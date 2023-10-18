@@ -1,4 +1,19 @@
+using ExcelUploadServer.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configuration
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
+
+// Database connection configuration
+var connectionString = configuration.GetConnectionString("AppConnection");
+builder.Services.AddDbContext<ExcelUploadContext>(options =>
+    options.UseSqlServer(connectionString));
+
 
 // Add services to the container.
 

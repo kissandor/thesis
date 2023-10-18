@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+lp1AUDqdrxFsysDtlQ5R+VdAIGMtL1M4Gtxb5hwOdI=",
+  "Source": "ExcelUploadServer",
+  "BasePath": "_content/ExcelUploadServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
