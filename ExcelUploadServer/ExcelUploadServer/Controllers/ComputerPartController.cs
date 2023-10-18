@@ -17,31 +17,31 @@ namespace ExcelUploadServer.Controllers
         }
 
         [HttpPost]
-        public JsonResult CreateEdit(IEnumerable<ComputerPart> computerPartList)
+        public JsonResult CreateEdit(IEnumerable<UploadModel> computerPartList)
         {
             if (computerPartList == null || !computerPartList.Any())
             {
-                return new JsonResult(BadRequest("Nincs elmentendő érték."));
+                return new JsonResult(BadRequest("The computer part list is empty."));
             }
 
             foreach (var computerPart in computerPartList)
             {
-                if (computerPart.Id == 0)
+                var existingCategory = _context.Category.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
+                if (existingCategory == null)
                 {
-                    _context.ComputerParts.Add(computerPart);
+                    return new JsonResult(BadRequest("Incorrect category"));
                 }
-                else
+
+                ComputerPart cp = new ComputerPart
                 {
-                    var computerPartInDb = _context.ComputerParts.Find(computerPart.Id);
-                    if (computerPartInDb == null)
-                        return new JsonResult(NotFound());
-                    computerPartInDb = computerPart;
-                }
+                    ComputerPartName = computerPart.ComputerPartName,
+                    CategoryId = existingCategory.Id
+                };
+                _context.Add(cp);
+                _context.SaveChanges();
             }
-
-            _context.SaveChanges();
-
-            return new JsonResult(Ok(computerPartList));
+            return new JsonResult(Ok());
         }
+
     }
 }
