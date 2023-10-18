@@ -29,6 +29,7 @@ namespace ExcelUploadServer.Controllers
                 var existingCategory = _context.Category.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
                 if (existingCategory == null)
                 {
+                    /*TODO: return the incorrect categories to the user.*/
                     return new JsonResult(BadRequest("Incorrect category"));
                 }
 
