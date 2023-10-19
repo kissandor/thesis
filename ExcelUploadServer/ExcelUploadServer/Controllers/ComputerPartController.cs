@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ExcelUploadServer.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ComputerPartController : ControllerBase
     {
@@ -17,7 +17,7 @@ namespace ExcelUploadServer.Controllers
         }
 
         [HttpPost]
-        public JsonResult CreateEdit(IEnumerable<UploadModel> computerPartList)
+        public JsonResult ComputerPartsUpload(IEnumerable<UploadModel> computerPartList)
         {
             if (computerPartList == null || !computerPartList.Any())
             {
@@ -43,6 +43,23 @@ namespace ExcelUploadServer.Controllers
             }
             return new JsonResult(Ok());
         }
+        
+        [HttpPost]
+        public JsonResult CatregoryUpload(IEnumerable<Category> categoryList)
+        {
+            if (categoryList == null || !categoryList.Any())
+            {
+                return new JsonResult(BadRequest("The computer part list is empty."));
+            }
 
+            foreach (var category in categoryList)
+            {
+                _context.Category.Add(category);
+            }
+            _context.SaveChanges();
+            return new JsonResult(Ok());
+        }
+       
+        
     }
 }
