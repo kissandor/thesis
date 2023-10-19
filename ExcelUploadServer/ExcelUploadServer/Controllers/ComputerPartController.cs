@@ -59,7 +59,21 @@ namespace ExcelUploadServer.Controllers
             _context.SaveChanges();
             return new JsonResult(Ok());
         }
-       
-        
+
+        [HttpPost]
+        public JsonResult WebshopUpload(IEnumerable<WebShop> webShopList)
+        {
+            if (webShopList == null || !webShopList.Any())
+            {
+                return new JsonResult(BadRequest("The computer part list is empty."));
+            }
+
+            foreach (var webShop in webShopList)
+            {
+                _context.Add(webShop);
+                _context.SaveChanges();
+            }
+            return new JsonResult(Ok());
+        }
     }
 }
