@@ -45,7 +45,7 @@ namespace ExcelUploadServer.Controllers
         }
         
         [HttpPost]
-        public JsonResult CatregoryUpload(IEnumerable<Category> categoryList)
+        public JsonResult CategoryUpload(IEnumerable<Category> categoryList)
         {
             if (categoryList == null || !categoryList.Any())
             {
