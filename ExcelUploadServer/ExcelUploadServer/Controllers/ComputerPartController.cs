@@ -16,12 +16,17 @@ namespace ExcelUploadServer.Controllers
             _context = context;
         }
 
+        private JsonResult BadRequestResult(string message)
+        {
+            return new JsonResult(BadRequest(message));
+        }
+
         [HttpPost]
         public JsonResult ComputerPartsUpload(IEnumerable<UploadModel> computerPartList)
         {
             if (computerPartList == null || !computerPartList.Any())
             {
-                return new JsonResult(BadRequest("The computer part list is empty."));
+                return BadRequestResult("The computer part list is empty.");
             }
 
             foreach (var computerPart in computerPartList)
@@ -30,7 +35,7 @@ namespace ExcelUploadServer.Controllers
                 if (existingCategory == null)
                 {
                     /*TODO: return the incorrect categories to the user.*/
-                    return new JsonResult(BadRequest("Incorrect category"));
+                    return BadRequestResult("Incorrect category");
                 }
 
                 ComputerPart cp = new ComputerPart
@@ -50,7 +55,7 @@ namespace ExcelUploadServer.Controllers
         {
             if (categoryList == null || !categoryList.Any())
             {
-                return new JsonResult(BadRequest("The computer part list is empty."));
+                return BadRequestResult("The category list is empty.");
             }
 
             foreach (var category in categoryList)
@@ -68,7 +73,7 @@ namespace ExcelUploadServer.Controllers
         {
             if (webShopList == null || !webShopList.Any())
             {
-                return new JsonResult(BadRequest("The computer part list is empty."));
+                return BadRequestResult("The webShop list is empty.");
             }
 
             foreach (var webShop in webShopList)
