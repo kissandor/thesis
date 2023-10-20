@@ -4,9 +4,84 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExcelUploadClient"
+        xmlns:Menu="clr-namespace:ExcelUploadClient.Utilitis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Excel Upload Client" 
+        Height="450" 
+        Width="800"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent">
     <Grid>
-        
+        <!-- Window border and background -->
+        <Border Background="AntiqueWhite" CornerRadius="20" />
+
+        <!-- Main grids -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="600" />
+            </Grid.ColumnDefinitions>
+            <Grid HorizontalAlignment="Left" Width="200">
+                <Border Background="#272B2F" CornerRadius="20,0,0,20" />
+                <StackPanel Height="400" Width="200">
+                    <!--Home Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding HomeCommand}"
+                        IsChecked="True">
+                        <Grid>
+                            <Image Source="Images/home.png" 
+                                Style="{StaticResource Image_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Category Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding HomeCommand}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/parts.png" 
+                                Style="{StaticResource Image_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Category Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding HomeCommand}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/category.png" 
+                                Style="{StaticResource Image_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!-- Webshop Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding HomeCommand}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/webshop.png" 
+                                Style="{StaticResource Image_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Open Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding HomeCommand}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/open-folder.png" 
+                                 Style="{StaticResource Image_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Open Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                         Command="{Binding HomeCommand}"
+                         IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/delete.png" 
+                                Style="{StaticResource Image_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

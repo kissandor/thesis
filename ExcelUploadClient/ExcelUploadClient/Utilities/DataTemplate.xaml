@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:ExcelUploadClient.ViewModel"
+                    xmlns:view ="clr-namespace:ExcelUploadClient.View">
+
+
+    <DataTemplate DataType="{x:Type vm:HomeViewModel}"> 
+        <view:Home />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:ComputerPartsViewModel}">
+    <view:ComputerParts/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:CategoriesViewModel}">
+        <view:Categories />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:WebShopsViewModel}">
+        <view:WebShops />
+    </DataTemplate>
+
+</ResourceDictionary>

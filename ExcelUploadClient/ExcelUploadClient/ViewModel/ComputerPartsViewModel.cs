@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExcelUploadClient.Model
+namespace ExcelUploadClient.ViewModel
 {
-    internal class CategoriesModel
+    class ComputerPartsViewModel
     {
     }
 }

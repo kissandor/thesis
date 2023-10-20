@@ -3,7 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ExcelUploadClient"
              StartupUri="MainWindow.xaml">
+
     <Application.Resources>
-         
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style/Button.xaml" />
+                <ResourceDictionary Source="Style/Image.xaml" />
+                <ResourceDictionary Source="Utilities/DataTemplate.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
