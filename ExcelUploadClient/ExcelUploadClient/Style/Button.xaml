@@ -10,6 +10,8 @@
         <Setter Property="Margin"
                 Value="0,5,0,0" />
 
+        
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
@@ -49,11 +51,15 @@
                             <Setter Property="Visibility"
                                     TargetName="Indicator"
                                     Value="Visible" />
+                            <Setter Property="Cursor" Value="Hand" />
+
 
                         </Trigger>
 
                         <EventTrigger RoutedEvent="Border.MouseEnter"
                                       SourceName="border">
+                            
+                            
 
                             <BeginStoryboard>
                                 <Storyboard>

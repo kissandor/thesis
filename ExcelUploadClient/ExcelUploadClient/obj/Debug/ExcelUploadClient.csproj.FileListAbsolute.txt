@@ -26,3 +26,4 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\App.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Utilities\DataTemplate.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Button.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Image.baml
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Text.baml

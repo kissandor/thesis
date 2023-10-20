@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\App.xaml
-8-807206255
+91150308975
 
 15-1770352593
 13-1310406943
-MainWindow.xaml;Style\Button.xaml;Style\Image.xaml;Utilities\DataTemplate.xaml;View\Categories.xaml;View\ComputerParts.xaml;View\Home.xaml;View\WebShops.xaml;
+MainWindow.xaml;Style\Button.xaml;Style\Image.xaml;Style\Text.xaml;Utilities\DataTemplate.xaml;View\Categories.xaml;View\ComputerParts.xaml;View\Home.xaml;View\WebShops.xaml;
 
-False
+True
 

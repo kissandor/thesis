@@ -92,6 +92,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Style\Text.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Utilities\DataTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,13 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\category.png" />
-    <Resource Include="Images\ecommerce.png" />
-    <Resource Include="Images\open.png" />
-    <Resource Include="Images\grid.png" />
     <Resource Include="Images\home.png" />
     <Resource Include="Images\open-folder.png" />
     <Resource Include="Images\webshop.png" />
-    <Resource Include="Images\img_home.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\delete.png" />

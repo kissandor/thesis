@@ -33,15 +33,18 @@
                         <Grid>
                             <Image Source="Images/home.png" 
                                 Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Home" 
+                                Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
-                    <!--Category Btn-->
+                    <!--Parts Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
                         Command="{Binding HomeCommand}"
                         IsChecked="False">
                         <Grid>
                             <Image Source="Images/parts.png" 
                                 Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Parts" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
                     <!--Category Btn-->
@@ -51,6 +54,7 @@
                         <Grid>
                             <Image Source="Images/category.png" 
                                 Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Category" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
                     <!-- Webshop Btn-->
@@ -60,6 +64,7 @@
                         <Grid>
                             <Image Source="Images/webshop.png" 
                                 Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Webshop" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
                     <!--Open Btn-->
@@ -69,15 +74,17 @@
                         <Grid>
                             <Image Source="Images/open-folder.png" 
                                  Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Open" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
-                    <!--Open Btn-->
+                    <!--Delete Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
                          Command="{Binding HomeCommand}"
                          IsChecked="False">
                         <Grid>
                             <Image Source="Images/delete.png" 
                                 Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Delete" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
                 </StackPanel>
