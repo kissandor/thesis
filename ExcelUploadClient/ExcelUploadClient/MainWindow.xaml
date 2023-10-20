@@ -87,6 +87,15 @@
                             <TextBlock Text="Delete" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
+                    <!--Exit Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                          Command="{Binding HomeCommand}"
+                          IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/exit.png" Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Exit" Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
                 </StackPanel>
             </Grid>
         </Grid>
