@@ -29,24 +29,42 @@ namespace ExcelUploadServer.Controllers
                 return BadRequestResult("The computer part list is empty.");
             }
 
+            var invalidCategories = new List<string>();
+
             foreach (var computerPart in computerPartList)
             {
                 var existingCategory = _context.Category.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
                 if (existingCategory == null)
                 {
-                    /*TODO: return the incorrect categories to the user.*/
-                    return BadRequestResult("Incorrect category");
+                    invalidCategories.Add(computerPart.CategoryName);
                 }
-
-                ComputerPart cp = new ComputerPart
+                else
                 {
-                    ComputerPartName = computerPart.ComputerPartName,
-                    CategoryId = existingCategory.Id
-                };
-                _context.Add(cp);
+                    ComputerPart cp = new ComputerPart
+                    {
+                        ComputerPartName = computerPart.ComputerPartName,
+                        CategoryId = existingCategory.Id
+                    };
+                    _context.Add(cp);
+                }
+                
             }
 
             _context.SaveChanges();
+
+            if (invalidCategories.Any())
+            {
+                var errorResponse = new
+                {
+                    Error = "Incorrect categories",
+                    InvalidCategories = invalidCategories
+                };
+                return new JsonResult(errorResponse)
+                {
+                    StatusCode = StatusCodes.Status400BadRequest
+                };
+            }
+            
             return new JsonResult(Ok());
         }
         
