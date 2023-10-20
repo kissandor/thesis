@@ -39,8 +39,9 @@ namespace ExcelUploadServer.Controllers
                     CategoryId = existingCategory.Id
                 };
                 _context.Add(cp);
-                _context.SaveChanges();
             }
+
+            _context.SaveChanges();
             return new JsonResult(Ok());
         }
         
@@ -54,7 +55,9 @@ namespace ExcelUploadServer.Controllers
 
             foreach (var category in categoryList)
             {
-                _context.Category.Add(category);
+                var existingCategory = _context.Category.FirstOrDefault(k => k.CategoryName == category.CategoryName);
+                if (existingCategory == null)
+                    _context.Category.Add(category);
             }
             _context.SaveChanges();
             return new JsonResult(Ok());
@@ -70,9 +73,11 @@ namespace ExcelUploadServer.Controllers
 
             foreach (var webShop in webShopList)
             {
-                _context.Add(webShop);
-                _context.SaveChanges();
+                var existingWebShop = _context.WebShops.FirstOrDefault(w => w.WebshopName == webShop.WebshopName);
+                if (existingWebShop == null)
+                    _context.Add(webShop);
             }
+            _context.SaveChanges();
             return new JsonResult(Ok());
         }
     }
