@@ -1,0 +1,110 @@
+﻿<Window x:Class="ExcelUploadClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Menu="clr-namespace:ExcelUploadClient.Utilitis" xmlns:viewmodel="clr-namespace:ExcelUploadClient.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:NavigationViewModel}"
+        xmlns:viewMode="clr-namespace:ExcelUploadClient.ViewModel"
+        mc:Ignorable="d"
+        Title="Excel Upload Client" 
+        Height="450" 
+        Width="800"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent">
+    
+    <Window.DataContext>
+        <viewMode:NavigationViewModel /> 
+    </Window.DataContext>
+    
+    <Grid>
+        <!-- Window border and background -->
+        <Border Background="#272B2F" CornerRadius="20" />
+
+        <!-- Main grids -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="600" />
+            </Grid.ColumnDefinitions>
+            <Grid HorizontalAlignment="Left" Width="200">
+                <Border Background="#272B2F" CornerRadius="20,0,0,20" />
+                <StackPanel Height="400" Width="200">
+                    <!--Home Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding HomeCmd}"
+                        IsChecked="True">
+                        <Grid>
+                            <Image Source="Images/home.png" 
+                                Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Home" 
+                                Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Parts Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding ComputerPartsCmd}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/parts.png" 
+                                Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Parts" Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Category Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding CategoriesCmd}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/category.png" 
+                                Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Category" Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!-- Webshop Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding WebShopsCmd}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/webshop.png" 
+                                Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Webshop" Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Open Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                        Command="{Binding OpenCmd}"
+                        IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/open-folder.png" 
+                                 Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Open" Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Delete Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                         Command="{Binding DeleteCmd}"
+                         IsChecked="False">
+                        <Grid>
+                            <Image Source="Images/delete.png" 
+                                Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Delete" Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                    <!--Exit Btn-->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                          IsChecked="False" Click="CLoseApp">
+                        <Grid>
+                            <Image Source="Images/exit.png" Style="{StaticResource Image_Style}"/>
+                            <TextBlock Text="Exit" Style="{StaticResource Text_Style}"/>
+                        </Grid>
+                    </Menu:Btn>
+                </StackPanel>
+            </Grid>
+            <ContentControl Grid.Column="1" 
+                Content="{Binding CurrentView}"/>
+        </Grid>
+    </Grid>
+</Window>
