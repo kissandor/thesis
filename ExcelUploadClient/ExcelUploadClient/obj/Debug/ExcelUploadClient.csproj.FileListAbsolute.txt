@@ -23,7 +23,6 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\View\Home.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\View\WebShops.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\App.baml
-D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Utilities\DataTemplate.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Button.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Image.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Text.baml

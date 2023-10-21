@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ExcelUploadClient"
-        xmlns:Menu="clr-namespace:ExcelUploadClient.Utilitis"
+        xmlns:Menu="clr-namespace:ExcelUploadClient.Utilitis" xmlns:viewmodel="clr-namespace:ExcelUploadClient.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:NavigationViewModel}"
+        xmlns:viewMode="clr-namespace:ExcelUploadClient.ViewModel"
         mc:Ignorable="d"
         Title="Excel Upload Client" 
         Height="450" 
@@ -12,10 +12,16 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        ResizeMode="NoResize"
         Background="Transparent">
+    
+    <Window.DataContext>
+        <viewMode:NavigationViewModel /> 
+    </Window.DataContext>
+    
     <Grid>
         <!-- Window border and background -->
-        <Border Background="AntiqueWhite" CornerRadius="20" />
+        <Border Background="#272B2F" CornerRadius="20" />
 
         <!-- Main grids -->
         <Grid>
@@ -28,7 +34,7 @@
                 <StackPanel Height="400" Width="200">
                     <!--Home Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                        Command="{Binding HomeCommand}"
+                        Command="{Binding HomeCmd}"
                         IsChecked="True">
                         <Grid>
                             <Image Source="Images/home.png" 
@@ -39,7 +45,7 @@
                     </Menu:Btn>
                     <!--Parts Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                        Command="{Binding HomeCommand}"
+                        Command="{Binding ComputerPartsCmd}"
                         IsChecked="False">
                         <Grid>
                             <Image Source="Images/parts.png" 
@@ -49,7 +55,7 @@
                     </Menu:Btn>
                     <!--Category Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                        Command="{Binding HomeCommand}"
+                        Command="{Binding CategoriesCmd}"
                         IsChecked="False">
                         <Grid>
                             <Image Source="Images/category.png" 
@@ -59,7 +65,7 @@
                     </Menu:Btn>
                     <!-- Webshop Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                        Command="{Binding HomeCommand}"
+                        Command="{Binding WebShopsCmd}"
                         IsChecked="False">
                         <Grid>
                             <Image Source="Images/webshop.png" 
@@ -69,7 +75,7 @@
                     </Menu:Btn>
                     <!--Open Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                        Command="{Binding HomeCommand}"
+                        Command="{Binding OpenCmd}"
                         IsChecked="False">
                         <Grid>
                             <Image Source="Images/open-folder.png" 
@@ -79,7 +85,7 @@
                     </Menu:Btn>
                     <!--Delete Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                         Command="{Binding HomeCommand}"
+                         Command="{Binding DeleteCmd}"
                          IsChecked="False">
                         <Grid>
                             <Image Source="Images/delete.png" 
@@ -89,7 +95,7 @@
                     </Menu:Btn>
                     <!--Exit Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                          Command="{Binding HomeCommand}"
+                          Command="{Binding HomeCmd}"
                           IsChecked="False">
                         <Grid>
                             <Image Source="Images/exit.png" Style="{StaticResource Image_Style}"/>
@@ -98,6 +104,8 @@
                     </Menu:Btn>
                 </StackPanel>
             </Grid>
+            <ContentControl Grid.Column="1" 
+                Content="{Binding CurrentView}"/>
         </Grid>
     </Grid>
 </Window>

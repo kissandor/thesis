@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExcelUploadClient.ViewModel
 {
-    internal class HomeViewModel
+    internal class DeleteViewModel
     {
     }
 }
