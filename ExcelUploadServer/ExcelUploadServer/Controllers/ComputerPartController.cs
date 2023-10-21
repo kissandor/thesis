@@ -47,7 +47,7 @@ namespace ExcelUploadServer.Controllers
                     };
                     _context.Add(cp);
                 }
-                
+
             }
 
             _context.SaveChanges();
@@ -64,10 +64,10 @@ namespace ExcelUploadServer.Controllers
                     StatusCode = StatusCodes.Status400BadRequest
                 };
             }
-            
+
             return new JsonResult(Ok());
         }
-        
+
         [HttpPost]
         public JsonResult CategoryUpload(IEnumerable<Category> categoryList)
         {
@@ -112,7 +112,7 @@ namespace ExcelUploadServer.Controllers
             return new JsonResult(Ok(result));
         }
 
-        
+
         [HttpGet]
         public JsonResult GetAllCategories()
         {
@@ -121,11 +121,35 @@ namespace ExcelUploadServer.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetAllWenShops()
+        public JsonResult GetAllWebShops()
         {
             var result = _context.WebShops.ToList();
             return new JsonResult(Ok(result));
         }
 
+        [HttpDelete]
+        public JsonResult DeleteAll()
+        {
+            try
+            {
+                _context.ComputerParts.RemoveRange(_context.ComputerParts.ToList());
+                _context.SaveChanges();
+                _context.Category.RemoveRange(_context.Category.ToList());
+                _context.WebShops.RemoveRange(_context.WebShops.ToList());
+                _context.SaveChanges();
+                return new JsonResult("All computer parts have been deleted successfully.")
+                {
+                    StatusCode = StatusCodes.Status200OK
+                };
+            }
+            catch (Exception ex)
+            {
+                // Hiba esetén hibás válasz küldése
+                return new JsonResult($"Error: {ex.Message}")
+                {
+                    StatusCode = StatusCodes.Status500InternalServerError
+                };
+            }
+        }
     }
 }
