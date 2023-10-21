@@ -1,30 +1,56 @@
-﻿using ExcelUploadClient.View;
-using ExcelUploadClient.VMVM.Model;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ExcelUploadClient.Utilities;
+using ExcelUploadClient.VMVM.Model;
 
 namespace ExcelUploadClient.ViewModel
 {
-    class ComputerPartsViewModel
+
+    public class ComputerPartsViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<ComputerPart> ComputerParts { get; set; }
+        private ObservableCollection<ComputerPart> computerParts;
+
+        public ObservableCollection<ComputerPart> ComputerParts
+        {
+            get { return computerParts; }
+            set
+            {
+                if (computerParts != value)
+                {
+                    computerParts = value;
+                    OnPropertyChanged(nameof(ComputerParts));
+                }
+            }
+        }
 
         public ComputerPartsViewModel()
         {
-            // Itt példányosítsd a ComputerParts listát és töltsd fel adatokkal (például adatbázisból vagy más forrásból).
-            ComputerParts = new ObservableCollection<ComputerPart>
+            LoadComputerPartsData();
+        }
+
+        private async void LoadComputerPartsData()
+        {
+            try
             {
-                new ComputerPart { Id = 1, ComputerPartName = "Alaplap", ComputerPartPrice = 100, CategoryId = 1, WebshopId = 1 },
-                new ComputerPart { Id = 2, ComputerPartName = "Processzor", ComputerPartPrice = 200, CategoryId = 1, WebshopId = 1 },
-                new ComputerPart { Id = 3, ComputerPartName = "Memória", ComputerPartPrice = 50, CategoryId = 2, WebshopId = 2 },
-                // Egyéb ComputerPart példányok hozzáadása
-            };
+                string apiUrl = "http://localhost:5278"; // Cseréld le a saját API URL-re
+                string apiEndpoint = "api/ComputerPart/GetAllComputerParts"; // Cseréld le a saját API végpontodra
+
+                ObservableCollection<ComputerPart> parts = await ApiHandler.GetComputerParts(apiUrl, apiEndpoint);
+
+                ComputerParts = parts;
+            }
+            catch (Exception ex)
+            {
+                // Kezeld a hibákat vagy naplózd őket szükség szerint
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

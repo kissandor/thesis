@@ -26,3 +26,6 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\Categorie
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\ComputerParts.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\Home.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\WebShops.baml
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\Newtonsoft.Json.dll
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\Newtonsoft.Json.xml
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\ExcelUploadClient.csproj.CopyComplete

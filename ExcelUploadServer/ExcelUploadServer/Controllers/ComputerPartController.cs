@@ -103,5 +103,13 @@ namespace ExcelUploadServer.Controllers
             _context.SaveChanges();
             return new JsonResult(Ok());
         }
+
+        //getting all Computerparts from the database
+        [HttpGet]
+        public JsonResult GetAllComputerParts()
+        {
+            var result = _context.ComputerParts.ToList();
+            return new JsonResult(Ok(result));
+        }
     }
 }

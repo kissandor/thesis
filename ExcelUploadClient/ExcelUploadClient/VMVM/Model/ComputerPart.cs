@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ExcelUploadClient.VMVM.Model
 {
-    internal class ComputerPart
+    public class ComputerPart
     {
         public int Id { get; set; }
         public string ComputerPartName { get; set; }
-        public decimal ComputerPartPrice { get; set; }
+        public decimal? ComputerPartPrice { get; set; }
         public int CategoryId { get; set; }
-        public int WebshopId { get; set; }
+        public int? WebshopId { get; set; }
   
     }
 }
