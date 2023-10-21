@@ -111,5 +111,13 @@ namespace ExcelUploadServer.Controllers
             var result = _context.ComputerParts.ToList();
             return new JsonResult(Ok(result));
         }
+
+        
+        [HttpGet]
+        public JsonResult GetAllCategories()
+        {
+            var result = _context.Category.ToList();
+            return new JsonResult(Ok(result));
+        }
     }
 }
