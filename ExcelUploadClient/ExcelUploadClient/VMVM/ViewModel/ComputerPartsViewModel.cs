@@ -4,7 +4,7 @@ using System.ComponentModel;
 using ExcelUploadClient.Utilities;
 using ExcelUploadClient.VMVM.Model;
 
-namespace ExcelUploadClient.ViewModel
+namespace ExcelUploadClient.VMVM.ViewModel
 {
 
     public class ComputerPartsViewModel : INotifyPropertyChanged

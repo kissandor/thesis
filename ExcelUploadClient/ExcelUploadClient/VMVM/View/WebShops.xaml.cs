@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExcelUploadClient.View
+namespace ExcelUploadClient.VMVM.View
 {
     /// <summary>
     /// Interaction logic for WebShops.xaml

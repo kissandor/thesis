@@ -1,4 +1,4 @@
-﻿using ExcelUploadClient.ViewModel;
+﻿using ExcelUploadClient.VMVM.ViewModel;
 using ExcelUploadClient.VMVM.Model;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExcelUploadClient.View
+namespace ExcelUploadClient.VMVM.View
 {
     /// <summary>
     /// Interaction logic for ComputerParts.xaml

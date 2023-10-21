@@ -7,7 +7,7 @@ using ExcelUploadClient.Utilities;
 using System.Windows.Input;
 using System.Windows;
 
-namespace ExcelUploadClient.ViewModel
+namespace ExcelUploadClient.VMVM.ViewModel
 {
     class NavigationViewModel : ViewModelBase
     {

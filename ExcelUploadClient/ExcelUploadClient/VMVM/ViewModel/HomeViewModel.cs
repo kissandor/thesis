@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExcelUploadClient.ViewModel
+namespace ExcelUploadClient.VMVM.ViewModel
 {
     internal class HomeViewModel
     {
