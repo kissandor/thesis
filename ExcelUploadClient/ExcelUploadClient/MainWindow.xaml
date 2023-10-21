@@ -95,8 +95,7 @@
                     </Menu:Btn>
                     <!--Exit Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                          Command="{Binding HomeCmd}"
-                          IsChecked="False">
+                          IsChecked="False" Click="CLoseApp">
                         <Grid>
                             <Image Source="Images/exit.png" Style="{StaticResource Image_Style}"/>
                             <TextBlock Text="Exit" Style="{StaticResource Text_Style}"/>

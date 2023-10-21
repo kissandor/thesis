@@ -24,5 +24,10 @@ namespace ExcelUploadClient
         {
             InitializeComponent();
         }
+
+        private void CLoseApp(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

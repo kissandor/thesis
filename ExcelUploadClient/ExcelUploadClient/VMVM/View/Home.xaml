@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <Grid>
-        <TextBlock Text="Hello" Foreground="AliceBlue" FontSize="30"></TextBlock>
+        <TextBlock Text="Hello"  Foreground="AliceBlue" FontSize="30"></TextBlock>
     </Grid>
 </UserControl>

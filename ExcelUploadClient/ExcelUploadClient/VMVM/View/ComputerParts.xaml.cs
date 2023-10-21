@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExcelUploadClient.ViewModel;
+using ExcelUploadClient.VMVM.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,7 @@ namespace ExcelUploadClient.View
         public ComputerParts()
         {
             InitializeComponent();
+            DataContext = new ComputerPartsViewModel();
         }
     }
 }

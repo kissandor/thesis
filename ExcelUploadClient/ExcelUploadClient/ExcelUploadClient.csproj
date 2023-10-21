@@ -58,23 +58,24 @@
     <Compile Include="Utilities\Btn.cs" />
     <Compile Include="Utilities\RelayCommand.cs" />
     <Compile Include="Utilities\ViewModelBase.cs" />
-    <Compile Include="ViewModel\CategoriesViewModel.cs" />
-    <Compile Include="ViewModel\ComputerPartsViewModel.cs" />
-    <Compile Include="ViewModel\DeleteViewModel.cs" />
-    <Compile Include="ViewModel\HomeViewModel.cs" />
-    <Compile Include="ViewModel\NavigationViewModel.cs" />
-    <Compile Include="ViewModel\OpenViewModel.cs" />
-    <Compile Include="ViewModel\WebShopsViewModel.cs" />
-    <Compile Include="View\Categories.xaml.cs">
+    <Compile Include="VMVM\Model\ComputerPart.cs" />
+    <Compile Include="VMVM\ViewModel\CategoriesViewModel.cs" />
+    <Compile Include="VMVM\ViewModel\ComputerPartsViewModel.cs" />
+    <Compile Include="VMVM\ViewModel\DeleteViewModel.cs" />
+    <Compile Include="VMVM\ViewModel\HomeViewModel.cs" />
+    <Compile Include="VMVM\ViewModel\NavigationViewModel.cs" />
+    <Compile Include="VMVM\ViewModel\OpenViewModel.cs" />
+    <Compile Include="VMVM\ViewModel\WebShopsViewModel.cs" />
+    <Compile Include="VMVM\View\Categories.xaml.cs">
       <DependentUpon>Categories.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ComputerParts.xaml.cs">
+    <Compile Include="VMVM\View\ComputerParts.xaml.cs">
       <DependentUpon>ComputerParts.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Home.xaml.cs">
+    <Compile Include="VMVM\View\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\WebShops.xaml.cs">
+    <Compile Include="VMVM\View\WebShops.xaml.cs">
       <DependentUpon>WebShops.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -101,19 +102,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Categories.xaml">
+    <Page Include="VMVM\View\Categories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ComputerParts.xaml">
+    <Page Include="VMVM\View\ComputerParts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Home.xaml">
+    <Page Include="VMVM\View\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\WebShops.xaml">
+    <Page Include="VMVM\View\WebShops.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

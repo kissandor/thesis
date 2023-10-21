@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ExcelUploadClient.Utilities;
 using System.Windows.Input;
+using System.Windows;
 
 namespace ExcelUploadClient.ViewModel
 {
@@ -31,6 +32,8 @@ namespace ExcelUploadClient.ViewModel
         private void Open(object obj) => CurrentView = new OpenViewModel();
         private void Delete(object obj) => CurrentView = new DeleteViewModel();
 
+        
+
         public NavigationViewModel()
         {
             HomeCmd = new RelayCommand(Home);
@@ -39,7 +42,6 @@ namespace ExcelUploadClient.ViewModel
             ComputerPartsCmd = new RelayCommand(ComputerParts);
             OpenCmd = new RelayCommand(Open);
             DeleteCmd = new RelayCommand(Delete);
-            
 
             // Startup Page
             CurrentView = new HomeViewModel();
