@@ -77,8 +77,14 @@
     <Compile Include="VMVM\View\ComputerParts.xaml.cs">
       <DependentUpon>ComputerParts.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VMVM\View\Delete.xaml.cs">
+      <DependentUpon>Delete.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VMVM\View\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VMVM\View\Open.xaml.cs">
+      <DependentUpon>Open.xaml</DependentUpon>
     </Compile>
     <Compile Include="VMVM\View\WebShops.xaml.cs">
       <DependentUpon>WebShops.xaml</DependentUpon>
@@ -115,7 +121,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="VMVM\View\Delete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="VMVM\View\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMVM\View\Open.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

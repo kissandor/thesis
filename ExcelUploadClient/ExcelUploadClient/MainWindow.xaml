@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Menu="clr-namespace:ExcelUploadClient.Utilitis" xmlns:viewmodel="clr-namespace:ExcelUploadClient.VMVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:NavigationViewModel}"
+        xmlns:Menu="clr-namespace:ExcelUploadClient.Utilitis" 
+        xmlns:viewmodel="clr-namespace:ExcelUploadClient.VMVM.ViewModel" 
+        d:DataContext="{d:DesignInstance Type=viewmodel:NavigationViewModel}"
         xmlns:viewMode="clr-namespace:ExcelUploadClient.VMVM.ViewModel"
         mc:Ignorable="d"
         Title="Excel Upload Client" 
@@ -14,11 +16,11 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent">
-    
+
     <Window.DataContext>
-        <viewMode:NavigationViewModel /> 
+        <viewMode:NavigationViewModel />
     </Window.DataContext>
-    
+
     <Grid>
         <!-- Window border and background -->
         <Border Background="#272B2F" CornerRadius="20" />
@@ -80,7 +82,8 @@
                         <Grid>
                             <Image Source="Images/open-folder.png" 
                                  Style="{StaticResource Image_Style}"/>
-                            <TextBlock Text="Open" Style="{StaticResource Text_Style}"/>
+                            <TextBlock Text="Open" 
+                                 Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
                     <!--Delete Btn-->

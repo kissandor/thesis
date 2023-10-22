@@ -29,3 +29,7 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\WebShops.
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\Newtonsoft.Json.dll
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\Newtonsoft.Json.xml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\ExcelUploadClient.csproj.CopyComplete
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\Open.g.cs
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\Open.baml
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\Delete.g.cs
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\Delete.baml

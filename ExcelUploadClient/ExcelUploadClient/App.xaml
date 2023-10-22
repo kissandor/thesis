@@ -30,6 +30,10 @@
                 <view:WebShops />
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type vm:OpenViewModel}">
+                <view:Open />
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

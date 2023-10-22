@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExcelUploadClient.VMVM.ViewModel
 {
-    class WebShopsViewModel
+    internal class WebShopsViewModel
     {
     }
 }

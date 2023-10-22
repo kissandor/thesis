@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ExcelUploadClient.VMVM.View.WebShops"
+﻿<UserControl x:Class="ExcelUploadClient.VMVM.View.Delete"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,9 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <Grid>
-        <TextBlock Text="Webshop"
-                     FontSize="50"
-                     Foreground="AliceBlue">
+        <TextBlock Text="Hello"  
+                   Foreground="AliceBlue" 
+                   FontSize="30">
         </TextBlock>
     </Grid>
 </UserControl>
