@@ -23,14 +23,18 @@
                 Margin="10,5,5,5"
                 AutoGenerateColumns="True"
                 Width="280"
+                Height="160"
                 HorizontalAlignment="Left"
+                VerticalAlignment="Top"
                 ItemsSource="{Binding Categories}">
             </DataGrid>
             <DataGrid x:Name="DataGridCategories" 
                 Margin="5,5,10,5"
                 AutoGenerateColumns="True"
                 Width="280"
+                Height="160"
                 HorizontalAlignment="Right"
+                VerticalAlignment="Top"
                 ItemsSource="{Binding Categories}">
             </DataGrid>
         </Grid>

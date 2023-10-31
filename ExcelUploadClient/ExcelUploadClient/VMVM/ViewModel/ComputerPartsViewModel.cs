@@ -69,7 +69,7 @@ namespace ExcelUploadClient.VMVM.ViewModel
                     ComputerPartName = row["computerPartName"].ToString(),
                     ComputerPartPrice = row["computerPartPrice"] as decimal?,
                     CategoryId = Convert.ToInt32(row["categoryId"]),
-                    //Category = row["category"].ToString(),
+                    //Webshop = row["category"].ToString(),
                     WebshopId = row["webshopId"] as int?,
                     //Webshop = row["webshop"].ToString()
                 };

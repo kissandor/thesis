@@ -7,9 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <Grid>
-        <TextBlock Text="Webshop"
-                     FontSize="50"
-                     Foreground="AliceBlue">
-        </TextBlock>
+        <DataGrid x:Name="DataGridComputerParts" 
+          Margin="10,50,10,10"
+          ItemsSource="{Binding Webshops}">
+
+        </DataGrid>
     </Grid>
 </UserControl>

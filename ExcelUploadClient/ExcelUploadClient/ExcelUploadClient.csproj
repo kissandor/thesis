@@ -64,6 +64,7 @@
     <Compile Include="Utilities\ViewModelBase.cs" />
     <Compile Include="VMVM\Model\Category.cs" />
     <Compile Include="VMVM\Model\ComputerPart.cs" />
+    <Compile Include="VMVM\Model\Webshop.cs" />
     <Compile Include="VMVM\ViewModel\CategoriesViewModel.cs" />
     <Compile Include="VMVM\ViewModel\ComputerPartsViewModel.cs" />
     <Compile Include="VMVM\ViewModel\DeleteViewModel.cs" />
