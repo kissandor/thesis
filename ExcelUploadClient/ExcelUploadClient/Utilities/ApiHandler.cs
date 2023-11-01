@@ -99,9 +99,4 @@ namespace ExcelUploadClient.Utilities
         }
 
     }
-
-    public class ApiResult
-    {
-        public List<ComputerPart> value { get; set; }
-    }
 }

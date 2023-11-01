@@ -32,8 +32,6 @@ namespace ExcelUploadClient.VMVM.ViewModel
         private void Open(object obj) => CurrentView = new OpenViewModel();
         private void Delete(object obj) => CurrentView = new DeleteViewModel();
 
-        
-
         public NavigationViewModel()
         {
             HomeCmd = new RelayCommand(Home);
