@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ExcelUploadClient.Utilities;
 using System.Windows.Input;
 using System.Windows;
+using Microsoft.Win32;
 
 namespace ExcelUploadClient.VMVM.ViewModel
 {
@@ -26,11 +27,12 @@ namespace ExcelUploadClient.VMVM.ViewModel
         public ICommand DeleteCmd { get; set; }
 
         private void Home(object obj) => CurrentView = new HomeViewModel();
-        private void Categories(object obj) => CurrentView = new CategoriesViewModel();
+        private void Categories(object obj) => CurrentView = new ComputerPartCategoriesViewModel();
         private void WebShops(object obj) => CurrentView = new WebShopsViewModel();
         private void ComputerParts(object obj) => CurrentView = new ComputerPartsViewModel();
         private void Open(object obj) => CurrentView = new OpenViewModel();
         private void Delete(object obj) => CurrentView = new DeleteViewModel();
+
 
         public NavigationViewModel()
         {

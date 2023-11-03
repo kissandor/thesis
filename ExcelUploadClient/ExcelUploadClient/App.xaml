@@ -22,7 +22,7 @@
                 <view:ComputerParts/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type vm:CategoriesViewModel}">
+            <DataTemplate DataType="{x:Type vm:ComputerPartCategoriesViewModel}">
                 <view:Categories />
             </DataTemplate>
 

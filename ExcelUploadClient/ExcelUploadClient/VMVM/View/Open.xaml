@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ExcelUploadClient.VMVM.View"
+             xmlns:src="clr-namespace:ExcelUploadClient.VMVM.Model"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <Grid>
@@ -15,7 +16,7 @@
             <DataGrid x:Name="DataGridParts" 
                 Margin="10,50,10,10"
                 AutoGenerateColumns="True"
-                ItemsSource="{Binding Categories}">
+                ItemsSource="{Binding ComputerParts}">
             </DataGrid>
         </Grid>
         <Grid Grid.Row="2" VerticalAlignment="Bottom" Height="200">
@@ -35,7 +36,7 @@
                 Height="160"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
-                ItemsSource="{Binding Categories}">
+                ItemsSource="{Binding Webshops}">
             </DataGrid>
         </Grid>
 
