@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ExcelUploadClient.VMVM.ViewModel
 {
-    public class WebShopsViewModel: INotifyPropertyChanged
+    public class WebShopsViewModel: ViewModelBase
     {
         private ObservableCollection<Webshop> webshops;
 
@@ -49,13 +49,7 @@ namespace ExcelUploadClient.VMVM.ViewModel
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
+      
         private ObservableCollection<Webshop> ConvertDataTableToCategories(DataTable dataTable)
         {
             ObservableCollection<Webshop> webshops = new ObservableCollection<Webshop>();

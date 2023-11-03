@@ -15,7 +15,7 @@ using System.Windows.Input;
 
 namespace ExcelUploadClient.VMVM.ViewModel
 {
-    public class OpenViewModel : INotifyPropertyChanged
+    public class OpenViewModel : ViewModelBase
     {
         private string selectedFilePath;
 
@@ -84,13 +84,6 @@ namespace ExcelUploadClient.VMVM.ViewModel
             {
                 // Kezeld a hibákat vagy naplózd őket szükség szerint
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private ObservableCollection<ComputerPartCategory> ConvertDataTableToCategories(DataTable dataTable)

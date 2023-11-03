@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 namespace ExcelUploadClient.VMVM.ViewModel
 {
 
-    public class ComputerPartsViewModel : INotifyPropertyChanged
+    public class ComputerPartsViewModel : ViewModelBase
     {
         private ObservableCollection<ComputerPart> computerParts;
 
@@ -48,13 +48,6 @@ namespace ExcelUploadClient.VMVM.ViewModel
             {
                 // Kezeld a hibákat vagy naplózd őket szükség szerint
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private ObservableCollection<ComputerPart> ConvertDataTableToComputerParts(DataTable dataTable)

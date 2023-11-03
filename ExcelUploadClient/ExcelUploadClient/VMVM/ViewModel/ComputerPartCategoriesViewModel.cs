@@ -13,7 +13,7 @@ using System.Windows.Controls;
 
 namespace ExcelUploadClient.VMVM.ViewModel
 {
-    public class ComputerPartCategoriesViewModel : INotifyPropertyChanged
+    public class ComputerPartCategoriesViewModel : ViewModelBase
     {
         private ObservableCollection<ComputerPartCategory> categories;
 
@@ -49,14 +49,7 @@ namespace ExcelUploadClient.VMVM.ViewModel
             {
                 // Kezeld a hibákat vagy naplózd őket szükség szerint
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        }    
 
         private ObservableCollection<ComputerPartCategory> ConvertDataTableToCategories(DataTable dataTable)
         {
