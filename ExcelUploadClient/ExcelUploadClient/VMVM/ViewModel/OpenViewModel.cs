@@ -86,46 +86,14 @@ namespace ExcelUploadClient.VMVM.ViewModel
             }
         }
 
-        private ObservableCollection<ComputerPartCategory> ConvertDataTableToCategories(DataTable dataTable)
-        {
-            ObservableCollection<ComputerPartCategory> categories = new ObservableCollection<ComputerPartCategory>();
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                ComputerPartCategory category = new ComputerPartCategory
-                {
-                    Id = dataTable.Rows.IndexOf(row),
-                    CategoryName = row["categoryName"].ToString(),
-                };
-                categories.Add(category);
-            }
-
-            return categories;
-        }
 
         private async Task LoadDataAsync()
         {
-           // selectedFilePath = await Task.Run(OpenFile);
-;
-            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel workbook | *.xlsx", Multiselect = false };
-            try
-            {
-                if (openFileDialog.ShowDialog() == true)
-                {
-                    selectedFilePath = openFileDialog.FileName;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Hiba történt: {ex.Message}", "Hibajelentés");
-                selectedFilePath = null;
-            }
-
+           selectedFilePath = await Task.Run(OpenFile);
 
             if (selectedFilePath != null)
             {
-                /*
+                
                 DataTable dtParts = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 1));
                 DataTable dtCategory = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 2));
                 DataTable dtWebshop = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 3));
@@ -133,7 +101,7 @@ namespace ExcelUploadClient.VMVM.ViewModel
                 String resp = await Task.Run(() => ApiHandler.SendDataAsync(dtCategory, "http://localhost:5278", "api/ComputerPart/CategoryUpload"));
                 resp = await Task.Run(() => ApiHandler.SendDataAsync(dtParts, "http://localhost:5278", "api/ComputerPart/ComputerPartsUpload"));
                 resp = await Task.Run(() => ApiHandler.SendDataAsync(dtWebshop, "http://localhost:5278", "api/ComputerPart/WebshopUpload"));
-                */
+                
             }
         }
 
@@ -154,6 +122,22 @@ namespace ExcelUploadClient.VMVM.ViewModel
                     MessageBox.Show($"Hiba történt: {ex.Message}", "Hibajelentés");
                 }
             return null;
+        }
+        private ObservableCollection<ComputerPartCategory> ConvertDataTableToCategories(DataTable dataTable)
+        {
+            ObservableCollection<ComputerPartCategory> categories = new ObservableCollection<ComputerPartCategory>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                ComputerPartCategory category = new ComputerPartCategory
+                {
+                    Id = dataTable.Rows.IndexOf(row),
+                    CategoryName = row["categoryName"].ToString(),
+                };
+                categories.Add(category);
+            }
+
+            return categories;
         }
 
     }

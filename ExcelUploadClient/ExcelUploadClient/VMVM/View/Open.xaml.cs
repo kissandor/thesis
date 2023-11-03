@@ -24,7 +24,6 @@ namespace ExcelUploadClient.VMVM.View
         public Open()
         {
             InitializeComponent();
-            DataContext = new OpenViewModel();
         }
     }
 }

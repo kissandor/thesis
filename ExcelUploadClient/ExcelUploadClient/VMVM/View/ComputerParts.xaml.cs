@@ -25,7 +25,7 @@ namespace ExcelUploadClient.VMVM.View
         public ComputerParts()
         {
             InitializeComponent();
-            DataContext = new ComputerPartsViewModel();
+            //DataContext = new ComputerPartsViewModel();
         }
     }
 }
