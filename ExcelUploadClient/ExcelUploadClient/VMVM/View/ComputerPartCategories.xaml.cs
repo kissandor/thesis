@@ -24,7 +24,6 @@ namespace ExcelUploadClient.VMVM.View
         public Categories()
         {
             InitializeComponent();
-            DataContext = new ComputerPartCategoriesViewModel();
         }
     }
 }

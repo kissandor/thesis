@@ -16,7 +16,7 @@
             <DataGrid x:Name="DataGridParts" 
                 Margin="10,50,10,10"
                 AutoGenerateColumns="True"
-                ItemsSource="{Binding ComputerParts}">
+                ItemsSource="{Binding PartsUpload}">
             </DataGrid>
         </Grid>
         <Grid Grid.Row="2" VerticalAlignment="Bottom" Height="200">

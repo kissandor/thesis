@@ -1,27 +1,23 @@
-﻿using DocumentFormat.OpenXml.Wordprocessing;
-using ExcelUploadClient.Utilities;
+﻿using ExcelUploadClient.Utilities;
 using ExcelUploadClient.VMVM.Model;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
 
 namespace ExcelUploadClient.VMVM.ViewModel
 {
     public class OpenViewModel : ViewModelBase
     {
         private string selectedFilePath;
+        private DataTable dtParts, dtCategory, dtWebshop;
+  
 
         private ObservableCollection<ComputerPartCategory> categories;
         private ObservableCollection<Webshop> webshops;
-        private ObservableCollection<ComputerPart> computerParts;
+        private ObservableCollection<PartUpload> partsUpload;
 
         public ObservableCollection<ComputerPartCategory> Categories
         {
@@ -49,15 +45,15 @@ namespace ExcelUploadClient.VMVM.ViewModel
             }
         }
 
-        public ObservableCollection<ComputerPart> ComputerParts
+        public ObservableCollection<PartUpload> PartsUpload
         {
-            get { return computerParts; }
+            get { return partsUpload; }
             set
             {
-                if (computerParts != value)
+                if (partsUpload != value)
                 {
-                    computerParts = value;
-                    OnPropertyChanged(nameof(ComputerParts));
+                    partsUpload = value;
+                    OnPropertyChanged(nameof(PartsUpload));
                 }
             }
         }
@@ -73,35 +69,14 @@ namespace ExcelUploadClient.VMVM.ViewModel
         {
             try
             {
+                selectedFilePath =  OpenFile();
+                await SaveToDataTable(selectedFilePath);
                 await LoadDataAsync();
-                /*
-                ComputerParts = ConvertDataTableToCategories(dataTableCP);
-                Webshops = ConvertDataTableToCategories(dataTableWS);
-                Categories = ConvertDataTableToCategories(dataTableCAT);
-                */
+                ConvertDataTableToObservableCollection();
             }
             catch (Exception ex)
             {
                 // Kezeld a hibákat vagy naplózd őket szükség szerint
-            }
-        }
-
-
-        private async Task LoadDataAsync()
-        {
-           selectedFilePath = await Task.Run(OpenFile);
-
-            if (selectedFilePath != null)
-            {
-                
-                DataTable dtParts = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 1));
-                DataTable dtCategory = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 2));
-                DataTable dtWebshop = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 3));
-
-                String resp = await Task.Run(() => ApiHandler.SendDataAsync(dtCategory, "http://localhost:5278", "api/ComputerPart/CategoryUpload"));
-                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtParts, "http://localhost:5278", "api/ComputerPart/ComputerPartsUpload"));
-                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtWebshop, "http://localhost:5278", "api/ComputerPart/WebshopUpload"));
-                
             }
         }
 
@@ -123,6 +98,43 @@ namespace ExcelUploadClient.VMVM.ViewModel
                 }
             return null;
         }
+
+        private async Task SaveToDataTable(String pathFile)
+        {
+            if (pathFile != null)
+            {
+                dtParts = new DataTable();
+                dtCategory = new DataTable();
+                dtWebshop = new DataTable();
+                dtParts = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 1));
+                dtCategory = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 2));
+                dtWebshop = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 3));
+
+            }
+        } 
+
+        private void ConvertDataTableToObservableCollection()
+        {
+            PartsUpload = ConvertDataTableToComputerParts(dtParts);
+            Webshops = ConvertDataTableToWebshops(dtWebshop);
+            Categories = ConvertDataTableToCategories(dtCategory);
+        }
+
+        private async Task LoadDataAsync()
+        {
+            try
+            {
+                String resp = await Task.Run(() => ApiHandler.SendDataAsync(dtCategory, "http://localhost:5278", "api/ComputerPart/CategoryUpload"));
+                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtParts, "http://localhost:5278", "api/ComputerPart/ComputerPartsUpload"));
+                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtWebshop, "http://localhost:5278", "api/ComputerPart/WebshopUpload"));
+
+            }
+            catch
+            {
+
+            }
+        }
+
         private ObservableCollection<ComputerPartCategory> ConvertDataTableToCategories(DataTable dataTable)
         {
             ObservableCollection<ComputerPartCategory> categories = new ObservableCollection<ComputerPartCategory>();
@@ -139,6 +151,40 @@ namespace ExcelUploadClient.VMVM.ViewModel
 
             return categories;
         }
+        private ObservableCollection<Webshop> ConvertDataTableToWebshops(DataTable dataTable)
+        {
+            ObservableCollection<Webshop> webShops= new ObservableCollection<Webshop>();
 
+            foreach (DataRow row in dataTable.Rows)
+            {
+                 Webshop ws = new Webshop
+                {
+                    Id = dataTable.Rows.IndexOf(row),
+                    WebshopName = row["webshopName"].ToString(),
+                    WebshopURL = row["webshopURL"].ToString()
+                 };
+                webShops.Add(ws);
+            }
+
+            return webShops;
+        }
+        private ObservableCollection<PartUpload> ConvertDataTableToComputerParts(DataTable dataTable)
+        {
+            ObservableCollection<PartUpload> computerParts = new ObservableCollection<PartUpload>();
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                PartUpload computerPart = new PartUpload
+                {
+                    Id = dataTable.Rows.IndexOf(row),
+                    ComputerPartName = row["computerPartName"].ToString(),
+                    CategoryName = row["categoryName"].ToString()
+                };
+
+                computerParts.Add(computerPart);
+            }
+
+            return computerParts;
+        }
     }
 }
