@@ -7,38 +7,36 @@
              xmlns:src="clr-namespace:ExcelUploadClient.VMVM.Model"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="200" />
-            <RowDefinition Height="200" />
-        </Grid.RowDefinitions>
-        <Grid VerticalAlignment="Top" Height="200">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+        <Grid VerticalAlignment="Top" Height="400">
             <DataGrid x:Name="DataGridParts" 
-                Margin="10,50,10,10"
-                AutoGenerateColumns="True"
-                ItemsSource="{Binding PartsUpload}">
+        Margin="10,50,10,10"
+        AutoGenerateColumns="True"
+        ItemsSource="{Binding PartsUpload}">
             </DataGrid>
         </Grid>
-        <Grid Grid.Row="2" VerticalAlignment="Bottom" Height="200">
+        <Grid Grid.Column="2" Height="400" VerticalAlignment="Top">
             <DataGrid x:Name="DataGridWebshop" 
-                Margin="10,5,5,5"
-                AutoGenerateColumns="True"
-                Width="280"
-                Height="160"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                ItemsSource="{Binding Categories}">
+         Margin="10,50,10,5"
+         AutoGenerateColumns="True"
+         Width="280"
+         Height="160"      
+         VerticalAlignment="Top"
+         ItemsSource="{Binding Categories}">
             </DataGrid>
             <DataGrid x:Name="DataGridCategories" 
-                Margin="5,5,10,5"
-                AutoGenerateColumns="True"
-                Width="280"
-                Height="160"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                ItemsSource="{Binding Webshops}">
+         Margin="5,5,10,5"
+         AutoGenerateColumns="True"
+         Width="280"
+         Height="160"
+         VerticalAlignment="Bottom"
+         ItemsSource="{Binding Webshops}">
             </DataGrid>
         </Grid>
-
     </Grid>
 </UserControl>
