@@ -139,51 +139,56 @@ namespace ExcelUploadClient.VMVM.ViewModel
         {
             ObservableCollection<ComputerPartCategory> categories = new ObservableCollection<ComputerPartCategory>();
 
-            foreach (DataRow row in dataTable.Rows)
+            if (dataTable !=null)
             {
-                ComputerPartCategory category = new ComputerPartCategory
+                foreach (DataRow row in dataTable.Rows)
                 {
-                    Id = dataTable.Rows.IndexOf(row),
-                    CategoryName = row["categoryName"].ToString(),
-                };
-                categories.Add(category);
+                    ComputerPartCategory category = new ComputerPartCategory
+                    {
+                        Id = dataTable.Rows.IndexOf(row),
+                        CategoryName = row["categoryName"].ToString(),
+                    };
+                    categories.Add(category);
+                }
             }
-
             return categories;
         }
         private ObservableCollection<Webshop> ConvertDataTableToWebshops(DataTable dataTable)
         {
             ObservableCollection<Webshop> webShops= new ObservableCollection<Webshop>();
 
-            foreach (DataRow row in dataTable.Rows)
+            if (dataTable !=null)
             {
-                 Webshop ws = new Webshop
+                foreach (DataRow row in dataTable.Rows)
                 {
-                    Id = dataTable.Rows.IndexOf(row),
-                    WebshopName = row["webshopName"].ToString(),
-                    WebshopURL = row["webshopURL"].ToString()
-                 };
-                webShops.Add(ws);
+                     Webshop ws = new Webshop
+                    {
+                        Id = dataTable.Rows.IndexOf(row),
+                        WebshopName = row["webshopName"].ToString(),
+                        WebshopURL = row["webshopURL"].ToString()
+                     };
+                    webShops.Add(ws);
+                }
             }
-
             return webShops;
         }
         private ObservableCollection<PartUpload> ConvertDataTableToComputerParts(DataTable dataTable)
         {
             ObservableCollection<PartUpload> computerParts = new ObservableCollection<PartUpload>();
-
-            foreach (DataRow row in dataTable.Rows)
+            if (dataTable !=null)
             {
-                PartUpload computerPart = new PartUpload
+                foreach (DataRow row in dataTable.Rows)
                 {
-                    Id = dataTable.Rows.IndexOf(row),
-                    ComputerPartName = row["computerPartName"].ToString(),
-                    CategoryName = row["categoryName"].ToString()
-                };
+                    PartUpload computerPart = new PartUpload
+                    {
+                        Id = dataTable.Rows.IndexOf(row),
+                        ComputerPartName = row["computerPartName"].ToString(),
+                        CategoryName = row["categoryName"].ToString()
+                    };
 
-                computerParts.Add(computerPart);
+                    computerParts.Add(computerPart);
+                }
             }
-
             return computerParts;
         }
     }

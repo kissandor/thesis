@@ -15,27 +15,43 @@
         </Grid.ColumnDefinitions>
         <Grid VerticalAlignment="Top" Height="400">
             <DataGrid x:Name="DataGridParts" 
-        Margin="10,50,10,10"
-        AutoGenerateColumns="True"
-        ItemsSource="{Binding PartsUpload}">
+                        Margin="10,50,10,10"
+                        AutoGenerateColumns="False"
+                        ItemsSource="{Binding PartsUpload}"
+                        Style="{StaticResource DataGridStyle}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Part Name" Binding="{Binding ComputerPartName}"  Width="4*"/>
+                    <DataGridTextColumn Header="Category" Binding="{Binding CategoryName}" Width="4*"/>
+                </DataGrid.Columns>
             </DataGrid>
         </Grid>
         <Grid Grid.Column="2" Height="400" VerticalAlignment="Top">
             <DataGrid x:Name="DataGridWebshop" 
-         Margin="10,50,10,5"
-         AutoGenerateColumns="True"
-         Width="280"
-         Height="160"      
-         VerticalAlignment="Top"
-         ItemsSource="{Binding Categories}">
+                        Margin="10,50,10,0"
+                        AutoGenerateColumns="False"
+                        Width="280"
+                        Height="160"      
+                        VerticalAlignment="Top"
+                        ItemsSource="{Binding Categories}"
+                        Style="{StaticResource DataGridStyle}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="2*"/>
+                    <DataGridTextColumn Header="Category Name" Binding="{Binding CategoryName}"  Width="4*"/>
+                </DataGrid.Columns>
             </DataGrid>
             <DataGrid x:Name="DataGridCategories" 
-         Margin="5,5,10,5"
-         AutoGenerateColumns="True"
-         Width="280"
-         Height="160"
-         VerticalAlignment="Bottom"
-         ItemsSource="{Binding Webshops}">
+                        Margin="10,0,10,10"
+                        AutoGenerateColumns="False"
+                        Width="280"
+                        Height="160"
+                        VerticalAlignment="Bottom"
+                        ItemsSource="{Binding Webshops}"
+                        Style="{StaticResource DataGridStyle}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="2*"/>
+                    <DataGridTextColumn Header="Webshop Name" Binding="{Binding WebshopName}"  Width="4*"/>
+                    <DataGridTextColumn Header="Webshop URL" Binding="{Binding WebshopURL}"  Width="4*"/>
+                </DataGrid.Columns>
             </DataGrid>
         </Grid>
     </Grid>

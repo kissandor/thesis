@@ -8,9 +8,15 @@
              d:DesignHeight="450" d:DesignWidth="600">
     <Grid>
         <DataGrid x:Name="DataGridComputerParts" 
-          Margin="10,50,10,10"
-          ItemsSource="{Binding Webshops}">
-
+                    Margin="10,50,10,10"
+                    AutoGenerateColumns="False"
+                    ItemsSource="{Binding Webshops}"
+                    Style="{StaticResource DataGridStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="2*"/>
+                <DataGridTextColumn Header="Webshop Name" Binding="{Binding WebshopName}"  Width="4*"/>
+                <DataGridTextColumn Header="Webshop URL" Binding="{Binding WebshopURL}"  Width="4*"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </UserControl>

@@ -53,3 +53,4 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\System.Numerics.Vec
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\ComputerPartCategories.g.cs
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\VMVM\View\ComputerPartCategories.baml
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\DataGrid.baml

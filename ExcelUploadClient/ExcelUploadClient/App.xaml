@@ -10,6 +10,7 @@
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style/Button.xaml" />
+                <ResourceDictionary Source="Style/DataGrid.xaml" />
                 <ResourceDictionary Source="Style/Image.xaml" />
                 <ResourceDictionary Source="Style/Text.xaml" />
             </ResourceDictionary.MergedDictionaries>

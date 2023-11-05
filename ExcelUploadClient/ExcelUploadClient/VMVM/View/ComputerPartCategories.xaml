@@ -9,8 +9,13 @@
     <Grid>
         <DataGrid x:Name="DataGridCategories" 
           Margin="10,50,10,10"
-          AutoGenerateColumns="True"
-          ItemsSource="{Binding Categories}">
+          AutoGenerateColumns="False"
+          ItemsSource="{Binding Categories}"
+          Style="{StaticResource DataGridStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="2*"/>
+                <DataGridTextColumn Header="Category Name" Binding="{Binding CategoryName}"  Width="4*"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </UserControl>

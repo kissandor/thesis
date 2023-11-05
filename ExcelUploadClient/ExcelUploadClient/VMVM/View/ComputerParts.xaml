@@ -10,8 +10,16 @@
     <Grid>
         <DataGrid x:Name="DataGridComputerParts" 
                   Margin="10,50,10,10"
-                  ItemsSource="{Binding ComputerParts}">
-            
+                  AutoGenerateColumns="False"
+                  ItemsSource="{Binding ComputerParts}"
+                  Style="{StaticResource DataGridStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Part Name" Binding="{Binding ComputerPartName}"  Width="4*"/>
+                <DataGridTextColumn Header="Category Id" Binding="{Binding CategoryId}" Width="2*"/>
+                <DataGridTextColumn Header="Category Price" Binding="{Binding computerPartPrice}" Width="2*"/>
+                <DataGridTextColumn Header="Webshop URL" Binding="{Binding webshopId}"  Width="4*"/>
+            </DataGrid.Columns>
+
         </DataGrid>
     </Grid>
 </UserControl>
