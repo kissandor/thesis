@@ -33,12 +33,10 @@ namespace ExcelUploadServer.Controllers
 
             foreach (var computerPart in computerPartList)
             {
+                var existingPart = _context.ComputerParts.FirstOrDefault(k => k.ComputerPartName == computerPart.ComputerPartName);
                 var existingCategory = _context.Category.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
-                if (existingCategory == null)
-                {
-                    invalidCategories.Add(computerPart.CategoryName);
-                }
-                else
+
+                if (existingPart == null && existingCategory != null)
                 {
                     ComputerPart cp = new ComputerPart
                     {
@@ -47,7 +45,15 @@ namespace ExcelUploadServer.Controllers
                     };
                     _context.Add(cp);
                 }
-
+                else if ((existingPart == null && existingCategory == null) || (existingPart != null && existingCategory == null))
+                {
+                    invalidCategories.Add(computerPart.CategoryName);
+                }
+                else
+                {
+                    //category exist and part exist as well
+                }
+                
             }
 
             _context.SaveChanges();
