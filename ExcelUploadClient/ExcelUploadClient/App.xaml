@@ -35,6 +35,10 @@
                 <view:Open />
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type vm:DeleteViewModel}">
+                <view:Delete />
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

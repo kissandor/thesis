@@ -3,13 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ExcelUploadClient.VMVM.View"
+             xmlns:local="clr-namespace:ExcelUploadClient.VMVM.View" xmlns:Menu="clr-namespace:ExcelUploadClient.Utilitis"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
-    <Grid>
-        <TextBlock Text="Hello"  
-                   Foreground="AliceBlue" 
-                   FontSize="30">
-        </TextBlock>
-    </Grid>
+
+    <StackPanel Background="#F0F0F0" Margin="10,50,10,10">
+        <TextBlock Text="Delete" Foreground="Black" FontSize="30" Margin="30, 20, 30, 0"/>
+        <Border Margin="30, 40, 30, 10" Background="#F0F0F0" BorderBrush="Gray" BorderThickness="0,1,0,1">
+            <StackPanel Margin="0, 15">
+                <TextBlock Text="Are you sure you want to permanently delete &#x0a;all data from the database?"
+                           FontSize="20"/>
+                <TextBlock Text="This action cannot be undone." FontSize="20" Margin="0, 20, 0, 0"/>
+            </StackPanel>
+        </Border>
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,0">
+            <Menu:Btn Style="{StaticResource BtnStyle}"
+                      Command="{Binding ComputerPartsCmd}"
+                      IsChecked="False"
+                      Margin="0,0,20,0">
+                <Grid>
+                    <TextBlock Text="Delete" Style="{StaticResource Text_Style}"/>
+                </Grid>
+            </Menu:Btn>
+            <Menu:Btn Style="{StaticResource BtnStyle}"
+                      Command="{Binding ComputerPartsCmd}"
+                      IsChecked="False"
+                      Margin="20,0,0,0">
+                <Grid>
+                    <TextBlock Text="Cancel" Style="{StaticResource Text_Style}"/>
+                </Grid>
+            </Menu:Btn>
+        </StackPanel>
+    </StackPanel>
 </UserControl>
