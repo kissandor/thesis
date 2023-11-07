@@ -1,10 +1,10 @@
 ﻿
 FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\App.xaml;;
 FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\MainWindow.xaml;;
-FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\VMVM\View\ComputerPartCategories.xaml;;
-FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\VMVM\View\ComputerParts.xaml;;
-FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\VMVM\View\Delete.xaml;;
-FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\VMVM\View\Home.xaml;;
-FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\VMVM\View\Open.xaml;;
-FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\VMVM\View\WebShops.xaml;;
+FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\MVVM\View\ComputerPartCategories.xaml;;
+FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\MVVM\View\ComputerParts.xaml;;
+FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\MVVM\View\Delete.xaml;;
+FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\MVVM\View\Home.xaml;;
+FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\MVVM\View\Open.xaml;;
+FD:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\MVVM\View\WebShops.xaml;;
 

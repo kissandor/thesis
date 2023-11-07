@@ -137,33 +137,33 @@
     <Compile Include="Utilities\ExcelFileHandler.cs" />
     <Compile Include="Utilities\RelayCommand.cs" />
     <Compile Include="Utilities\ViewModelBase.cs" />
-    <Compile Include="VMVM\Model\ComputerPartCategory.cs" />
-    <Compile Include="VMVM\Model\ComputerPart.cs" />
-    <Compile Include="VMVM\Model\PartUpload.cs" />
-    <Compile Include="VMVM\Model\Webshop.cs" />
-    <Compile Include="VMVM\ViewModel\ComputerPartCategoriesViewModel.cs" />
-    <Compile Include="VMVM\ViewModel\ComputerPartsViewModel.cs" />
-    <Compile Include="VMVM\ViewModel\DeleteViewModel.cs" />
-    <Compile Include="VMVM\ViewModel\HomeViewModel.cs" />
-    <Compile Include="VMVM\ViewModel\NavigationViewModel.cs" />
-    <Compile Include="VMVM\ViewModel\OpenViewModel.cs" />
-    <Compile Include="VMVM\ViewModel\WebShopsViewModel.cs" />
-    <Compile Include="VMVM\View\ComputerPartCategories.xaml.cs">
+    <Compile Include="MVVM\Model\ComputerPartCategory.cs" />
+    <Compile Include="MVVM\Model\ComputerPart.cs" />
+    <Compile Include="MVVM\Model\PartUpload.cs" />
+    <Compile Include="MVVM\Model\Webshop.cs" />
+    <Compile Include="MVVM\ViewModel\ComputerPartCategoriesViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\ComputerPartsViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\DeleteViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\NavigationViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\OpenViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\WebShopsViewModel.cs" />
+    <Compile Include="MVVM\View\ComputerPartCategories.xaml.cs">
       <DependentUpon>ComputerPartCategories.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VMVM\View\ComputerParts.xaml.cs">
+    <Compile Include="MVVM\View\ComputerParts.xaml.cs">
       <DependentUpon>ComputerParts.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VMVM\View\Delete.xaml.cs">
+    <Compile Include="MVVM\View\Delete.xaml.cs">
       <DependentUpon>Delete.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VMVM\View\Home.xaml.cs">
+    <Compile Include="MVVM\View\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VMVM\View\Open.xaml.cs">
+    <Compile Include="MVVM\View\Open.xaml.cs">
       <DependentUpon>Open.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VMVM\View\WebShops.xaml.cs">
+    <Compile Include="MVVM\View\WebShops.xaml.cs">
       <DependentUpon>WebShops.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -194,27 +194,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VMVM\View\ComputerPartCategories.xaml">
+    <Page Include="MVVM\View\ComputerPartCategories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VMVM\View\ComputerParts.xaml">
+    <Page Include="MVVM\View\ComputerParts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VMVM\View\Delete.xaml">
+    <Page Include="MVVM\View\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="VMVM\View\Home.xaml">
+    <Page Include="MVVM\View\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VMVM\View\Open.xaml">
+    <Page Include="MVVM\View\Open.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VMVM\View\WebShops.xaml">
+    <Page Include="MVVM\View\WebShops.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

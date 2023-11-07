@@ -1,4 +1,4 @@
-﻿using ExcelUploadClient.VMVM.Model;
+﻿using ExcelUploadClient.MVVM.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +95,37 @@ namespace ExcelUploadClient.Utilities
                 catch (Exception ex)
                 {
                     throw new Exception($"Hiba történt a kérés során: {ex.Message}");
+                }
+            }
+        }
+        public static async Task<string> DeleteDatabaseAsync(string apiUrl, string apiEndPoint)
+        {
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    // Construct the URL for the DELETE request
+                    string deleteUrl = $"{apiUrl}/{apiEndPoint}";
+
+                    // Send the DELETE request
+                    HttpResponseMessage response = await client.DeleteAsync(deleteUrl);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // The DELETE request was successful
+                        string responseContent = await response.Content.ReadAsStringAsync();
+                        return responseContent;
+                    }
+                    else
+                    {
+                        // Handle HTTP error
+                        return $"HTTP error: {response.StatusCode}";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle other exceptions
+                    return $"Hiba történt: {ex.Message}";
                 }
             }
         }

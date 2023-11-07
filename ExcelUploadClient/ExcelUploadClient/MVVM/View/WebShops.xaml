@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ExcelUploadClient.MVVM.View.WebShops"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExcelUploadClient.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <DataGrid x:Name="DataGridComputerParts" 
+                    Margin="10,50,10,10"
+                    AutoGenerateColumns="False"
+                    ItemsSource="{Binding Webshops}"
+                    Style="{StaticResource DataGridStyle}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="2*"/>
+                <DataGridTextColumn Header="Webshop Name" Binding="{Binding WebshopName}"  Width="4*"/>
+                <DataGridTextColumn Header="Webshop URL" Binding="{Binding WebshopURL}"  Width="4*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
