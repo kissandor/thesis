@@ -36,7 +36,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
                 {
                     await ApiHandler.DeleteDatabaseAsync(apiUrl, apiEndpoint);
                     NavigationViewModel navigationViewModel = ((Window)Application.Current.MainWindow).DataContext as NavigationViewModel;
-                    navigationViewModel.CurrentView = new Home();
+                    navigationViewModel.CurrentView = new DatabaseDeleted();
                 });
             }
         }

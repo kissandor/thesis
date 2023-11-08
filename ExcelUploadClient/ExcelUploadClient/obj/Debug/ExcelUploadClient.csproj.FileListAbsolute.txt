@@ -54,3 +54,5 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\Delete.ba
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\Home.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\Open.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\WebShops.baml
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\DatabaseDeleted.g.cs
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\DatabaseDeleted.baml

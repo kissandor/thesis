@@ -132,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MVVM\ViewModel\DatabaseDeletedViewModel.cs" />
+    <Compile Include="MVVM\View\DatabaseDeleted.xaml.cs">
+      <DependentUpon>DatabaseDeleted.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\ApiHandler.cs" />
     <Compile Include="Utilities\Btn.cs" />
     <Compile Include="Utilities\ExcelFileHandler.cs" />
@@ -178,6 +182,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\DatabaseDeleted.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Style\Button.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

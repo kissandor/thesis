@@ -25,6 +25,8 @@ namespace ExcelUploadClient.MVVM.ViewModel
         public ICommand ComputerPartsCmd { get; set; }
         public ICommand OpenCmd { get; set; }
         public ICommand DeleteCmd { get; set; }
+        public ICommand DatabaseDeletedCmd { get; set; }
+
 
         private void Home(object obj) => CurrentView = new HomeViewModel();
         private void Categories(object obj) => CurrentView = new ComputerPartCategoriesViewModel();
@@ -32,6 +34,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
         private void ComputerParts(object obj) => CurrentView = new ComputerPartsViewModel();
         private void Open(object obj) => CurrentView = new OpenViewModel();
         private void Delete(object obj) => CurrentView = new DeleteViewModel();
+        private void DatabaseDeleted(object obj) => CurrentView = new DatabaseDeletedViewModel();
 
 
         public NavigationViewModel()
@@ -42,6 +45,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             ComputerPartsCmd = new RelayCommand(ComputerParts);
             OpenCmd = new RelayCommand(Open);
             DeleteCmd = new RelayCommand(Delete);
+            DatabaseDeletedCmd = new RelayCommand(DatabaseDeleted);
 
             // Startup Page
             CurrentView = new HomeViewModel();
