@@ -6,11 +6,18 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Configuration;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
     public class OpenViewModel : ViewModelBase
     {
+
+        private readonly string apiUrl;
+        private readonly string categoryUploadEndPoint;
+        private readonly string computerPartsUploadEndPoint;
+        private readonly string webshopUploadEndPoint;
+
         private string selectedFilePath;
         private DataTable dtParts, dtCategory, dtWebshop;
   
@@ -61,7 +68,11 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public OpenViewModel()
         {
-            
+            apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
+            categoryUploadEndPoint = ConfigurationManager.AppSettings["CategoryUploadEndPoint"];
+            computerPartsUploadEndPoint = ConfigurationManager.AppSettings["ComputerPartsUploadEndPoint"];
+            webshopUploadEndPoint = ConfigurationManager.AppSettings["WebshopUploadEndPoint"];
+
             Load();
         }
 
@@ -90,7 +101,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
                          return openFileDialog.FileName;
                     }
 
-                return null;
+                    return null;
                 }
                 catch (Exception ex)
                 {
@@ -123,11 +134,10 @@ namespace ExcelUploadClient.MVVM.ViewModel
         private async Task LoadDataAsync()
         {
             try
-            {
-                String resp = await Task.Run(() => ApiHandler.SendDataAsync(dtCategory, "http://localhost:5278", "api/ComputerPart/CategoryUpload"));
-                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtParts, "http://localhost:5278", "api/ComputerPart/ComputerPartsUpload"));
-                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtWebshop, "http://localhost:5278", "api/ComputerPart/WebshopUpload"));
-
+            {              
+                String resp = await Task.Run(() => ApiHandler.SendDataAsync(dtCategory, apiUrl, categoryUploadEndPoint));
+                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtParts, apiUrl, computerPartsUploadEndPoint));
+                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtWebshop, apiUrl, webshopUploadEndPoint));
             }
             catch
             {
