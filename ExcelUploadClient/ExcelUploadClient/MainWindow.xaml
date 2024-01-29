@@ -23,7 +23,7 @@
 
     <Grid>
         <!-- Window border and background -->
-        <Border Background="#272B2F" CornerRadius="20" />
+        <Border Background="#5366a2" CornerRadius="20" />
 
         <!-- Main grids -->
         <Grid>
@@ -32,7 +32,7 @@
                 <ColumnDefinition Width="600" />
             </Grid.ColumnDefinitions>
             <Grid HorizontalAlignment="Left" Width="200">
-                <Border Background="#272B2F" CornerRadius="20,0,0,20" />
+                <Border Background="#5366a2" CornerRadius="20,0,0,20" />
                 <StackPanel Height="400" Width="200">
                     <!--Home Btn-->
                     <Menu:Btn Style="{StaticResource BtnStyle}"

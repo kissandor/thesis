@@ -23,7 +23,7 @@
 
                         <Border.Background>
                             <SolidColorBrush x:Name="BorderBackground"
-                                             Color="#272B2F" />
+                                             Color="#5366a2" />
                         </Border.Background>
 
                         <Grid>
@@ -65,8 +65,8 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#272B2F"
-                                                    To="#3E434A"
+                                                    From="#5366a2"
+                                                    To="#82a5bf"
                                                     Duration="0:0:0.3" />
                                 </Storyboard>
                             </BeginStoryboard>
@@ -80,8 +80,8 @@
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
-                                                    From="#3E434A"
-                                                    To="#272B2F"
+                                                    From="#82a5bf"
+                                                    To="#5366a2"
                                                     Duration="0:0:0.3" />
                                 </Storyboard>
                             </BeginStoryboard>
@@ -93,7 +93,7 @@
 
                             <Setter Property="Background"
                                     TargetName="border"
-                                    Value="#212529" />
+                                    Value="#425180" />
 
                             <Setter Property="Visibility"
                                     TargetName="Indicator"
