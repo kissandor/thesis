@@ -16,32 +16,38 @@ namespace ExcelUploadClient.Utilities
 
             using (XLWorkbook workbook = new XLWorkbook(filePath))
             {
-                IXLWorksheet xLWorksheet = workbook.Worksheet(sheetNumber);
-
-                bool isFirst = true;
-
-                foreach (IXLRow row in xLWorksheet.RowsUsed())
+                if (sheetNumber <= workbook.Worksheets.Count && sheetNumber > 0)
                 {
-                    if (isFirst)
+                    IXLWorksheet xLWorksheet = workbook.Worksheet(sheetNumber);
+
+                    bool isFirst = true;
+
+                    foreach (IXLRow row in xLWorksheet.RowsUsed())
                     {
-                        foreach (IXLCell cell in row.Cells())
+                        if (isFirst)
                         {
-                            dataTable.Columns.Add(cell.Value.ToString());
+                            foreach (IXLCell cell in row.Cells())
+                            {
+                                dataTable.Columns.Add(cell.Value.ToString());
+                            }
+                            isFirst = false;
                         }
-                        isFirst = false;
-                    }
-                    else
-                    {
-                        dataTable.Rows.Add();
-                        int i = 0;
-                        foreach (IXLCell cell in row.Cells())
+                        else
                         {
-                            dataTable.Rows[dataTable.Rows.Count - 1][i++] = cell.Value.ToString();
+                            dataTable.Rows.Add();
+                            int i = 0;
+                            foreach (IXLCell cell in row.Cells())
+                            {
+                                dataTable.Rows[dataTable.Rows.Count - 1][i++] = cell.Value.ToString();
+                            }
                         }
                     }
                 }
+                else
+                {
+                    return null;
+                }
             }
-
             return dataTable;
         }
     }
