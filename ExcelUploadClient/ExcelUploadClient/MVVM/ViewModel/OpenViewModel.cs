@@ -81,7 +81,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             try
             {
                 selectedFilePath =  OpenFile();
-                await SaveToDataTable(selectedFilePath);
+                await ReadExcelDataToDataTable(selectedFilePath);
                 await LoadDataAsync();
                 ConvertDataTableToObservableCollection();
             }
@@ -110,7 +110,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             return null;
         }
 
-        private async Task SaveToDataTable(String pathFile)
+        private async Task ReadExcelDataToDataTable(String pathFile)
         {
             if (pathFile != null)
             {
