@@ -8,11 +8,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
     public class WebShopsViewModel: ViewModelBase
     {
+        private readonly string apiUrl;
+        private readonly string getAllWebshopsEndPoint;
         private ObservableCollection<Webshop> webshops;
 
         public ObservableCollection<Webshop> Webshops
@@ -30,6 +33,8 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public WebShopsViewModel()
         {
+            apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
+            getAllWebshopsEndPoint = ConfigurationManager.AppSettings["GetAllWebshopsEndPoint"];
             LoadCategoriesAsync();
         }
 
@@ -37,10 +42,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
         {
             try
             {
-                string apiUrl = "http://localhost:5278";
-                string apiEndpoint = "api/ComputerPart/GetAllWebshops";
-
-                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, apiEndpoint);
+                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllWebshopsEndPoint);
                 Webshops = ConvertDataTableToCategories(dataTable);
             }
             catch (Exception ex)

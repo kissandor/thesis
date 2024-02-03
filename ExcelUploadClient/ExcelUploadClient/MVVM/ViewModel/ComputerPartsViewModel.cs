@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 using ExcelUploadClient.Utilities;
 using ExcelUploadClient.MVVM.Model;
 using Newtonsoft.Json.Linq;
+using System.Configuration;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
 
     public class ComputerPartsViewModel : ViewModelBase
     {
+        private readonly string apiUrl;
+        private readonly string getAllComputerPartsEndPoint;
         private ObservableCollection<ComputerPart> computerParts;
 
         public ObservableCollection<ComputerPart> ComputerParts
@@ -30,18 +33,16 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public ComputerPartsViewModel()
         {
+            apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
+            getAllComputerPartsEndPoint = ConfigurationManager.AppSettings["GetAllComputerPartsEndPoint"];
             LoadComputerPartsData();
         }
 
         private async void LoadComputerPartsData()
         {
             try
-            {
-                string apiUrl = "http://localhost:5278"; // Cseréld le a saját API URL-re
-                string apiEndpoint = "api/ComputerPart/GetAllComputerParts"; // Cseréld le a saját API végpontodra
-
-                //ObservableCollection<ComputerPart> parts = await ApiHandler.GetComputerParts(apiUrl, apiEndpoint);                        
-                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, apiEndpoint);
+            {                      
+                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllComputerPartsEndPoint);
                 ComputerParts = ConvertDataTableToComputerParts(dataTable);
             }
             catch (Exception ex)
@@ -69,12 +70,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
                 computerParts.Add(computerPart);
             }
-
             return computerParts;
         }
-
-
-
-
     }
 }

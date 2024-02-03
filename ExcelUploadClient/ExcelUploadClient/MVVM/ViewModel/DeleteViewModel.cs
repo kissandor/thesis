@@ -8,14 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
+using System.Configuration;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
     internal class DeleteViewModel : ViewModelBase
     {
 
-        private string apiUrl = "http://localhost:5278";
-        private string apiEndpoint = "api/ComputerPart/DeleteAll";
+        private string apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
+        private string apiEndpoint = ConfigurationManager.AppSettings["DeleteAll"];
+        
         public ICommand CancelCmd
         {
             get

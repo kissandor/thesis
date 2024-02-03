@@ -10,11 +10,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Configuration;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
     public class ComputerPartCategoriesViewModel : ViewModelBase
     {
+
+        private readonly string apiUrl;
+        private readonly string getAllCategoriesEndPoint;
         private ObservableCollection<ComputerPartCategory> categories;
 
         public ObservableCollection<ComputerPartCategory> Categories
@@ -32,6 +36,8 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public ComputerPartCategoriesViewModel()
         {
+            apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
+            getAllCategoriesEndPoint = ConfigurationManager.AppSettings["GetAllCategoriesEndPoint"];
             LoadCategoriesAsync();
         }
 
@@ -39,10 +45,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
         {
             try
             {
-                string apiUrl = "http://localhost:5278";
-                string apiEndpoint = "api/ComputerPart/GetAllCategories";
-
-                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, apiEndpoint);
+                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllCategoriesEndPoint);
                 Categories = ConvertDataTableToCategories(dataTable);
             }
             catch (Exception ex)

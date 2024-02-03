@@ -43,7 +43,8 @@ namespace ExcelUploadServer.Controllers
                         ComputerPartName = computerPart.ComputerPartName,
                         CategoryId = existingCategory.Id
                     };
-                    _context.Add(cp);
+                    //_context.Add(cp);
+                    _context.ComputerParts.Add(cp);
                 }
                 else if ((existingPart == null && existingCategory == null) || (existingPart != null && existingCategory == null))
                 {
