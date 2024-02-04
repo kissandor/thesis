@@ -8,6 +8,8 @@ using ExcelUploadClient.Utilities;
 using ExcelUploadClient.MVVM.Model;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
+using System.Windows;
+using System.Net.Http;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
@@ -17,6 +19,34 @@ namespace ExcelUploadClient.MVVM.ViewModel
         private readonly string apiUrl;
         private readonly string getAllComputerPartsEndPoint;
         private ObservableCollection<ComputerPart> computerParts;
+
+        private string errorMessageText;
+        public string ErrorMessageText
+        {
+            get { return errorMessageText; }
+            set
+            {
+                if (errorMessageText != value)
+                {
+                    errorMessageText = value;
+                    OnPropertyChanged(nameof(ErrorMessageText));
+                }
+            }
+        }
+
+        private Visibility visibility;
+        public Visibility Visibility
+        {
+            get { return visibility; }
+            set
+            {
+                if (visibility != value)
+                {
+                    visibility = value;
+                    OnPropertyChanged(nameof(Visibility));
+                }
+            }
+        }
 
         public ObservableCollection<ComputerPart> ComputerParts
         {
@@ -40,15 +70,29 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         private async void LoadComputerPartsData()
         {
+            Visibility = Visibility.Hidden;
             try
             {                      
                 DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllComputerPartsEndPoint);
                 ComputerParts = ConvertDataTableToComputerParts(dataTable);
             }
+            catch (HttpRequestException)
+            {
+                // Az HTTP kérés hiba, tehát a szerver nem érhető el
+                ShowErrorMessage("A szerver jelenleg nem elérhető. Kérlek próbáld újra később.");
+            }
             catch (Exception ex)
             {
-                // Kezeld a hibákat vagy naplózd őket szükség szerint
+                // Bármilyen más hiba esetén
+                ShowErrorMessage($"Hiba történt a kérés során: {ex.Message}");
             }
+        }
+
+        private void ShowErrorMessage(string message)
+        {
+
+            Visibility = Visibility.Visible;
+            ErrorMessageText = message;
         }
 
         private ObservableCollection<ComputerPart> ConvertDataTableToComputerParts(DataTable dataTable)

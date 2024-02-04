@@ -8,14 +8,32 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DataGrid x:Name="DataGridCategories" 
-          Margin="10,50,10,10"
-          AutoGenerateColumns="False"
-          ItemsSource="{Binding Categories}"
-          Style="{StaticResource DataGridStyle}">
+              Margin="10,50,10,10"
+              AutoGenerateColumns="False"
+              ItemsSource="{Binding Categories}"
+              Style="{StaticResource DataGridStyle}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="2*"/>
                 <DataGridTextColumn Header="Category Name" Binding="{Binding CategoryName}"  Width="4*"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <Grid 
+                 Margin="10,50,8,8"
+                 Width="600" 
+                 Height="400"
+                 Visibility="{Binding Visibility}"
+                 Background="#5366a2">
+            
+            <TextBlock 
+                 TextWrapping="Wrap"  
+                 FontSize="40"
+                 Text="Server is offline"
+                 Foreground="AliceBlue"
+                 TextAlignment="Center"
+                 HorizontalAlignment="Center" 
+                 VerticalAlignment="Center"
+             />
+        </Grid>
     </Grid>
 </UserControl>

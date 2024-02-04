@@ -21,5 +21,22 @@
             </DataGrid.Columns>
 
         </DataGrid>
+        <Grid 
+             Margin="10,50,8,8"
+             Width="600" 
+             Height="400"
+             Visibility="{Binding Visibility}"
+             Background="#5366a2">
+
+                <TextBlock 
+                     TextWrapping="Wrap"  
+                     FontSize="40"
+                     Text="Server is offline"
+                     Foreground="AliceBlue"
+                     TextAlignment="Center"
+                     HorizontalAlignment="Center" 
+                     VerticalAlignment="Center"
+                 />
+        </Grid>
     </Grid>
 </UserControl>
