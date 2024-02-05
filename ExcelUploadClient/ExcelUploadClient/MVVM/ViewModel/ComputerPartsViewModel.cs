@@ -10,6 +10,7 @@ using Newtonsoft.Json.Linq;
 using System.Configuration;
 using System.Windows;
 using System.Net.Http;
+using System.Windows.Controls;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
@@ -48,6 +49,20 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
         }
 
+        private Visibility progresBarVisibility = Visibility.Visible;
+        public Visibility ProgresBarVisibility
+        {
+            get { return progresBarVisibility; }
+            set
+            {
+                if (progresBarVisibility != value)
+                {
+                    progresBarVisibility = value;
+                    OnPropertyChanged(nameof(progresBarVisibility));
+                }
+            }
+        }
+
         public ObservableCollection<ComputerPart> ComputerParts
         {
             get { return computerParts; }
@@ -72,17 +87,21 @@ namespace ExcelUploadClient.MVVM.ViewModel
         {
             Visibility = Visibility.Hidden;
             try
-            {                      
+            {  
                 DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllComputerPartsEndPoint);
                 ComputerParts = ConvertDataTableToComputerParts(dataTable);
+                ProgresBarVisibility = Visibility.Hidden;
+              
             }
             catch (HttpRequestException)
             {
+               
                 // Az HTTP kérés hiba, tehát a szerver nem érhető el
                 ShowErrorMessage("A szerver jelenleg nem elérhető. Kérlek próbáld újra később.");
             }
             catch (Exception ex)
             {
+                
                 // Bármilyen más hiba esetén
                 ShowErrorMessage($"Hiba történt a kérés során: {ex.Message}");
             }
@@ -90,7 +109,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         private void ShowErrorMessage(string message)
         {
-
+            ProgresBarVisibility = Visibility.Hidden;
             Visibility = Visibility.Visible;
             ErrorMessageText = message;
         }
@@ -116,5 +135,6 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
             return computerParts;
         }
+
     }
 }

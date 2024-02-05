@@ -18,6 +18,13 @@
                 <DataGridTextColumn Header="Webshop URL" Binding="{Binding WebshopURL}"  Width="4*"/>
             </DataGrid.Columns>
         </DataGrid>
+        <ProgressBar HorizontalAlignment="Center" 
+             Height="40" 
+             VerticalAlignment="Center" 
+             Width="454"
+             Foreground="#5366a2"
+             IsIndeterminate="True" 
+             Visibility="{Binding ProgresBarVisibility}"/>
         <Grid 
              Margin="10,50,8,8"
              Width="600" 

@@ -51,6 +51,20 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
         }
 
+        private Visibility progresBarVisibility = Visibility.Visible;
+        public Visibility ProgresBarVisibility
+        {
+            get { return progresBarVisibility; }
+            set
+            {
+                if (progresBarVisibility != value)
+                {
+                    progresBarVisibility = value;
+                    OnPropertyChanged(nameof(progresBarVisibility));
+                }
+            }
+        }
+
         public ObservableCollection<ComputerPartCategory> Categories
         {
             get { return categories; }
@@ -79,6 +93,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             {
                 DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllCategoriesEndPoint);
                 Categories = ConvertDataTableToCategories(dataTable);
+                ProgresBarVisibility = Visibility.Hidden;
             }
             catch (HttpRequestException)
             {
@@ -94,7 +109,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         private void ShowErrorMessage(string message)
         {
-
+            ProgresBarVisibility = Visibility.Hidden;
             Visibility = Visibility.Visible;
             ErrorMessageText = message;
         }
