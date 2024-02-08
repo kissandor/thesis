@@ -7,5 +7,5 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {2}Fejezet címe}{9}{chapter.2}%
 \select@language {magyar} \contentsline {section}{\numberline {2.1}Szakasz címe}{9}{section.2.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Alszakasz címe}{9}{subsection.2.1.1}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{10}{chapter*.8}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{11}{chapter*.9}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{10}{chapter*.9}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{11}{chapter*.10}%
