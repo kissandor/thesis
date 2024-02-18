@@ -1,0 +1,32 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Placeholder&Sequence_20",
+        "ui_SearchUiElement&Sequence_6",
+        "bool_IsSearchFiledFound&Sequence_6",
+        "str_CurrentAttributeValue&Sequence_8",
+        "ui_SearchInput&Sequence_6",
+        "ui_InputFileds&Sequence_6",
+        "db_ConnectionString&Sequence_1",
+        "dt_ComputerParts&Sequence_1",
+        "str_ComputerPartsQuery&Sequence_1",
+        "str_WebShopQuery&Sequence_1",
+        "dt_WebShops&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
