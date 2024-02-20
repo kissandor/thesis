@@ -1,11 +1,13 @@
 \select@language {magyar} \contentsline {chapter}{Bevezetés}{3}{chapter*.2}%
 \select@language {magyar} \contentsline {chapter}{\numberline {1}Választott technológiák bemutatása}{5}{chapter.1}%
-\select@language {magyar} \contentsline {section}{\numberline {1.1}UiPath}{5}{section.1.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.1} UiPath Studio}{6}{subsection.1.1.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.2} UiPath Orchestrator}{7}{subsection.1.1.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.1.3} UiPath Robot}{8}{subsection.1.1.3}%
-\select@language {magyar} \contentsline {chapter}{\numberline {2}Fejezet címe}{9}{chapter.2}%
-\select@language {magyar} \contentsline {section}{\numberline {2.1}Szakasz címe}{9}{section.2.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Alszakasz címe}{9}{subsection.2.1.1}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{10}{chapter*.9}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{11}{chapter*.10}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}.NET Keretrendszer}{5}{section.1.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.2}Entity Framework}{6}{section.1.2}%
+\select@language {magyar} \contentsline {section}{\numberline {1.3}UiPath}{6}{section.1.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.1} UiPath Studio}{6}{subsection.1.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.2} UiPath Orchestrator}{7}{subsection.1.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.3.3} UiPath Robot}{8}{subsection.1.3.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Megoldás}{10}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Szakasz címe}{10}{section.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Alszakasz címe}{10}{subsection.2.1.1}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{11}{chapter*.9}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{12}{chapter*.10}%
