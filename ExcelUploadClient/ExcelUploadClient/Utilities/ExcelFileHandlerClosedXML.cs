@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExcelUploadClient.Utilities
 {
-    internal class ExcelFileHandler
+    internal class ExcelFileHandlerClosedXML
     {
         public static DataTable ReadExcelFile(string filePath, int sheetNumber)
         {

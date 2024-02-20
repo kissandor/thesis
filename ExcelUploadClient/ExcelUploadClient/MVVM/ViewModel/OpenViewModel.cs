@@ -117,9 +117,9 @@ namespace ExcelUploadClient.MVVM.ViewModel
                 dtParts = new DataTable();
                 dtCategory = new DataTable();
                 dtWebshop = new DataTable();
-                dtParts = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 1));
-                dtCategory = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 2));
-                dtWebshop = await Task.Run(() => ExcelFileHandler.ReadExcelFile(selectedFilePath, 3));
+                dtParts = await Task.Run(() => ExcelFileHandlerInterop.ReadExcelFile(selectedFilePath, 1));
+                dtCategory = await Task.Run(() => ExcelFileHandlerInterop.ReadExcelFile(selectedFilePath, 2));
+                dtWebshop = await Task.Run(() => ExcelFileHandlerInterop.ReadExcelFile(selectedFilePath, 3));
 
             }
         } 
