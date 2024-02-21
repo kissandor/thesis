@@ -3,7 +3,7 @@
     <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1084.8,4169.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,2115.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -122,7 +122,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="The robot retrieves information about products and webshops from the database.&#xA;It navigates to the websites and searches for the specified products.&#xA;The robot saves the search results back into the database.&#xA;" DisplayName="PriceComparisonBot" sap:VirtualizedContainerService.HintSize="1095.2,4104.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="The robot retrieves information about products and webshops from the database.&#xA;It navigates to the websites and searches for the specified products.&#xA;The robot saves the search results back into the database.&#xA;" DisplayName="PriceComparisonBot" sap:VirtualizedContainerService.HintSize="708,2050.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_ConnectionString" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_WebShops" />
@@ -136,7 +136,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Sequence to &#xA;- connect the database&#xA;- retreve data from database&#xA;- disconect from databas " DisplayName="Database Sequence" sap:VirtualizedContainerService.HintSize="1032.8,83.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Sequence to &#xA;- connect the database&#xA;- retreve data from database&#xA;- disconect from databas " DisplayName="Database Sequence" sap:VirtualizedContainerService.HintSize="645.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -220,7 +220,7 @@
         </ui:DatabaseDisconnect.DatabaseConnection>
       </ui:DatabaseDisconnect>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Sequence to:&#xA; - visit webshops listed in dt_WebShops datatable&#xA; - find the search input filed&#xA; - type the copmputer part names listed in the dt_ComputerParts datatable" DisplayName="Sequence for Searching in The Webshops" sap:VirtualizedContainerService.HintSize="1032.8,3869.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Sequence to:&#xA; - visit webshops listed in dt_WebShops datatable&#xA; - find the search input filed&#xA; - type the copmputer part names listed in the dt_ComputerParts datatable" DisplayName="Sequence for Searching in The Webshops" sap:VirtualizedContainerService.HintSize="645.6,1815.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -228,25 +228,25 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in dt_Webshop Datatable" sap:VirtualizedContainerService.HintSize="970.4,3757.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in dt_Webshop Datatable" sap:VirtualizedContainerService.HintSize="583.2,1703.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="936.8,3569.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="549.6,1515.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Edge Browser to visit all websites" sap:VirtualizedContainerService.HintSize="893.6,3480" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="1f15d68f-60a7-4bb5-b9cd-c9effa7729e3" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Edge Browser to visit all websites" sap:VirtualizedContainerService.HintSize="506.4,1425.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="1f15d68f-60a7-4bb5-b9cd-c9effa7729e3" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="860,3263.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472.8,1208.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="ui:UiElement" Name="ui_SearchInput" />
                         <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_InputFileds" />
@@ -258,7 +258,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:FindChildren DisplayName="Find All Input UiElement" Filter="&lt;webctrl tag='INPUT'/&gt;" sap:VirtualizedContainerService.HintSize="797.6,86.4" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+                      <ui:FindChildren DisplayName="Find All Input UiElement" Filter="&lt;webctrl tag='INPUT' type='text'/&gt;" sap:VirtualizedContainerService.HintSize="410.4,86.4" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
                         <ui:FindChildren.Children>
                           <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                             <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">ui_InputFileds</CSharpReference>
@@ -281,22 +281,24 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FindChildren>
-                      <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each To Find The Search Input Filed" sap:VirtualizedContainerService.HintSize="797.6,1012" sap2010:WorkflowViewState.IdRef="ForEach`1_11">
+                      <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="- Looping through all input filed&#xA;-  check if the placeholder, name or data-testid attribute contains the &quot;search&quot; string&#xA;- if yes, save the UiElement into a ui_SearchUiElement variable" DisplayName="For Each To Find The Search Input Filed" sap:VirtualizedContainerService.HintSize="410.4,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_11">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="ui:UiElement">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentInputField" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="543.2,824" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="589.6,1062.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
                               <Sequence.Variables>
-                                <Variable x:TypeArguments="x:String" Name="str_Placeholder" />
+                                <Variable x:TypeArguments="x:String" Name="str_PlaceholderAttribute" />
+                                <Variable x:TypeArguments="x:String" Name="str_NameAttribute" />
+                                <Variable x:TypeArguments="x:String" Name="str_DatatestIdAttribute" />
                               </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="placeholder" DisplayName="Get Attribute - Placeholder " sap:VirtualizedContainerService.HintSize="500,188" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Version="V3">
+                              <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="placeholder" DisplayName="Get Attribute - Placeholder " sap:VirtualizedContainerService.HintSize="546.4,52.8" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Version="V3">
                                 <uix:NGetAttributeGeneric.InUiElement>
                                   <InArgument x:TypeArguments="ui:UiElement">
                                     <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_125">currentInputField</CSharpValue>
@@ -304,38 +306,103 @@
                                 </uix:NGetAttributeGeneric.InUiElement>
                                 <uix:NGetAttributeGeneric.Result>
                                   <OutArgument x:TypeArguments="x:String">
-                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">str_Placeholder</CSharpReference>
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">str_PlaceholderAttribute</CSharpReference>
                                   </OutArgument>
                                 </uix:NGetAttributeGeneric.Result>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
                               </uix:NGetAttributeGeneric>
-                              <ui:IfElseIf DisplayName="Else If - Placeholder Contains Search" sap:VirtualizedContainerService.HintSize="500,506.4" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                              <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="name" DisplayName="Get Attribute - Name" sap:VirtualizedContainerService.HintSize="546.4,52.8" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Version="V3">
+                                <uix:NGetAttributeGeneric.InUiElement>
+                                  <InArgument x:TypeArguments="ui:UiElement">
+                                    <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_132">currentInputField</CSharpValue>
+                                  </InArgument>
+                                </uix:NGetAttributeGeneric.InUiElement>
+                                <uix:NGetAttributeGeneric.Result>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">str_NameAttribute</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetAttributeGeneric.Result>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetAttributeGeneric>
+                              <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="data-testid" DisplayName="Get Attribute - Data-TestId" sap:VirtualizedContainerService.HintSize="546.4,52.8" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Version="V3">
+                                <uix:NGetAttributeGeneric.InUiElement>
+                                  <InArgument x:TypeArguments="ui:UiElement">
+                                    <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_133">currentInputField</CSharpValue>
+                                  </InArgument>
+                                </uix:NGetAttributeGeneric.InUiElement>
+                                <uix:NGetAttributeGeneric.Result>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">str_DatatestIdAttribute</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetAttributeGeneric.Result>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetAttributeGeneric>
+                              <ui:IfElseIf DisplayName="Else If - Placeholder Contains Search" sap:VirtualizedContainerService.HintSize="546.4,694.4" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
                                 <ui:IfElseIf.ConditionBlocks>
                                   <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                     <ui:IfElseIfBlock BlockType="If">
                                       <ui:IfElseIfBlock.Condition>
                                         <InArgument x:TypeArguments="x:Boolean">
-                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_131">str_Placeholder.ToLower().Contains("search") || str_Placeholder.ToLower().Contains("looking for")</CSharpValue>
+                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_134" xml:space="preserve">str_PlaceholderAttribute.ToLower().Contains("search") || 
+str_PlaceholderAttribute.ToLower().Contains("looking for") ||
+str_NameAttribute.ToLower().Contains("search") ||
+str_DatatestIdAttribute.ToLower().Contains("search")</CSharpValue>
                                         </InArgument>
                                       </ui:IfElseIfBlock.Condition>
                                       <ui:IfElseIfBlock.Then>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,310.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,496.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,198.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="Found you" Version="V3">
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,198.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="Found you" Version="V3">
                                             <uix:NTypeInto.InUiElement>
                                               <InArgument x:TypeArguments="ui:UiElement">
                                                 <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_129">currentInputField</CSharpValue>
                                               </InArgument>
                                             </uix:NTypeInto.InUiElement>
                                           </uix:NTypeInto>
+                                          <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="ui:UiElement">
+                                                <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">ui_SearchUiElement</CSharpReference>
+                                              </OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="ui:UiElement">
+                                                <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_135">currentInputField</CSharpValue>
+                                              </InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <ui:Break sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="Break_3" />
                                         </Sequence>
                                       </ui:IfElseIfBlock.Then>
                                     </ui:IfElseIfBlock>
                                   </sc:BindingList>
                                 </ui:IfElseIf.ConditionBlocks>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
                               </ui:IfElseIf>
                             </Sequence>
                           </ActivityAction>
@@ -345,28 +412,96 @@
                             <CSharpValue x:TypeArguments="sc1:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">ui_InputFileds</CSharpValue>
                           </InArgument>
                         </ui:ForEach.Values>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEach>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="797.6,1878.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in ComputerParts Data Table" sap:VirtualizedContainerService.HintSize="410.4,688.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                        <ui:ForEachRow.Body>
+                          <ActivityAction x:TypeArguments="sd:DataRow">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,500.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,234.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Version="V3">
+                                <uix:NTypeInto.InUiElement>
+                                  <InArgument x:TypeArguments="ui:UiElement">
+                                    <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_136">ui_SearchUiElement</CSharpValue>
+                                  </InArgument>
+                                </uix:NTypeInto.InUiElement>
+                                <uix:NTypeInto.Text>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_138">CurrentRow["ComputerPartName"].ToString()</CSharpValue>
+                                  </InArgument>
+                                </uix:NTypeInto.Text>
+                                <uix:NTypeInto.VerifyOptions>
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
+                                </uix:NTypeInto.VerifyOptions>
+                              </uix:NTypeInto>
+                              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="333.6,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                <ui:SendHotkey.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="97448bb0-a032-4e11-8783-3eefa5e9e073">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:SendHotkey.Target>
+                              </ui:SendHotkey>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEachRow.Body>
+                        <ui:ForEachRow.DataTable>
+                          <InArgument x:TypeArguments="sd:DataTable">
+                            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_137">dt_ComputerParts</CSharpValue>
+                          </InArgument>
+                        </ui:ForEachRow.DataTable>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ForEachRow>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="410.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                         <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="762.4,1800" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="762.4,950.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="- Loop through all input fileds&#xA;- Loop through all attributes of each input filed" DisplayName="For Each to Identify The Search Input Fild" sap:VirtualizedContainerService.HintSize="700,1688" sap2010:WorkflowViewState.IdRef="ForEach`1_10">
+                            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="- Loop through all input fileds&#xA;- Loop through all attributes of each input filed" DisplayName="For Each to Identify The Search Input Fild" sap:VirtualizedContainerService.HintSize="700,838.4" sap2010:WorkflowViewState.IdRef="ForEach`1_10">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="ui:UiElement">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="CurrentInputField" />
                                   </ActivityAction.Argument>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="666.4,1500" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="666.4,650.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - To Find The &quot;Search&quot; Text In Any Attribute" sap:VirtualizedContainerService.HintSize="623.2,1037.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+                                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - To Find The &quot;Search&quot; Text In Any Attribute" sap:VirtualizedContainerService.HintSize="623.2,188" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
                                       <ui:ForEach.Body>
                                         <ActivityAction x:TypeArguments="x:String">
                                           <ActivityAction.Argument>
@@ -509,12 +644,12 @@
                         </ui:CommentOut.Body>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:CommentOut>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="797.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="410.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                         <ui:CommentOut.Body>
                           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,310.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
                             <sap:WorkflowViewStateService.ViewState>

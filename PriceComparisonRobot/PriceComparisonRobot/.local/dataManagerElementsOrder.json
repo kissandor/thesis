@@ -12,7 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_Placeholder&Sequence_20",
+        "str_NameAttribute&Sequence_20",
+        "str_PlaceholderAttribute&Sequence_20",
+        "str_DatatestIdAttribute&Sequence_20",
         "ui_SearchUiElement&Sequence_6",
         "bool_IsSearchFiledFound&Sequence_6",
         "str_CurrentAttributeValue&Sequence_8",
