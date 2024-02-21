@@ -3,12 +3,13 @@
 \select@language {magyar} \contentsline {section}{\numberline {1.1}.NET Keretrendszer}{5}{section.1.1}%
 \select@language {magyar} \contentsline {section}{\numberline {1.2}Entity Framework}{6}{section.1.2}%
 \select@language {magyar} \contentsline {section}{\numberline {1.3}Windows Presentation Foundation}{6}{section.1.3}%
-\select@language {magyar} \contentsline {section}{\numberline {1.4}UiPath}{7}{section.1.4}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.4.1} UiPath Studio}{7}{subsection.1.4.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.4.2} UiPath Orchestrator}{8}{subsection.1.4.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.4.3} UiPath Robot}{9}{subsection.1.4.3}%
-\select@language {magyar} \contentsline {chapter}{\numberline {2}Megoldás}{11}{chapter.2}%
-\select@language {magyar} \contentsline {section}{\numberline {2.1}Szakasz címe}{11}{section.2.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Alszakasz címe}{11}{subsection.2.1.1}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{12}{chapter*.10}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{13}{chapter*.11}%
+\select@language {magyar} \contentsline {section}{\numberline {1.4}MVVM (Model-View-ViewModel)}{7}{section.1.4}%
+\select@language {magyar} \contentsline {section}{\numberline {1.5}UiPath}{8}{section.1.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.5.1} UiPath Studio}{8}{subsection.1.5.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.5.2} UiPath Orchestrator}{9}{subsection.1.5.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.5.3} UiPath Robot}{10}{subsection.1.5.3}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Megoldás}{12}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Szakasz címe}{12}{section.2.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Alszakasz címe}{12}{subsection.2.1.1}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{13}{chapter*.10}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{14}{chapter*.11}%

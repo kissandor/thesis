@@ -73,7 +73,24 @@ A Windows Presentation Foundation (WPF) egy grafikus felhasználói interfész (
 	\item \textbf{Stílusok és Sablonok (Styles and Templates):} A WPF lehetővé teszi a felhasználói interfész elemeinek stílusainak és sablonjainak egyszerű definiálását és alkalmazását. Ez segíti a dizájn egységesítését és az alkalmazások testreszabhatóságát.
 	\item \textbf{Vektorgrafika és Animációk:} A WPF támogatja a vektorgrafikát, amely lehetővé teszi a skálázható és magas felbontású grafikai elemek használatát. Emellett a keretrendszer könnyen kezeli az animációkat is.
 \end{itemize}
+\section{MVVM (Model-View-ViewModel)}
+Az MVVM egy olyan tervezési minta, amelyenek célja az alkalmazások strukturáltabbá tétele és könnyebb karbantarthatósága. A nevét a három fő komponensének nevéből kapta:
+\begin{itemize}
+	
+	\item \textbf{Model:} A Model reprezentálja az alkalmazás üzleti logikáját és adatelérési rétegét. Ez a rész felelős az adatok kezeléséért és az üzleti szabályok végrehajtásáért.
 
+	\item \textbf{View:} A View felelős a felhasználói felület megjelenítéséért. Ez a rész megjeleníti az adatokat és érzékeli a felhasználói interakciókat.
+
+	\item \textbf{ViewModel:} A ViewModel egy köztes réteg a Model és a View között. Feladata a felhasználói felület és az üzleti logika közötti kapcsolat fenntartása. A ViewModel feldolgozza a felhasználói interakciókat a View-tól, valamint frissíti a View-t az adatokból, amelyeket a Modelből kap. A ViewModel segítségével az alkalmazás jól elkülöníthető módon oszlik meg, ami könnyebb tesztelést és karbantarthatóságot eredményez.
+\end{itemize}
+	Az MVVM használatával az alkalmazás könnyebben bővíthető és karbantartható, és lehetőséget ad az egységtesztelésre is. A WPF keretrendszer kifejezetten támogatja az MVVM tervezési mintát, és adatakötegelési mechanizmusokat kínál a Model és a ViewModel közötti adatkommunikáció egyszerűsítésére.
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=12cm]{mvvm}
+		\caption{Az MVVM modell}\
+		\label{picture-mvvm}
+	\end{figure}
+	
 \section{UiPath}
 UiPath története 2005-re nyúlik vissza, ekkor alapította meg a DeskOver vállalatot Daniel Dines és Marius Tirca egy bukaresti lakásban. Kezdetben szoftverautomatizációs eszközöket és fejlesztői készleteket hoztak létre olyan neves cégek számára, mint az IBM, a Google és a Microsoft, akik ezeket beépítették saját termékeikbe. 
 
