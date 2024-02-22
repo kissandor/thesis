@@ -4,7 +4,7 @@
   </x:Members>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>900,2026.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>756,1961.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -124,9 +124,10 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PriceComparisonBot" sap:VirtualizedContainerService.HintSize="766.4,1961.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PriceComparisonBot" sap:VirtualizedContainerService.HintSize="766.4,1896.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_ConnectionString" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_WebShops" />
@@ -156,7 +157,7 @@
         </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence sap2010:Annotation.AnnotationText="Sequence to:&#xA; - visit webshops listed in dt_WebShops datatable&#xA; - find the search input filed&#xA; - type the copmputer part names listed in the dt_ComputerParts datatable" DisplayName="Sequence for Searching in The Webshops" sap:VirtualizedContainerService.HintSize="704,1719.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Sequence to:&#xA; - visit webshops listed in dt_WebShops datatable&#xA; - find the search input filed&#xA; - type the copmputer part names listed in the dt_ComputerParts datatable" DisplayName="Sequence for Searching in The Webshops" sap:VirtualizedContainerService.HintSize="704,1654.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -164,25 +165,25 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in dt_Webshop Datatable" sap:VirtualizedContainerService.HintSize="641.6,1607.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in dt_Webshop Datatable" sap:VirtualizedContainerService.HintSize="641.6,1542.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,1418.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,1353.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Edge Browser to visit all websites" sap:VirtualizedContainerService.HintSize="545.6,1332" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="1f15d68f-60a7-4bb5-b9cd-c9effa7729e3" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Edge Browser to visit all websites" sap:VirtualizedContainerService.HintSize="545.6,1267.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="1f15d68f-60a7-4bb5-b9cd-c9effa7729e3" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1092" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1027.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="ui:UiElement" Name="ui_SearchInput" />
                         <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_InputFileds" />
@@ -356,19 +357,19 @@ str_DatatestIdAttribute.ToLower().Contains("search")</CSharpValue>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEach>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in ComputerParts Data Table" sap:VirtualizedContainerService.HintSize="449.6,614.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in ComputerParts Data Table" sap:VirtualizedContainerService.HintSize="449.6,549.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,408.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,344" sap2010:WorkflowViewState.IdRef="Sequence_23">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,274.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,257.6" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Version="V3">
                                 <uix:NTypeInto.InUiElement>
                                   <InArgument x:TypeArguments="ui:UiElement">
                                     <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_136">ui_SearchUiElement</CSharpValue>
@@ -390,7 +391,6 @@ str_DatatestIdAttribute.ToLower().Contains("search")</CSharpValue>
                                   </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <ui:RefreshBrowser Browser="{x:Null}" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1" />
                             </Sequence>
                           </ActivityAction>
                         </ui:ForEachRow.Body>
