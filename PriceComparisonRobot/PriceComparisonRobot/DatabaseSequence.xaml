@@ -97,7 +97,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Sequence to &#xA;- connect to the database&#xD;&#xA;- retrieve data from the database&#xD;&#xA;- save retrieved data to datatable&#xA;- disconect from databas " DisplayName="Sequence for Database Connection" sap:VirtualizedContainerService.HintSize="515.2,772" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Sequence to &#xA;- connect to the database&#xA;- retrieve data from the database&#xA;- save retrieved data to datatable&#xA;- disconect from databas " DisplayName="Sequence for Database Connection" sap:VirtualizedContainerService.HintSize="515.2,772" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -116,7 +116,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Sequence to&#xD;&#xA;- connect to the database&#xD;&#xA;- retrieve data from the database&#xD;&#xA;- save retrieved data to datatable" DisplayName="DatabaseSequence" sap:VirtualizedContainerService.HintSize="416,428.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Sequence to&#xA;- connect to the database&#xA;- retrieve data from the database&#xA;- save retrieved data to datatable" DisplayName="DatabaseSequence" sap:VirtualizedContainerService.HintSize="416,428.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,7 +138,7 @@
               </OutArgument>
             </ui:DatabaseConnect.DatabaseConnection>
           </ui:DatabaseConnect>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the webshop table and save it to t he WebShops data table" CommandType="Text" DisplayName="Run query retreve information from WebShops table" sap:VirtualizedContainerService.HintSize="353.6,129.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the webshop table and save it to t he WebShops data table" CommandType="Text" DisplayName="Run query retrieve information from WebShops table" sap:VirtualizedContainerService.HintSize="353.6,129.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
             <ui:ExecuteQuery.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_WebShops</CSharpReference>
@@ -165,7 +165,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExecuteQuery>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the ComputerParts table and save it to t he CompuetrParts data table" CommandType="Text" DisplayName="Run query retreve information from ComputerParts table" sap:VirtualizedContainerService.HintSize="353.6,112.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2">
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the ComputerParts table and save it to t he CompuetrParts data table" CommandType="Text" DisplayName="Run query retrieve information from ComputerParts table" sap:VirtualizedContainerService.HintSize="353.6,112.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2">
             <ui:ExecuteQuery.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_ComputerParts</CSharpReference>

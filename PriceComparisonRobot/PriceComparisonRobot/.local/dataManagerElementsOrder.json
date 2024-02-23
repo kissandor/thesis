@@ -12,14 +12,18 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_NameAttribute&Sequence_20",
+        "ui_SearchUiElement&Sequence_4",
+        "ui_SearchInput&Sequence_20",
+        "str_PlaceholderAttribute&Sequence_26",
+        "str_NameAttribute&Sequence_26",
+        "str_DatatestIdAttribute&Sequence_26",
         "str_PlaceholderAttribute&Sequence_20",
+        "str_NameAttribute&Sequence_20",
         "str_DatatestIdAttribute&Sequence_20",
-        "ui_SearchUiElement&Sequence_6",
+        "ui_InputFileds&Sequence_2",
+        "Browser&Sequence_2",
         "bool_IsSearchFiledFound&Sequence_6",
         "str_CurrentAttributeValue&Sequence_8",
-        "ui_SearchInput&Sequence_6",
-        "ui_InputFileds&Sequence_6",
         "db_ConnectionString&Sequence_1",
         "dt_ComputerParts&Sequence_1",
         "str_ComputerPartsQuery&Sequence_1",
@@ -27,6 +31,40 @@
         "dt_WebShops&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DatabaseSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "db_ConnectionString&TryCatch_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_ComputerParts",
+        "in_ComputerPartsQuery",
+        "out_WebShops",
+        "in_WebShopQuery"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FindSearchInputSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "OpenWebBrowserSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_URL",
+        "out_InputFileds"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
