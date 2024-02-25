@@ -119,7 +119,7 @@ Az árgép robot célja az asztali PC alkatrészek árainak összehasonlítása 
 
 - **Adatbáziskapcsolat**: Először is, a robot csatlakozik az adatbázishoz, és kiolvassa onnan az adatokat. Ez a lépés lehetővé teszi számára az alkatrészek és webshopok információinak előkészítését a webhelyek böngészése és az árak lekérdezése előtt.
 - **Webshopok böngészése**: A robot a tárolt webshopokhoz navigál, és bejárja azokat egyesével. Ez lehetővé teszi számára, hogy elérje a webshopok terméklistáit és készen álljon a termékek árainak lekérdezésére.
-- **Árak lekérdezése**: A robot a webshopokon keresztül keresi meg az egyes termékeket, és lekérdezi az áraikat. Ehhez valószínűleg web scraping technológiát alkalmaz, hogy megszerezze az árinformációkat.
+- **Árak lekérdezése**: A robot a webshopokon keresztül keresi meg az egyes termékeket, és lekérdezi az áraikat. 
 - **Adatok mentése az adatbázisba**: Miután a robot sikeresen lekérdezte az árakat, azokat az adatokat az adatbázisba menti. Ez lehetővé teszi az árak összehasonlítását és a további riportok készítését.
 
 ## Technológiák és eszközök
@@ -137,6 +137,7 @@ Az Árgép Robot tesztelése elengedhetetlen a pontos és megbízható működé
 2. **Egyes modulok tesztelése**: Ellenőrizzük az egyes robotmodulok működését, például a webshopok böngészését, az árak lekérdezését és az adatbázisba történő mentést.
 3. **Adatok összehasonlítása**: Összehasonlítjuk az árgép robot által megszerzett árakat a webshopok eredeti áraival, hogy ellenőrizzük az adatok pontosságát.
 4. **Hibajavítás és finomhangolás**: Az esetlegesen felmerülő hibák javítása és az alkalmazás finomhangolása a tesztek során.
+5. **UAT**
 
 A tesztelés során biztosítjuk, hogy az árgép robot megbízhatóan működik és pontos adatokat szolgáltat az adatbázisba.
 
