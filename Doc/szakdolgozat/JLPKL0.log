@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  25 FEB 2024 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  27 FEB 2024 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,57 +651,63 @@ Package pdftex.def Info: mvvm.png  used on input line 89.
 (pdftex.def)             Requested size: 341.43306pt x 261.21257pt.
  [7 <./mvvm.png>] [8] [9] [10] [11]
 2. fejezet.
+<entity diagram.png, id=159, 500.46976pt x 234.8775pt>
+File: entity diagram.png Graphic file (type png)
+<use entity diagram.png>
+Package pdftex.def Info: entity diagram.png  used on input line 173.
+(pdftex.def)             Requested size: 426.79134pt x 200.30984pt.
 [12
 
-] [13
+ <./entity diagram.png>] [13] [14
 
 ]
-<nyilatkozat.pdf, id=168, 597.50829pt x 845.0471pt>
+<nyilatkozat.pdf, id=176, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 185.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 194.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 185.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 194.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<nyilatkozat.pdf, id=171, page=1, 597.50829pt x 845.0471pt>
+<nyilatkozat.pdf, id=179, page=1, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 185.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 194.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 185.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 194.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [14
+ [15
 
 ]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 185.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 194.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 185.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 194.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 185.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 194.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [15 <./nyilatkozat.pdf>] (./JLPKL0.aux)
+ [16 <./nyilatkozat.pdf>]
+(./JLPKL0.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `JLPKL0.out' has not changed.
-(rerunfilecheck)             Checksum: 97486A7AE85607ED2EA3B50FFBE02581;2653.
+(rerunfilecheck)             Checksum: A035AF96A34CAE76043442C123464BF1;2617.
  ) 
 Here is how much of TeX's memory you used:
- 14924 strings out of 474934
- 237523 string characters out of 5763814
+ 14937 strings out of 474934
+ 237803 string characters out of 5763814
  1927801 words of memory out of 5000000
- 36154 multiletter control sequences out of 15000+600000
+ 36165 multiletter control sequences out of 15000+600000
  617673 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,81p,815b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -710,10 +716,10 @@ Here is how much of TeX's memory you used:
 /type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lm
 ri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/texli
 ve/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pfb>
-Output written on JLPKL0.pdf (15 pages, 363251 bytes).
+Output written on JLPKL0.pdf (16 pages, 380356 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

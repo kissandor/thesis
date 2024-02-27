@@ -166,8 +166,17 @@ Az UiPath Robot egy szoftverrobot, mely a számítógépen elvégzi az automatiz
 \item \textbf{Integrálható:} A UiPath Robot könnyen integrálható más üzleti alkalmazásokkal és rendszerekkel, lehetővé téve a szervezetek számára az egységes munkafolyamatok kialakítását.
 \end{itemize}
 \chapter{Megoldás}
-\section{Szakasz címe}
-\subsection{Alszakasz címe}
+\section{Adatbázis}
+Az alkalmazásban nincs szükség sok adat tárolására, csupán a webáruházak nevét, webcímét, illetve a megvásárolni kívánt számítógép alkatrészekhez tartozó alapvető információkat kell eltárolni, illetve kiolvasni.
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=15cm]{entity diagram}
+		\caption{SSMS Adatbázis Diagram}
+		\label{picture-adatbazis}
+	\end{figure}
+Az adatbázis felépítése a az \ref{picture-adatbazis} ábrán látható. A fő táblánk a ComputerParts, mely a megvásárolni kívánt alkatrészek neveit és kategóriáit tartalmazza. Ebbe a táblába kerül majd elmentésre a robot által az alkatrész ára, illetve azt a webshopot, ahol az alkatrészt a legolcsóbban meg lehet vásárolni. Két darab idegenkulcs található meg benne, amelyek a Categories és WebShops táblákra mutatnak.
+Az adatbázisba az adatokat egy asztali alkalmazás segítségével egyszerűen feltölthetjük egy Excel fájlból. Ezt az asztali alkalmazást ExcelToDBLoader-nek neveztem el.
+\section{ExcelToDBLoader}
 
 
 
