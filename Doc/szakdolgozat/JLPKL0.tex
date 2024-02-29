@@ -11,7 +11,7 @@
 \usepackage[T1]{fontenc}
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
-\usepackage{mathtools,amssymb,amsthm,pdfpages}
+\usepackage{mathtools,amssymb,amsthm,pdfpages, listingsutf8, xcolor, caption}
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -19,6 +19,23 @@
 \newtheorem{definicio}[tetel]{Definíció}
 \theoremstyle{remark}
 \newtheorem{megjegyzes}[tetel]{Megjegyzés}
+
+\renewcommand{\lstlistingname}{kód}
+\lstdefinestyle{csharp}{
+	inputencoding=utf8/latin2,
+	language=[Sharp]C,
+	basicstyle=\footnotesize,
+	numbers=left,
+	xleftmargin=1cm,
+	xrightmargin=1cm,
+	breaklines,
+	postbreak=\hbox{$\color{red}\hookrightarrow\ $},
+	backgroundcolor=\color{gray!30},
+	frame=tblr,
+	framesep=3pt,
+	commentstyle=\itshape\color{teal},
+	keywordstyle=\bfseries\color{blue},
+}
 
 \begin{document}
 \institute{Matematikai és Informatikai Intézet}
@@ -176,8 +193,33 @@ Az alkalmazásban nincs szükség sok adat tárolására, csupán a webáruháza
 	\end{figure}
 Az adatbázis felépítése a az \ref{picture-adatbazis} ábrán látható. A fő táblánk a ComputerParts, mely a megvásárolni kívánt alkatrészek neveit és kategóriáit tartalmazza. Ebbe a táblába kerül majd elmentésre a robot által az alkatrész ára, illetve azt a webshopot, ahol az alkatrészt a legolcsóbban meg lehet vásárolni. Két darab idegenkulcs található meg benne, amelyek a Categories és WebShops táblákra mutatnak.
 Az adatbázisba az adatokat egy asztali alkalmazás segítségével egyszerűen feltölthetjük egy Excel fájlból. Ezt az asztali alkalmazást ExcelToDBLoader-nek neveztem el.
-\section{ExcelToDBLoader}
+\subsection{Adatbázis inicializálása}
+Az adatbázis inicializálásához Entity Framework-öt használtam. Az Entity Framework használatakor az adatbázis inicializálását különböző módon lehet elvégezni; választható a Code First, Database First és Model First megközelítés is.
+\subsubsection{Entity}
+Én a Code First megközelítést választottam az adatbázis létrehozására. Ebben a megközelítésben az adatbázis sémát a kód alapján hozzuk létre. Első lépésben létrehoztam három Entity-t, azaz három C\# osztályt melyek reprezentálják az adatbázis táblákat. Az alábbi kódrészlet a ComputerPart Entity kódját mutatja be.
 
+	\lstinputlisting[style=csharp, caption={ComputerPart Entity}, label={kod-ComputerPart}]{ComputerPart.cs}
+Az érdemes megjegyezni, hogy Entity Framework esetén az Id egy speciális property név, amely az elsődleges kulcsot reprezentálja a létrehozandó táblában. Az elsődleges kulcsnak nem feltétlenül kell Id nevet kapnia, de ha más nevet választunk, akkor a property-t el kell látnunk a [Key] attribútummal.
+
+Másik érdekes dolog a = null! kifejezés. A ComputerPart osztályban a ComputerPartName property-nek és a Category property-nek is null! értéket adtam. Ez azt jelenti, hogy a property-knek mindig értéket kell kapniuk, mielőtt a ComputerPart entitást az adatbázisban elmentődik. Ha nem adunk értéket a ComputerPartName és a Category property-knek, akkor az Entity Framework hibát fog dobni.
+
+A = null! kifejezés használata nem kötelező, de előnyökkel jár. Segít megelőzni a hibákat és a nem kívánt viselkedést, ha egy propertynek nem szabad null értéket kapnia. Biztosítja, hogy az adatbázisban tárolt adatok konzisztensek lesznek és javítja a kód olvashatóságát is, mivel egyértelművé teszi, hogy a propertynek mindig értéket kell kapniaxx.
+
+\subsubsection{Database Context osztály}
+A következő lépésben létrehoztam a Database Context osztályt. Ez az osztály az Entity Framework központi eleme, amelynek a DbContext osztályból kell származnia. Felelős a relációs adatbázissal való kapcsolódásért, az objektumok leképezéséért az adatbázisra a Code First megközelítés esetén, felelős a változások nyomon követéséért (change tracking), valamint az adatbázis-migrációk kezeléséért. Ez nemcsak hogy szabványos gyakorlat az Entity Framework alkalmazása során, hanem elengedhetetlen is a hatékony adatbázis-kezeléshez. Az következő kódrészlet a  Database Context osztály kódját mutatja be.
+
+DbSet propertik a különböző adatbázis műveletek elvégzését teszik lehetővé, például adatok lekérdezése, hozzáadása, frissítése vagy törlése.
+
+\lstinputlisting[style=csharp, caption={ExcelUploadContext osztály}, label={kod-ExcelUploadContext}]{ExcelUploadContext.cs}
+Az osztályban található egy paraméter nélküli és egy paraméterezett konstruktor, valamint három DbSet property. 
+
+A paraméterezett konstruktor egy DbContextOptions<ExcelUploadContext> típusú objektumot vár paraméterként. Ez az objektum tartalmazza a konfigurációs beállításokat az adott adatbázis kapcsolathoz.
+
+A három DbSet property (Categories, WebShops, ComputerParts) pedig nem más, mint az adatbázisban lévő táblák reprezentációi. Ezek a property-k teszik lehetővé, hogy a kódban az entitásokon keresztül műveleteket végezek a táblákkal. Erre példa az alábbi kód.
+
+\lstinputlisting[style=csharp, caption={GetAllCategories metódus}, label={kod-GetAllCategories}]{GetAllCategories.cs}
+
+\section{ExcelToDBLoader}
 
 
 \chapter*{Összegzés}
