@@ -191,7 +191,7 @@ Az alkalmazásban nincs szükség sok adat tárolására, csupán a webáruháza
 		\caption{SSMS Adatbázis Diagram}
 		\label{picture-adatbazis}
 	\end{figure}
-Az adatbázis felépítése a az \ref{picture-adatbazis} ábrán látható. A fő táblánk a ComputerParts, mely a megvásárolni kívánt alkatrészek neveit és kategóriáit tartalmazza. Ebbe a táblába kerül majd elmentésre a robot által az alkatrész ára, illetve azt a webshopot, ahol az alkatrészt a legolcsóbban meg lehet vásárolni. Két darab idegenkulcs található meg benne, amelyek a Categories és WebShops táblákra mutatnak.
+Az adatbázis felépítése a az \ref{picture-adatbazis} ábrán látható. A fő táblánk a ComputerParts, mely a megvásárolni kívánt alkatrészek neveit és kategóriáit tartalmazza. Ebbe a táblába kerül majd elmentésre a robot által az alkatrész ára, illetve annak a webshopnak a neve, ahol az alkatrészt a legolcsóbban meg lehet vásárolni. Két darab idegenkulcs található meg benne, amelyek a Categories és WebShops táblákra mutatnak.
 Az adatbázisba az adatokat egy asztali alkalmazás segítségével egyszerűen feltölthetjük egy Excel fájlból. Ezt az asztali alkalmazást ExcelToDBLoader-nek neveztem el.
 \subsection{Adatbázis inicializálása}
 Az adatbázis inicializálásához Entity Framework-öt használtam. Az Entity Framework használatakor az adatbázis inicializálását különböző módon lehet elvégezni; választható a Code First, Database First és Model First megközelítés is.
@@ -199,16 +199,14 @@ Az adatbázis inicializálásához Entity Framework-öt használtam. Az Entity F
 Én a Code First megközelítést választottam az adatbázis létrehozására. Ebben a megközelítésben az adatbázis sémát a kód alapján hozzuk létre. Első lépésben létrehoztam három Entity-t, azaz három C\# osztályt melyek reprezentálják az adatbázis táblákat. Az alábbi kódrészlet a ComputerPart Entity kódját mutatja be.
 
 	\lstinputlisting[style=csharp, caption={ComputerPart Entity}, label={kod-ComputerPart}]{ComputerPart.cs}
-Az érdemes megjegyezni, hogy Entity Framework esetén az Id egy speciális property név, amely az elsődleges kulcsot reprezentálja a létrehozandó táblában. Az elsődleges kulcsnak nem feltétlenül kell Id nevet kapnia, de ha más nevet választunk, akkor a property-t el kell látnunk a [Key] attribútummal.
+Az érdemes megjegyezni, hogy Entity Framework esetén az Id egy speciális property név, amely az elsődleges kulcsot reprezentálja a létrehozandó táblában. Az elsődleges kulcsnak nem feltétlenül kell az Id nevet kapnia, de ha más nevet választunk, akkor a property-t el kell látnunk a \texttt{[Key]} attribútummal.
 
-Másik érdekes dolog a = null! kifejezés. A ComputerPart osztályban a ComputerPartName property-nek és a Category property-nek is null! értéket adtam. Ez azt jelenti, hogy a property-knek mindig értéket kell kapniuk, mielőtt a ComputerPart entitást az adatbázisban elmentődik. Ha nem adunk értéket a ComputerPartName és a Category property-knek, akkor az Entity Framework hibát fog dobni.
+Másik érdekes dolog az \texttt{= null!} kifejezés. A ComputerPart osztályban a ComputerPartName property-nek és a Category property-nek is \texttt{null!} értéket adtam. Ez azt jelenti, hogy a property-knek mindig értéket kell kapniuk, mielőtt a ComputerPart entitás az adatbázisban elmentődik. Ha nem adunk értéket a ComputerPartName és a Category property-knek, akkor az Entity Framework hibát fog dobni.
 
-A = null! kifejezés használata nem kötelező, de előnyökkel jár. Segít megelőzni a hibákat és a nem kívánt viselkedést, ha egy propertynek nem szabad null értéket kapnia. Biztosítja, hogy az adatbázisban tárolt adatok konzisztensek lesznek és javítja a kód olvashatóságát is, mivel egyértelművé teszi, hogy a propertynek mindig értéket kell kapniaxx.
+A \texttt{= null!} kifejezés használata nem kötelező, de előnyökkel jár. Segít megelőzni a hibákat és a nem kívánt viselkedést, hogy ha egy propertynek nem szabad null értéket kapnia. Biztosítja, hogy az adatbázisban tárolt adatok konzisztensek és javítja a kód olvashatóságát is, mivel egyértelművé teszi, hogy a propertynek mindig értéket kell adni.
 
 \subsubsection{Database Context osztály}
 A következő lépésben létrehoztam a Database Context osztályt. Ez az osztály az Entity Framework központi eleme, amelynek a DbContext osztályból kell származnia. Felelős a relációs adatbázissal való kapcsolódásért, az objektumok leképezéséért az adatbázisra a Code First megközelítés esetén, felelős a változások nyomon követéséért (change tracking), valamint az adatbázis-migrációk kezeléséért. Ez nemcsak hogy szabványos gyakorlat az Entity Framework alkalmazása során, hanem elengedhetetlen is a hatékony adatbázis-kezeléshez. Az következő kódrészlet a  Database Context osztály kódját mutatja be.
-
-DbSet propertik a különböző adatbázis műveletek elvégzését teszik lehetővé, például adatok lekérdezése, hozzáadása, frissítése vagy törlése.
 
 \lstinputlisting[style=csharp, caption={ExcelUploadContext osztály}, label={kod-ExcelUploadContext}]{ExcelUploadContext.cs}
 Az osztályban található egy paraméter nélküli és egy paraméterezett konstruktor, valamint három DbSet property. 
@@ -218,6 +216,33 @@ A paraméterezett konstruktor egy DbContextOptions<ExcelUploadContext> típusú 
 A három DbSet property (Categories, WebShops, ComputerParts) pedig nem más, mint az adatbázisban lévő táblák reprezentációi. Ezek a property-k teszik lehetővé, hogy a kódban az entitásokon keresztül műveleteket végezek a táblákkal. Erre példa az alábbi kód.
 
 \lstinputlisting[style=csharp, caption={GetAllCategories metódus}, label={kod-GetAllCategories}]{GetAllCategories.cs}
+
+\subsubsection{Migráció}
+Az Entity osztályok és a Database Context osztály elkészítése után az Entity Framework a migráció segítségével automatikusan elkészíti vagy frissíti az adatbázist. Az adatbázisban lévő táblák az előzőleg elkészített entity osztályok definíciójának megfelelően jönnek létre.
+
+Az \texttt{Add-Migration InitialCreate} konzolos parancs használatával az Entity Framework ellenőrzi az entity osztályokat és létrehozza a megfelelő SQL parancsokat az adatbázis inicializálásához vagy frissítéséhez.
+
+Az \texttt{Update-Database} paranccsal az Entity Framework végrehajtja az előzőleg generált SQL parancsokat, és az adatbázist az entity osztályok definícióinak megfelelően elkészíti vagy frissíti.
+
+Ez a megoldás azért is kényelmes, mert a fejlesztés során az entity osztályokon vagy a Database Context osztályon történő változásokat egy új migráció segítségével nagyon könnyen fel tudom vinni az adatbázisba, ezáltal biztosítani tudom, hogy az adatbázis mindig szinkronban lesz a kód változásaival.	
+\section{Kontroller osztály}
+A kontroller osztályok az ASP.NET Core alkalmazásokban felelősek a kérések fogadásáért és a válaszok kiszolgálásáért. Tehát a kliens a kéréseit a kontroller osztálynak küldi el, és a kontroller osztály válaszol a kérésekre a megfelelő adatokkal vagy válaszkóddal.
+
+Az alkalmazásom szerveroldali logikáját egyetlen vezérlő osztállyal valósítom meg, ez a ComputerPartController osztály. Ez az osztály a ControllerBase osztályból származik, ami biztosítja az alapvető funkciókat a HTTP kérések és válaszok kezeléséhez. Továbbá a ComputerPartController osztály az ExcelUploadContext példányát használja, amit konstruktor alapú dependency injection segítségével kap meg. Ez azt jelenti, hogy a szükséges függőségek az osztály konstruktorán keresztül injektálódnak be. Ez látható az alábbi kódrészletben.
+\lstinputlisting[style=csharp, caption={Dependency injection az ExcelUploadContext példányához}, label={kod-GetAllCategories}]{DependencyInjection.cs}
+
+\subsubsection{HTTP metódusok}
+Az adatbázison végzett műveleteket HTTP metódusok segítségével valósítom meg:
+\begin{itemize}
+	\item \textbf{Create}: A számítógépalkatrészek, kategóriák és webáruházak hozzáadásáért a POST metódusok felelnek meg. A ComputerPartsUpload, CategoryUpload és WebshopUpload metódusok a kliens által küldött adatok alapján új elemeket hoznak létre és mentik azokat az adatbázisba.
+
+	\item \textbf{Read}: Az összes számítógépalkatrész, kategória és webáruház lekérése a GET metódusokkal valósul meg. A GetAllComputerParts, GetAllCategories és GetAllWebShops metódusok a megfelelő entitásokat kérdezik le az adatbázisból és visszaküldik  a kliensnek.
+
+	\item \textbf{Delete}: Az összes számítógépalkatrész, kategória és webáruház törlésére a DELETE metódusok szolgálnak. A DeleteAll metódus az összes entitást törli az adatbázisból.
+\end{itemize}
+
+
+
 
 \section{ExcelToDBLoader}
 
