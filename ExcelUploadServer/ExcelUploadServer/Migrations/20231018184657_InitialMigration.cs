@@ -11,7 +11,7 @@ namespace ExcelUploadServer.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Category",
+                name: "Categories",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -54,7 +54,7 @@ namespace ExcelUploadServer.Migrations
                     table.ForeignKey(
                         name: "FK_ComputerParts_Category_CategoryId",
                         column: x => x.CategoryId,
-                        principalTable: "Category",
+                        principalTable: "Categories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -82,7 +82,7 @@ namespace ExcelUploadServer.Migrations
                 name: "ComputerParts");
 
             migrationBuilder.DropTable(
-                name: "Category");
+                name: "Categories");
 
             migrationBuilder.DropTable(
                 name: "WebShops");

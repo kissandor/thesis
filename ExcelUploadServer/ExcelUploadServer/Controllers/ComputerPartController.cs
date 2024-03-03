@@ -30,49 +30,54 @@ namespace ExcelUploadServer.Controllers
             }
 
             var invalidCategories = new List<string>();
-
-            foreach (var computerPart in computerPartList)
+            try
             {
-                var existingPart = _context.ComputerParts.FirstOrDefault(k => k.ComputerPartName == computerPart.ComputerPartName);
-                var existingCategory = _context.Category.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
-
-                if (existingPart == null && existingCategory != null)
+                foreach (var computerPart in computerPartList)
                 {
-                    ComputerPart cp = new ComputerPart
+                    var existingPart = _context.ComputerParts.FirstOrDefault(k => k.ComputerPartName == computerPart.ComputerPartName);
+                    var existingCategory = _context.Categories.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
+
+                    if (existingPart == null && existingCategory != null)
                     {
-                        ComputerPartName = computerPart.ComputerPartName,
-                        CategoryId = existingCategory.Id
+                        ComputerPart cp = new ComputerPart
+                        {
+                            ComputerPartName = computerPart.ComputerPartName,
+                            CategoryId = existingCategory.Id
+                        };
+
+                        _context.ComputerParts.Add(cp);
+                    }
+                    else if ((existingPart == null && existingCategory == null) || (existingPart != null && existingCategory == null))
+                    {
+                        invalidCategories.Add(computerPart.CategoryName);
+                    }
+                    else
+                    {
+                        //category exist and part exist as well
+                    }
+
+                }
+
+                _context.SaveChanges();
+
+                if (invalidCategories.Any())
+                {
+                    var errorResponse = new
+                    {
+                        Error = "Incorrect categories",
+                        InvalidCategories = invalidCategories
                     };
-                    //_context.Add(cp);
-                    _context.ComputerParts.Add(cp);
+                    return new JsonResult(errorResponse)
+                    {
+                        StatusCode = StatusCodes.Status400BadRequest
+                    };
                 }
-                else if ((existingPart == null && existingCategory == null) || (existingPart != null && existingCategory == null))
-                {
-                    invalidCategories.Add(computerPart.CategoryName);
-                }
-                else
-                {
-                    //category exist and part exist as well
-                }
-                
-            }
 
-            _context.SaveChanges();
-
-            if (invalidCategories.Any())
+                return new JsonResult(Ok());
+            } catch (Exception ex) 
             {
-                var errorResponse = new
-                {
-                    Error = "Incorrect categories",
-                    InvalidCategories = invalidCategories
-                };
-                return new JsonResult(errorResponse)
-                {
-                    StatusCode = StatusCodes.Status400BadRequest
-                };
+                return BadRequestResult("Error during the upload of parts.");
             }
-
-            return new JsonResult(Ok());
         }
 
         [HttpPost]
@@ -82,56 +87,88 @@ namespace ExcelUploadServer.Controllers
             {
                 return BadRequestResult("The category list is empty.");
             }
-
-            foreach (var category in categoryList)
+            try
             {
-                var existingCategory = _context.Category.FirstOrDefault(k => k.CategoryName == category.CategoryName);
-                if (existingCategory == null)
-                    _context.Category.Add(category);
+                foreach (var category in categoryList)
+                {
+                    var existingCategory = _context.Categories.FirstOrDefault(k => k.CategoryName == category.CategoryName);
+                    if (existingCategory == null)
+                        _context.Categories.Add(category);
+                }
+                _context.SaveChanges();
+                return new JsonResult(Ok());
+            } catch (Exception ex) 
+            {
+                return BadRequestResult("Error during the upload of categories.");
             }
-            _context.SaveChanges();
-            return new JsonResult(Ok());
         }
 
         [HttpPost]
-        public JsonResult WebshopUpload(IEnumerable<WebShop> webShopList)
+        public JsonResult WebShopUpload(IEnumerable<WebShop> webShopList)
         {
             if (webShopList == null || !webShopList.Any())
             {
                 return BadRequestResult("The webShop list is empty.");
             }
 
-            foreach (var webShop in webShopList)
+            try
             {
-                var existingWebShop = _context.WebShops.FirstOrDefault(w => w.WebshopName == webShop.WebshopName);
-                if (existingWebShop == null)
-                    _context.Add(webShop);
+                foreach (var webShop in webShopList)
+                {
+                    var existingWebShop = _context.WebShops.FirstOrDefault(w => w.WebShopName == webShop.WebShopName);
+                    if (existingWebShop == null)
+                        _context.Add(webShop);
+                }
+                _context.SaveChanges();
+                return new JsonResult(Ok());
+            } catch (Exception ex) 
+            { 
+                return BadRequestResult("Error during the upload of webshops.");
             }
-            _context.SaveChanges();
-            return new JsonResult(Ok());
         }
 
         //getting all Computerparts from the database
         [HttpGet]
         public JsonResult GetAllComputerParts()
         {
-            var result = _context.ComputerParts.ToList();
-            return new JsonResult(Ok(result));
+            try
+            {
+                var result = _context.ComputerParts.ToList();
+                return new JsonResult(Ok(result));
+            }
+            catch (Exception ex)
+            {
+                return BadRequestResult("Error occurred while retrieving computer parts.");
+            }
         }
 
 
         [HttpGet]
         public JsonResult GetAllCategories()
         {
-            var result = _context.Category.ToList();
-            return new JsonResult(Ok(result));
+            try
+            {
+                var result = _context.Categories.ToList();
+                return new JsonResult(Ok(result));
+            }
+            catch (Exception ex)
+            {
+                return BadRequestResult("Error occurred while retrieving categories.");
+            }
         }
 
         [HttpGet]
         public JsonResult GetAllWebShops()
         {
-            var result = _context.WebShops.ToList();
-            return new JsonResult(Ok(result));
+            try
+            {
+                var result = _context.WebShops.ToList();
+                return new JsonResult(Ok(result));
+            }
+            catch (Exception ex)
+            {
+                return BadRequestResult("Error occurred while retrieving webshops.");
+            }
         }
 
         [HttpDelete]
@@ -141,7 +178,7 @@ namespace ExcelUploadServer.Controllers
             {
                 _context.ComputerParts.RemoveRange(_context.ComputerParts.ToList());
                 _context.SaveChanges();
-                _context.Category.RemoveRange(_context.Category.ToList());
+                _context.Categories.RemoveRange(_context.Categories.ToList());
                 _context.WebShops.RemoveRange(_context.WebShops.ToList());
                 _context.SaveChanges();
                 return new JsonResult("All computer parts have been deleted successfully.")
@@ -151,7 +188,6 @@ namespace ExcelUploadServer.Controllers
             }
             catch (Exception ex)
             {
-                // Hiba esetén hibás válasz küldése
                 return new JsonResult($"Error: {ex.Message}")
                 {
                     StatusCode = StatusCodes.Status500InternalServerError

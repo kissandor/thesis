@@ -25,7 +25,7 @@ namespace ExcelUploadServer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ExcelUploadServer.Models.Category", b =>
+            modelBuilder.Entity("ExcelUploadServer.Models.Categories", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace ExcelUploadServer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ExcelUploadServer.Models.ComputerPart", b =>
@@ -80,11 +80,11 @@ namespace ExcelUploadServer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("WebshopName")
+                    b.Property<string>("WebShopName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("WebshopURL")
+                    b.Property<string>("WebShopURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -95,7 +95,7 @@ namespace ExcelUploadServer.Migrations
 
             modelBuilder.Entity("ExcelUploadServer.Models.ComputerPart", b =>
                 {
-                    b.HasOne("ExcelUploadServer.Models.Category", "Category")
+                    b.HasOne("ExcelUploadServer.Models.Categories", "Categories")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -105,7 +105,7 @@ namespace ExcelUploadServer.Migrations
                         .WithMany()
                         .HasForeignKey("WebshopId");
 
-                    b.Navigation("Category");
+                    b.Navigation("Categories");
 
                     b.Navigation("Webshop");
                 });
