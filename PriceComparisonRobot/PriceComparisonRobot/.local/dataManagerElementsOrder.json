@@ -12,18 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ui_SearchUiElement&Sequence_4",
-        "ui_SearchInput&Sequence_20",
-        "str_PlaceholderAttribute&Sequence_26",
-        "str_NameAttribute&Sequence_26",
-        "str_DatatestIdAttribute&Sequence_26",
-        "str_PlaceholderAttribute&Sequence_20",
-        "str_NameAttribute&Sequence_20",
-        "str_DatatestIdAttribute&Sequence_20",
+        "ui_SearchBarUiElement&Sequence_4",
         "ui_InputFileds&Sequence_2",
         "Browser&Sequence_2",
-        "bool_IsSearchFiledFound&Sequence_6",
-        "str_CurrentAttributeValue&Sequence_8",
         "db_ConnectionString&Sequence_1",
         "dt_ComputerParts&Sequence_1",
         "str_ComputerPartsQuery&Sequence_1",
@@ -52,18 +43,30 @@
     {
       "Path": "FindSearchInputSequence.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str_PlaceholderAttribute&Sequence_2",
+        "str_NameAttribute&Sequence_2",
+        "str_DatatestIdAttribute&Sequence_2",
+        "str_DatatestIdAttribute&Sequence_1",
+        "str_NameAttribute&Sequence_1",
+        "str_PlaceholderAttribute&Sequence_1",
+        "ui_InputFileds&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_SearchBarUiElement"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
     {
-      "Path": "OpenWebBrowserSequence.xaml",
+      "Path": "SearchForProduct.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "resoults&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
-        "in_URL",
-        "out_InputFileds"
+        "in_ComputerPartName",
+        "in_SearchBarUiElement"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
