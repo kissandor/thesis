@@ -12,10 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_AllPrice&Sequence_1",
+        "dt_SearchResult&Sequence_1",
         "ui_SearchBarUiElement&Sequence_4",
-        "ui_InputFileds&Sequence_2",
-        "Browser&Sequence_2",
-        "db_ConnectionString&Sequence_1",
         "dt_ComputerParts&Sequence_1",
         "str_ComputerPartsQuery&Sequence_1",
         "str_WebShopQuery&Sequence_1",
@@ -62,11 +61,31 @@
       "Path": "SearchForProduct.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "resoults&Sequence_1"
+        "dr_DataRow&Sequence_6",
+        "variable1&Sequence_6",
+        "str_Price&Sequence_6",
+        "str_ComputerPartNameWithAsterisks&Sequence_2",
+        "ui_ProductElementsList&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_SerachResult",
         "in_ComputerPartName",
         "in_SearchBarUiElement"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchForPrice.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ui_Parrent&Flowchart_1",
+        "ui_PriceElement&Flowchart_1",
+        "ui_Price&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_ActualPrice",
+        "in_Product"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

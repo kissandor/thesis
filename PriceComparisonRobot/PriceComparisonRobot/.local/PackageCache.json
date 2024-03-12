@@ -8,7 +8,7 @@
       "Assemblies": [
         "C:\\Users\\kissa\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\azure.identity\\1.3.0\\lib/netstandard2.0/Azure.Identity.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.data.sqlclient\\4.1.0\\runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.16.5\\lib/netcoreapp2.1/Microsoft.Identity.Client.Extensions.Msal.dll",
@@ -67,6 +67,57 @@
     },
     {
       "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.22.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.61.0\\lib/netstandard2.0/Google.Apis.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.core\\1.61.0\\lib/netstandard2.0/Google.Apis.Core.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.codedworkflows\\23.10.2\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Office.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.platform\\23.10.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1"
+    },
+    {
+      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "23.12.0-preview"
       },
@@ -83,7 +134,7 @@
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\3.1.6\\lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\3.1.6\\lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\3.1.6\\lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.VisualBasic.dll",
@@ -98,8 +149,6 @@
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.extensions.options\\3.1.6\\lib/netcoreapp3.1/Microsoft.Extensions.Options.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.management.infrastructure.cimcmdlets\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.Management.Infrastructure.CimCmdlets.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.Native.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes/win10-x64/lib/netstandard1.6/Microsoft.Management.Infrastructure.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.powershell.commands.diagnostics\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Diagnostics.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.powershell.commands.management\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Management.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\microsoft.powershell.commands.utility\\7.2.15\\runtimes/win/lib/net6.0/Microsoft.PowerShell.Commands.Utility.dll",
@@ -121,7 +170,6 @@
         "C:\\Users\\kissa\\.nuget\\packages\\system.data.odbc\\6.0.1\\runtimes/win/lib/net6.0/System.Data.Odbc.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\system.data.oledb\\6.0.0\\runtimes/win/lib/net6.0/System.Data.OleDb.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\system.directoryservices.accountmanagement\\6.0.0\\runtimes/win/lib/net6.0/System.DirectoryServices.AccountManagement.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\system.directoryservices.protocols\\6.0.2\\runtimes/win/lib/net6.0/System.DirectoryServices.Protocols.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
@@ -210,72 +258,59 @@
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.Wizards.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.CV.Activities.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.CV.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UIAutomationCore.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.API.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.Contracts.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.API.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/MimeDetective.Definitions.Exhaustive.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/MimeDetective.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/UiPath.Vision.Core.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/UiPath.Vision.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities\\23.12.0-preview"
     },
     {
       "Package": {
-        "Id": "UiPath.Mail.Activities",
-        "Version": "1.22.1"
+        "Id": "UiPath.GSuite.Activities",
+        "Version": "2.5.8"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\azure.core\\1.18.0\\lib/net5.0/Azure.Core.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.55.0\\lib/netstandard2.0/Google.Apis.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.61.0\\lib/netstandard2.0/Google.Apis.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0\\lib/netstandard2.0/Google.Apis.Auth.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0\\lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/netstandard2.0/Google.Apis.Calendar.v3.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/netstandard2.0/Google.Apis.Core.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.core\\1.61.0\\lib/netstandard2.0/Google.Apis.Core.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.docs.v1\\1.55.0.2379\\lib/netstandard2.0/Google.Apis.Docs.v1.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.drive.v3\\1.61.0.3082\\lib/netstandard2.0/Google.Apis.Drive.v3.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.drivelabels.v2\\1.61.0.3079\\lib/netstandard2.0/Google.Apis.DriveLabels.v2.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/netstandard2.0/Google.Apis.Gmail.v1.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/netstandard2.0/Google.Apis.PeopleService.v1.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/netstandard2.0/HtmlAgilityPack.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\mailkit\\3.1.1\\lib/net6.0/MailKit.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.graph\\4.11.0\\lib/netstandard2.0/Microsoft.Graph.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.graph.core\\2.0.5\\lib/netstandard2.0/Microsoft.Graph.Core.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/netcoreapp2.1/Microsoft.Identity.Client.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.script.v1\\1.55.0.2555\\lib/netstandard2.0/Google.Apis.Script.v1.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.sheets.v4\\1.55.0.2371\\lib/netstandard2.0/Google.Apis.Sheets.v4.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\mimekit\\3.1.1\\lib/net6.0/MimeKit.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\nodatime\\2.4.7\\lib/netstandard2.0/NodaTime.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/netstandard2.0/BouncyCastle.Crypto.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20231124.2\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\system.memory.data\\1.0.2\\lib/netstandard2.0/System.Memory.Data.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\system.linq.async\\6.0.1\\lib/net6.0/System.Linq.Async.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib/net6.0/System.Linq.Async.Queryable.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\system.runtime.caching\\6.0.0\\runtimes/win/lib/net6.0/System.Runtime.Caching.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net5.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.codedworkflows\\23.10.2\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.connectionclient\\1.4.8\\lib/net5.0/ConnectionClient.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Interop.Domino.UiPath.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Exchange.WebServices.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Outlook.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/Office.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Api.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.Mail.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1\\lib/net6.0-windows7.0/UiPath.MainSessionServer.Shared.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8\\lib/net6.0-windows7.0/UiPath.GSuite.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8\\lib/net6.0-windows7.0/UiPath.GSuite.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8\\lib/net6.0-windows7.0/UiPath.GSuite.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.platform\\23.10.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.telemetry.client\\1.6.69\\lib/netstandard2.0/TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\uipath.mail.activities\\1.22.1"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8"
     }
   ],
   "Conflicts": [],
@@ -419,25 +454,25 @@
     },
     "Google.Apis": {
       "Id": "Google.Apis",
-      "Version": "1.55.0",
+      "Version": "1.61.0",
       "Dependencies": [
         {
           "Item1": "Google.Apis.Core",
-          "Item2": "[1.55.0, )"
+          "Item2": "[1.61.0, )"
         }
       ]
     },
     "Google.Apis.Auth": {
       "Id": "Google.Apis.Auth",
-      "Version": "1.55.0",
+      "Version": "1.61.0",
       "Dependencies": [
         {
           "Item1": "Google.Apis.Core",
-          "Item2": "[1.55.0, )"
+          "Item2": "[1.61.0, )"
         },
         {
           "Item1": "Google.Apis",
-          "Item2": "[1.55.0, )"
+          "Item2": "[1.61.0, )"
         }
       ]
     },
@@ -457,11 +492,49 @@
     },
     "Google.Apis.Core": {
       "Id": "Google.Apis.Core",
-      "Version": "1.55.0",
+      "Version": "1.61.0",
       "Dependencies": [
         {
           "Item1": "Newtonsoft.Json",
-          "Item2": "[13.0.1, )"
+          "Item2": "[13.0.3, )"
+        }
+      ]
+    },
+    "Google.Apis.Docs.v1": {
+      "Id": "Google.Apis.Docs.v1",
+      "Version": "1.55.0.2379",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.55.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.55.0, )"
+        }
+      ]
+    },
+    "Google.Apis.Drive.v3": {
+      "Id": "Google.Apis.Drive.v3",
+      "Version": "1.61.0.3082",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.61.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.61.0, )"
+        }
+      ]
+    },
+    "Google.Apis.DriveLabels.v2": {
+      "Id": "Google.Apis.DriveLabels.v2",
+      "Version": "1.61.0.3079",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.61.0, )"
         }
       ]
     },
@@ -482,6 +555,34 @@
     "Google.Apis.PeopleService.v1": {
       "Id": "Google.Apis.PeopleService.v1",
       "Version": "1.55.0.2567",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.55.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.55.0, )"
+        }
+      ]
+    },
+    "Google.Apis.Script.v1": {
+      "Id": "Google.Apis.Script.v1",
+      "Version": "1.55.0.2555",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.55.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.55.0, )"
+        }
+      ]
+    },
+    "Google.Apis.Sheets.v4": {
+      "Id": "Google.Apis.Sheets.v4",
+      "Version": "1.55.0.2371",
       "Dependencies": [
         {
           "Item1": "Google.Apis",
@@ -677,7 +778,7 @@
     },
     "Microsoft.Bcl.AsyncInterfaces": {
       "Id": "Microsoft.Bcl.AsyncInterfaces",
-      "Version": "5.0.0",
+      "Version": "6.0.0",
       "Dependencies": []
     },
     "Microsoft.CodeAnalysis.Analyzers": {
@@ -1793,6 +1894,11 @@
       "Version": "4.5.11",
       "Dependencies": []
     },
+    "NodaTime": {
+      "Id": "NodaTime",
+      "Version": "2.4.7",
+      "Dependencies": []
+    },
     "NPOI": {
       "Id": "NPOI",
       "Version": "2.5.5",
@@ -2762,6 +2868,26 @@
         {
           "Item1": "System.Runtime.Extensions",
           "Item2": "[4.3.0, )"
+        }
+      ]
+    },
+    "System.Linq.Async": {
+      "Id": "System.Linq.Async",
+      "Version": "6.0.1",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Bcl.AsyncInterfaces",
+          "Item2": "[6.0.0, )"
+        }
+      ]
+    },
+    "System.Linq.Async.Queryable": {
+      "Id": "System.Linq.Async.Queryable",
+      "Version": "6.0.1",
+      "Dependencies": [
+        {
+          "Item1": "System.Linq.Async",
+          "Item2": "[6.0.1, )"
         }
       ]
     },
@@ -4487,6 +4613,92 @@
         }
       ]
     },
+    "UiPath.GSuite.Activities": {
+      "Id": "UiPath.GSuite.Activities",
+      "Version": "2.5.8",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis.Calendar.v3",
+          "Item2": "[1.55.0.2554, )"
+        },
+        {
+          "Item1": "Google.Apis.Docs.v1",
+          "Item2": "[1.55.0.2379, )"
+        },
+        {
+          "Item1": "Google.Apis.Drive.v3",
+          "Item2": "[1.61.0.3082, )"
+        },
+        {
+          "Item1": "Google.Apis.DriveLabels.v2",
+          "Item2": "[1.61.0.3079, )"
+        },
+        {
+          "Item1": "Google.Apis.Gmail.v1",
+          "Item2": "[1.55.0.2510, )"
+        },
+        {
+          "Item1": "Google.Apis.PeopleService.v1",
+          "Item2": "[1.55.0.2567, )"
+        },
+        {
+          "Item1": "Google.Apis.Script.v1",
+          "Item2": "[1.55.0.2555, )"
+        },
+        {
+          "Item1": "Google.Apis.Sheets.v4",
+          "Item2": "[1.55.0.2371, )"
+        },
+        {
+          "Item1": "Microsoft.Win32.Registry",
+          "Item2": "[5.0.0, )"
+        },
+        {
+          "Item1": "MimeKit",
+          "Item2": "[2.10.0, )"
+        },
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[13.0.3, )"
+        },
+        {
+          "Item1": "NodaTime",
+          "Item2": "[2.4.7, )"
+        },
+        {
+          "Item1": "System.Activities.ViewModels",
+          "Item2": "[1.0.0-20231124.2, )"
+        },
+        {
+          "Item1": "System.ComponentModel.Annotations",
+          "Item2": "[5.0.0, )"
+        },
+        {
+          "Item1": "System.Linq.Async.Queryable",
+          "Item2": "[6.0.1, )"
+        },
+        {
+          "Item1": "System.Security.Cryptography.ProtectedData",
+          "Item2": "[5.0.0, )"
+        },
+        {
+          "Item1": "UiPath.Activities.RuntimeGovernance",
+          "Item2": "[1.1.6, )"
+        },
+        {
+          "Item1": "UiPath.ConnectionClient",
+          "Item2": "[1.4.8, )"
+        },
+        {
+          "Item1": "UiPath.Platform",
+          "Item2": "[23.10.0, )"
+        },
+        {
+          "Item1": "UiPath.Telemetry.Client",
+          "Item2": "[1.5.3, )"
+        }
+      ]
+    },
     "UiPath.ImageProcessing": {
       "Id": "UiPath.ImageProcessing",
       "Version": "23.4.0",
@@ -5015,23 +5227,23 @@
     {
       "Package": {
         "Id": "Google.Apis",
-        "Version": "1.55.0"
+        "Version": "1.61.0"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.55.0\\lib\\netstandard2.0\\Google.Apis.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.61.0\\lib\\netstandard2.0\\Google.Apis.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.55.0"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.61.0"
     },
     {
       "Package": {
         "Id": "Google.Apis.Auth",
-        "Version": "1.55.0"
+        "Version": "1.61.0"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.PlatformServices.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Auth.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0\\lib\\netstandard2.0\\Google.Apis.Auth.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0\\lib\\netstandard2.0\\Google.Apis.Auth.PlatformServices.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.55.0"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0"
     },
     {
       "Package": {
@@ -5046,12 +5258,42 @@
     {
       "Package": {
         "Id": "Google.Apis.Core",
-        "Version": "1.55.0"
+        "Version": "1.61.0"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.core\\1.55.0\\lib\\netstandard2.0\\Google.Apis.Core.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.core\\1.61.0\\lib\\netstandard2.0\\Google.Apis.Core.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.core\\1.55.0"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.core\\1.61.0"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Docs.v1",
+        "Version": "1.55.0.2379"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.docs.v1\\1.55.0.2379\\lib\\netstandard2.0\\Google.Apis.Docs.v1.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.docs.v1\\1.55.0.2379"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Drive.v3",
+        "Version": "1.61.0.3082"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.drive.v3\\1.61.0.3082\\lib\\netstandard2.0\\Google.Apis.Drive.v3.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.drive.v3\\1.61.0.3082"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.DriveLabels.v2",
+        "Version": "1.61.0.3079"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.drivelabels.v2\\1.61.0.3079\\lib\\netstandard2.0\\Google.Apis.DriveLabels.v2.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.drivelabels.v2\\1.61.0.3079"
     },
     {
       "Package": {
@@ -5072,6 +5314,26 @@
         "C:\\Users\\kissa\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib\\netstandard2.0\\Google.Apis.PeopleService.v1.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Script.v1",
+        "Version": "1.55.0.2555"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.script.v1\\1.55.0.2555\\lib\\netstandard2.0\\Google.Apis.Script.v1.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.script.v1\\1.55.0.2555"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Sheets.v4",
+        "Version": "1.55.0.2371"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\google.apis.sheets.v4\\1.55.0.2371\\lib\\netstandard2.0\\Google.Apis.Sheets.v4.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\google.apis.sheets.v4\\1.55.0.2371"
     },
     {
       "Package": {
@@ -5216,12 +5478,12 @@
     {
       "Package": {
         "Id": "Microsoft.Bcl.AsyncInterfaces",
-        "Version": "5.0.0"
+        "Version": "6.0.0"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib\\netstandard2.1\\Microsoft.Bcl.AsyncInterfaces.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\lib\\netstandard2.1\\Microsoft.Bcl.AsyncInterfaces.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0"
     },
     {
       "Package": {
@@ -5522,10 +5784,7 @@
         "Id": "Microsoft.Management.Infrastructure.Runtime.Win",
         "Version": "2.0.0"
       },
-      "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes\\win10-x64\\lib\\netstandard1.6\\Microsoft.Management.Infrastructure.Native.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0\\runtimes\\win10-x64\\lib\\netstandard1.6\\Microsoft.Management.Infrastructure.dll"
-      ],
+      "Assemblies": [],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\2.0.0"
     },
     {
@@ -5827,6 +6086,16 @@
         "C:\\Users\\kissa\\.nuget\\packages\\nlog\\4.5.11\\lib\\netstandard2.0\\NLog.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\nlog\\4.5.11"
+    },
+    {
+      "Package": {
+        "Id": "NodaTime",
+        "Version": "2.4.7"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\nodatime\\2.4.7\\lib\\netstandard2.0\\NodaTime.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\nodatime\\2.4.7"
     },
     {
       "Package": {
@@ -6331,24 +6600,6 @@
     },
     {
       "Package": {
-        "Id": "runtime.win7-x64.runtime.native.System.IO.Compression",
-        "Version": "4.3.0"
-      },
-      "Assemblies": [],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\runtime.win7-x64.runtime.native.system.io.compression\\4.3.0"
-    },
-    {
-      "Package": {
-        "Id": "runtime.win7.System.Private.Uri",
-        "Version": "4.3.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtimes\\win\\lib\\netstandard1.0\\System.Private.Uri.dll"
-      ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0"
-    },
-    {
-      "Package": {
         "Id": "SharpZipLib",
         "Version": "1.3.3"
       },
@@ -6759,6 +7010,26 @@
         "C:\\Users\\kissa\\.nuget\\packages\\system.linq\\4.3.0\\lib\\netstandard1.6\\System.Linq.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\system.linq\\4.3.0"
+    },
+    {
+      "Package": {
+        "Id": "System.Linq.Async",
+        "Version": "6.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\system.linq.async\\6.0.1\\lib\\net6.0\\System.Linq.Async.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\system.linq.async\\6.0.1"
+    },
+    {
+      "Package": {
+        "Id": "System.Linq.Async.Queryable",
+        "Version": "6.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\system.linq.async.queryable\\6.0.1\\lib\\net6.0\\System.Linq.Async.Queryable.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\system.linq.async.queryable\\6.0.1"
     },
     {
       "Package": {
@@ -7563,6 +7834,18 @@
     },
     {
       "Package": {
+        "Id": "UiPath.GSuite.Activities",
+        "Version": "2.5.8"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8\\lib\\net6.0-windows7.0\\UiPath.GSuite.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8\\lib\\net6.0-windows7.0\\UiPath.GSuite.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8\\lib\\net6.0-windows7.0\\UiPath.GSuite.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\uipath.gsuite.activities\\2.5.8"
+    },
+    {
+      "Package": {
         "Id": "UiPath.ImageProcessing",
         "Version": "23.4.0"
       },
@@ -7701,12 +7984,12 @@
       "Assemblies": [
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.CV.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UIAutomationCore.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.API.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.Contracts.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.API.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.12.0-preview"
     },
@@ -7720,9 +8003,9 @@
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\MimeDetective.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\UiPath.Vision.Core.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\UiPath.Vision.dll",
         "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0\\lib\\net6.0-windows7.0\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\uipath.vision\\3.12.0"
     }
