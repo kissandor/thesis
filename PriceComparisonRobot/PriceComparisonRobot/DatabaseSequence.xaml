@@ -6,7 +6,7 @@
     <x:Property Name="out_ComputerParts" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>844,600.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,836.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -97,7 +97,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Sequence to &#xA;- connect to the database&#xA;- retrieve data from the database&#xA;- save retrieved data to datatable&#xA;- disconect from databas " DisplayName="Sequence for Database Connection" sap:VirtualizedContainerService.HintSize="496,489.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Sequence to &#xA;- connect to the database&#xA;- retrieve data from the database&#xA;- save retrieved data to datatable&#xA;- disconect from databas " DisplayName="Sequence for Database Connection" sap:VirtualizedContainerService.HintSize="517.6,772" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -105,7 +105,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch Database Connection" sap:VirtualizedContainerService.HintSize="433.6,400.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Database Connection" sap:VirtualizedContainerService.HintSize="455.2,683.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_ConnectionString" />
       </TryCatch.Variables>
@@ -116,7 +116,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Sequence to&#xA;- connect to the database&#xA;- retrieve data from the database&#xA;- save retrieved data to datatable" DisplayName="DatabaseSequence" sap:VirtualizedContainerService.HintSize="416,428.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence sap2010:Annotation.AnnotationText="Sequence to&#xA;- connect to the database&#xA;- retrieve data from the database&#xA;- save retrieved data to datatable" DisplayName="DatabaseSequence" sap:VirtualizedContainerService.HintSize="418.4,428.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,7 +124,7 @@
               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DatabaseConnect sap2010:Annotation.AnnotationText="Connect to Thesis database and save the connection to ConnectionString variable" DisplayName="Connect to Thesis database" sap:VirtualizedContainerService.HintSize="353.6,100" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False">
+          <ui:DatabaseConnect sap2010:Annotation.AnnotationText="Connect to Thesis database and save the connection to ConnectionString variable" DisplayName="Connect to Thesis database" sap:VirtualizedContainerService.HintSize="356,100" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,7 +138,29 @@
               </OutArgument>
             </ui:DatabaseConnect.DatabaseConnection>
           </ui:DatabaseConnect>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the webshop table and save it to t he WebShops data table" CommandType="Text" DisplayName="Run query retrieve information from WebShops table" sap:VirtualizedContainerService.HintSize="353.6,129.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the ComputerParts table and save it to t he CompuetrParts data table" CommandType="Text" ConnectionString="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False" DisplayName="Run query retrieve information from ComputerParts table" sap:VirtualizedContainerService.HintSize="356,129.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" ProviderName="Microsoft.Data.SqlClient">
+            <ui:ExecuteQuery.DataTable>
+              <OutArgument x:TypeArguments="sd:DataTable">
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_ComputerParts</CSharpReference>
+              </OutArgument>
+            </ui:ExecuteQuery.DataTable>
+            <ui:ExecuteQuery.Parameters>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:ExecuteQuery.Parameters>
+            <ui:ExecuteQuery.Sql>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_ComputerPartsQuery</CSharpValue>
+              </InArgument>
+            </ui:ExecuteQuery.Sql>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExecuteQuery>
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the webshop table and save it to t he WebShops data table" CommandType="Text" DisplayName="Run query retrieve information from WebShops table" sap:VirtualizedContainerService.HintSize="356,112.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
             <ui:ExecuteQuery.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_WebShops</CSharpReference>
@@ -165,40 +187,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExecuteQuery>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Retrieve all data from the ComputerParts table and save it to t he CompuetrParts data table" CommandType="Text" DisplayName="Run query retrieve information from ComputerParts table" sap:VirtualizedContainerService.HintSize="353.6,112.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2">
-            <ui:ExecuteQuery.DataTable>
-              <OutArgument x:TypeArguments="sd:DataTable">
-                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_ComputerParts</CSharpReference>
-              </OutArgument>
-            </ui:ExecuteQuery.DataTable>
-            <ui:ExecuteQuery.ExistingDbConnection>
-              <InArgument x:TypeArguments="ui:DatabaseConnection">
-                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">db_ConnectionString</CSharpValue>
-              </InArgument>
-            </ui:ExecuteQuery.ExistingDbConnection>
-            <ui:ExecuteQuery.Parameters>
-              <scg:Dictionary x:TypeArguments="x:String, Argument" />
-            </ui:ExecuteQuery.Parameters>
-            <ui:ExecuteQuery.Sql>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_ComputerPartsQuery</CSharpValue>
-              </InArgument>
-            </ui:ExecuteQuery.Sql>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:ExecuteQuery>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,213.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="421.6,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>

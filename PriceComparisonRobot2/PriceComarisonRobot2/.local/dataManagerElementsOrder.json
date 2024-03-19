@@ -1,0 +1,127 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Result&Sequence_1",
+        "str_ComputerPartsQuery&Sequence_1",
+        "str_WebShopQuery&Sequence_1",
+        "dt_ComputerParts&Sequence_1",
+        "dt_WebShops&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DataBase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "db_Connection&TryCatch_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_WebShops",
+        "out_ComputerParts",
+        "in_WebShopQuery",
+        "in_ComputerPartsQuery"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchForProducts.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_WS&Sequence_11",
+        "bool_IsWebShopExistToSearchOn&Sequence_5",
+        "arr_ExistingWebShops&Sequence_1",
+        "dt_SearchResult&Sequence_1",
+        "dt_SearchResultOfOneProduct&Sequence_1",
+        "dr_DataRow&Sequence_1",
+        "str_URLParameter&Sequence_5",
+        "arr_ComputerPartToArray&Sequence_5",
+        "url_EMAG&Sequence_6",
+        "bool_IsCorrectProduct&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_WebShops",
+        "out_SearchResoults",
+        "in_ComputerPartsDataTable"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Emag.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_RES",
+        "in_URLParameter"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Alza.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_RES",
+        "in_URLParameter"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Pcx.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_RES",
+        "in_URLParameter"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Ipon.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_RES",
+        "in_URLParameter"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Amazon.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_URLParameter",
+        "out_RES"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

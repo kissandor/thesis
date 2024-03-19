@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "url_WebShopURL&Sequence_38",
         "dt_AllPrice&Sequence_1",
         "dt_SearchResult&Sequence_1",
         "ui_SearchBarUiElement&Sequence_4",
@@ -20,7 +21,9 @@
         "str_WebShopQuery&Sequence_1",
         "dt_WebShops&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "argument1"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -68,6 +71,7 @@
         "ui_ProductElementsList&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_WebShopURL",
         "out_SerachResult",
         "in_ComputerPartName",
         "in_SearchBarUiElement"

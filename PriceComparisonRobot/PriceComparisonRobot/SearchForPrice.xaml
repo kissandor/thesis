@@ -321,7 +321,7 @@
                               </OutArgument>
                             </ui:GetAncestor.Ancestor>
                             <ui:GetAncestor.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="4b1a1180-bfbf-46a8-812f-1371cd6bd7ea">
+                              <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="4b1a1180-bfbf-46a8-812f-1371cd6bd7ea" WaitForReady="INTERACTIVE">
                                 <ui:Target.Element>
                                   <InArgument x:TypeArguments="ui:UiElement">
                                     <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">in_Product</CSharpValue>
@@ -330,9 +330,6 @@
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
                               </ui:Target>
                             </ui:GetAncestor.Target>
                             <sap:WorkflowViewStateService.ViewState>
