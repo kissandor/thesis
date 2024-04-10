@@ -16,7 +16,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Part Name" Binding="{Binding ComputerPartName}"  Width="4*"/>
                 <DataGridTextColumn Header="Category Id" Binding="{Binding CategoryId}" Width="2*"/>
-                <DataGridTextColumn Header="Category Price" Binding="{Binding computerPartPrice}" Width="2*"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding computerPartPrice}" Width="2*"/>
                 <DataGridTextColumn Header="Webshop URL" Binding="{Binding webshopId}"  Width="4*"/>
             </DataGrid.Columns>
 

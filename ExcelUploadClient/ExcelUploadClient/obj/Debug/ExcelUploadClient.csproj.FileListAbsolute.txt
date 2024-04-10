@@ -20,7 +20,6 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Image.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\Style\Text.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\Newtonsoft.Json.dll
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\Newtonsoft.Json.xml
-D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\ExcelUploadClient.csproj.CopyComplete
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\ClosedXML.dll
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\DocumentFormat.OpenXml.dll
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\bin\Debug\ExcelNumberFormat.dll
@@ -56,3 +55,4 @@ D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\Open.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\WebShops.baml
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\DatabaseDeleted.g.cs
 D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\MVVM\View\DatabaseDeleted.baml
+D:\Eger\thesis\ExcelUploadClient\ExcelUploadClient\obj\Debug\ExcelUpl.B508FC97.Up2Date

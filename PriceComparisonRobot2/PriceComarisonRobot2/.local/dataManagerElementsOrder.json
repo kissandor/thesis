@@ -9,7 +9,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Main.xaml",
+      "Path": "Old/Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "dt_Result&Sequence_1",
@@ -26,9 +26,12 @@
       "Path": "DataBase.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_ConnectionString&Sequence_2",
         "db_Connection&TryCatch_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_Categories",
+        "in_CategoryQuery",
         "out_WebShops",
         "out_ComputerParts",
         "in_WebShopQuery",
@@ -38,19 +41,19 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "SearchForProducts.xaml",
+      "Path": "Old/SearchForProducts.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_WS&Sequence_11",
-        "bool_IsWebShopExistToSearchOn&Sequence_5",
-        "arr_ExistingWebShops&Sequence_1",
-        "dt_SearchResult&Sequence_1",
+        "url_EMAG&Sequence_6",
+        "bool_IsCorrectProduct&Sequence_6",
         "dt_SearchResultOfOneProduct&Sequence_1",
+        "dt_SearchResult&Sequence_1",
         "dr_DataRow&Sequence_1",
+        "arr_ExistingWebShops&Sequence_1",
+        "str_WS&Sequence_11",
         "str_URLParameter&Sequence_5",
         "arr_ComputerPartToArray&Sequence_5",
-        "url_EMAG&Sequence_6",
-        "bool_IsCorrectProduct&Sequence_6"
+        "bool_IsWebShopExistToSearchOn&Sequence_5"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_WebShops",
@@ -61,7 +64,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Emag.xaml",
+      "Path": "WebShopsWhereShearchIsImplemented/Emag.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
@@ -72,7 +75,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Alza.xaml",
+      "Path": "WebShopsWhereShearchIsImplemented/Alza.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "ExtractDataTable&Sequence_1"
@@ -85,7 +88,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Pcx.xaml",
+      "Path": "WebShopsWhereShearchIsImplemented/Pcx.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "ExtractDataTable&Sequence_1"
@@ -98,7 +101,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Ipon.xaml",
+      "Path": "WebShopsWhereShearchIsImplemented/Ipon.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "ExtractDataTable&Sequence_1"
@@ -111,7 +114,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Amazon.xaml",
+      "Path": "WebShopsWhereShearchIsImplemented/Amazon.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "ExtractDataTable&Sequence_1"
@@ -119,6 +122,74 @@
       "ArgumentsSectionElementsOrder": [
         "in_URLParameter",
         "out_RES"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MainFlow.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SearchResoult&Flowchart_1",
+        "str_CategoriesQuery&Flowchart_1",
+        "dt_Categories&Flowchart_1",
+        "str_ComputerPartsQuery&Flowchart_1",
+        "str_WebShopQuery&Flowchart_1",
+        "dt_ComputerParts&Flowchart_1",
+        "dt_WebShops&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchForOneProductInOneWebShop.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "pc_PriceAndCurrency&Sequence_8",
+        "dr_DataRow&Sequence_8",
+        "arr_WebShopsSearchImplemented&Flowchart_1",
+        "bool_IsSearchImplemented&Flowchart_1",
+        "bool_IsProductCorrect&Sequence_3",
+        "dt_SearchResultOfOneProduct&Flowchart_1",
+        "str_URLParameter&Flowchart_1",
+        "arr_ProductNameToArray&Flowchart_1",
+        "str_WebShopToSearch&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_WebShopId",
+        "in_CategoryId",
+        "out_SearchResoultsToReturn",
+        "in_ProductName",
+        "in_WebShopURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchForProducts.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "int_WebShopId&Sequence_5",
+        "dt_SearchResultOfOneProduct&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ComputerPartsDataTable",
+        "out_SearchResoults",
+        "in_WebShops"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ResoultToDataBase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_NoEmptyRows&Sequence_1",
+        "db_Connection&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_SearchResult"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

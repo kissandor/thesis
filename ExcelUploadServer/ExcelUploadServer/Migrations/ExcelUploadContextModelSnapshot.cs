@@ -69,6 +69,35 @@ namespace ExcelUploadServer.Migrations
                     b.ToTable("ComputerParts");
                 });
 
+            modelBuilder.Entity("ExcelUploadServer.Models.SearchResult", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ComputerPartName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("ComputerPartPrice")
+                        .HasColumnType("decimal(10, 2)");
+
+                    b.Property<string>("Currency")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("WebshopId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("WebshopId");
+
+                    b.ToTable("SearchResults");
+                });
+
             modelBuilder.Entity("ExcelUploadServer.Models.WebShop", b =>
                 {
                     b.Property<int>("Id")
@@ -101,6 +130,25 @@ namespace ExcelUploadServer.Migrations
                     b.HasOne("ExcelUploadServer.Models.WebShop", "Webshop")
                         .WithMany()
                         .HasForeignKey("WebshopId");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Webshop");
+                });
+
+            modelBuilder.Entity("ExcelUploadServer.Models.SearchResult", b =>
+                {
+                    b.HasOne("ExcelUploadServer.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ExcelUploadServer.Models.WebShop", "Webshop")
+                        .WithMany()
+                        .HasForeignKey("WebshopId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Category");
 

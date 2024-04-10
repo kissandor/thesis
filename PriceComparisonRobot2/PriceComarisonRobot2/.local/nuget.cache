@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IdRAEy0zeLAX5FSqpO7j6wVZOnpA+iAG2/oqbGS/3D8+0LJEFYowcbztkOX6yA9bmNH24A/pJn26QZx/VjaUhQ==",
+  "dgSpecHash": "54E37i0JO93k3CE7IqkjMOud3j2uaHXOZFfwEqvb5HTw2P2NxEjts40tDmd1+t027s8vhwT7DG8A8WprAezhcw==",
   "success": true,
   "projectFilePath": "D:\\Eger\\thesis\\PriceComparisonRobot2\\PriceComarisonRobot2\\.local\\",
   "expectedPackageFiles": [
@@ -96,6 +96,7 @@
     "C:\\Users\\kissa\\.nuget\\packages\\nlog\\4.5.11\\nlog.4.5.11.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\npoi\\2.5.5\\npoi.2.5.5.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.1\\oracle.manageddataaccess.core.3.21.1.nupkg.sha512",
+    "C:\\Users\\kissa\\.nuget\\packages\\parser\\1.0.10\\parser.1.0.10.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",

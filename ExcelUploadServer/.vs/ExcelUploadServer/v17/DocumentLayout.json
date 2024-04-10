@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Eger\\thesis\\ExcelUploadServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Migrations\\20240410201650_addCurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ExcelUploadServer\\Migrations\\20240410201650_addCurrency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\controllers\\computerpartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\controllers\\computerpartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240410201650_addCurrency.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Migrations\\20240410201650_addCurrency.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Migrations\\20240410201650_addCurrency.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Migrations\\20240410201650_addCurrency.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Migrations\\20240410201650_addCurrency.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T20:16:50.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Result.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\Result.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Models\\Result.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\Result.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Models\\Result.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T20:14:40.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComputerPartController.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Controllers\\ComputerPartController.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Controllers\\ComputerPartController.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Controllers\\ComputerPartController.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Controllers\\ComputerPartController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAYwEwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T19:45:32.366Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

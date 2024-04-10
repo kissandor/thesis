@@ -2,8 +2,9 @@
   "name": "PriceComarisonRobot2",
   "projectId": "d8ea9fc5-4e68-4ce5-a038-e947ef22d01f",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "MainFlow.xaml",
   "dependencies": {
+    "Parser": "[1.0.10]",
     "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.23.2-preview]",
     "UiPath.Mail.Activities": "[1.22.1]",
@@ -50,8 +51,14 @@
   "expressionLanguage": "CSharp",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "8a23341c-6288-45b1-b9ba-2a2411b5a31a",
+      "filePath": "MainFlow.xaml",
+      "uniqueId": "d26a6648-90c0-454f-accc-f207ca90ddcd",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Old\\Main.xaml",
+      "uniqueId": "5acd6eaf-bc1a-4c59-9b34-dd8b5f7df08b",
       "input": [],
       "output": []
     }

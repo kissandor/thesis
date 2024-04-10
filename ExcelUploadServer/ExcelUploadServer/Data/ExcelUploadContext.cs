@@ -13,5 +13,6 @@ namespace ExcelUploadServer.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<WebShop> WebShops { get; set; }   
         public DbSet<ComputerPart> ComputerParts { get; set; }
+        public DbSet<SearchResult> SearchResults { get; set; }
     }
 }
