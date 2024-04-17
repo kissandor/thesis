@@ -12,7 +12,7 @@ namespace ExcelUploadServer.Models
         public string Description { get; set; } = null!;
 
         [Column(TypeName = "decimal(10, 2)")]
-        public decimal? ComputerPartPrice { get; set; }
+        public double? ComputerPartPrice { get; set; }
         public string? Currency { get; set; } = null!;
 
         public int WebshopId { get; set; }

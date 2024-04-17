@@ -5,6 +5,7 @@
   "main": "MainFlow.xaml",
   "dependencies": {
     "Parser": "[1.0.10]",
+    "TestDatabaseConnection": "[1.0.11]",
     "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.23.2-preview]",
     "UiPath.Mail.Activities": "[1.22.1]",

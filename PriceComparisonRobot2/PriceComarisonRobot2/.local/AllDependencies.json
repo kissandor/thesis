@@ -4397,6 +4397,15 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "TestDatabaseConnection/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/TestDataBaseConnection.dll": {}
+        }
+      },
       "UiPath/24.2.78.22593-preview": {
         "type": "package",
         "compile": {
@@ -10075,6 +10084,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "TestDatabaseConnection/1.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/TestDataBaseConnection.dll": {}
         }
       },
       "UiPath/24.2.78.22593-preview": {
@@ -20305,6 +20323,17 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "TestDatabaseConnection/1.0.11": {
+      "sha512": "9DlYuQo3BEQxPBBGDHVcTu99I3jEUvDHsTfvLU7CKLtOjLl73CyvjH/ZNPWvgY2qcFUU0BlRDB9uCNcL7qhyDQ==",
+      "type": "package",
+      "path": "testdatabaseconnection/1.0.11",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net6.0-windows7.0/TestDataBaseConnection.dll",
+        "testdatabaseconnection.1.0.11.nupkg.sha512",
+        "testdatabaseconnection.nuspec"
+      ]
+    },
     "UiPath/24.2.78.22593-preview": {
       "sha512": "Qm/O9Z6xoP+geKRE5SyK9+/KQDWQk2WFTWLLfjfzfd2x+dzu7uSPwyHS/SBCniRF3mvQ16yQRHSGPYKFVdPAJw==",
       "type": "package",
@@ -22249,6 +22278,7 @@
     "": [],
     "net8.0-windows7.0": [
       "Parser >= 1.0.10 <= 1.0.10",
+      "TestDatabaseConnection >= 1.0.11 <= 1.0.11",
       "UiPath.Database.Activities >= 1.7.1 <= 1.7.1",
       "UiPath.Excel.Activities >= 2.23.2-preview <= 2.23.2-preview",
       "UiPath.Mail.Activities >= 1.22.1 <= 1.22.1",
@@ -22275,6 +22305,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[1.0.10, 1.0.10]"
+          },
+          "TestDatabaseConnection": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.11, 1.0.11]"
           },
           "UiPath.Database.Activities": {
             "include": "Runtime",

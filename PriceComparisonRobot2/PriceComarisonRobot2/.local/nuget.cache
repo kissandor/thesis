@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "54E37i0JO93k3CE7IqkjMOud3j2uaHXOZFfwEqvb5HTw2P2NxEjts40tDmd1+t027s8vhwT7DG8A8WprAezhcw==",
+  "dgSpecHash": "uLxBA9zA8wv4dzccxNzNyKOkB1DAAE2z4kmcOMRvCQCi8opYakf0JD0qhJTUefVImlsAlvhUW+6NB8TBW9/how==",
   "success": true,
   "projectFilePath": "D:\\Eger\\thesis\\PriceComparisonRobot2\\PriceComarisonRobot2\\.local\\",
   "expectedPackageFiles": [
@@ -269,6 +269,7 @@
     "C:\\Users\\kissa\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11\\testdatabaseconnection.1.0.11.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\uipath\\24.2.78.22593-preview\\uipath.24.2.78.22593-preview.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\uipath.activities.runtimegovernance.1.1.6.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\uipath.codedworkflows\\24.2.0-alpha.4786647\\uipath.codedworkflows.24.2.0-alpha.4786647.nupkg.sha512",

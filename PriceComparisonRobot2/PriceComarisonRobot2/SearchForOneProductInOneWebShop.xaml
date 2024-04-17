@@ -187,11 +187,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,403.6</av:Point>
-                  <av:Size x:Key="ShapeSize">220.8,52.8</av:Size>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">100,456.40000000000003 100,473.6</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign - URL Parameter From Each ComputerParts" sap:VirtualizedContainerService.HintSize="220.8,52.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign DisplayName="Assign - URL Parameter From Each ComputerParts" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="Assign_4">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">
                     <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">str_URLParameter</CSharpReference>
@@ -214,11 +214,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">0,473.6</av:Point>
-                      <av:Size x:Key="ShapeSize">223.2,52.8</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">200,500 300,500 300,546.4</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">200,500 280.2,500 280.2,546.4</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WebShop Workflow File" sap:VirtualizedContainerService.HintSize="223.2,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WebShop Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_URLParameter">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">str_URLParameter</CSharpValue>
@@ -259,13 +259,13 @@
                               <av:Size x:Key="ShapeSize">200,52.8</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each to check if the result is the correct product, and remove it from the data table if theproduct is not correct" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="738.4,2678.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each to check if the result is the correct product, and remove it from the data table if theproduct is not correct" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="738.4,2685.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentProductRow" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="704.8,2512.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="704.8,2520" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Boolean" Name="bool_IsProductCorrect" />
                                   </Sequence.Variables>
@@ -274,7 +274,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="642.4,120.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                  <Assign sap:VirtualizedContainerService.HintSize="642.4,121.6" sap2010:WorkflowViewState.IdRef="Assign_5">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Boolean">
                                         <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">bool_IsProductCorrect</CSharpReference>
@@ -284,20 +284,20 @@
                                       <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each (ForEach)" sap:VirtualizedContainerService.HintSize="642.4,765.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5">
+                                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each (ForEach)" sap:VirtualizedContainerService.HintSize="642.4,767.2" sap2010:WorkflowViewState.IdRef="ForEach`1_5">
                                     <ui:ForEach.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608.8,560" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608.8,561.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="546.4,473.6" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="546.4,475.2" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
                                             <ui:IfElseIf.ConditionBlocks>
                                               <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                 <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
@@ -307,13 +307,13 @@
                                                     </InArgument>
                                                   </ui:IfElseIfBlock.Condition>
                                                   <ui:IfElseIfBlock.Then>
-                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,255.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,256" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,120.8" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_6">
                                                         <Assign.To>
                                                           <OutArgument x:TypeArguments="x:Boolean">
                                                             <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">bool_IsProductCorrect</CSharpReference>
@@ -339,7 +339,7 @@
                                       </InArgument>
                                     </ui:ForEach.Values>
                                   </ui:ForEach>
-                                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="642.4,1540" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
+                                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="642.4,1544.8" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
                                     <ui:IfElseIf.ConditionBlocks>
                                       <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                         <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
@@ -349,13 +349,13 @@
                                             </InArgument>
                                           </ui:IfElseIfBlock.Condition>
                                           <ui:IfElseIfBlock.Then>
-                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558.4,1321.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558.4,1325.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1235.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1239.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="sd:DataRow" Name="dr_DataRow" />
                                                   <Variable x:TypeArguments="p:PriceCurrencyPair" Name="pc_PriceAndCurrency" />
@@ -365,7 +365,7 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,120.8" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_12">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="sd:DataRow">
                                                       <CSharpReference x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">dr_DataRow</CSharpReference>
@@ -383,7 +383,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </Assign>
-                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,120.8" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_22">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:Object">
                                                       <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">dr_DataRow["ComputerPartName"]</CSharpReference>
@@ -395,7 +395,7 @@
                                                     </InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <p:Parser sap:VirtualizedContainerService.HintSize="433.6,64.8" sap2010:WorkflowViewState.IdRef="Parser_1">
+                                                <p:Parser DisplayName="Parser Price" sap:VirtualizedContainerService.HintSize="433.6,64.8" sap2010:WorkflowViewState.IdRef="Parser_1">
                                                   <p:Parser.PriceAndCurrency>
                                                     <OutArgument x:TypeArguments="p:PriceCurrencyPair">
                                                       <CSharpReference x:TypeArguments="p:PriceCurrencyPair" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">pc_PriceAndCurrency</CSharpReference>
@@ -407,7 +407,7 @@
                                                     </InArgument>
                                                   </p:Parser.PriceWithCurrency>
                                                 </p:Parser>
-                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,120.8" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_30">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:Object">
                                                       <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">dr_DataRow["ComputerPartPrice"]</CSharpReference>
@@ -419,7 +419,7 @@
                                                     </InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,120.8" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_25">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:Object">
                                                       <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">dr_DataRow["WebshopId"]</CSharpReference>
@@ -431,7 +431,7 @@
                                                     </InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,120.8" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,121.6" sap2010:WorkflowViewState.IdRef="Assign_20">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:Object">
                                                       <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">dr_DataRow["Description"]</CSharpReference>

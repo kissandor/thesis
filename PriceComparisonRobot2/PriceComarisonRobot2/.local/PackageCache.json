@@ -2,6 +2,16 @@
   "Packages": [
     {
       "Package": {
+        "Id": "Parser",
+        "Version": "1.0.10"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\parser\\1.0.10\\lib/net6.0-windows7.0/PriceParserActivity.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\parser\\1.0.10"
+    },
+    {
+      "Package": {
         "Id": "UiPath.Database.Activities",
         "Version": "1.7.1"
       },
@@ -282,13 +292,13 @@
     },
     {
       "Package": {
-        "Id": "Parser",
-        "Version": "1.0.10"
+        "Id": "TestDatabaseConnection",
+        "Version": "1.0.11"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\parser\\1.0.10\\lib/net6.0-windows7.0/PriceParserActivity.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11\\lib/net6.0-windows7.0/TestDataBaseConnection.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\parser\\1.0.10"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11"
     }
   ],
   "Conflicts": [],
@@ -4397,6 +4407,11 @@
         }
       ]
     },
+    "TestDatabaseConnection": {
+      "Id": "TestDatabaseConnection",
+      "Version": "1.0.11",
+      "Dependencies": []
+    },
     "UiPath": {
       "Id": "UiPath",
       "Version": "24.2.78.22593-preview",
@@ -7531,6 +7546,16 @@
         "C:\\Users\\kissa\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\lib\\netstandard1.3\\System.Xml.XDocument.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\system.xml.xdocument\\4.3.0"
+    },
+    {
+      "Package": {
+        "Id": "TestDatabaseConnection",
+        "Version": "1.0.11"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11\\lib\\net6.0-windows7.0\\TestDataBaseConnection.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11"
     },
     {
       "Package": {
