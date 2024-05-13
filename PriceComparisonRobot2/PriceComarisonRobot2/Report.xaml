@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Report" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="707.2,1360.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:t="clr-namespace:TestDataBaseConnection;assembly=TestDataBaseConnection" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Report" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="707.2,1329.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:t="clr-namespace:TestDataBaseConnection;assembly=TestDataBaseConnection" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -93,29 +93,26 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Report" sap:VirtualizedContainerService.HintSize="592,1296" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Report" sap:VirtualizedContainerService.HintSize="592,1264.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_ConnectionStering">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False" Name="str_ConnectionStering" />
       <Variable x:TypeArguments="scg:List(t:Product)" Name="products" />
       <Variable x:TypeArguments="x:String" Name="str_ProductToAddToEmailHtml" />
+      <Variable x:TypeArguments="x:String" Name="Asset_EmailAddress" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="529.6,100" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" DatabaseConnection="{x:Null}">
+    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="529.6,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" DatabaseConnection="{x:Null}">
       <ui:DatabaseConnect.ConnectionString>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">str_ConnectionStering</CSharpValue>
         </InArgument>
       </ui:DatabaseConnect.ConnectionString>
     </ui:DatabaseConnect>
-    <t:TestDatabaseConnection DisplayName="Test database connection" sap:VirtualizedContainerService.HintSize="529.6,64.8" sap2010:WorkflowViewState.IdRef="TestDatabaseConnection_1">
+    <t:TestDatabaseConnection DisplayName="Test database connection" sap:VirtualizedContainerService.HintSize="529.6,56.8" sap2010:WorkflowViewState.IdRef="TestDatabaseConnection_1">
       <t:TestDatabaseConnection.ConnectionString>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">str_ConnectionStering</CSharpValue>
@@ -127,30 +124,18 @@
         </OutArgument>
       </t:TestDatabaseConnection.Products>
     </t:TestDatabaseConnection>
-    <ui:ForEach x:TypeArguments="t:Product" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="529.6,579.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="t:Product" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="529.6,388.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="t:Product">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="t:Product" Name="currentProduct" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,373.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,191.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
-              <ui:LogMessage.Level>
-                <InArgument x:TypeArguments="ui:LogLevel">
-                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Level>
-              <ui:LogMessage.Message>
-                <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">currentProduct.Category + " " + currentProduct.ComputerPartName + " " + currentProduct.ComputerPartPrice.ToString() + " " +currentProduct.Currency + " " + currentProduct.Description + " " + currentProduct.Webshop</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Message>
-            </ui:LogMessage>
             <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
@@ -178,6 +163,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="FromEmailAddress" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Thesis" sap:VirtualizedContainerService.HintSize="529.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">Asset_EmailAddress</CSharpReference>
+        </OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
     <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="529.6,463.2" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
@@ -189,7 +181,7 @@
               <Variable x:TypeArguments="x:String" Default="kalapacs@gmail.com" Name="str_EmailAddress" />
               <Variable x:TypeArguments="x:String" Name="str_Body">
                 <Variable.Default>
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7" xml:space="preserve">"&lt;!DOCTYPE html&gt;"+
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11" xml:space="preserve">"&lt;!DOCTYPE html&gt;"+
 "&lt;html&gt;"+
 "&lt;head&gt;"+
 "&lt;title&gt;Page Title&lt;/title&gt;"+
@@ -208,7 +200,7 @@
 "&lt;p class='detail_primary'&gt;Price list report:&lt;/p&gt;"+
 "&lt;p class='detail_secondary'&gt;Riporting time:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;"+ DateTime.Now.ToString("yyyy.MM.dd H:mm:ss")+"&lt;/span&gt;&lt;/p&gt;"+
 "&lt;p class='detail_secondary'&gt;Sent by:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;UiPath   RPA bot&lt;/span&gt;&lt;/p&gt;"+
-"&lt;p class='detail_secondary'&gt;Sent from:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;"+ Outlook.SelectedAccount	+"&lt;/span&gt;&lt;/p&gt;"+
+"&lt;p class='detail_secondary'&gt;Sent from:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;"+ Asset_EmailAddress	+"&lt;/span&gt;&lt;/p&gt;"+
 "&lt;p class='detail_secondary'&gt;Sent to:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;"+ str_EmailAddress+"&lt;/span&gt;&lt;/p&gt;"+
 "&lt;br&gt;" + 
 "&lt;p class='detail_primary'&gt;Products  :&lt;/p&gt;"+

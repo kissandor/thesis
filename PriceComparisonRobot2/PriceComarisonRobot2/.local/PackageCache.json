@@ -12,6 +12,16 @@
     },
     {
       "Package": {
+        "Id": "TestDatabaseConnection",
+        "Version": "1.0.11"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11\\lib/net6.0-windows7.0/TestDataBaseConnection.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11"
+    },
+    {
+      "Package": {
         "Id": "UiPath.Database.Activities",
         "Version": "1.7.1"
       },
@@ -292,13 +302,17 @@
     },
     {
       "Package": {
-        "Id": "TestDatabaseConnection",
-        "Version": "1.0.11"
+        "Id": "BalaReva.Word.Activities",
+        "Version": "8.0.0"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11\\lib/net6.0-windows7.0/TestDataBaseConnection.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Utilities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/Office.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0"
     }
   ],
   "Conflicts": [],
@@ -412,6 +426,11 @@
           "Item2": "[6.0.0, )"
         }
       ]
+    },
+    "BalaReva.Word.Activities": {
+      "Id": "BalaReva.Word.Activities",
+      "Version": "8.0.0",
+      "Dependencies": []
     },
     "ClosedXML": {
       "Id": "ClosedXML",
@@ -5047,6 +5066,20 @@
         "C:\\Users\\kissa\\.nuget\\packages\\azure.storage.common\\12.18.1\\lib\\net6.0\\Azure.Storage.Common.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\azure.storage.common\\12.18.1"
+    },
+    {
+      "Package": {
+        "Id": "BalaReva.Word.Activities",
+        "Version": "8.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib\\net6.0-windows7.0\\BalaReva.Word.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib\\net6.0-windows7.0\\BalaReva.Word.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib\\net6.0-windows7.0\\BalaReva.Word.Utilities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib\\net6.0-windows7.0\\Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib\\net6.0-windows7.0\\Office.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0"
     },
     {
       "Package": {

@@ -4,6 +4,7 @@
   "description": "Blank Process",
   "main": "MainFlow.xaml",
   "dependencies": {
+    "BalaReva.Word.Activities": "[8.0.0]",
     "Parser": "[1.0.10]",
     "TestDatabaseConnection": "[1.0.11]",
     "UiPath.Database.Activities": "[1.7.1]",
@@ -17,7 +18,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.2.1.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1-alpha.4",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

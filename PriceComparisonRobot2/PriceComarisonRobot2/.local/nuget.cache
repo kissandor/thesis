@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uLxBA9zA8wv4dzccxNzNyKOkB1DAAE2z4kmcOMRvCQCi8opYakf0JD0qhJTUefVImlsAlvhUW+6NB8TBW9/how==",
+  "dgSpecHash": "pACRNRGQCkgsJP82suFz8sVjJE03zO/5ZmTVogWpXC5lLgCq2WDu/+/L0Dse1KsW7/La/S2gB1k/Zj/RLGJ0xg==",
   "success": true,
   "projectFilePath": "D:\\Eger\\thesis\\PriceComparisonRobot2\\PriceComarisonRobot2\\.local\\",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\kissa\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\azure.storage.blobs\\12.19.1\\azure.storage.blobs.12.19.1.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\azure.storage.common\\12.18.1\\azure.storage.common.12.18.1.nupkg.sha512",
+    "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\balareva.word.activities.8.0.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\documentformat.openxml\\2.12.1\\documentformat.openxml.2.12.1.nupkg.sha512",
