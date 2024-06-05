@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Eger\\thesis\\ExcelUploadClient\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|d:\\eger\\thesis\\exceluploadclient\\exceluploadclient\\mvvm\\view\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|solutionrelative:exceluploadclient\\mvvm\\view\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.xaml",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\View\\Home.xaml",
+              "RelativeDocumentMoniker": "ExcelUploadClient\\MVVM\\View\\Home.xaml",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\View\\Home.xaml",
+              "RelativeToolTip": "ExcelUploadClient\\MVVM\\View\\Home.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-05T20:47:21.637Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
