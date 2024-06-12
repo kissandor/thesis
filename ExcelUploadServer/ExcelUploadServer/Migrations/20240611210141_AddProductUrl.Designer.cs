@@ -4,6 +4,7 @@ using ExcelUploadServer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExcelUploadServer.Migrations
 {
     [DbContext(typeof(ExcelUploadContext))]
-    partial class ExcelUploadContextModelSnapshot : ModelSnapshot
+    [Migration("20240611210141_AddProductUrl")]
+    partial class AddProductUrl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,6 +96,9 @@ namespace ExcelUploadServer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("WebshopId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WebshopUrl")
                         .HasColumnType("int");
 
                     b.HasIndex("CategoryId");

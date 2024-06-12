@@ -17,5 +17,6 @@ namespace ExcelUploadServer.Models
 
         public int WebshopId { get; set; }
         public virtual WebShop Webshop { get; set; } = null!;
+        public string ProductUrl { get; set; } = null!;
     }
 }
