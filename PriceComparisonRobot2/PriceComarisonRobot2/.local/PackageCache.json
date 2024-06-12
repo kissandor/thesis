@@ -2,6 +2,20 @@
   "Packages": [
     {
       "Package": {
+        "Id": "BalaReva.Word.Activities",
+        "Version": "8.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Utilities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/Office.dll"
+      ],
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0"
+    },
+    {
+      "Package": {
         "Id": "Parser",
         "Version": "1.0.10"
       },
@@ -9,16 +23,6 @@
         "C:\\Users\\kissa\\.nuget\\packages\\parser\\1.0.10\\lib/net6.0-windows7.0/PriceParserActivity.dll"
       ],
       "Path": "C:\\Users\\kissa\\.nuget\\packages\\parser\\1.0.10"
-    },
-    {
-      "Package": {
-        "Id": "TestDatabaseConnection",
-        "Version": "1.0.11"
-      },
-      "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11\\lib/net6.0-windows7.0/TestDataBaseConnection.dll"
-      ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11"
     },
     {
       "Package": {
@@ -302,17 +306,13 @@
     },
     {
       "Package": {
-        "Id": "BalaReva.Word.Activities",
-        "Version": "8.0.0"
+        "Id": "TestDatabaseConnection",
+        "Version": "1.0.13"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Design.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/BalaReva.Word.Utilities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/Microsoft.Office.Interop.Word.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0\\lib/net6.0-windows7.0/Office.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.13\\lib/net6.0-windows7.0/TestDataBaseConnection.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\balareva.word.activities\\8.0.0"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.13"
     }
   ],
   "Conflicts": [],
@@ -4428,7 +4428,7 @@
     },
     "TestDatabaseConnection": {
       "Id": "TestDatabaseConnection",
-      "Version": "1.0.11",
+      "Version": "1.0.13",
       "Dependencies": []
     },
     "UiPath": {
@@ -7583,12 +7583,12 @@
     {
       "Package": {
         "Id": "TestDatabaseConnection",
-        "Version": "1.0.11"
+        "Version": "1.0.13"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11\\lib\\net6.0-windows7.0\\TestDataBaseConnection.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.13\\lib\\net6.0-windows7.0\\TestDataBaseConnection.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.11"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\testdatabaseconnection\\1.0.13"
     },
     {
       "Package": {

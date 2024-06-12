@@ -210,7 +210,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "PdfReport.xaml",
+      "Path": "ReportBuilder.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "str_ProductToAddToEmailHtml&Sequence_1",

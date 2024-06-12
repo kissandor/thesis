@@ -4413,7 +4413,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "TestDatabaseConnection/1.0.11": {
+      "TestDatabaseConnection/1.0.13": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -10118,7 +10118,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "TestDatabaseConnection/1.0.11": {
+      "TestDatabaseConnection/1.0.13": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -20376,14 +20376,14 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "TestDatabaseConnection/1.0.11": {
-      "sha512": "9DlYuQo3BEQxPBBGDHVcTu99I3jEUvDHsTfvLU7CKLtOjLl73CyvjH/ZNPWvgY2qcFUU0BlRDB9uCNcL7qhyDQ==",
+    "TestDatabaseConnection/1.0.13": {
+      "sha512": "Al6AhxkQrnxZI90uw3v3jBBbFS6XmIlcze5YQ6BcZ7yoZaaJpgsTUZqrhw+0hMfAnWDjuN3w1NQQI0Z9k1U5Wg==",
       "type": "package",
-      "path": "testdatabaseconnection/1.0.11",
+      "path": "testdatabaseconnection/1.0.13",
       "files": [
         ".nupkg.metadata",
         "lib/net6.0-windows7.0/TestDataBaseConnection.dll",
-        "testdatabaseconnection.1.0.11.nupkg.sha512",
+        "testdatabaseconnection.1.0.13.nupkg.sha512",
         "testdatabaseconnection.nuspec"
       ]
     },
@@ -22332,7 +22332,7 @@
     "net8.0-windows7.0": [
       "BalaReva.Word.Activities >= 8.0.0 <= 8.0.0",
       "Parser >= 1.0.10 <= 1.0.10",
-      "TestDatabaseConnection >= 1.0.11 <= 1.0.11",
+      "TestDatabaseConnection >= 1.0.13 <= 1.0.13",
       "UiPath.Database.Activities >= 1.7.1 <= 1.7.1",
       "UiPath.Excel.Activities >= 2.23.2-preview <= 2.23.2-preview",
       "UiPath.Mail.Activities >= 1.22.1 <= 1.22.1",
@@ -22368,7 +22368,7 @@
           "TestDatabaseConnection": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.11, 1.0.11]"
+            "version": "[1.0.13, 1.0.13]"
           },
           "UiPath.Database.Activities": {
             "include": "Runtime",
