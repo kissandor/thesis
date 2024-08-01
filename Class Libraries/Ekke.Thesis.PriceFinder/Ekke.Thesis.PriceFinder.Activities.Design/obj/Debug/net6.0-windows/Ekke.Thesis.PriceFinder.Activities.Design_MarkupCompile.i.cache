@@ -1,0 +1,20 @@
+﻿Ekke.Thesis.PriceFinder.Activities.Design
+1.0.0.0
+
+library
+C#
+.cs
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder.Activities.Design\obj\Debug\net6.0-windows\
+Ekke.Thesis.PriceFinder.Activities.Design
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+
+7-1392230843
+
+20397938628
+215987766493
+..\..\Shared\Themes\Generic.xaml;Designers\PriceFinderDesigner.xaml;Themes\Icons.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Controls\ComboboxControl.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Controls\FilePathControl.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Controls\RestrictiveBodyConnector.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Editors\EditorTemplates.xaml;
+
+True
+

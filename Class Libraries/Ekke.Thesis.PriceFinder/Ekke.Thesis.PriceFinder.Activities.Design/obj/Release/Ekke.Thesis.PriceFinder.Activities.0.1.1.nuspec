@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Ekke.Thesis.PriceFinder.Activities</id>
+    <version>0.1.1</version>
+    <authors>Company</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <projectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</iconUrl>
+    <description>This package was generated using the UiPath VS Extension.</description>
+    <copyright>© 2022 Company</copyright>
+    <tags>UiPath Activit𝗒</tags>
+    <repository type="git" commit="55b1126376e8557a3f0eaef029282b80a802286f" />
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder.Activities\bin\Release\net6.0\Ekke.Thesis.PriceFinder.Activities.dll" target="lib\net6.0-windows7.0\Ekke.Thesis.PriceFinder.Activities.dll" />
+    <file src="D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder.Activities\bin\Release\net6.0\Ekke.Thesis.PriceFinder.dll" target="lib\net6.0-windows7.0\Ekke.Thesis.PriceFinder.dll" />
+    <file src="D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder.Activities.Design\bin\Release\net6.0-windows\Ekke.Thesis.PriceFinder.Activities.Design.dll" target="lib\net6.0-windows7.0\Ekke.Thesis.PriceFinder.Activities.Design.dll" />
+    <file src="D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder.Activities.Design\packageIcon.png" target="packageIcon.png" />
+  </files>
+</package>

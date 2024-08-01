@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Ekke.Thesis.PriceFinder.Activities.Implementation</id>
+    <version>1.0.1-alpha1</version>
+    <authors>Ekke.Thesis.PriceFinder.Activities</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="55b1126376e8557a3f0eaef029282b80a802286f" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder.Activities\bin\Release\net6.0\Ekke.Thesis.PriceFinder.Activities.dll" target="lib\net6.0\Ekke.Thesis.PriceFinder.Activities.dll" />
+    <file src="D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder.Activities\bin\Release\net6.0\Ekke.Thesis.PriceFinder.Activities.xml" target="lib\net6.0\Ekke.Thesis.PriceFinder.Activities.xml" />
+  </files>
+</package>

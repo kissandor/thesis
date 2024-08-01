@@ -1,0 +1,15 @@
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\bin\Debug\net6.0\Ekke.Thesis.PriceFinder.deps.json
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\bin\Debug\net6.0\Ekke.Thesis.PriceFinder.dll
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\bin\Debug\net6.0\Ekke.Thesis.PriceFinder.pdb
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\bin\Debug\net6.0\Ekke.Thesis.PriceFinder.xml
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.Properties.Resources.resources
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.csproj.GenerateResource.cache
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.GeneratedMSBuildEditorConfig.editorconfig
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.AssemblyInfoInputs.cache
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.AssemblyInfo.cs
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.csproj.CoreCompileInputs.cache
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.sourcelink.json
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.dll
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\refint\Ekke.Thesis.PriceFinder.dll
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\Ekke.Thesis.PriceFinder.pdb
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.PriceFinder\Ekke.Thesis.PriceFinder\obj\Debug\net6.0\ref\Ekke.Thesis.PriceFinder.dll

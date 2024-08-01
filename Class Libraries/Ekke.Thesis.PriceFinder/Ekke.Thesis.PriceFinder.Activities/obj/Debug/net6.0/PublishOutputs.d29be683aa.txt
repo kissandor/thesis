@@ -1,0 +1,7 @@
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.PriceFinder.Activities.dll
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.PriceFinder.Activities.pdb
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.PriceFinder.dll
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.PriceFinder.pdb
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.PriceFinder.xml
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.PriceFinder.Activities.xml
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.PriceFinder.Activities.deps.json

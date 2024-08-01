@@ -229,6 +229,62 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "DefaultSearch/DefaultSearch.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ui_SearchBarUiElement&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_SearchResultOfOneProduct",
+        "in_WebShopToSearch",
+        "in_ProductToSearch"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DefaultSearch/FindSearchInputUiElement.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_IdAttribute&Sequence_3",
+        "ui_AllInputTextUiElements&Sequence_1",
+        "ui_AllInputSearchUiElements&Sequence_1",
+        "str_DatatestIdAttribute&Sequence_3",
+        "str_NameAttribute&Sequence_3",
+        "str_PlaceholderAttribute&Sequence_3",
+        "ui_AllInputUiElements&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_SearchBarUiElement"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DefaultSearch/DefaultProductSerach.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TestString&Sequence_1",
+        "dr_DataRow&Sequence_9",
+        "pcp_FoundPrice&Sequence_4",
+        "str_HrefOfCurrentUiElement&Sequence_4",
+        "str_AllRes&Sequence_1",
+        "str_InnerTextOfAncestor&Sequence_4",
+        "ui_AncestorOfCurrentUiElement&Sequence_4",
+        "ui_FilteredProducts&Sequence_1",
+        "str_InnerTextOfCurrentUiElement&Sequence_4",
+        "str_ComputerPartNameWebCtrl&Sequence_1",
+        "ui_ProductsFound&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_SearchResultOfOneProduct",
+        "in_ProductToSearch",
+        "in_SearchBarUiElement"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
