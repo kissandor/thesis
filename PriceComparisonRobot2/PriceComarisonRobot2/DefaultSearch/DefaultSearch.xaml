@@ -232,6 +232,9 @@
                             <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_SearchResultOfOneProduct">
                               <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_SearchResultOfOneProduct</CSharpReference>
                             </OutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_WebShopUrl">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_WebShopToSearch</CSharpValue>
+                            </InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                       </Sequence>

@@ -3,9 +3,10 @@
     <x:Property Name="in_SearchBarUiElement" Type="InArgument(ui:UiElement)" />
     <x:Property Name="in_ProductToSearch" Type="InArgument(x:String)" />
     <x:Property Name="out_SearchResultOfOneProduct" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_WebShopUrl" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1001.5999999999999,4084.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1001.5999999999999,3997.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -144,7 +145,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow:&#xA;- types the product name into the search bar and press &quot;Enter&quot;&#xA;- finds all UiElements where the aaname attribute contains the product name&#xA;- for each loop to get the 3rd ancestor of all of these ui element. The price should be  found in the ancestor ui element &#xA;" DisplayName="DefaultProductSerach" sap:VirtualizedContainerService.HintSize="804,4020" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow:&#xA;- types the product name into the search bar and press &quot;Enter&quot;&#xA;- finds all UiElements where the aaname attribute contains the product name&#xA;- for each loop to get the 3rd ancestor of all of these ui element. The price should be  found in the ancestor ui element &#xA;" DisplayName="DefaultProductSerach" sap:VirtualizedContainerService.HintSize="817.6,3932.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_ComputerPartNameWebCtrl" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_ProductsFound" />
@@ -153,8 +154,6 @@
           <CSharpValue x:TypeArguments="scg:List(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">new List&lt;UiElement&gt;()</CSharpValue>
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:String" Name="str_AllRes" />
-      <Variable x:TypeArguments="x:String" Name="TestString" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -163,14 +162,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="741.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Product_x0020_Description_x0020_Url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Product_x0020_Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="755.2,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Product_x0020_Description_x0020_Url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Product_x0020_Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
       <ui:BuildDataTable.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">out_SearchResultOfOneProduct</CSharpReference>
         </OutArgument>
       </ui:BuildDataTable.DataTable>
     </ui:BuildDataTable>
-    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="5" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="741.6,230.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V3">
+    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="5" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="755.2,230.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V3">
       <uix:NTypeInto.InUiElement>
         <InArgument x:TypeArguments="ui:UiElement">
           <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_SearchBarUiElement</CSharpValue>
@@ -182,7 +181,7 @@
         </InArgument>
       </uix:NTypeInto.Text>
     </uix:NTypeInto>
-    <Assign sap:VirtualizedContainerService.HintSize="741.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="755.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">str_ComputerPartNameWebCtrl</CSharpReference>
@@ -194,7 +193,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:FindChildren DisplayName="Find Children" sap:VirtualizedContainerService.HintSize="741.6,118.4" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+    <ui:FindChildren DisplayName="Find Children" sap:VirtualizedContainerService.HintSize="755.2,118.4" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
       <ui:FindChildren.Children>
         <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
           <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">ui_ProductsFound</CSharpReference>
@@ -222,13 +221,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FindChildren>
-    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="741.6,2812.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="755.2,3197.6" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ui:UiElement">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentUiElement" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="708,2615.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="721.6,3008.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_InnerTextOfCurrentUiElement" />
               <Variable x:TypeArguments="ui:UiElement" Name="ui_AncestorOfCurrentUiElement" />
@@ -242,7 +241,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="645.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_6" Version="V3">
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="659.2,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_6" Version="V3">
               <uix:NGetAttributeGeneric.InUiElement>
                 <InArgument x:TypeArguments="ui:UiElement">
                   <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">currentUiElement</CSharpValue>
@@ -254,7 +253,7 @@
                 </OutArgument>
               </uix:NGetAttributeGeneric.Result>
             </uix:NGetAttributeGeneric>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="645.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_7" Version="V3">
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="href" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="659.2,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_7" Version="V3">
               <uix:NGetAttributeGeneric.InUiElement>
                 <InArgument x:TypeArguments="ui:UiElement">
                   <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">currentUiElement</CSharpValue>
@@ -266,7 +265,7 @@
                 </OutArgument>
               </uix:NGetAttributeGeneric.Result>
             </uix:NGetAttributeGeneric>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="645.6,1324.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="659.2,1097.6" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
               <ui:IfElseIf.ConditionBlocks>
                 <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
@@ -276,13 +275,13 @@
                       </InArgument>
                     </ui:IfElseIfBlock.Condition>
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="595.2,1096.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="515.2,869.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:GetAncestor DisplayName="Get Ancestor" sap:VirtualizedContainerService.HintSize="532.8,118.4" sap2010:WorkflowViewState.IdRef="GetAncestor_2" UpLevels="3">
+                        <ui:GetAncestor DisplayName="Get Ancestor" sap:VirtualizedContainerService.HintSize="452.8,118.4" sap2010:WorkflowViewState.IdRef="GetAncestor_2" UpLevels="3">
                           <ui:GetAncestor.Ancestor>
                             <OutArgument x:TypeArguments="ui:UiElement">
                               <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">ui_AncestorOfCurrentUiElement</CSharpReference>
@@ -304,7 +303,7 @@
                             </ui:Target>
                           </ui:GetAncestor.Target>
                         </ui:GetAncestor>
-                        <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innerText" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="532.8,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Version="V3">
+                        <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innerText" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="452.8,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_5" Version="V3">
                           <uix:NGetAttributeGeneric.InUiElement>
                             <InArgument x:TypeArguments="ui:UiElement">
                               <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">ui_AncestorOfCurrentUiElement</CSharpValue>
@@ -316,19 +315,7 @@
                             </OutArgument>
                           </uix:NGetAttributeGeneric.Result>
                         </uix:NGetAttributeGeneric>
-                        <Assign sap:VirtualizedContainerService.HintSize="532.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">
-                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">str_AllRes</CSharpReference>
-                            </OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">
-                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">string.Concat(str_AllRes, str_InnerTextOfAncestor.Replace("\t", "").Replace("\n", "").Replace("\r", "").Replace("\u00A0", ""), "+++++++++++++++")</CSharpValue>
-                            </InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="532.8,556" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452.8,442.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -336,13 +323,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence sap:VirtualizedContainerService.HintSize="496,301.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <Sequence sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <etpa:PriceFinder ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="433.6,108" sap2010:WorkflowViewState.IdRef="PriceFinder_1">
+                              <etpa:PriceFinder ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="353.6,99.2" sap2010:WorkflowViewState.IdRef="PriceFinder_1">
                                 <etpa:PriceFinder.InputText>
                                   <InArgument x:TypeArguments="x:String">
                                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">str_InnerTextOfAncestor.Replace("\t", "").Replace("\n", "").Replace("\r", "").Replace("\u00A0", "")</CSharpValue>
@@ -354,22 +341,10 @@
                                   </OutArgument>
                                 </etpa:PriceFinder.PriceAndCurrency>
                               </etpa:PriceFinder>
-                              <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_11">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">
-                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">TestString</CSharpReference>
-                                  </OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">string.Concat(TestString," Product name: ",str_InnerTextOfCurrentUiElement, " Website: ",str_HrefOfCurrentUiElement, " Price: ",pcp_FoundPrice.Price.ToString(), " ",pcp_FoundPrice.Currency.ToString(), "\n")</CSharpValue>
-                                  </InArgument>
-                                </Assign.Value>
-                              </Assign>
                             </Sequence>
                           </TryCatch.Try>
                           <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="419.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -409,7 +384,7 @@
                 </sc1:BindingList>
               </ui:IfElseIf.ConditionBlocks>
             </ui:IfElseIf>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="645.6,761.6" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="659.2,1382.4" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
               <ui:IfElseIf.ConditionBlocks>
                 <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_3">
@@ -419,7 +394,7 @@
                       </InArgument>
                     </ui:IfElseIfBlock.Condition>
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.8,542.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608.8,1163.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataRow" Name="dr_DataRow" />
                         </Sequence.Variables>
@@ -428,7 +403,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="546.4,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -440,18 +415,6 @@
                                 <ui:AssignOperation.Value>
                                   <InArgument x:TypeArguments="sd:DataRow">
                                     <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">out_SearchResultOfOneProduct.NewRow()</CSharpValue>
-                                  </InArgument>
-                                </ui:AssignOperation.Value>
-                              </ui:AssignOperation>
-                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                                <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="x:Object">
-                                    <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">dr_DataRow["Product Description Url"]</CSharpReference>
-                                  </OutArgument>
-                                </ui:AssignOperation.To>
-                                <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="x:Object">
-                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">str_HrefOfCurrentUiElement</CSharpValue>
                                   </InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
@@ -482,7 +445,64 @@
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="478.4,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                        <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="546.4,651.2" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
+                          <ui:IfElseIf.ConditionBlocks>
+                            <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                              <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
+                                <ui:IfElseIfBlock.Condition>
+                                  <InArgument x:TypeArguments="x:Boolean">
+                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">str_HrefOfCurrentUiElement.Contains("www.")</CSharpValue>
+                                  </InArgument>
+                                </ui:IfElseIfBlock.Condition>
+                                <ui:IfElseIfBlock.Then>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Object">
+                                          <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">dr_DataRow["Product Description Url"]</CSharpReference>
+                                        </OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Object">
+                                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">str_HrefOfCurrentUiElement</CSharpValue>
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </ui:IfElseIfBlock.Then>
+                              </ui:IfElseIfBlock>
+                              <ui:IfElseIfBlock BlockType="Else" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_5">
+                                <ui:IfElseIfBlock.Then>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Object">
+                                          <CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">dr_DataRow["Product Description Url"]</CSharpReference>
+                                        </OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Object">
+                                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">string.Concat(in_WebShopUrl.ToLower().Replace("http://", "").Replace("https://", ""), str_HrefOfCurrentUiElement)</CSharpValue>
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </ui:IfElseIfBlock.Then>
+                              </ui:IfElseIfBlock>
+                            </sc1:BindingList>
+                          </ui:IfElseIf.ConditionBlocks>
+                        </ui:IfElseIf>
+                        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="546.4,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                           <ui:AddDataRow.DataRow>
                             <InArgument x:TypeArguments="sd:DataRow">
                               <CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">dr_DataRow</CSharpValue>
@@ -515,26 +535,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="741.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="sheet1" WorkbookPath="out.xlsx">
-      <ui:WriteRange.DataTable>
-        <InArgument x:TypeArguments="sd:DataTable">
-          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">out_SearchResultOfOneProduct</CSharpValue>
-        </InArgument>
-      </ui:WriteRange.DataTable>
-    </ui:WriteRange>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="RES.txt" sap:VirtualizedContainerService.HintSize="741.6,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
-      <ui:WriteTextFile.Text>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">str_AllRes</CSharpValue>
-        </InArgument>
-      </ui:WriteTextFile.Text>
-    </ui:WriteTextFile>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="RESSSS.txt" sap:VirtualizedContainerService.HintSize="741.6,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_2">
-      <ui:WriteTextFile.Text>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">TestString</CSharpValue>
-        </InArgument>
-      </ui:WriteTextFile.Text>
-    </ui:WriteTextFile>
   </Sequence>
 </Activity>
