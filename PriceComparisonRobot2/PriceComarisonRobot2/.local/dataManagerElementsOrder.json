@@ -266,11 +266,10 @@
       "Path": "DefaultSearch/DefaultProductSerach.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "TestString&Sequence_1",
+        "str_InnerOfAnc&Sequence_1",
         "dr_DataRow&Sequence_9",
         "pcp_FoundPrice&Sequence_4",
         "str_HrefOfCurrentUiElement&Sequence_4",
-        "str_AllRes&Sequence_1",
         "str_InnerTextOfAncestor&Sequence_4",
         "ui_AncestorOfCurrentUiElement&Sequence_4",
         "ui_FilteredProducts&Sequence_1",
@@ -279,6 +278,7 @@
         "ui_ProductsFound&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_WebShopUrl",
         "out_SearchResultOfOneProduct",
         "in_ProductToSearch",
         "in_SearchBarUiElement"

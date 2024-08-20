@@ -6,7 +6,7 @@
     <x:Property Name="in_WebShopUrl" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1001.5999999999999,3997.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1001.5999999999999,4277.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -145,7 +145,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow:&#xA;- types the product name into the search bar and press &quot;Enter&quot;&#xA;- finds all UiElements where the aaname attribute contains the product name&#xA;- for each loop to get the 3rd ancestor of all of these ui element. The price should be  found in the ancestor ui element &#xA;" DisplayName="DefaultProductSerach" sap:VirtualizedContainerService.HintSize="817.6,3932.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow:&#xA;- types the product name into the search bar and press &quot;Enter&quot;&#xA;- finds all UiElements where the aaname attribute contains the product name&#xA;- for each loop to get the 3rd ancestor of all of these ui element. The price should be  found in the ancestor ui element &#xA;" DisplayName="DefaultProductSerach" sap:VirtualizedContainerService.HintSize="817.6,4212.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_ComputerPartNameWebCtrl" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_ProductsFound" />
@@ -154,6 +154,7 @@
           <CSharpValue x:TypeArguments="scg:List(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">new List&lt;UiElement&gt;()</CSharpValue>
         </Variable.Default>
       </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_InnerOfAnc" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -221,13 +222,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FindChildren>
-    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="755.2,3197.6" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="755.2,3320" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ui:UiElement">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentUiElement" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="721.6,3008.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="721.6,3122.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_InnerTextOfCurrentUiElement" />
               <Variable x:TypeArguments="ui:UiElement" Name="ui_AncestorOfCurrentUiElement" />
@@ -265,7 +266,7 @@
                 </OutArgument>
               </uix:NGetAttributeGeneric.Result>
             </uix:NGetAttributeGeneric>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="659.2,1097.6" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="659.2,1211.2" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
               <ui:IfElseIf.ConditionBlocks>
                 <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
@@ -275,7 +276,7 @@
                       </InArgument>
                     </ui:IfElseIfBlock.Condition>
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="515.2,869.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="515.2,983.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -315,6 +316,18 @@
                             </OutArgument>
                           </uix:NGetAttributeGeneric.Result>
                         </uix:NGetAttributeGeneric>
+                        <Assign sap:VirtualizedContainerService.HintSize="452.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">str_InnerOfAnc</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">string.Concat(str_InnerOfAnc, str_InnerTextOfAncestor.Replace("\t", "").Replace("\n", "").Replace("\r", "").Replace("\u00A0", ""), "\n")</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
                         <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452.8,442.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -332,7 +345,7 @@
                               <etpa:PriceFinder ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="353.6,99.2" sap2010:WorkflowViewState.IdRef="PriceFinder_1">
                                 <etpa:PriceFinder.InputText>
                                   <InArgument x:TypeArguments="x:String">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">str_InnerTextOfAncestor.Replace("\t", "").Replace("\n", "").Replace("\r", "").Replace("\u00A0", "")</CSharpValue>
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">str_InnerTextOfAncestor.Replace("\t", "").Replace("\n", "").Replace("\r", "").Replace("\u00A0", "")</CSharpValue>
                                   </InArgument>
                                 </etpa:PriceFinder.InputText>
                                 <etpa:PriceFinder.PriceAndCurrency>
@@ -535,5 +548,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="res.txt" sap:VirtualizedContainerService.HintSize="755.2,157.6" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
+      <ui:WriteTextFile.Text>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">str_InnerOfAnc</CSharpValue>
+        </InArgument>
+      </ui:WriteTextFile.Text>
+    </ui:WriteTextFile>
   </Sequence>
 </Activity>

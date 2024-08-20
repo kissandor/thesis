@@ -14,7 +14,7 @@
     <InArgument x:TypeArguments="sd:DataTable" />
   </this:DataBase.out_Categories>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>707.2,986.4000000000001</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1024,988.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,13 +106,15 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DataBase Connection Workflow" sap:VirtualizedContainerService.HintSize="515.2,921.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow:&#xA;- tries to connect to the Theses database,&#xA;- retrieves data from the ComputerParts Table and saves it to the out_ComputerParts datatable,&#xA;- retrieves data from the WebShops Table and saves it to the out_WebShops datatable,&#xA;- retrieves data from the Categories Table and saves it to the out_Categories datatable,&#xA;- logs any errors that occur,&#xA;- closes the database connection" DisplayName="Database connection workflow" sap:VirtualizedContainerService.HintSize="515.2,924" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch Database Connection" sap:VirtualizedContainerService.HintSize="452.8,832.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try catch database connection" sap:VirtualizedContainerService.HintSize="452.8,835.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_Connection" />
       </TryCatch.Variables>
@@ -120,16 +122,22 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence To Connect Database" sap:VirtualizedContainerService.HintSize="416,578.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Thesis database connector" sap:VirtualizedContainerService.HintSize="416,580.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Default="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False" Name="str_ConnectionString" />
+            <Variable x:TypeArguments="x:String" Name="str_ConnectionString">
+              <Variable.Default>
+                <Literal x:TypeArguments="x:String">Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False</Literal>
+              </Variable.Default>
+            </Variable>
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:DatabaseConnect sap2010:Annotation.AnnotationText="Activity to connect the Thesis database and save the connection to db_Connection variable" DisplayName="Connect to Thesis database" sap:VirtualizedContainerService.HintSize="353.6,136" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="Microsoft.Data.SqlClient">
@@ -140,24 +148,36 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:DatabaseConnect.ConnectionString>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">str_ConnectionString</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">
+                  <CSharpValue.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </CSharpValue.Result>str_ConnectionString</CSharpValue>
               </InArgument>
             </ui:DatabaseConnect.ConnectionString>
             <ui:DatabaseConnect.DatabaseConnection>
               <OutArgument x:TypeArguments="ui:DatabaseConnection">
-                <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">db_Connection</CSharpReference>
+                <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">
+                  <CSharpReference.Result>
+                    <OutArgument x:TypeArguments="Location(ui:DatabaseConnection)" />
+                  </CSharpReference.Result>db_Connection</CSharpReference>
               </OutArgument>
             </ui:DatabaseConnect.DatabaseConnection>
           </ui:DatabaseConnect>
           <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Query to retrive data from ComputerParts Table" sap:VirtualizedContainerService.HintSize="353.6,121.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
             <ui:ExecuteQuery.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
-                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_ComputerParts</CSharpReference>
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">
+                  <CSharpReference.Result>
+                    <OutArgument x:TypeArguments="Location(sd:DataTable)" />
+                  </CSharpReference.Result>out_ComputerParts</CSharpReference>
               </OutArgument>
             </ui:ExecuteQuery.DataTable>
             <ui:ExecuteQuery.ExistingDbConnection>
               <InArgument x:TypeArguments="ui:DatabaseConnection">
-                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">db_Connection</CSharpValue>
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">
+                  <CSharpValue.Result>
+                    <OutArgument x:TypeArguments="ui:DatabaseConnection" />
+                  </CSharpValue.Result>db_Connection</CSharpValue>
               </InArgument>
             </ui:ExecuteQuery.ExistingDbConnection>
             <ui:ExecuteQuery.Parameters>
@@ -165,19 +185,28 @@
             </ui:ExecuteQuery.Parameters>
             <ui:ExecuteQuery.Sql>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_ComputerPartsQuery</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">
+                  <CSharpValue.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </CSharpValue.Result>in_ComputerPartsQuery</CSharpValue>
               </InArgument>
             </ui:ExecuteQuery.Sql>
           </ui:ExecuteQuery>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Query to retrive data from WebShops Table" sap:VirtualizedContainerService.HintSize="353.6,121.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2">
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Query to retrive data from WebShops table" sap:VirtualizedContainerService.HintSize="353.6,121.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2">
             <ui:ExecuteQuery.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
-                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">out_WebShops</CSharpReference>
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">
+                  <CSharpReference.Result>
+                    <OutArgument x:TypeArguments="Location(sd:DataTable)" />
+                  </CSharpReference.Result>out_WebShops</CSharpReference>
               </OutArgument>
             </ui:ExecuteQuery.DataTable>
             <ui:ExecuteQuery.ExistingDbConnection>
               <InArgument x:TypeArguments="ui:DatabaseConnection">
-                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">db_Connection</CSharpValue>
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">
+                  <CSharpValue.Result>
+                    <OutArgument x:TypeArguments="ui:DatabaseConnection" />
+                  </CSharpValue.Result>db_Connection</CSharpValue>
               </InArgument>
             </ui:ExecuteQuery.ExistingDbConnection>
             <ui:ExecuteQuery.Parameters>
@@ -185,19 +214,34 @@
             </ui:ExecuteQuery.Parameters>
             <ui:ExecuteQuery.Sql>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">in_WebShopQuery</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">
+                  <CSharpValue.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </CSharpValue.Result>in_WebShopQuery</CSharpValue>
               </InArgument>
             </ui:ExecuteQuery.Sql>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
           </ui:ExecuteQuery>
-          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Query to retrive data from Categories Table" sap:VirtualizedContainerService.HintSize="353.6,112.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3">
+          <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Query to retrive data from Categories table" sap:VirtualizedContainerService.HintSize="353.6,112.8" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3">
             <ui:ExecuteQuery.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
-                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">out_Categories</CSharpReference>
+                <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">
+                  <CSharpReference.Result>
+                    <OutArgument x:TypeArguments="Location(sd:DataTable)" />
+                  </CSharpReference.Result>out_Categories</CSharpReference>
               </OutArgument>
             </ui:ExecuteQuery.DataTable>
             <ui:ExecuteQuery.ExistingDbConnection>
               <InArgument x:TypeArguments="ui:DatabaseConnection">
-                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">db_Connection</CSharpValue>
+                <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">
+                  <CSharpValue.Result>
+                    <OutArgument x:TypeArguments="ui:DatabaseConnection" />
+                  </CSharpValue.Result>db_Connection</CSharpValue>
               </InArgument>
             </ui:ExecuteQuery.ExistingDbConnection>
             <ui:ExecuteQuery.Parameters>
@@ -205,7 +249,10 @@
             </ui:ExecuteQuery.Parameters>
             <ui:ExecuteQuery.Sql>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_CategoryQuery</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">
+                  <CSharpValue.Result>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </CSharpValue.Result>in_CategoryQuery</CSharpValue>
               </InArgument>
             </ui:ExecuteQuery.Sql>
           </ui:ExecuteQuery>
@@ -223,26 +270,41 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+            <ui:LogMessage DisplayName="Log Error Message" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_1">
               <ui:LogMessage.Level>
                 <InArgument x:TypeArguments="ui:LogLevel">
-                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">
+                    <CSharpValue.Result>
+                      <OutArgument x:TypeArguments="ui:LogLevel" />
+                    </CSharpValue.Result>UiPath.Core.Activities.LogLevel.Error</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Level>
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Error: " + exception.Message</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">
+                    <CSharpValue.Result>
+                      <OutArgument x:TypeArguments="x:Object" />
+                    </CSharpValue.Result>"Error: " + exception.Message</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <ui:DatabaseDisconnect DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
+        <ui:DatabaseDisconnect DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="201.6,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
           <ui:DatabaseDisconnect.DatabaseConnection>
             <InArgument x:TypeArguments="ui:DatabaseConnection">
-              <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">db_Connection</CSharpValue>
+              <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">
+                <CSharpValue.Result>
+                  <OutArgument x:TypeArguments="ui:DatabaseConnection" />
+                </CSharpValue.Result>db_Connection</CSharpValue>
             </InArgument>
           </ui:DatabaseDisconnect.DatabaseConnection>
         </ui:DatabaseDisconnect>

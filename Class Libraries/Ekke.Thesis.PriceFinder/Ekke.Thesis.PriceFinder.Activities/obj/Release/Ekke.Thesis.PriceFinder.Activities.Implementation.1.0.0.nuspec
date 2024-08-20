@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <authors>Ekke.Thesis.PriceFinder.Activities</authors>
     <description>Package Description</description>
-    <repository type="git" commit="55b1126376e8557a3f0eaef029282b80a802286f" />
+    <repository type="git" commit="bac8812765890526e555374ac6c528526854654b" />
     <dependencies>
       <group targetFramework="net6.0" />
     </dependencies>

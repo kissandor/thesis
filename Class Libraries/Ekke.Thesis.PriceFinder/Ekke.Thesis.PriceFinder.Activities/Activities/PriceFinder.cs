@@ -94,11 +94,13 @@ namespace Ekke.Thesis.PriceFinder.Activities
        
         private PriceCurrencyPair Finder(string SerachForPrice) 
         {
+            string inputWithoutSpaceInPrice = RemoveSpacesAfterIntegers(SerachForPrice);
+
             // Regular expression to match1 a price and currency pair, including thousands separators
             var regex1 = new Regex(@"([\d,]+(\.\d{1,2})?)\s*(USD|EUR|GBP|JPY|CAD|AUD|CHF|CNY|SEK|Ft|HUF|FT)", RegexOptions.IgnoreCase);
             var regex2 = new Regex(@"(\$|€|£|¥|CA\$|AU\$|USD|EUR|GBP|CHF|CNY|SEK|Ft|HUF|FT)?\s?([\d,]+(\.\d{1,2})?)", RegexOptions.IgnoreCase);
-            var match1 = regex1.Match(SerachForPrice);
-            var match2 = regex2.Match(SerachForPrice);
+            var match1 = regex1.Match(inputWithoutSpaceInPrice);
+            var match2 = regex2.Match(inputWithoutSpaceInPrice);
 
             if (match1.Success)
             {
@@ -130,7 +132,13 @@ namespace Ekke.Thesis.PriceFinder.Activities
 
             return null; // Return null if no price-currency pair is found
         }
-      
+
+        public static string RemoveSpacesAfterIntegers(string s)
+        {
+            // Use regex to find a digit followed by a space and replace it with just the digit
+            return Regex.Replace(s, @"(\d) ", "$1");
+        }
+
         #endregion
     }
 }

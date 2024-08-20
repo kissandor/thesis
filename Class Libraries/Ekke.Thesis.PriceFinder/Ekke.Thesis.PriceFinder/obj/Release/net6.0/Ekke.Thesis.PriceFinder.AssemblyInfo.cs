@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ekke.Thesis.PriceFinder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55b1126376e8557a3f0eaef029282b80a802286f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bac8812765890526e555374ac6c528526854654b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ekke.Thesis.PriceFinder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ekke.Thesis.PriceFinder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

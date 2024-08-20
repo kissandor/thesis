@@ -115,7 +115,7 @@
       <AssemblyReference>PriceParserActivity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="The flowchart receives 2 arguments:&#xA;- WebShop&#xA;- Product&#xA;&#xA;It checks if the search is implemented on the provided Webshop.&#xA;&#xA;If it's not, a message box will appear with relevant information.&#xA;&#xA;If the search is implemented on the provided webshop:&#xA;&#xA;- The name of the product is split by spaces into an array.&#xA;- The name of the product is saved into a new variable, and spaces are replaced with &quot;+&quot;. This forms the URL parameter.&#xA;- The workflow of the search implementation is invoked." DisplayName="Flowchart - To Search For A Product On A WebShop" sap:VirtualizedContainerService.HintSize="1061.6,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="The flowchart receives 2 arguments:&#xA;- WebShop&#xA;- Product&#xA;&#xA;It checks if the search is implemented on the provided Webshop.&#xA;&#xA;If it's not, a message box will appear with relevant information.&#xA;&#xA;If the search is implemented on the provided webshop:&#xA;&#xA;- The name of the product is split by spaces into an array.&#xA;- The name of the product is saved into a new variable, and spaces are replaced with &quot;+&quot;. This forms the URL parameter.&#xA;- The workflow of the search implementation is invoked." DisplayName="Flowchart - To Search For A Product On A WebShop" sap:VirtualizedContainerService.HintSize="1061.6,337.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="str_WebShopToSearch" />
       <Variable x:TypeArguments="s:String[]" Name="arr_ProductNameToArray" />
@@ -124,7 +124,7 @@
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="bool_IsSearchImplemented" />
       <Variable x:TypeArguments="s:String[]" Name="arr_WebShopsSearchImplemented">
         <Variable.Default>
-          <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">new string[]{"Alzaa"}</CSharpValue>
+          <CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">new string[]{"Alzaa", "Emag", "Pcx"}</CSharpValue>
         </Variable.Default>
       </Variable>
     </Flowchart.Variables>

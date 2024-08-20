@@ -180,7 +180,7 @@
           }
         }
       },
-      "Ekke.Thesis.PriceFinder.Activities/0.1.6": {
+      "Ekke.Thesis.PriceFinder.Activities/0.1.7": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -6177,7 +6177,7 @@
           }
         }
       },
-      "Ekke.Thesis.PriceFinder.Activities/0.1.6": {
+      "Ekke.Thesis.PriceFinder.Activities/0.1.7": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -12062,13 +12062,13 @@
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
       ]
     },
-    "Ekke.Thesis.PriceFinder.Activities/0.1.6": {
-      "sha512": "wCjRzhLlPfcpU60upQ/WwJydYVUUJmTgLxnF9F3A4Lz1DbZhVmFUn6oEjMnrAY1hpCt8e1C1zOgiJ9I8SRQaYg==",
+    "Ekke.Thesis.PriceFinder.Activities/0.1.7": {
+      "sha512": "7kJUWBafU657TrNFI7JYcwAxwPsd7tDL5AMwouMuMsjGnBypGPKmiPNfr5WSXsl20W9p4PxwfF1mkiU45oRhhw==",
       "type": "package",
-      "path": "ekke.thesis.pricefinder.activities/0.1.6",
+      "path": "ekke.thesis.pricefinder.activities/0.1.7",
       "files": [
         ".nupkg.metadata",
-        "ekke.thesis.pricefinder.activities.0.1.6.nupkg.sha512",
+        "ekke.thesis.pricefinder.activities.0.1.7.nupkg.sha512",
         "ekke.thesis.pricefinder.activities.nuspec",
         "lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.Design.dll",
         "lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.dll",
@@ -22787,7 +22787,7 @@
     "": [],
     "net8.0-windows7.0": [
       "BalaReva.Word.Activities >= 8.0.0 <= 8.0.0",
-      "Ekke.Thesis.PriceFinder.Activities >= 0.1.6 <= 0.1.6",
+      "Ekke.Thesis.PriceFinder.Activities >= 0.1.7 <= 0.1.7",
       "Parser >= 1.0.10 <= 1.0.10",
       "TestDatabaseConnection >= 1.0.13 <= 1.0.13",
       "UiPath.Database.Activities >= 1.7.1 <= 1.7.1",
@@ -22821,7 +22821,7 @@
           "Ekke.Thesis.PriceFinder.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[0.1.6, 0.1.6]"
+            "version": "[0.1.7, 0.1.7]"
           },
           "Parser": {
             "include": "Runtime",
