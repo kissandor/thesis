@@ -72,6 +72,8 @@ namespace ExcelUploadServer.Controllers
                         StatusCode = StatusCodes.Status400BadRequest
                     };
                 }
+                var sender = new SendEmail();
+                sender.emailSender();
 
                 return new JsonResult(Ok());
             } catch (Exception ex) 

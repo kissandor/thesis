@@ -86,3 +86,9 @@ D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\obj\Debug\net6.0\ExcelUploadS
 D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\obj\Debug\net6.0\ref\ExcelUploadServer.dll
 D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\obj\Debug\net6.0\ExcelUploadServer.sourcelink.json
 D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\obj\Debug\net6.0\ExcelUpl.713DFF31.Up2Date
+D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\bin\Debug\net6.0\MailKit.dll
+D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\bin\Debug\net6.0\MimeKit.dll
+D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\bin\Debug\net6.0\System.Formats.Asn1.dll
+D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Eger\thesis\ExcelUploadServer\ExcelUploadServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
