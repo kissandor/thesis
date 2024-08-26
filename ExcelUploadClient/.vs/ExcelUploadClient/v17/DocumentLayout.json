@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\Eger\\thesis\\ExcelUploadClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|d:\\eger\\thesis\\exceluploadclient\\exceluploadclient\\mvvm\\view\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|solutionrelative:exceluploadclient\\mvvm\\view\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|d:\\eger\\thesis\\exceluploadclient\\exceluploadclient\\mvvm\\viewmodel\\deleteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|solutionrelative:exceluploadclient\\mvvm\\viewmodel\\deleteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|d:\\eger\\thesis\\exceluploadclient\\exceluploadclient\\mvvm\\viewmodel\\computerpartsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|solutionrelative:exceluploadclient\\mvvm\\viewmodel\\computerpartsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|d:\\eger\\thesis\\exceluploadclient\\exceluploadclient\\mvvm\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D99CF85-BC3C-4CC2-B7B4-42801719FD22}|ExcelUploadClient\\ExcelUploadClient.csproj|solutionrelative:exceluploadclient\\mvvm\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\ViewModel\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "ExcelUploadClient\\MVVM\\ViewModel\\HomeViewModel.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\ViewModel\\HomeViewModel.cs",
+              "RelativeToolTip": "ExcelUploadClient\\MVVM\\ViewModel\\HomeViewModel.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwDIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T21:39:46.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Home.xaml",
-              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\View\\Home.xaml",
-              "RelativeDocumentMoniker": "ExcelUploadClient\\MVVM\\View\\Home.xaml",
-              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\View\\Home.xaml",
-              "RelativeToolTip": "ExcelUploadClient\\MVVM\\View\\Home.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-05T20:47:21.637Z",
+              "Title": "DeleteViewModel.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\ViewModel\\DeleteViewModel.cs",
+              "RelativeDocumentMoniker": "ExcelUploadClient\\MVVM\\ViewModel\\DeleteViewModel.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\ViewModel\\DeleteViewModel.cs",
+              "RelativeToolTip": "ExcelUploadClient\\MVVM\\ViewModel\\DeleteViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAiwD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T21:19:33.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ComputerPartsViewModel.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\ViewModel\\ComputerPartsViewModel.cs",
+              "RelativeDocumentMoniker": "ExcelUploadClient\\MVVM\\ViewModel\\ComputerPartsViewModel.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadClient\\ExcelUploadClient\\MVVM\\ViewModel\\ComputerPartsViewModel.cs",
+              "RelativeToolTip": "ExcelUploadClient\\MVVM\\ViewModel\\ComputerPartsViewModel.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAAAgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T20:46:02.22Z",
               "EditorCaption": ""
             }
           ]

@@ -14,10 +14,8 @@
                   ItemsSource="{Binding ComputerParts}"
                   Style="{StaticResource DataGridStyle}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Part Name" Binding="{Binding ComputerPartName}"  Width="4*"/>
                 <DataGridTextColumn Header="Category Id" Binding="{Binding CategoryId}" Width="2*"/>
-                <DataGridTextColumn Header="Price" Binding="{Binding computerPartPrice}" Width="2*"/>
-                <DataGridTextColumn Header="Webshop URL" Binding="{Binding webshopId}"  Width="4*"/>
+                <DataGridTextColumn Header="Part Name" Binding="{Binding ComputerPartName}"  Width="4*"/>
             </DataGrid.Columns>
 
         </DataGrid>
@@ -27,7 +25,7 @@
                      Width="454"
                      Foreground="#5366a2"
                      IsIndeterminate="True" 
-                     Visibility="{Binding ProgresBarVisibility}"/>
+                     Visibility="{Binding ProgressBarVisibility}"/>
         <Grid 
              Margin="10,50,8,8"
              Width="600" 

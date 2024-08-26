@@ -1,19 +1,12 @@
 ﻿using ExcelUploadClient.Utilities;
 using ExcelUploadClient.MVVM.Model;
-using ExcelUploadClient.MVVM.View;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Configuration;
 using System.Net.Http;
 using System.Windows;
-using DocumentFormat.OpenXml.Office2016.Drawing.Charts;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
@@ -51,16 +44,16 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
         }
 
-        private Visibility progresBarVisibility = Visibility.Visible;
-        public Visibility ProgresBarVisibility
+        private Visibility progressBarVisibility = Visibility.Visible;
+        public Visibility ProgressBarVisibility
         {
-            get { return progresBarVisibility; }
+            get { return progressBarVisibility; }
             set
             {
-                if (progresBarVisibility != value)
+                if (progressBarVisibility != value)
                 {
-                    progresBarVisibility = value;
-                    OnPropertyChanged(nameof(progresBarVisibility));
+                    progressBarVisibility = value;
+                    OnPropertyChanged(nameof(ProgressBarVisibility));
                 }
             }
         }
@@ -83,17 +76,24 @@ namespace ExcelUploadClient.MVVM.ViewModel
             
             apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
             getAllCategoriesEndPoint = ConfigurationManager.AppSettings["GetAllCategoriesEndPoint"];
-            LoadCategoriesAsync();
+            
+            if (string.IsNullOrEmpty(apiUrl) || string.IsNullOrEmpty(getAllCategoriesEndPoint))
+            {
+                ShowErrorMessage("Configuration settings are missing or invalid.");
+                return;
+            }
+
+            LoadCategoriesAsync().ConfigureAwait(false);
         }
 
-        private async void LoadCategoriesAsync()
+        private async Task LoadCategoriesAsync()
         {
             Visibility = Visibility.Hidden;
             try
             {
                 DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllCategoriesEndPoint);
                 Categories = ConvertDataTableToCategories(dataTable);
-                ProgresBarVisibility = Visibility.Hidden;
+                ProgressBarVisibility = Visibility.Hidden;
             }
             catch (HttpRequestException)
             {
@@ -109,7 +109,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         private void ShowErrorMessage(string message)
         {
-            ProgresBarVisibility = Visibility.Hidden;
+            ProgressBarVisibility = Visibility.Hidden;
             Visibility = Visibility.Visible;
             ErrorMessageText = message;
         }
@@ -122,8 +122,8 @@ namespace ExcelUploadClient.MVVM.ViewModel
             {
                     ComputerPartCategory category = new ComputerPartCategory
                     {
-                        Id = Convert.ToInt32(row["id"]),
-                        CategoryName = row["categoryName"].ToString(),
+                        Id = row["id"] != DBNull.Value ? Convert.ToInt32(row["id"]) : 0,
+                        CategoryName = row["categoryName"]?.ToString(),
                     };
                     categories.Add(category);
             }

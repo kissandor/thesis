@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
-using System.Net;
-using System.Threading.Tasks;
+﻿using ExcelUploadClient.MVVM.Model;
 using ExcelUploadClient.Utilities;
-using ExcelUploadClient.MVVM.Model;
-using Newtonsoft.Json.Linq;
+using System.Collections.ObjectModel;
 using System.Configuration;
-using System.Windows;
+using System.Data;
 using System.Net.Http;
-using System.Windows.Controls;
+using System.Windows;
+using System;
+using System.Threading.Tasks;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
-
     public class ComputerPartsViewModel : ViewModelBase
     {
         private readonly string apiUrl;
@@ -49,16 +44,16 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
         }
 
-        private Visibility progresBarVisibility = Visibility.Visible;
-        public Visibility ProgresBarVisibility
+        private Visibility progressBarVisibility = Visibility.Visible;
+        public Visibility ProgressBarVisibility
         {
-            get { return progresBarVisibility; }
+            get { return progressBarVisibility; }
             set
             {
-                if (progresBarVisibility != value)
+                if (progressBarVisibility != value)
                 {
-                    progresBarVisibility = value;
-                    OnPropertyChanged(nameof(progresBarVisibility));
+                    progressBarVisibility = value;
+                    OnPropertyChanged(nameof(ProgressBarVisibility));
                 }
             }
         }
@@ -80,61 +75,60 @@ namespace ExcelUploadClient.MVVM.ViewModel
         {
             apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
             getAllComputerPartsEndPoint = ConfigurationManager.AppSettings["GetAllComputerPartsEndPoint"];
-            LoadComputerPartsData();
+
+            if (string.IsNullOrEmpty(apiUrl) || string.IsNullOrEmpty(getAllComputerPartsEndPoint))
+            {
+                ShowErrorMessage("Configuration settings are missing or invalid.");
+                return;
+            }
+
+            LoadComputerPartsData().ConfigureAwait(false);
         }
 
-        private async void LoadComputerPartsData()
+        private async Task LoadComputerPartsData()
         {
             Visibility = Visibility.Hidden;
             try
-            {  
+            {
                 DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllComputerPartsEndPoint);
                 ComputerParts = ConvertDataTableToComputerParts(dataTable);
-                ProgresBarVisibility = Visibility.Hidden;
-              
+                ProgressBarVisibility = Visibility.Hidden;
             }
             catch (HttpRequestException)
             {
-               
-                // Az HTTP kérés hiba, tehát a szerver nem érhető el
-                ShowErrorMessage("A szerver jelenleg nem elérhető. Kérlek próbáld újra később.");
+                ShowErrorMessage("The server is currently unavailable. Please try again later.");
             }
             catch (Exception ex)
             {
-                
-                // Bármilyen más hiba esetén
-                ShowErrorMessage($"Hiba történt a kérés során: {ex.Message}");
+                ShowErrorMessage($"An error occurred during the request: {ex.Message}");
             }
         }
 
         private void ShowErrorMessage(string message)
         {
-            ProgresBarVisibility = Visibility.Hidden;
+            ProgressBarVisibility = Visibility.Hidden;
             Visibility = Visibility.Visible;
             ErrorMessageText = message;
         }
 
         private ObservableCollection<ComputerPart> ConvertDataTableToComputerParts(DataTable dataTable)
         {
-            ObservableCollection<ComputerPart> computerParts = new ObservableCollection<ComputerPart>();
+            var computerParts = new ObservableCollection<ComputerPart>();
 
             foreach (DataRow row in dataTable.Rows)
             {
-                ComputerPart computerPart = new ComputerPart
+                var computerPart = new ComputerPart
                 {
-                    Id = Convert.ToInt32(row["id"]),
-                    ComputerPartName = row["computerPartName"].ToString(),
+                    Id = row["id"] != DBNull.Value ? Convert.ToInt32(row["id"]) : 0,
+                    ComputerPartName = row["computerPartName"]?.ToString(),
                     ComputerPartPrice = row["computerPartPrice"] as decimal?,
-                    CategoryId = Convert.ToInt32(row["categoryId"]),
-                    //Webshop = row["category"].ToString(),
-                    WebshopId = row["webshopId"] as int?,
-                    //Webshop = row["webshop"].ToString()
+                    CategoryId = row["categoryId"] != DBNull.Value ? Convert.ToInt32(row["categoryId"]) : 0,
+                    WebshopId = row["webshopId"] as int?
                 };
 
                 computerParts.Add(computerPart);
             }
             return computerParts;
         }
-
     }
 }

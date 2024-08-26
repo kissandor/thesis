@@ -23,7 +23,7 @@
              Width="454"
              Foreground="#5366a2"
              IsIndeterminate="True" 
-             Visibility="{Binding ProgresBarVisibility}"/>
+             Visibility="{Binding ProgressBarVisibility}"/>
 
         <Grid 
                  Margin="10,50,8,8"
