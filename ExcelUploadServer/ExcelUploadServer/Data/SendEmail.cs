@@ -24,7 +24,7 @@ namespace ExcelUploadServer.Data
                 // Create the email body
                 var builder = new BodyBuilder
                 {
-                    TextBody = "Hello"
+                    TextBody = "Search"
                 };
                 email.Body = builder.ToMessageBody();
 

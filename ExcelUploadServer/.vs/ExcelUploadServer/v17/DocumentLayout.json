@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\Eger\\thesis\\ExcelUploadServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\data\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\data\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\controllers\\computerpartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\controllers\\computerpartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\models\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\data\\exceluploadcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\data\\exceluploadcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\models\\computerpart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\models\\computerpart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|d:\\eger\\thesis\\exceluploadserver\\exceluploadserver\\models\\webshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23FD2699-D521-4ED5-A398-74E29E8A22C6}|ExcelUploadServer\\ExcelUploadServer.csproj|solutionrelative:exceluploadserver\\models\\webshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ComputerPartController.cs",
               "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Controllers\\ComputerPartController.cs",
               "RelativeDocumentMoniker": "ExcelUploadServer\\Controllers\\ComputerPartController.cs",
               "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Controllers\\ComputerPartController.cs",
               "RelativeToolTip": "ExcelUploadServer\\Controllers\\ComputerPartController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAgwEwAAAAAAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAgwLAAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T21:22:24.665Z"
+              "WhenOpened": "2024-09-07T22:06:01.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SendEmail.cs",
-              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Data\\SendEmail.cs",
-              "RelativeDocumentMoniker": "ExcelUploadServer\\Data\\SendEmail.cs",
-              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Data\\SendEmail.cs",
-              "RelativeToolTip": "ExcelUploadServer\\Data\\SendEmail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Result.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\Result.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Models\\Result.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\Result.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Models\\Result.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T21:16:54.126Z",
+              "WhenOpened": "2024-09-07T21:32:10.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExcelUploadContext.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Data\\ExcelUploadContext.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Data\\ExcelUploadContext.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Data\\ExcelUploadContext.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Data\\ExcelUploadContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T21:13:11.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebShop.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\WebShop.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Models\\WebShop.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\WebShop.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Models\\WebShop.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T22:41:30.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Models\\Category.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\Category.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T22:37:31.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ComputerPart.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\ComputerPart.cs",
+              "RelativeDocumentMoniker": "ExcelUploadServer\\Models\\ComputerPart.cs",
+              "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Models\\ComputerPart.cs",
+              "RelativeToolTip": "ExcelUploadServer\\Models\\ComputerPart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T22:37:02.701Z",
               "EditorCaption": ""
             }
           ]

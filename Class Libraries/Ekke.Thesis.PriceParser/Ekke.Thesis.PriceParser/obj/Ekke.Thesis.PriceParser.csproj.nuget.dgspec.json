@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser.csproj": {}
+  },
+  "projects": {
+    "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser.csproj",
+        "projectName": "Ekke.Thesis.PriceParser",
+        "projectPath": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser.csproj",
+        "packagesPath": "C:\\Users\\kissa\\.nuget\\packages\\",
+        "outputPath": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.PriceParser\\Ekke.Thesis.PriceParser\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\kissa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\kissa\\source\\repos\\Company.Product1\\Company.Product1.Activities.Design\\bin\\Debug": {},
+          "D:\\Eger\\thesis\\Nuget Packages": {},
+          "https://pkgs.dev.azure.com/uipath/Public.Feeds/_packaging/UiPath-Official/nuget/v3/index.json": {},
+          "https://uipath.pkgs.visualstudio.com/Public.Feeds/_packaging/Marketplace-Public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

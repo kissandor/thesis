@@ -6,7 +6,7 @@
     <InArgument x:TypeArguments="sd:DataTable" />
   </this:ResoultToDataBase.in_SearchResult>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>703.2,966.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1001.5999999999999,666.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,9 +102,10 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Workflow to save the search results back to the database.&#xD;&#xA;" DisplayName="ResoultToDataBase" sap:VirtualizedContainerService.HintSize="516,901.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Workflow to save the search results back to the database.&#xA;" DisplayName="ResoultToDataBase" sap:VirtualizedContainerService.HintSize="518.4,601.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_Connection" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_NoEmptyRows" />
@@ -113,17 +114,18 @@
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="453.6,812.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,512.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="416.8,558.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="420.8,560.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DatabaseConnect DisplayName="Connect to Thesis database" sap:VirtualizedContainerService.HintSize="354.4,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False">
+          <ui:DatabaseConnect DisplayName="Connect to Thesis database" sap:VirtualizedContainerService.HintSize="358.4,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False">
             <ui:DatabaseConnect.DatabaseConnection>
               <OutArgument x:TypeArguments="ui:DatabaseConnection">
                 <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">
@@ -133,7 +135,7 @@
               </OutArgument>
             </ui:DatabaseConnect.DatabaseConnection>
           </ui:DatabaseConnect>
-          <ui:FilterDataTable sap2010:Annotation.AnnotationText="Activity to remove empty rows from the datatable." DisplayName="Filter Data Table To Remove Empty Rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="354.4,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
+          <ui:FilterDataTable sap2010:Annotation.AnnotationText="Activity to remove empty rows from the datatable." DisplayName="Filter Data Table To Remove Empty Rows" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="358.4,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
             <ui:FilterDataTable.DataTable>
               <InArgument x:TypeArguments="sd:DataTable">
                 <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">in_SearchResult</CSharpValue>
@@ -168,7 +170,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:FilterDataTable>
-          <ui:BulkInsert AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Activity to insert the in_SearchResult DataTable into the SearchResults table of the database" DisplayName="Bulk insert in_SearchResult Datatable To The Database" sap:VirtualizedContainerService.HintSize="354.4,185.6" sap2010:WorkflowViewState.IdRef="BulkInsert_2" TableName="SearchResults">
+          <ui:BulkInsert AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Activity to insert the in_SearchResult DataTable into the SearchResults table of the database" DisplayName="Bulk insert in_SearchResult Datatable To The Database" sap:VirtualizedContainerService.HintSize="358.4,185.6" sap2010:WorkflowViewState.IdRef="BulkInsert_2" TableName="SearchResults">
             <ui:BulkInsert.DataTable>
               <InArgument x:TypeArguments="sd:DataTable">
                 <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">in_SearchResult</CSharpValue>
@@ -193,10 +195,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="420,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422.4,325.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -204,29 +206,36 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="LogMessage_1">
-              <ui:LogMessage.Level>
-                <InArgument x:TypeArguments="ui:LogLevel">
-                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Level>
-              <ui:LogMessage.Message>
-                <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">"Error " + exception</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Message>
+            <Sequence sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:LogMessage>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                <ui:LogMessage.Level>
+                  <InArgument x:TypeArguments="ui:LogLevel">
+                    <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Level>
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">"Error " + exception</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+            </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <ui:DatabaseDisconnect DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
+        <ui:DatabaseDisconnect DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="201.6,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1">
           <ui:DatabaseDisconnect.DatabaseConnection>
             <InArgument x:TypeArguments="ui:DatabaseConnection">
               <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">db_Connection</CSharpValue>

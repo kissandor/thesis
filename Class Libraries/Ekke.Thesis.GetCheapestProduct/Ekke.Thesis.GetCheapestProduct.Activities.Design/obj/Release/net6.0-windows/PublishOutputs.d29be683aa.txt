@@ -1,0 +1,10 @@
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.Activities.Design.dll
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.Activities.Design.pdb
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.Activities.dll
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.dll
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.Activities.pdb
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.Activities.xml
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.pdb
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.xml
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.Activities.Design.xml
+D:\Eger\thesis\Nuget Packages\Ekke.Thesis.GetCheapestProduct.Activities.Design.deps.json

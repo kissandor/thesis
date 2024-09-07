@@ -121,9 +121,9 @@ namespace ExcelUploadClient.MVVM.ViewModel
                 {
                     Id = row["id"] != DBNull.Value ? Convert.ToInt32(row["id"]) : 0,
                     ComputerPartName = row["computerPartName"]?.ToString(),
-                    ComputerPartPrice = row["computerPartPrice"] as decimal?,
+                    //ComputerPartPrice = row["computerPartPrice"] as decimal?,
                     CategoryId = row["categoryId"] != DBNull.Value ? Convert.ToInt32(row["categoryId"]) : 0,
-                    WebshopId = row["webshopId"] as int?
+                    //WebshopId = row["webshopId"] as int?
                 };
 
                 computerParts.Add(computerPart);

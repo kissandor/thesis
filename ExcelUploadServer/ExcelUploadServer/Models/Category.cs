@@ -1,4 +1,6 @@
-﻿namespace ExcelUploadServer.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ExcelUploadServer.Models
 {
     public class Category
     {

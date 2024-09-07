@@ -72,7 +72,7 @@ namespace ExcelUploadServer.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_ComputerParts_WebshopId",
                 table: "ComputerParts",
-                column: "WebshopId");
+                column: "WebShopId");
         }
 
         /// <inheritdoc />

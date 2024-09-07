@@ -1,0 +1,16 @@
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\bin\Release\net6.0\Ekke.Thesis.GetCheapestProduct.deps.json
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\bin\Release\net6.0\Ekke.Thesis.GetCheapestProduct.dll
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\bin\Release\net6.0\Ekke.Thesis.GetCheapestProduct.pdb
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\bin\Release\net6.0\Ekke.Thesis.GetCheapestProduct.xml
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.csproj.AssemblyReference.cache
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.Properties.Resources.resources
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.csproj.GenerateResource.cache
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.GeneratedMSBuildEditorConfig.editorconfig
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.AssemblyInfoInputs.cache
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.AssemblyInfo.cs
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.csproj.CoreCompileInputs.cache
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.sourcelink.json
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.dll
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\refint\Ekke.Thesis.GetCheapestProduct.dll
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\Ekke.Thesis.GetCheapestProduct.pdb
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct\obj\Release\net6.0\ref\Ekke.Thesis.GetCheapestProduct.dll

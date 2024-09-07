@@ -1,0 +1,20 @@
+﻿Ekke.Thesis.GetCheapestProduct.Activities.Design
+1.0.0.0
+
+library
+C#
+.cs
+D:\Eger\thesis\Class Libraries\Ekke.Thesis.GetCheapestProduct\Ekke.Thesis.GetCheapestProduct.Activities.Design\obj\Release\net6.0-windows\
+Ekke.Thesis.GetCheapestProduct.Activities.Design
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+
+7-1833235976
+
+201089629195
+2151434027526
+..\..\Shared\Themes\Generic.xaml;Designers\GetCheapestProductDesigner.xaml;Themes\Icons.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Controls\ComboboxControl.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Controls\FilePathControl.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Controls\RestrictiveBodyConnector.xaml;D:\Eger\thesis\Class Libraries\Shared\UiPath.Shared.Activities.Design\Editors\EditorTemplates.xaml;
+
+True
+

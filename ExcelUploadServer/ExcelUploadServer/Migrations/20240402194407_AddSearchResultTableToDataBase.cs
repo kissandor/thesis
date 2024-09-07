@@ -44,7 +44,7 @@ namespace ExcelUploadServer.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_SearchResults_WebshopId",
                 table: "SearchResults",
-                column: "WebshopId");
+                column: "WebShopId");
         }
 
         /// <inheritdoc />

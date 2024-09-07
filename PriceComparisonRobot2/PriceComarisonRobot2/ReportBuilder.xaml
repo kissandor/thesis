@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PdfReport" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1001.5999999999999,4194.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bw="clr-namespace:BalaReva.Word;assembly=BalaReva.Word.Activities" xmlns:bwd="clr-namespace:BalaReva.Word.Documents;assembly=BalaReva.Word.Activities" xmlns:bwp="clr-namespace:BalaReva.Word.Pages;assembly=BalaReva.Word.Activities" xmlns:bwt="clr-namespace:BalaReva.Word.Tables;assembly=BalaReva.Word.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:sc1="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:t="clr-namespace:TestDataBaseConnection;assembly=TestDataBaseConnection" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PdfReport" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1001.5999999999999,5956.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:bw="clr-namespace:BalaReva.Word;assembly=BalaReva.Word.Activities" xmlns:bwd="clr-namespace:BalaReva.Word.Documents;assembly=BalaReva.Word.Activities" xmlns:bwp="clr-namespace:BalaReva.Word.Pages;assembly=BalaReva.Word.Activities" xmlns:bwt="clr-namespace:BalaReva.Word.Tables;assembly=BalaReva.Word.Activities" xmlns:etga="clr-namespace:Ekke.Thesis.GetCheapestProduct.Activities;assembly=Ekke.Thesis.GetCheapestProduct.Activities" xmlns:etgm="clr-namespace:Ekke.Thesis.GetCheapestProduct.Models;assembly=Ekke.Thesis.GetCheapestProduct" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:sc1="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:t="clr-namespace:TestDataBaseConnection;assembly=TestDataBaseConnection" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -45,6 +45,15 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>Ekke.Thesis.GetCheapestProduct.Models</x:String>
+      <x:String>Ekke.Thesis.GetCheapestProduct.Activities</x:String>
+      <x:String>Ekke.Thesis.GetCheapestProduct</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,11 +118,27 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>Ekke.Thesis.GetCheapestProduct</AssemblyReference>
+      <AssemblyReference>Ekke.Thesis.GetCheapestProduct.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow:&#xA;Connects to the Thesis Database.&#xA;Retrieves the cheapest products from the SearchResult table.&#xA;Builds the dt_ProductsToAddToReport DataTable using the cheapest products.&#xA;Gets SendTo Email Address, SendFrom Email Address, and SendToName assets from Orchestrator.&#xA;Copies a new version of the template Word file.&#xA;Using this new version, builds the report and save it as a PDF.&#xA;Emails the report to the user.&#xA;" DisplayName="Report Builder WorkFlow" sap:VirtualizedContainerService.HintSize="802.4,4129.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow:&#xA;Connects to the Thesis Database.&#xA;Retrieves the cheapest products from the SearchResult table.&#xA;Builds the dt_ProductsToAddToReport DataTable using the cheapest products.&#xA;Gets SendTo Email Address, SendFrom Email Address, and SendToName assets from Orchestrator.&#xA;Copies a new version of the template Word file.&#xA;Using this new version, builds the report and save it as a PDF.&#xA;Emails the report to the user.&#xA;" DisplayName="Report Builder WorkFlow" sap:VirtualizedContainerService.HintSize="704.8,5892" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False" Name="str_ConnectionString" />
+      <Variable x:TypeArguments="x:String" Name="str_ConnectionString">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="scg:List(t:Product)" Name="products" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ProductsToAddToReport" />
       <Variable x:TypeArguments="x:String" Name="str_EmailFrom" />
@@ -122,6 +147,8 @@
       <Variable x:TypeArguments="x:String" Name="str_docName" />
       <Variable x:TypeArguments="x:String" Name="str_Pdf" />
       <Variable x:TypeArguments="x:String" Name="str_ProductToAddToEmailHtml" />
+      <Variable x:TypeArguments="x:String" Name="str_Body" />
+      <Variable x:TypeArguments="scg:List(etgm:Product)" Name="cheapestProducts" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -129,7 +156,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="740,944" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="642.4,1252" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,35 +164,71 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="512,680.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="513.6,988.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DatabaseConnect DisplayName="Connect to Thesis database" sap:VirtualizedContainerService.HintSize="449.6,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" DatabaseConnection="{x:Null}" ConnectionString="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False" />
-          <t:TestDatabaseConnection sap2010:Annotation.AnnotationText="Custom activity to retrieve the cheapest products from the Thesis Database SearchResult table." DisplayName="Get Cheapest Products From Database" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="TestDatabaseConnection_1">
-            <t:TestDatabaseConnection.ConnectionString>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">str_ConnectionString</CSharpValue>
-              </InArgument>
-            </t:TestDatabaseConnection.ConnectionString>
-            <t:TestDatabaseConnection.Products>
-              <OutArgument x:TypeArguments="scg:List(t:Product)">
-                <CSharpReference x:TypeArguments="scg:List(t:Product)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">products</CSharpReference>
-              </OutArgument>
-            </t:TestDatabaseConnection.Products>
+          <ui:DatabaseConnect DisplayName="Connect to Thesis database" sap:VirtualizedContainerService.HintSize="451.2,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" DatabaseConnection="{x:Null}" ConnectionString="Data Source=POKOLGEP\SQLEXPRESS;Initial Catalog=Thesis;Integrated Security=True;Encrypt=False">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-          </t:TestDatabaseConnection>
-          <ui:ForEach x:TypeArguments="t:Product" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="449.6,443.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+          </ui:DatabaseConnect>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,247.2" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <t:TestDatabaseConnection sap2010:Annotation.AnnotationText="Custom activity to retrieve the cheapest products from the Thesis Database SearchResult table." DisplayName="Get Cheapest Products From Database" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="TestDatabaseConnection_1">
+                  <t:TestDatabaseConnection.ConnectionString>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">str_ConnectionString</CSharpValue>
+                    </InArgument>
+                  </t:TestDatabaseConnection.ConnectionString>
+                  <t:TestDatabaseConnection.Products>
+                    <OutArgument x:TypeArguments="scg:List(t:Product)">
+                      <CSharpReference x:TypeArguments="scg:List(t:Product)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">products</CSharpReference>
+                    </OutArgument>
+                  </t:TestDatabaseConnection.Products>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </t:TestDatabaseConnection>
+              </Sequence>
+            </ui:CommentOut.Body>
+          </ui:CommentOut>
+          <etga:GetCheapestProduct ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="451.2,117.6" sap2010:WorkflowViewState.IdRef="GetCheapestProduct_1">
+            <etga:GetCheapestProduct.ConnectionString>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">str_ConnectionString</CSharpValue>
+              </InArgument>
+            </etga:GetCheapestProduct.ConnectionString>
+            <etga:GetCheapestProduct.Products>
+              <OutArgument x:TypeArguments="scg:List(etgm:Product)">
+                <CSharpReference x:TypeArguments="scg:List(etgm:Product)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">cheapestProducts</CSharpReference>
+              </OutArgument>
+            </etga:GetCheapestProduct.Products>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </etga:GetCheapestProduct>
+          <ui:ForEach x:TypeArguments="etgm:Product" CurrentIndex="{x:Null}" DisplayName="For Each - Can this be deleted?" sap:VirtualizedContainerService.HintSize="451.2,443.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
             <ui:ForEach.Body>
-              <ActivityAction x:TypeArguments="t:Product">
+              <ActivityAction x:TypeArguments="etgm:Product">
                 <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="t:Product" Name="currentProduct" />
+                  <DelegateInArgument x:TypeArguments="etgm:Product" Name="currentProduct" />
                 </ActivityAction.Argument>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
@@ -190,14 +253,14 @@
             </ui:ForEach.Body>
             <ui:ForEach.Values>
               <InArgument x:TypeArguments="sc:IEnumerable">
-                <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">products</CSharpValue>
+                <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">cheapestProducts</CSharpValue>
               </InArgument>
             </ui:ForEach.Values>
           </ui:ForEach>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="515.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -222,7 +285,7 @@
                 </ui:LogMessage.Level>
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
-                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42" xml:space="preserve">"Error!!!:  " + exception</CSharpValue>
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49" xml:space="preserve">"Error:  " + exception</CSharpValue>
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
@@ -243,7 +306,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="740,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Category&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Website&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="642.4,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Category&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Website&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;">
       <ui:BuildDataTable.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">dt_ProductsToAddToReport</CSharpReference>
@@ -256,13 +319,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:IfElseIf DisplayName="Else If To Check If The Product List Is Not Null" sap:VirtualizedContainerService.HintSize="740,1661.6" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:IfElseIf DisplayName="Else If To Check If The Product List Is Not Null" sap:VirtualizedContainerService.HintSize="642.4,1661.6" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
             <ui:IfElseIfBlock.Condition>
               <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">products != null</CSharpValue>
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">cheapestProducts != null</CSharpValue>
               </InArgument>
             </ui:IfElseIfBlock.Condition>
             <ui:IfElseIfBlock.Then>
@@ -273,11 +336,11 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEach x:TypeArguments="t:Product" CurrentIndex="{x:Null}" DisplayName="For Each To Add The Chepest Products To The DataTable" sap:VirtualizedContainerService.HintSize="529.6,1344.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+                <ui:ForEach x:TypeArguments="etgm:Product" CurrentIndex="{x:Null}" DisplayName="For Each To Add The Chepest Products To The DataTable" sap:VirtualizedContainerService.HintSize="529.6,1344.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
                   <ui:ForEach.Body>
-                    <ActivityAction x:TypeArguments="t:Product">
+                    <ActivityAction x:TypeArguments="etgm:Product">
                       <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="t:Product" Name="currentProduct" />
+                        <DelegateInArgument x:TypeArguments="etgm:Product" Name="currentProduct" />
                       </ActivityAction.Argument>
                       <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1156" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <Sequence.Variables>
@@ -389,15 +452,9 @@
                   </ui:ForEach.Body>
                   <ui:ForEach.Values>
                     <InArgument x:TypeArguments="sc:IEnumerable">
-                      <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">products</CSharpValue>
+                      <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">cheapestProducts</CSharpValue>
                     </InArgument>
                   </ui:ForEach.Values>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
                 </ui:ForEach>
               </Sequence>
             </ui:IfElseIfBlock.Then>
@@ -411,7 +468,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:IfElseIf>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="FromEmailAddress" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Thesis" sap:VirtualizedContainerService.HintSize="740,56.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="FromEmailAddress" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Thesis" sap:VirtualizedContainerService.HintSize="642.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">str_EmailFrom</CSharpReference>
@@ -419,12 +476,12 @@
       </ui:GetRobotAsset.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ToEmailAddress" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Thesis" sap:VirtualizedContainerService.HintSize="740,56.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ToEmailAddress" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Thesis" sap:VirtualizedContainerService.HintSize="642.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">str_EmailTo</CSharpReference>
@@ -432,12 +489,12 @@
       </ui:GetRobotAsset.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Name" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Thesis" sap:VirtualizedContainerService.HintSize="740,56.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Name" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Thesis" sap:VirtualizedContainerService.HintSize="642.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">str_NameTo</CSharpReference>
@@ -445,24 +502,24 @@
       </ui:GetRobotAsset.Value>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotAsset>
-    <bw:WordScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="Word Application Scope To Save A Copy Of The Template File" FilePath="D:\Eger\thesis\Doc\Template.docx" sap:VirtualizedContainerService.HintSize="740,56.8" sap2010:WorkflowViewState.IdRef="WordScope_1">
+    <bw:WordScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="Word Application Scope To Save A Copy Of The Template File" FilePath="D:\Eger\thesis\Doc\Template.docx" sap:VirtualizedContainerService.HintSize="642.4,84.8" sap2010:WorkflowViewState.IdRef="WordScope_1">
       <bw:WordScope.Body>
         <ActivityAction x:TypeArguments="bw:WordObject">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="bw:WordObject" Name="WordObj" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,326.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,327.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">str_docName</CSharpReference>
@@ -491,53 +548,53 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </bw:WordScope>
-    <bw:WordScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="Word Application Scope To Build The Word Report And Save To PDF" sap:VirtualizedContainerService.HintSize="740,650.4" sap2010:WorkflowViewState.IdRef="WordScope_2">
+    <bw:WordScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="Word Application Scope To Build The Word Report And Save To PDF" sap:VirtualizedContainerService.HintSize="642.4,987.2" sap2010:WorkflowViewState.IdRef="WordScope_2">
       <bw:WordScope.Body>
         <ActivityAction x:TypeArguments="bw:WordObject">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="bw:WordObject" Name="WordObj" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,477.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="528.8,813.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;ReportingTime&gt;" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_1" MatchCase="False" ReplaceOption="ReplaceAll">
+            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;ReportingTime&gt;" sap:VirtualizedContainerService.HintSize="466.4,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_1" MatchCase="False" ReplaceOption="ReplaceAll">
               <bwp:FindReplace.ReplaceText>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">DateTime.Now.ToString("yyyy.MM.dd H:mm:ss")</CSharpValue>
                 </InArgument>
               </bwp:FindReplace.ReplaceText>
             </bwp:FindReplace>
-            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;SentFromEmail&gt;" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_2" MatchCase="False" ReplaceOption="ReplaceAll">
+            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;SentFromEmail&gt;" sap:VirtualizedContainerService.HintSize="466.4,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_2" MatchCase="False" ReplaceOption="ReplaceAll">
               <bwp:FindReplace.ReplaceText>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">str_EmailFrom</CSharpValue>
                 </InArgument>
               </bwp:FindReplace.ReplaceText>
             </bwp:FindReplace>
-            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;SendToEmail&gt;" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_3" MatchCase="False" ReplaceOption="ReplaceAll">
+            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;SendToEmail&gt;" sap:VirtualizedContainerService.HintSize="466.4,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_3" MatchCase="False" ReplaceOption="ReplaceAll">
               <bwp:FindReplace.ReplaceText>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">str_EmailTo</CSharpValue>
                 </InArgument>
               </bwp:FindReplace.ReplaceText>
             </bwp:FindReplace>
-            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;SendToName&gt;" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_4" MatchCase="False" ReplaceOption="ReplaceAll">
+            <bwp:FindReplace ExecutionResult="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Find Replace" FindOption="Whole" FindText="&lt;SendToName&gt;" sap:VirtualizedContainerService.HintSize="466.4,56.8" sap2010:WorkflowViewState.IdRef="FindReplace_4" MatchCase="False" ReplaceOption="ReplaceAll">
               <bwp:FindReplace.ReplaceText>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">str_NameTo</CSharpValue>
                 </InArgument>
               </bwp:FindReplace.ReplaceText>
             </bwp:FindReplace>
-            <ui:IfElseIf DisplayName="Else If To Check If The Product List Is Null" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+            <ui:IfElseIf DisplayName="Else If To Check If The Product List Is Null" sap:VirtualizedContainerService.HintSize="466.4,364.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
               <ui:IfElseIf.ConditionBlocks>
                 <sc1:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
                     <ui:IfElseIfBlock.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
-                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">products != null</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">cheapestProducts != null</CSharpValue>
                       </InArgument>
                     </ui:IfElseIfBlock.Condition>
                     <ui:IfElseIfBlock.Then>
@@ -561,12 +618,12 @@
               </ui:IfElseIf.ConditionBlocks>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:IfElseIf>
-            <Assign sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign sap:VirtualizedContainerService.HintSize="466.4,84.8" sap2010:WorkflowViewState.IdRef="Assign_8">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">str_Pdf</CSharpReference>
@@ -584,7 +641,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <bwp:WordToPdf ModifyPassword="{x:Null}" OpenPassword="{x:Null}" ContinueOnError="False" DisplayName="Word to PDF" EndPage="0" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="WordToPdf_1" StartPage="0">
+            <bwp:WordToPdf ModifyPassword="{x:Null}" OpenPassword="{x:Null}" ContinueOnError="False" DisplayName="Word to PDF" EndPage="0" sap:VirtualizedContainerService.HintSize="466.4,48" sap2010:WorkflowViewState.IdRef="WordToPdf_1" StartPage="0">
               <bwp:WordToPdf.PDFFile>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">str_Pdf</CSharpValue>
@@ -611,79 +668,98 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </bw:WordScope>
-    <umab:OutlookApplicationCard Account="kissandor@hotmail.com" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App To Email The Report" sap:VirtualizedContainerService.HintSize="740,465.6" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
-      <umab:OutlookApplicationCard.Body>
-        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,260.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="kalapacs@gmail.com" Name="str_EmailAddres" />
-              <Variable x:TypeArguments="x:String" Name="str_Body">
-                <Variable.Default>
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45" xml:space="preserve">"&lt;!DOCTYPE html&gt;"+
-"&lt;html&gt;"+
-"&lt;head&gt;"+
-"&lt;title&gt;Page Title&lt;/title&gt;"+
-"&lt;style type='text/css'&gt;"+
-"p.detail_primary { color:#000000 ;font-weight:normal;font-family:ZF Sans;font-size:22px; border-bottom:solid black 1.0pt; }"+
-"p.detail_primary_no_border { color:#000000 ;font-weight:normal;font-family:ZF Sans;font-size:22px;}"+
-"span.name_primary { color:#1179BF;font-weight:bold;font-family:ZF Sans;font-size:22px; }"+
-"p.detail_secondary { color:#000000 ;font-weight:normal;font-family:ZF Sans;font-size:16px; }"+
-"span.name_secondary { color:#000000;font-weight:normal;font-family:ZF Sans;font-size:16px; }"+
-"span.name_secondary_with_border { color:#000000;font-weight:normal;font-family:ZF Sans;font-size:16px; border-bottom:solid black 1.0pt; }"+
-"span.name_secondary_with_bold { color:#000000;font-weight:bold;font-family:ZF Sans;font-size:20px; }"+
-"p.website { color:#000000 ;font-weight:normal;font-family:Sans;font-size:30px; border-bottom:solid black 1.0pt; }"+
-"&lt;/style&gt;"+
-"&lt;/head&gt;"+
-"&lt;body&gt;"+
-"&lt;p class='detail_primary'&gt;Price list report:&lt;/p&gt;"+
-"&lt;p class='detail_secondary'&gt;Riporting time:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;"+ DateTime.Now.ToString("yyyy.MM.dd H:mm:ss")+"&lt;/span&gt;&lt;/p&gt;"+
-"&lt;p class='detail_secondary'&gt;Sent by:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;UiPath   RPA bot&lt;/span&gt;&lt;/p&gt;"+
-"&lt;p class='detail_secondary'&gt;Sent from:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;"+ Outlook.SelectedAccount	+"&lt;/span&gt;&lt;/p&gt;"+
-"&lt;p class='detail_secondary'&gt;Sent to:&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;span class='name_secondary'&gt;"+ str_EmailAddres+"&lt;/span&gt;&lt;/p&gt;"+
-"&lt;br&gt;" + 
-"&lt;p class='detail_primary'&gt;Products  :&lt;/p&gt;"+
-str_ProductToAddToEmailHtml +
-"&lt;/body&gt;" +
-"&lt;/html&gt;"</CSharpValue>
-                </Variable.Default>
-              </Variable>
-            </Sequence.Variables>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="642.4,664" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,553.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <umab:OutlookApplicationCard Account="kissandor@hotmail.com" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App To Email The Report" sap:VirtualizedContainerService.HintSize="449.6,464.8" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+            <umab:OutlookApplicationCard.Body>
+              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,258.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="str_EmailAddres" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="353.6,169.6" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Price list">
+                    <ui:SendOutlookMail.Body>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">str_Body</CSharpValue>
+                      </InArgument>
+                    </ui:SendOutlookMail.Body>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">str_Pdf</CSharpValue>
+                        </InArgument>
+                      </scg:List>
+                    </ui:SendOutlookMail.Files>
+                    <ui:SendOutlookMail.To>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">str_EmailTo</CSharpValue>
+                      </InArgument>
+                    </ui:SendOutlookMail.To>
+                  </ui:SendOutlookMail>
+                </Sequence>
+              </ActivityAction>
+            </umab:OutlookApplicationCard.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="353.6,172" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Price list">
-              <ui:SendOutlookMail.Body>
-                <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">str_Body</CSharpValue>
-                </InArgument>
-              </ui:SendOutlookMail.Body>
-              <ui:SendOutlookMail.Files>
-                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">str_Pdf</CSharpValue>
-                  </InArgument>
-                </scg:List>
-              </ui:SendOutlookMail.Files>
-              <ui:SendOutlookMail.To>
-                <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">str_EmailTo</CSharpValue>
-                </InArgument>
-              </ui:SendOutlookMail.To>
-            </ui:SendOutlookMail>
-          </Sequence>
-        </ActivityAction>
-      </umab:OutlookApplicationCard.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </umab:OutlookApplicationCard>
+          </umab:OutlookApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" ConnectionId="46b6e3e8-3278-4381-a694-d907d2059b21" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="642.4,536" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Price list" UseConnectionService="True">
+      <uga:SendEmailConnections.ArgumentAttachments>
+        <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+          <InArgument x:TypeArguments="upr:IResource">
+            <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">LocalResource.FromPath(str_Pdf)</CSharpValue>
+          </InArgument>
+        </scg:List>
+      </uga:SendEmailConnections.ArgumentAttachments>
+      <uga:SendEmailConnections.AttachmentsBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="Builder">
+          <usau:BackupSlot.BackupValues>
+            <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+              <x:Null />
+            </scg:List>
+            <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
+              <x:Null />
+            </scg:List>
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.AttachmentsBackup>
+      <uga:SendEmailConnections.Body>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">str_Body</CSharpValue>
+        </InArgument>
+      </uga:SendEmailConnections.Body>
+      <uga:SendEmailConnections.InputTypeBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.InputTypeBackup>
+      <uga:SendEmailConnections.To>
+        <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
+          <CSharpValue x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">new List&lt;string&gt; { str_EmailTo }</CSharpValue>
+        </InArgument>
+      </uga:SendEmailConnections.To>
+    </uga:SendEmailConnections>
   </Sequence>
 </Activity>

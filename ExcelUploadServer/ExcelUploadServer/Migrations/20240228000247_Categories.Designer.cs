@@ -60,14 +60,14 @@ namespace ExcelUploadServer.Migrations
                     b.Property<decimal?>("ComputerPartPrice")
                         .HasColumnType("decimal(10, 2)");
 
-                    b.Property<int?>("WebshopId")
+                    b.Property<int?>("WebShopId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("WebshopId");
+                    b.HasIndex("WebShopId");
 
                     b.ToTable("ComputerParts");
                 });
@@ -101,13 +101,13 @@ namespace ExcelUploadServer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ExcelUploadServer.Models.WebShop", "Webshop")
+                    b.HasOne("ExcelUploadServer.Models.WebShop", "WebShop")
                         .WithMany()
-                        .HasForeignKey("WebshopId");
+                        .HasForeignKey("WebShopId");
 
                     b.Navigation("Category");
 
-                    b.Navigation("Webshop");
+                    b.Navigation("WebShop");
                 });
 #pragma warning restore 612, 618
         }

@@ -130,13 +130,13 @@
       "Path": "MainFlow.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dt_SearchResoult&Flowchart_1",
-        "str_CategoriesQuery&Flowchart_1",
-        "dt_Categories&Flowchart_1",
-        "str_ComputerPartsQuery&Flowchart_1",
-        "str_WebShopQuery&Flowchart_1",
+        "dt_WebShops&Flowchart_1",
         "dt_ComputerParts&Flowchart_1",
-        "dt_WebShops&Flowchart_1"
+        "str_WebShopQuery&Flowchart_1",
+        "str_ComputerPartsQuery&Flowchart_1",
+        "dt_Categories&Flowchart_1",
+        "str_CategoriesQuery&Flowchart_1",
+        "dt_SearchResoult&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -146,6 +146,7 @@
       "Path": "SearchForOneProductInOneWebShop.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "pf_PriceAndCurrency&Sequence_8",
         "pc_PriceAndCurrency&Sequence_8",
         "dr_DataRow&Sequence_8",
         "arr_WebShopsSearchImplemented&Flowchart_1",
@@ -213,6 +214,8 @@
       "Path": "ReportBuilder.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "cheapestProducts&Sequence_1",
+        "str_Body&Sequence_1",
         "str_ProductToAddToEmailHtml&Sequence_1",
         "str_Pdf&Sequence_1",
         "str_docName&Sequence_1",
@@ -223,8 +226,7 @@
         "dt_ProductsToAddToReport&Sequence_1",
         "products&Sequence_1",
         "str_ConnectionString&Sequence_1",
-        "str_EmailAddres&Sequence_2",
-        "str_Body&Sequence_2"
+        "str_EmailAddres&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
