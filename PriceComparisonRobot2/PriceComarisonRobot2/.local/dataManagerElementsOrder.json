@@ -158,6 +158,7 @@
         "str_WebShopToSearch&Flowchart_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_ProductId",
         "in_WebShopId",
         "in_CategoryId",
         "out_SearchResoultsToReturn",
@@ -285,6 +286,28 @@
         "in_ProductToSearch",
         "in_SearchBarUiElement"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetWebShopsAsset.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_WebShops&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_WebShopsSearchImplemented"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DatabaseOffline.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_EmailTo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

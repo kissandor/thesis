@@ -405,14 +405,14 @@
     {
       "Package": {
         "Id": "Ekke.Thesis.GetCheapestProduct.Activities",
-        "Version": "0.1.0.831225743"
+        "Version": "0.1.0.908121836"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.Design.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836"
     }
   ],
   "Conflicts": [],
@@ -581,7 +581,7 @@
     },
     "Ekke.Thesis.GetCheapestProduct.Activities": {
       "Id": "Ekke.Thesis.GetCheapestProduct.Activities",
-      "Version": "0.1.0.831225743",
+      "Version": "0.1.0.908121836",
       "Dependencies": []
     },
     "Ekke.Thesis.PriceFinder.Activities": {
@@ -5525,14 +5525,14 @@
     {
       "Package": {
         "Id": "Ekke.Thesis.GetCheapestProduct.Activities",
-        "Version": "0.1.0.831225743"
+        "Version": "0.1.0.908121836"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743\\lib\\net6.0-windows7.0\\Ekke.Thesis.GetCheapestProduct.Activities.Design.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743\\lib\\net6.0-windows7.0\\Ekke.Thesis.GetCheapestProduct.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743\\lib\\net6.0-windows7.0\\Ekke.Thesis.GetCheapestProduct.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib\\net6.0-windows7.0\\Ekke.Thesis.GetCheapestProduct.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib\\net6.0-windows7.0\\Ekke.Thesis.GetCheapestProduct.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib\\net6.0-windows7.0\\Ekke.Thesis.GetCheapestProduct.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.831225743"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836"
     },
     {
       "Package": {

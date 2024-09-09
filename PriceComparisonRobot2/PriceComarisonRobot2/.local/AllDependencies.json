@@ -180,7 +180,7 @@
           }
         }
       },
-      "Ekke.Thesis.GetCheapestProduct.Activities/0.1.0.831225743": {
+      "Ekke.Thesis.GetCheapestProduct.Activities/0.1.0.908121836": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {
@@ -6536,7 +6536,7 @@
           }
         }
       },
-      "Ekke.Thesis.GetCheapestProduct.Activities/0.1.0.831225743": {
+      "Ekke.Thesis.GetCheapestProduct.Activities/0.1.0.908121836": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {
@@ -12780,13 +12780,13 @@
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
       ]
     },
-    "Ekke.Thesis.GetCheapestProduct.Activities/0.1.0.831225743": {
-      "sha512": "gyjNV9o8M1VDzkE/73JmCRsr6Vpm3iRqK2Ffhxehna7Vk1l1QtnDsB7sdrFJbPybTHd9A0X5E1wx5ADcPfJNlA==",
+    "Ekke.Thesis.GetCheapestProduct.Activities/0.1.0.908121836": {
+      "sha512": "7UUvPX2KQUXexvr9abOmeImCSI18EC5stVEzamRee2TwHgHuFd9iv3Zx+ihoNTkQyqoVi0Q89jpRo0Y12Sd3Iw==",
       "type": "package",
-      "path": "ekke.thesis.getcheapestproduct.activities/0.1.0.831225743",
+      "path": "ekke.thesis.getcheapestproduct.activities/0.1.0.908121836",
       "files": [
         ".nupkg.metadata",
-        "ekke.thesis.getcheapestproduct.activities.0.1.0.831225743.nupkg.sha512",
+        "ekke.thesis.getcheapestproduct.activities.0.1.0.908121836.nupkg.sha512",
         "ekke.thesis.getcheapestproduct.activities.nuspec",
         "lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.Design.dll",
         "lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.Design.xml",
@@ -23909,7 +23909,7 @@
     "": [],
     "net8.0-windows7.0": [
       "BalaReva.Word.Activities >= 8.0.0 <= 8.0.0",
-      "Ekke.Thesis.GetCheapestProduct.Activities >= 0.1.0.831225743 <= 0.1.0.831225743",
+      "Ekke.Thesis.GetCheapestProduct.Activities >= 0.1.0.908121836 <= 0.1.0.908121836",
       "Ekke.Thesis.PriceFinder.Activities >= 0.1.7 <= 0.1.7",
       "Parser >= 1.0.10 <= 1.0.10",
       "TestDatabaseConnection >= 1.0.13 <= 1.0.13",
@@ -23945,7 +23945,7 @@
           "Ekke.Thesis.GetCheapestProduct.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[0.1.0.831225743, 0.1.0.831225743]"
+            "version": "[0.1.0.908121836, 0.1.0.908121836]"
           },
           "Ekke.Thesis.PriceFinder.Activities": {
             "include": "Runtime",
