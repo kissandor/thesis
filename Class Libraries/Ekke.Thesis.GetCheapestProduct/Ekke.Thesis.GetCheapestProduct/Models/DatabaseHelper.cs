@@ -25,6 +25,7 @@ namespace Ekke.Thesis.GetCheapestProduct.Models
                 try
                 {
                     connection.Open();
+                    /*
                     string query = "SELECT " +
                                         "CategoryName, " +
                                         "ComputerPartName, " +
@@ -51,6 +52,35 @@ namespace Ekke.Thesis.GetCheapestProduct.Models
                                           ") AS ranked " +
                                      "WHERE " +
                                           "RowNum = 1;";
+                    */
+                    string query = "SELECT " +
+                                        "CategoryName, " +
+                                        "ComputerPartName, " +
+                                        "Description, " +
+                                        "ComputerPartPrice, " +
+                                        "Currency, " +
+                                        "WebShopURL, " +
+                                        "ProductUrl " +
+                                   "FROM " +
+                                        "(" +
+                                            "SELECT " +
+                                                "s.Id, " +
+                                                "cp.ComputerPartName, " +
+                                                "c.CategoryName, " +
+                                                "s.Description, " +
+                                                "s.ComputerPartPrice, " +
+                                                "s.Currency, " +
+                                                "w.WebShopURL, " +
+                                                "s.ProductUrl, " +
+                                                "ROW_NUMBER() OVER (PARTITION BY cp.Id ORDER BY s.ComputerPartPrice) AS RowNum " +
+                                             "FROM " +
+                                                "SearchResults s " +
+                                                "INNER JOIN ComputerParts cp ON s.ComputerPartId = cp.Id " +
+                                                "INNER JOIN Categories c ON cp.CategoryId = c.Id " +
+                                                "INNER JOIN WebShops w ON s.WebShopId = w.Id " +
+                                          ") AS ranked " +
+                                      "WHERE " +
+                                           "RowNum = 1;";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
