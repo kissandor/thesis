@@ -12,7 +12,7 @@
     </UserControl.DataContext>
 
     <StackPanel Background="#F0F0F0" Margin="10,50,10,10">
-        <TextBlock Text="Price Comparison Robot" Foreground="Black" FontSize="20" Margin="30, 20, 30, 0"/>
+        <TextBlock Text="Excel Data Loader" Foreground="Black" FontSize="20" Margin="30, 20, 30, 0"/>
         <Border Margin="30, 10, 30, 10" Background="#F0F0F0" BorderBrush="Gray" BorderThickness="0,1,0,1">
             <StackPanel Margin="0, 15">
                 <TextBlock Text="Please download the sample Excel file by clicking &#x0a;the download button. &#x0a;You can use this file to upload computer configurations."

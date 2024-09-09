@@ -13,8 +13,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
     public class ComputerPartCategoriesViewModel : ViewModelBase
     {
 
-        private readonly string apiUrl;
-        private readonly string getAllCategoriesEndPoint;
+        private readonly CategoryService categoryService;
         private ObservableCollection<ComputerPartCategory> categories;
 
         private string errorMessageText;
@@ -73,16 +72,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public ComputerPartCategoriesViewModel()
         {
-            
-            apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
-            getAllCategoriesEndPoint = ConfigurationManager.AppSettings["GetAllCategoriesEndPoint"];
-            
-            if (string.IsNullOrEmpty(apiUrl) || string.IsNullOrEmpty(getAllCategoriesEndPoint))
-            {
-                ShowErrorMessage("Configuration settings are missing or invalid.");
-                return;
-            }
-
+            categoryService = new CategoryService();
             LoadCategoriesAsync().ConfigureAwait(false);
         }
 
@@ -91,8 +81,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             Visibility = Visibility.Hidden;
             try
             {
-                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllCategoriesEndPoint);
-                Categories = ConvertDataTableToCategories(dataTable);
+                Categories = await categoryService.GetCategoriesAsync();
                 ProgressBarVisibility = Visibility.Hidden;
             }
             catch (HttpRequestException)
@@ -114,22 +103,6 @@ namespace ExcelUploadClient.MVVM.ViewModel
             ErrorMessageText = message;
         }
 
-        private ObservableCollection<ComputerPartCategory> ConvertDataTableToCategories(DataTable dataTable)
-        {
-            ObservableCollection<ComputerPartCategory> categories = new ObservableCollection<ComputerPartCategory>();
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                    ComputerPartCategory category = new ComputerPartCategory
-                    {
-                        Id = row["id"] != DBNull.Value ? Convert.ToInt32(row["id"]) : 0,
-                        CategoryName = row["categoryName"]?.ToString(),
-                    };
-                    categories.Add(category);
-            }
-
-            return categories;
-        }
     }
 
 }

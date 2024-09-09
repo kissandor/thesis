@@ -143,6 +143,7 @@
       <DependentUpon>DatabaseDeleted.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ApiHandler.cs" />
+    <Compile Include="Utilities\CategoryService.cs" />
     <Compile Include="Utilities\Btn.cs" />
     <Compile Include="Utilities\ExcelFileHandlerClosedXML.cs" />
     <Compile Include="Utilities\ExcelFileHandlerInterop.cs" />
