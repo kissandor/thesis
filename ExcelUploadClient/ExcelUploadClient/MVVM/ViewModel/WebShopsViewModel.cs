@@ -18,7 +18,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
     {
         private readonly string apiUrl;
         private readonly string getAllWebshopsEndPoint;
-        private ObservableCollection<Webshop> webshops;
+        private ObservableCollection<WebShop> webshops;
 
         private string errorMessageText;
         public string ErrorMessageText
@@ -62,7 +62,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
         }
 
-        public ObservableCollection<Webshop> Webshops
+        public ObservableCollection<WebShop> Webshops
         {
             get { return webshops; }
             set
@@ -110,13 +110,13 @@ namespace ExcelUploadClient.MVVM.ViewModel
             ErrorMessageText = message;
         }
 
-        private ObservableCollection<Webshop> ConvertDataTableToCategories(DataTable dataTable)
+        private ObservableCollection<WebShop> ConvertDataTableToCategories(DataTable dataTable)
         {
-            ObservableCollection<Webshop> webshops = new ObservableCollection<Webshop>();
+            ObservableCollection<WebShop> webshops = new ObservableCollection<WebShop>();
 
             foreach (DataRow row in dataTable.Rows)
             {
-                Webshop ws = new Webshop
+                WebShop ws = new WebShop
                 {
                     Id = Convert.ToInt32(row["id"]),
                     WebshopName = row["webShopName"].ToString(),

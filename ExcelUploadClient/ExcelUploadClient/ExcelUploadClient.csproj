@@ -147,12 +147,13 @@
     <Compile Include="Utilities\Btn.cs" />
     <Compile Include="Utilities\ExcelFileHandlerClosedXML.cs" />
     <Compile Include="Utilities\ExcelFileHandlerInterop.cs" />
+    <Compile Include="Utilities\ComputerPartService.cs" />
     <Compile Include="Utilities\RelayCommand.cs" />
     <Compile Include="Utilities\ViewModelBase.cs" />
     <Compile Include="MVVM\Model\ComputerPartCategory.cs" />
     <Compile Include="MVVM\Model\ComputerPart.cs" />
     <Compile Include="MVVM\Model\PartUpload.cs" />
-    <Compile Include="MVVM\Model\Webshop.cs" />
+    <Compile Include="MVVM\Model\WebShop.cs" />
     <Compile Include="MVVM\ViewModel\ComputerPartCategoriesViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ComputerPartsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DeleteViewModel.cs" />

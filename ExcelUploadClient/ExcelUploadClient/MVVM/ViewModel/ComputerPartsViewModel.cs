@@ -7,13 +7,13 @@ using System.Net.Http;
 using System.Windows;
 using System;
 using System.Threading.Tasks;
+using ExcelUploadClient.MVVM.View;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
     public class ComputerPartsViewModel : ViewModelBase
     {
-        private readonly string apiUrl;
-        private readonly string getAllComputerPartsEndPoint;
+        private readonly ComputerPartService partsService;
         private ObservableCollection<ComputerPart> computerParts;
 
         private string errorMessageText;
@@ -73,25 +73,16 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public ComputerPartsViewModel()
         {
-            apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
-            getAllComputerPartsEndPoint = ConfigurationManager.AppSettings["GetAllComputerPartsEndPoint"];
-
-            if (string.IsNullOrEmpty(apiUrl) || string.IsNullOrEmpty(getAllComputerPartsEndPoint))
-            {
-                ShowErrorMessage("Configuration settings are missing or invalid.");
-                return;
-            }
-
-            LoadComputerPartsData().ConfigureAwait(false);
+            partsService = new ComputerPartService();
+            LoadComputerPartsAsync().ConfigureAwait(false);
         }
 
-        private async Task LoadComputerPartsData()
+        private async Task LoadComputerPartsAsync()
         {
             Visibility = Visibility.Hidden;
             try
             {
-                DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllComputerPartsEndPoint);
-                ComputerParts = ConvertDataTableToComputerParts(dataTable);
+                ComputerParts = await partsService.GetComputerPartsAsync();
                 ProgressBarVisibility = Visibility.Hidden;
             }
             catch (HttpRequestException)
@@ -109,26 +100,6 @@ namespace ExcelUploadClient.MVVM.ViewModel
             ProgressBarVisibility = Visibility.Hidden;
             Visibility = Visibility.Visible;
             ErrorMessageText = message;
-        }
-
-        private ObservableCollection<ComputerPart> ConvertDataTableToComputerParts(DataTable dataTable)
-        {
-            var computerParts = new ObservableCollection<ComputerPart>();
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                var computerPart = new ComputerPart
-                {
-                    Id = row["id"] != DBNull.Value ? Convert.ToInt32(row["id"]) : 0,
-                    ComputerPartName = row["computerPartName"]?.ToString(),
-                    //ComputerPartPrice = row["computerPartPrice"] as decimal?,
-                    CategoryId = row["categoryId"] != DBNull.Value ? Convert.ToInt32(row["categoryId"]) : 0,
-                    //WebshopId = row["webshopId"] as int?
-                };
-
-                computerParts.Add(computerPart);
-            }
-            return computerParts;
         }
     }
 }

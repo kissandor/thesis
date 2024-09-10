@@ -40,8 +40,5 @@ namespace ExcelUploadClient.Utilities
             }
             return categories;
         }
-
-
-
     }
 }

@@ -86,13 +86,11 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
             catch (HttpRequestException)
             {
-                // Az HTTP kérés hiba, tehát a szerver nem érhető el
-                ShowErrorMessage("A szerver jelenleg nem elérhető. Kérlek próbáld újra később.");
+                ShowErrorMessage("The server is currently unavailable. Please try again later.");
             }
             catch (Exception ex)
             {
-                // Bármilyen más hiba esetén
-                ShowErrorMessage($"Hiba történt a kérés során: {ex.Message}");
+                ShowErrorMessage($"An error occurred during the request: {ex.Message}");
             }
         }
 

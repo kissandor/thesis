@@ -23,7 +23,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
   
 
         private ObservableCollection<ComputerPartCategory> categories;
-        private ObservableCollection<Webshop> webshops;
+        private ObservableCollection<WebShop> webshops;
         private ObservableCollection<PartUpload> partsUpload;
 
         public ObservableCollection<ComputerPartCategory> Categories
@@ -39,7 +39,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
         }
 
-        public ObservableCollection<Webshop> Webshops
+        public ObservableCollection<WebShop> Webshops
         {
             get { return webshops; }
             set
@@ -163,15 +163,15 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
             return categories;
         }
-        private ObservableCollection<Webshop> ConvertDataTableToWebshops(DataTable dataTable)
+        private ObservableCollection<WebShop> ConvertDataTableToWebshops(DataTable dataTable)
         {
-            ObservableCollection<Webshop> webShops= new ObservableCollection<Webshop>();
+            ObservableCollection<WebShop> webShops= new ObservableCollection<WebShop>();
 
             if (dataTable !=null)
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                     Webshop ws = new Webshop
+                     WebShop ws = new WebShop
                     {
                         Id = dataTable.Rows.IndexOf(row),
                         WebshopName = row["webshopName"].ToString(),

@@ -62,7 +62,7 @@
                         <Grid>
                             <Image Source="Images/category.png" 
                                 Style="{StaticResource Image_Style}"/>
-                            <TextBlock Text="Category" Style="{StaticResource Text_Style}"/>
+                            <TextBlock Text="Categories" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
                     <!-- Webshop Btn-->
@@ -72,7 +72,7 @@
                         <Grid>
                             <Image Source="Images/webshop.png" 
                                 Style="{StaticResource Image_Style}"/>
-                            <TextBlock Text="Webshop" Style="{StaticResource Text_Style}"/>
+                            <TextBlock Text="Webshops" Style="{StaticResource Text_Style}"/>
                         </Grid>
                     </Menu:Btn>
                     <!--Open Btn-->

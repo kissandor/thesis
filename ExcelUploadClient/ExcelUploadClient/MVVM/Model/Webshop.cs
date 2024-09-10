@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExcelUploadClient.MVVM.Model
 {
-    public class Webshop
+    public class WebShop
     {
         public int Id { get; set; }
         public string WebshopName { get; set; }
