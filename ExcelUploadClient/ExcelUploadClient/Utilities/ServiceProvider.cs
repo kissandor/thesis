@@ -11,5 +11,6 @@ namespace ExcelUploadClient.Utilities
     {
         public static IMessageService MessageService { get; set; } = new MessageService();
         public static INavigationService NavigationService { get; set; } = new NavigationService();
+        public static IDownloadService DownloadService { get; set; } = new DownloadService();
     }
 }
