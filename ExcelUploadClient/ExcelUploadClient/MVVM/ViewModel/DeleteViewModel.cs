@@ -1,10 +1,11 @@
-﻿using DocumentFormat.OpenXml.Wordprocessing;
-using ExcelUploadClient.Utilities;
+﻿using ExcelUploadClient.Utilities;
 using ExcelUploadClient.MVVM.View;
 using System;
 using System.Windows.Input;
 using System.Windows;
 using System.Configuration;
+using ExcelUploadClient.Interfaces;
+using System.Windows.Navigation;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
@@ -15,15 +16,20 @@ namespace ExcelUploadClient.MVVM.ViewModel
         private readonly string apiEndpoint;
         private ICommand cancelCmd;
         private ICommand deleteDatabaseCmd;
+        private readonly INavigationService navigationService;
+        private readonly IMessageService messageService;
+
 
         public DeleteViewModel()
         {
+            messageService = ServiceProvider.MessageService;
+            navigationService = ServiceProvider.NavigationService;
             apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
             apiEndpoint = ConfigurationManager.AppSettings["DeleteAll"];
 
             if (string.IsNullOrEmpty(apiUrl) || string.IsNullOrEmpty(apiEndpoint))
             {
-                MessageBox.Show("Configuration settings are missing or invalid.");
+                messageService.ShowMessage("Configuration settings are missing or invalid.");
             }
         }
 
@@ -33,8 +39,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
             {
                 return cancelCmd ?? (cancelCmd = new RelayCommand(param =>
                 {
-                    NavigationViewModel navigationViewModel = ((Window)Application.Current.MainWindow).DataContext as NavigationViewModel;
-                    navigationViewModel.CurrentView = new Home();
+                    navigationService.NavigateTo(new Home());
                 }));
             }
         }
@@ -48,12 +53,12 @@ namespace ExcelUploadClient.MVVM.ViewModel
                     try
                     {
                         await ApiHandler.DeleteDatabaseAsync(apiUrl, apiEndpoint);
-                        NavigationViewModel navigationViewModel = ((Window)Application.Current.MainWindow).DataContext as NavigationViewModel;
-                        navigationViewModel.CurrentView = new DatabaseDeleted();
+
+                        navigationService.NavigateTo(new DatabaseDeleted());
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Failed to delete the database: {ex.Message}");
+                        messageService.ShowMessage($"Failed to delete the database: {ex.Message}");
                     }
                 }));
             }

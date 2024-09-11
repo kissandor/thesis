@@ -7,17 +7,19 @@ using ExcelUploadClient.Utilities;
 using System.Windows.Input;
 using System.Windows;
 using Microsoft.Win32;
+using ExcelUploadClient.Interfaces;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
     class NavigationViewModel : ViewModelBase
     {
-        private object _currentView;
+        private object currentView;
         public object CurrentView
         {
-            get { return _currentView; }
-            set { _currentView = value; OnPropertyChanged(); }
+            get { return currentView; }
+            set { currentView = value; OnPropertyChanged(); }
         }
+
 
         public ICommand HomeCmd { get; set; }
         public ICommand CategoriesCmd { get; set; }
@@ -39,6 +41,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public NavigationViewModel()
         {
+            
             HomeCmd = new RelayCommand(Home);
             CategoriesCmd = new RelayCommand(Categories);
             WebShopsCmd = new RelayCommand(WebShops);
