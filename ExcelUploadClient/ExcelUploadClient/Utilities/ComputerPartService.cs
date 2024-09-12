@@ -1,4 +1,5 @@
-﻿using ExcelUploadClient.MVVM.Model;
+﻿using ExcelUploadClient.Interfaces;
+using ExcelUploadClient.MVVM.Model;
 using System;
 using System.Collections.ObjectModel;
 using System.Configuration;
@@ -11,9 +12,12 @@ namespace ExcelUploadClient.Utilities
     {
         private readonly string apiUrl;
         private readonly string getAllComputerPartsEndPoint;
+        private readonly IDataConversionService dataConversionService;
+
 
         public ComputerPartService() 
         {
+            dataConversionService = ServiceProvider.DataConversionService;
             apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
             getAllComputerPartsEndPoint = ConfigurationManager.AppSettings["GetAllComputerPartsEndPoint"];
         }
@@ -22,6 +26,7 @@ namespace ExcelUploadClient.Utilities
         {
             DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllComputerPartsEndPoint);
             return ConvertDataTableToComputerParts(dataTable);
+            //return dataConversionService.ConvertDataTableToComputerParts(dataTable);
         }
 
         private ObservableCollection<ComputerPart> ConvertDataTableToComputerParts(DataTable dataTable)

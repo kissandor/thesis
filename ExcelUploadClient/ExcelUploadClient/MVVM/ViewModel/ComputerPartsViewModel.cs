@@ -73,7 +73,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public ComputerPartsViewModel()
         {
-            partsService = new ComputerPartService();
+            partsService = ServiceProvider.ComputerPartService;
             LoadComputerPartsAsync().ConfigureAwait(false);
         }
 

@@ -138,7 +138,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Interfaces\IDataConversionService.cs" />
     <Compile Include="Interfaces\IDownloadService.cs" />
+    <Compile Include="Interfaces\IFileService.cs" />
     <Compile Include="Interfaces\IMessageService.cs" />
     <Compile Include="Interfaces\INavigationService.cs" />
     <Compile Include="MVVM\ViewModel\DatabaseDeletedViewModel.cs" />
@@ -148,10 +150,12 @@
     <Compile Include="Utilities\ApiHandler.cs" />
     <Compile Include="Utilities\CategoryService.cs" />
     <Compile Include="Utilities\Btn.cs" />
+    <Compile Include="Utilities\DataConversionService .cs" />
     <Compile Include="Utilities\DownloadService.cs" />
     <Compile Include="Utilities\ExcelFileHandlerClosedXML.cs" />
     <Compile Include="Utilities\ExcelFileHandlerInterop.cs" />
     <Compile Include="Utilities\ComputerPartService.cs" />
+    <Compile Include="Utilities\FileService.cs" />
     <Compile Include="Utilities\MessageService.cs" />
     <Compile Include="Utilities\NavigationService.cs" />
     <Compile Include="Utilities\RelayCommand.cs" />

@@ -72,7 +72,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public ComputerPartCategoriesViewModel()
         {
-            categoryService = new CategoryService();
+            categoryService = ServiceProvider.CategoryService;
             LoadCategoriesAsync().ConfigureAwait(false);
         }
 

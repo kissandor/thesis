@@ -9,11 +9,11 @@ namespace ExcelUploadServer.Controllers
     [ApiController]
     public class ComputerPartController : ControllerBase
     {
-        private readonly ExcelUploadContext _context;
+        private readonly ExcelUploadContext context;
 
         public ComputerPartController(ExcelUploadContext context)
         {
-            _context = context;
+            this.context = context;
         }
 
         private JsonResult BadRequestResult(string message)
@@ -34,8 +34,8 @@ namespace ExcelUploadServer.Controllers
             {
                 foreach (var computerPart in computerPartList)
                 {
-                    var existingPart = _context.ComputerParts.FirstOrDefault(k => k.ComputerPartName == computerPart.ComputerPartName);
-                    var existingCategory = _context.Categories.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
+                    var existingPart = context.ComputerParts.FirstOrDefault(k => k.ComputerPartName == computerPart.ComputerPartName);
+                    var existingCategory = context.Categories.FirstOrDefault(k => k.CategoryName == computerPart.CategoryName);
 
                     if (existingPart == null && existingCategory != null)
                     {
@@ -45,7 +45,7 @@ namespace ExcelUploadServer.Controllers
                             CategoryId = existingCategory.Id
                         };
 
-                        _context.ComputerParts.Add(cp);
+                        context.ComputerParts.Add(cp);
                     }
                     else if ((existingPart == null && existingCategory == null) || (existingPart != null && existingCategory == null))
                     {
@@ -58,7 +58,7 @@ namespace ExcelUploadServer.Controllers
 
                 }
 
-                _context.SaveChanges();
+                context.SaveChanges();
 
                 if (invalidCategories.Any())
                 {
@@ -93,11 +93,11 @@ namespace ExcelUploadServer.Controllers
             {
                 foreach (var category in categoryList)
                 {
-                    var existingCategory = _context.Categories.FirstOrDefault(k => k.CategoryName == category.CategoryName);
+                    var existingCategory = context.Categories.FirstOrDefault(k => k.CategoryName == category.CategoryName);
                     if (existingCategory == null)
-                        _context.Categories.Add(category);
+                        context.Categories.Add(category);
                 }
-                _context.SaveChanges();
+                context.SaveChanges();
                 return new JsonResult(Ok());
             } catch (Exception ex) 
             {
@@ -117,11 +117,11 @@ namespace ExcelUploadServer.Controllers
             {
                 foreach (var webShop in webShopList)
                 {
-                    var existingWebShop = _context.WebShops.FirstOrDefault(w => w.WebShopName == webShop.WebShopName);
+                    var existingWebShop = context.WebShops.FirstOrDefault(w => w.WebShopName == webShop.WebShopName);
                     if (existingWebShop == null)
-                        _context.Add(webShop);
+                        context.Add(webShop);
                 }
-                _context.SaveChanges();
+                context.SaveChanges();
                 return new JsonResult(Ok());
             } catch (Exception ex) 
             { 
@@ -135,7 +135,7 @@ namespace ExcelUploadServer.Controllers
         {
             try
             {
-                var result = _context.ComputerParts.ToList();
+                var result = context.ComputerParts.ToList();
                 return new JsonResult(Ok(result));
             }
             catch (Exception ex)
@@ -150,7 +150,7 @@ namespace ExcelUploadServer.Controllers
         {
             try
             {
-                var result = _context.Categories.ToList();
+                var result = context.Categories.ToList();
                 return new JsonResult(Ok(result));
             }
             catch (Exception ex)
@@ -164,7 +164,7 @@ namespace ExcelUploadServer.Controllers
         {
             try
             {
-                var result = _context.WebShops.ToList();
+                var result = context.WebShops.ToList();
                 return new JsonResult(Ok(result));
             }
             catch (Exception ex)
@@ -178,11 +178,11 @@ namespace ExcelUploadServer.Controllers
         {
             try
             {
-                _context.ComputerParts.RemoveRange(_context.ComputerParts.ToList());
-                _context.SaveChanges();
-                _context.Categories.RemoveRange(_context.Categories.ToList());
-                _context.WebShops.RemoveRange(_context.WebShops.ToList());
-                _context.SaveChanges();
+                context.ComputerParts.RemoveRange(context.ComputerParts.ToList());
+                context.SaveChanges();
+                context.Categories.RemoveRange(context.Categories.ToList());
+                context.WebShops.RemoveRange(context.WebShops.ToList());
+                context.SaveChanges();
                 return new JsonResult("All computer parts have been deleted successfully.")
                 {
                     StatusCode = StatusCodes.Status200OK
