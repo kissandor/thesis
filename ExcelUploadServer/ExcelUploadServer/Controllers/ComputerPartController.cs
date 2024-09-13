@@ -2,6 +2,7 @@
 using ExcelUploadServer.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExcelUploadServer.Controllers
 {
@@ -76,7 +77,8 @@ namespace ExcelUploadServer.Controllers
                 sender.emailSender();
 
                 return new JsonResult(Ok());
-            } catch (Exception ex) 
+            } 
+            catch (Exception ex) 
             {
                 return BadRequestResult("Error during the upload of parts.");
             }
@@ -135,7 +137,18 @@ namespace ExcelUploadServer.Controllers
         {
             try
             {
-                var result = context.ComputerParts.ToList();
+                // var result = context.ComputerParts.ToList();
+
+                var result = context.ComputerParts
+                            .Include(cp => cp.Category) //
+                            .Select(cp => new
+                            {
+                                cp.Id,
+                                cp.ComputerPartName,
+                                CategoryName = cp.Category.CategoryName 
+                            })
+                            .ToList();
+
                 return new JsonResult(Ok(result));
             }
             catch (Exception ex)

@@ -28,14 +28,14 @@ namespace ExcelUploadClient.Utilities
             return categories;
         }
 
-        public ObservableCollection<PartUpload> ConvertDataTableToComputerParts(DataTable dataTable)
+        public ObservableCollection<ComputerPart> ConvertDataTableToComputerParts(DataTable dataTable)
         {
-            ObservableCollection<PartUpload> computerParts = new ObservableCollection<PartUpload>();
+            ObservableCollection<ComputerPart> computerParts = new ObservableCollection<ComputerPart>();
             if (dataTable != null)
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    PartUpload computerPart = new PartUpload
+                    ComputerPart computerPart = new ComputerPart
                     {
                         Id = dataTable.Rows.IndexOf(row),
                         ComputerPartName = row["computerPartName"].ToString(),

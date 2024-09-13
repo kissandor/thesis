@@ -17,7 +17,6 @@ namespace ExcelUploadClient.MVVM.ViewModel
     {
 
         private readonly IFileService fileService;
-       // private readonly IApiService apiService;
         private readonly IDataConversionService dataConversionService;
         private readonly IMessageService messageService;
 
@@ -32,7 +31,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         private ObservableCollection<ComputerPartCategory> categories;
         private ObservableCollection<WebShop> webshops;
-        private ObservableCollection<PartUpload> partsUpload;
+        private ObservableCollection<ComputerPart> computerPatrts;
 
         public ObservableCollection<ComputerPartCategory> Categories
         {
@@ -60,15 +59,15 @@ namespace ExcelUploadClient.MVVM.ViewModel
             }
         }
 
-        public ObservableCollection<PartUpload> PartsUpload
+        public ObservableCollection<ComputerPart> ComputerParts
         {
-            get { return partsUpload; }
+            get { return computerPatrts; }
             set
             {
-                if (partsUpload != value)
+                if (computerPatrts != value)
                 {
-                    partsUpload = value;
-                    OnPropertyChanged(nameof(PartsUpload));
+                    computerPatrts = value;
+                    OnPropertyChanged(nameof(ComputerParts));
                 }
             }
         }
@@ -122,7 +121,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
         private void ConvertDataTableToObservableCollection()
         {
 
-            PartsUpload = dataConversionService.ConvertDataTableToComputerParts(dtParts);
+            ComputerParts = dataConversionService.ConvertDataTableToComputerParts(dtParts);
             Webshops = dataConversionService.ConvertDataTableToWebshops(dtWebshop);
             Categories = dataConversionService.ConvertDataTableToCategories(dtParts);
         }

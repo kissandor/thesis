@@ -14,8 +14,8 @@
                   ItemsSource="{Binding ComputerParts}"
                   Style="{StaticResource DataGridStyle}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Category Id" Binding="{Binding CategoryId}" Width="2*"/>
                 <DataGridTextColumn Header="Part Name" Binding="{Binding ComputerPartName}"  Width="4*"/>
+                <DataGridTextColumn Header="Category" Binding="{Binding CategoryName}" Width="2*"/>
             </DataGrid.Columns>
 
         </DataGrid>

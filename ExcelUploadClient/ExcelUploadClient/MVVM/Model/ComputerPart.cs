@@ -11,9 +11,11 @@ namespace ExcelUploadClient.MVVM.Model
     {
         public int Id { get; set; }
         public string ComputerPartName { get; set; }
-        public decimal? ComputerPartPrice { get; set; }
-        public int CategoryId { get; set; }
-        public int? WebshopId { get; set; }
-  
+
+        public string CategoryName { get; set; }
+        // public decimal? ComputerPartPrice { get; set; }
+        //  public int CategoryId { get; set; }
+        //  public int? WebshopId { get; set; }
+
     }
 }

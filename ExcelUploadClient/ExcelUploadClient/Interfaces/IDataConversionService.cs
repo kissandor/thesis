@@ -13,6 +13,6 @@ namespace ExcelUploadClient.Interfaces
     {
         ObservableCollection<ComputerPartCategory> ConvertDataTableToCategories(DataTable dataTable);
         ObservableCollection<WebShop> ConvertDataTableToWebshops(DataTable dataTable);
-        ObservableCollection<PartUpload> ConvertDataTableToComputerParts(DataTable dataTable);
+        ObservableCollection<ComputerPart> ConvertDataTableToComputerParts(DataTable dataTable);
     }
 }

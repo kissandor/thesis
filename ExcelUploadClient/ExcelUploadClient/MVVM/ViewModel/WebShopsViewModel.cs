@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Windows;
 using System.Net.Http;
+using ExcelUploadClient.Interfaces;
 
 namespace ExcelUploadClient.MVVM.ViewModel
 {
@@ -19,6 +20,9 @@ namespace ExcelUploadClient.MVVM.ViewModel
         private readonly string apiUrl;
         private readonly string getAllWebshopsEndPoint;
         private ObservableCollection<WebShop> webshops;
+
+        private readonly IDataConversionService conversionService;
+
 
         private string errorMessageText;
         public string ErrorMessageText
@@ -77,29 +81,29 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public WebShopsViewModel()
         {
+            conversionService = ServiceProvider.DataConversionService;
+
             apiUrl = ConfigurationManager.AppSettings["ApiUrl"];
             getAllWebshopsEndPoint = ConfigurationManager.AppSettings["GetAllWebshopsEndPoint"];
-            LoadCategoriesAsync();
+            LoadWebShopsAsync().ConfigureAwait(false);
         }
 
-        private async void LoadCategoriesAsync()
+        private async Task LoadWebShopsAsync()
         {
             Visibility = Visibility.Hidden;
             try
             {
                 DataTable dataTable = await ApiHandler.GetJsonDataAsync(apiUrl, getAllWebshopsEndPoint);
-                Webshops = ConvertDataTableToCategories(dataTable);
+                Webshops = conversionService.ConvertDataTableToWebshops(dataTable);
                 ProgresBarVisibility = Visibility.Hidden;
             }
             catch (HttpRequestException)
             {
-                // Az HTTP kérés hiba, tehát a szerver nem érhető el
-                ShowErrorMessage("A szerver jelenleg nem elérhető. Kérlek próbáld újra később.");
+                ShowErrorMessage("The server is currentyly offline. Please come back later.");
             }
             catch (Exception ex)
             {
-                // Bármilyen más hiba esetén
-                ShowErrorMessage($"Hiba történt a kérés során: {ex.Message}");
+                ShowErrorMessage($"Error: {ex.Message}");
             }
         }
 
@@ -108,24 +112,6 @@ namespace ExcelUploadClient.MVVM.ViewModel
             ProgresBarVisibility = Visibility.Hidden;
             Visibility = Visibility.Visible;
             ErrorMessageText = message;
-        }
-
-        private ObservableCollection<WebShop> ConvertDataTableToCategories(DataTable dataTable)
-        {
-            ObservableCollection<WebShop> webshops = new ObservableCollection<WebShop>();
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                WebShop ws = new WebShop
-                {
-                    Id = Convert.ToInt32(row["id"]),
-                    WebshopName = row["webShopName"].ToString(),
-                    WebshopURL = row["webShopURL"].ToString(),
-                };
-                webshops.Add(ws);
-            }
-
-            return webshops;
         }
     }
 }
