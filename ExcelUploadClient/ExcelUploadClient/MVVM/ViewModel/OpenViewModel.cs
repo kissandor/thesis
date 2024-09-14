@@ -27,7 +27,21 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         private string selectedFilePath;
         private DataTable dtParts, dtCategory, dtWebshop;
-  
+
+        private Visibility visibility;
+        public Visibility Visibility
+        {
+            get { return visibility; }
+            set
+            {
+                if (visibility != value)
+                {
+                    visibility = value;
+                    OnPropertyChanged(nameof(Visibility));
+                }
+            }
+        }
+
 
         private ObservableCollection<ComputerPartCategory> categories;
         private ObservableCollection<WebShop> webshops;
@@ -75,6 +89,8 @@ namespace ExcelUploadClient.MVVM.ViewModel
 
         public OpenViewModel()
         {
+            Visibility = Visibility.Hidden;
+
             fileService = ServiceProvider.FileService;
             dataConversionService = ServiceProvider.DataConversionService;  
             messageService = ServiceProvider.MessageService;
@@ -98,8 +114,13 @@ namespace ExcelUploadClient.MVVM.ViewModel
                     messageService.ShowMessage($"No file has been selected", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                await ReadExcelDataToDataTableAsync(selectedFilePath);
-                await LoadDataAsync();
+
+                dtParts = await fileService.ReadExcelFileAsync(selectedFilePath, 1);
+                dtCategory = await fileService.ReadExcelFileAsync(selectedFilePath, 2);
+                dtWebshop = await fileService.ReadExcelFileAsync(selectedFilePath, 3);
+
+                //await ReadExcelDataToDataTableAsync(selectedFilePath);
+                await UploadDataAsync();
                 ConvertDataTableToObservableCollection();
             }
             catch (Exception ex)
@@ -107,7 +128,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
                 messageService.ShowMessage($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+/*
         private async Task ReadExcelDataToDataTableAsync(String pathFile)
         {
             if (pathFile != null)
@@ -117,7 +138,7 @@ namespace ExcelUploadClient.MVVM.ViewModel
                 dtWebshop = await Task.Run(() => ExcelFileHandlerInterop.ReadExcelFile(selectedFilePath, 3));
             }
         } 
-
+*/
         private void ConvertDataTableToObservableCollection()
         {
 
@@ -126,17 +147,34 @@ namespace ExcelUploadClient.MVVM.ViewModel
             Categories = dataConversionService.ConvertDataTableToCategories(dtParts);
         }
 
-        private async Task LoadDataAsync()
+        private async Task UploadDataAsync()
         {
             try
             {              
-                String resp = await Task.Run(() => ApiHandler.SendDataAsync(dtCategory, apiUrl, categoryUploadEndPoint));
-                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtParts, apiUrl, computerPartsUploadEndPoint));
-                resp = await Task.Run(() => ApiHandler.SendDataAsync(dtWebshop, apiUrl, webshopUploadEndPoint));
+                String resp = await ApiHandler.SendDataAsync(dtCategory, apiUrl, categoryUploadEndPoint);
+                
+                if (resp.StartsWith("Error"))
+                {
+                    Visibility = Visibility.Visible;
+                    return; 
+                }
+                resp = await ApiHandler.SendDataAsync(dtParts, apiUrl, computerPartsUploadEndPoint);
+                if (resp.StartsWith("Error"))
+                {
+                    Visibility = Visibility.Visible;
+                    return;
+                }
+                resp = await ApiHandler.SendDataAsync(dtWebshop, apiUrl, webshopUploadEndPoint);
+                if (resp.StartsWith("Error"))
+                {
+                    Visibility = Visibility.Visible;
+                    return;
+                }
             }
             catch (Exception ex)
             {
                 messageService.ShowMessage($"An error occurred during data upload: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Visibility = Visibility.Visible;
             }
         }
     }

@@ -163,7 +163,6 @@
     <Compile Include="Utilities\ViewModelBase.cs" />
     <Compile Include="MVVM\Model\ComputerPartCategory.cs" />
     <Compile Include="MVVM\Model\ComputerPart.cs" />
-    <Compile Include="MVVM\Model\PartUpload.cs" />
     <Compile Include="MVVM\Model\WebShop.cs" />
     <Compile Include="MVVM\ViewModel\ComputerPartCategoriesViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ComputerPartsViewModel.cs" />

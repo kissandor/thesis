@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "ExcelUploadServer\\Controllers\\ComputerPartController.cs",
               "ToolTip": "D:\\Eger\\thesis\\ExcelUploadServer\\ExcelUploadServer\\Controllers\\ComputerPartController.cs",
               "RelativeToolTip": "ExcelUploadServer\\Controllers\\ComputerPartController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEwAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T22:06:01.116Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "ExcelUploadServer\\Data\\ExcelUploadContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T21:13:11.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-07T21:13:11.745Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "ExcelUploadServer\\Models\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T22:37:31.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T22:37:31.939Z"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "ExcelUploadServer\\Models\\ComputerPart.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T22:37:02.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-06T22:37:02.701Z"
             }
           ]
         }

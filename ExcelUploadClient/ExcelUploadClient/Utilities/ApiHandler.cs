@@ -23,30 +23,30 @@ namespace ExcelUploadClient.Utilities
             {
                 try
                 {
-                    // Beállítjuk az API alapcímét
+                    // Set the base URL of the API
                     client.BaseAddress = new Uri(apiUrl);
 
-                    // JSON adat serializálása
+                    // Serialize JSON data
                     string jsonData = JsonConvert.SerializeObject(dataTable);
 
-                    // HTTP kérés konfigurálása és elküldése
+                    // Configure and send the HTTP request
                     var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
                     var response = await client.PostAsync(apiEndPoint, content);
-
-                    // Ellenőrizzük a választ
+                    
+                    // Check the response
                     if (response.IsSuccessStatusCode)
                     {
                         string responseContent = await response.Content.ReadAsStringAsync();
-                        return $"Sikeres válasz: {responseContent}";
+                        return $"Successful response: {responseContent}";
                     }
                     else
                     {
-                        return $"Hiba történt: {response.StatusCode}";
+                        return $"Error occurred: {response.StatusCode}";
                     }
                 }
                 catch (Exception ex)
                 {
-                    return $"Hiba történt: {ex.Message}";
+                    return $"Error occured: {ex.Message}";
                 }
             }
         }
@@ -57,13 +57,13 @@ namespace ExcelUploadClient.Utilities
                 try
                 {
                     client.BaseAddress = new Uri(apiUrl);
-                    var response = await client.GetAsync(apiEndPoint); // Aszinkron hívás
+                    var response = await client.GetAsync(apiEndPoint); 
 
                     if (response.IsSuccessStatusCode)
                     {
-                        string jsonResponse = await response.Content.ReadAsStringAsync(); // Aszinkron adatolvasás
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
 
-                        // JSON feldolgozása és visszaalakítása DataTable formátumra
+                        // Process and convert JSON back to DataTable format
                         dynamic jsonObject = JsonConvert.DeserializeObject(jsonResponse);
                         JArray dataArray = jsonObject.value;
 
@@ -89,12 +89,12 @@ namespace ExcelUploadClient.Utilities
                     }
                     else
                     {
-                        throw new Exception($"Hiba történt a szerver válaszában: {response.StatusCode}");
+                        throw new Exception($"Error occurred in server response: {response.StatusCode}");
                     }
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception($"Hiba történt a kérés során: {ex.Message}");
+                    throw new Exception($"Error occurred during request: {ex.Message}");
                 }
             }
         }
@@ -125,7 +125,7 @@ namespace ExcelUploadClient.Utilities
                 catch (Exception ex)
                 {
                     // Handle other exceptions
-                    return $"Hiba történt: {ex.Message}";
+                    return $"Error occurred: {ex.Message}";
                 }
             }
         }
