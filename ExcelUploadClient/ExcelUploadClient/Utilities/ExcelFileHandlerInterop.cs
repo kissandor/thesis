@@ -1,10 +1,9 @@
 ﻿using Microsoft.Office.Interop.Excel;
-using System;
 using System.Data;
 
 namespace ExcelUploadClient.Utilities
 {
-    internal class ExcelFileHandlerInterop
+    internal static class ExcelFileHandlerInterop
     {
         public static System.Data.DataTable ReadExcelFile(string filePath, int sheetNumber)
         {

@@ -192,12 +192,12 @@ Az alkalmazásban nincs szükség sok adat tárolására, csupán a webáruháza
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=15cm, height=7.5cm]{entity_diagram}
-		\caption{SSMS Adatbázis Diagram}
+		\caption{SSMS adatbázis diagram}
 		\label{picture-adatbazis}
 	\end{figure}
 Az adatbázis felépítése a az \ref{picture-adatbazis} ábrán látható. 
 
-Az adatbázisban összesen négy tábla található: a ComputerParts, WebShops, és Categories táblákba az adatokat az ExcelDataLoader asztali alkalmazás segítségével egyszerűen feltölthetjük egy Excel-fájlból.
+Az adatbázisban összesen négy tábla található: a ComputerParts, WebShops, és Categories táblákba az adatokat az Excel Data Loader asztali alkalmazás segítségével egyszerűen feltölthetjük egy Excel-fájlból.
 A negyedik, egyben fő táblánk a SearchResults tábla, amelybe a robot az összes alkatrészről talált keresési eredményt elmenti majd el. Ebben a táblában két idegen kulcs található, amelyek a ComputerParts és a WebShops táblákra mutatnak.
 \subsection{Adatbázis inicializálása}
 Az adatbázis inicializálásához Entity Framework-öt használtam. Az Entity Framework használatakor az adatbázis inicializálását különböző módon lehet elvégezni; választható a Code First, Database First és Model First megközelítés is.
@@ -250,9 +250,24 @@ A szerveroldalon csak a Create, Read és Delete adatbázisműveletek vannak impl
 
 
 
-\section{ExcelDataLoader}
+\section{Excel Data Loader}
 Az adatok Excel fájlból történő beolvasására és azok szerverre történő elküldésére készítettem egy desktop alkalmazást, amelyhez a Windows Presentation Foundation (WPF) keretrendszert választottam. Azért esett a választásom a WPF-re, mert kiválóan támogatja a látványos felhasználói felület kialakítását, valamint könnyen kezelhető az adatok megjelenítése és a felhasználóval való interakció. A fejlesztés során az MVVM (Model-View-ViewModel) tervezési mintát követtem, amely lehetővé tette a karbantartható és jól struktúrált kód létrehozását, valamint az adatkezelés és a felhasználói felület szétválasztását. 
-\subsection{Model-View-ViewModel}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=15cm, height=7.5cm]{ExcelDataLoader}
+	\caption{Excel Data Loader asztali alkalmazás}
+	\label{picture-ExcelDataLoader}
+\end{figure}
+\subsection{Excel file feldolgozása}
+
+Többféle NuGet csomag közül lehet választani, ha Excel műveleteket szeretnénk integrálni a kódunkba. Mindegyik ilyen NuGet csomagnak vannak előnyei és hátrányai is. A dolgozatomban a Microsoft Office Interop Excel csomagot választottam. Ennek a csomagnak a legnagyobb előnye, hogy közvetlen kapcsolatot biztosít az Excel alkalmazással, így egyszerűen és könnyen lehetővé teszi az Excel funkcióinak és az adatoknak a programozott kezelését. A legnagyobb hátránya talán az, hogy az Excelnek telepítve kell lennie az alkalmazást futtató összes számítógépen. Emellett, mivel a programunk egy külső alkalmazással interaktál, az interop hívások lassabbak lehetnek, különösen akkor, amikor nagyobb adatmennyiséggel dolgozunk. 
+
+Az Excel fájl feldolgozására egy külön statikus osztályt hoztam létre ExcelFileHandlerInterop néven. Ennek az osztálynak egyetlen statikus metódusa van, a ReadExcelFile, amely paraméterként megkapja az Excel fájl elérési útvonalát és a munkalap számát, amin a beolvasandó adatok találhatók. Ez a metódus egy DataTable objektumot ad vissza, amelyben a beolvasott adatok vannak tárolva. Fontos része a kódnak egy új Application objektum létrehozása a Microsoft.Office.Interop.Excel könyvtárból, amely az Excel alkalmazást képviseli. Ennek az Application objektumnak a beépített metódusain keresztül megvalósíthatjuk a különböző Excel műveleteket. Lekérhetjük a munkafüzetet, a munkafüzet munkalapjait, és beállíthatunk tartományokat a munkalapokon. Kérhetjük a tartomány oszlopainak és sorainak számát, így egyszerűen ki tudjuk nyerni a kívánt adatokat. Ennek a megvalósítása látható az alábbi kódrészletben.
+
+\lstinputlisting[style=csharp, caption={Excel fájl beolvasása és kezelése .NET Interop használatával}, label={kod-ExcelFileHandlerInterop}]{ExcelFileHandlerInterop.cs}
+
+Nagyon fontos az erőforrások felszabadítása. Ügyelni kell arra, hogy bezárjuk az Excel alkalmazást, és hogy felszabadítsuk a COM objektumokat. Ha ezt nem tesszük meg, olyan problémákkal szembesülhetünk, mint például a memória szivárgás, ami azt jelenti, hogy a memória használat folyamatosan növekszik, és ezáltal komoly teljesítménycsökkenés következhet be a rendszerben.
+
 \section{UiPath Robot}
 \chapter*{Összegzés}
 \addcontentsline{toc}{chapter}{Összegzés}
