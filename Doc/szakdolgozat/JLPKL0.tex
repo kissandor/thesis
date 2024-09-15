@@ -37,6 +37,26 @@
 	keywordstyle=\bfseries\color{blue},
 }
 
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+
+\lstdefinestyle{xml}{
+	inputencoding=utf8/latin2,
+	language=XML,
+	basicstyle=\footnotesize,
+	numbers=left,
+	xleftmargin=1cm,
+	xrightmargin=1cm,
+	breaklines=true,
+	postbreak=\hbox{$\color{red}\hookrightarrow\ $},
+	backgroundcolor=\color{gray!30},
+	frame=tblr,
+	framesep=3pt,
+	commentstyle=\color{teal},
+	morecomment=[s]{<!--}{-->},
+	keywordstyle=\bfseries\color{blue},
+}
 \begin{document}
 \institute{Matematikai és Informatikai Intézet}
 \title{Árgép robot fejlesztése}
@@ -67,7 +87,7 @@ A felhasználók egyszerűen felsorolják a kívánt alkatrészeket egy Excel f�
 
 
 \chapter{Választott technológiák bemutatása}
-\section{.NET Keretrendszer \cite{Microsoft}}
+\section{.NET Keretrendszer \cite{.NET}}
 .NET-keretrendszer egy olyan technológia, amely támogatja a Windows-alkalmazások és webszolgáltatások készítését és futtatását. Előzőleg a .NET nemcsak fejlesztői környezetet jelentett, hanem magában foglalta különböző szoftvereket, fejlesztőeszközöket és hardvereszközöket is, azonban ma már a .NET kifejezés kizárólag magára a keretrendszerre vonatkozik.
 
 .NET-keretrendszer a közös nyelvi futtatókörnyezetből (CLR) és a .NET- keretrendszer osztálytárból áll. A közös nyelvi futtatókörnyezet a .NET- keretrendszer alapja. Végrehajtáskor kezeli a kódot és olyan alapvető szolgáltatásokat nyújt, mint a memóriakezelés, a szálkezelés és a visszalépés, miközben szigorú típusbiztonságot és a kód pontosságának egyéb olyan formáit is kikényszeríti, amelyek elősegítik a biztonságot és a robusztusságot.
@@ -266,7 +286,27 @@ Az Excel fájl feldolgozására egy külön statikus osztályt hoztam létre Exc
 
 \lstinputlisting[style=csharp, caption={Excel fájl beolvasása és kezelése .NET Interop használatával}, label={kod-ExcelFileHandlerInterop}]{ExcelFileHandlerInterop.cs}
 
-Nagyon fontos az erőforrások felszabadítása. Ügyelni kell arra, hogy bezárjuk az Excel alkalmazást, és hogy felszabadítsuk a COM objektumokat. Ha ezt nem tesszük meg, olyan problémákkal szembesülhetünk, mint például a memória szivárgás, ami azt jelenti, hogy a memória használat folyamatosan növekszik, és ezáltal komoly teljesítménycsökkenés következhet be a rendszerben.
+Nagyon fontos az erőforrások felszabadítása. Ügyelni kell arra, hogy bezárjuk az Excel alkalmazást, és hogy felszabadítsuk a COM objektumokat. Ha ezt nem tesszük meg, akkor olyan problémákkal szembesülhetünk, mint például a memória szivárgás, ami azt jelenti, hogy a memória használat folyamatosan növekszik, és ezáltal komoly teljesítménycsökkenés következhet be a rendszerben.
+\subsection{Adatkötés (data binding) \cite{Binding} \cite{WPF}}
+Az adatkötés vagy adatkapcsolás a felhasználói felület elemeinek és a háttérben lévő adatmodellek összekapcsolását jelenti, így a felhasználói felületen megjelenő adatok mindig automatikusan frissülnek.
+
+A program elkészítésekor én a Model-View-ViewModel (MVVM) tervezési mintát követtem, ahol az adatkötés a View és a ViewModel között valósul meg. A View az, ahol az adatkötés deklarálása megtörténik, a ViewModel pedig biztosítja azt, hogy a View értesüljön a változásokról, de ehhez először a ViewModelnek implementálnia kell az INotifyPropertyChanged interfészt. Ez az interfész a PropertyChanged eseményt definiálja, amit egy tulajdonság megváltozásánál kell kiváltani.
+
+Első lépésben létrehoztam egy ViewModelBase osztályt, amely implementálja az INotifyPropertyChanged interfészt és ez osztály az őse az összes többi ViewModel osztálynak.
+
+\lstinputlisting[style=csharp, caption={INotifyPropertyChanged interfész implementálása}, label={kod-ViewModelBase}]{ViewModelBase.cs}
+
+Ebben az osztályban az OnPropertyChanged metódus egy string típusú paramétert vár, amely a annak a tulajdonságnak a  nevét jelöli amit figyelunk, hogy valtozik e. Amikor ennek tulajdonságnak az értéke megváltozik, a PropertyChanged esemény kiváltódik. A View figyeli ezt az eseményt, és amikor a PropertyChanged esemény bekövetkezik, automatikusan frissíti a bindelt elemeket.
+
+Az alábbi WebShopsViewModel osztály kódrészletben látható, hogyan valósítottam meg az OnPropertyChanged metódus használatát. 
+
+Az osztálynak van egy WebShops nevű, WebShop objektumokat tartalmazó ObservableCollection property-je. Ennek a property-nek a setterében hívom meg az OnPropertyChanged metódust. Alap esetben ennek a metódusnak paraméterként át kellene adni a property nevét, de a CallerMemberName attribútum használata miatt a property neve automatikusan megadásra kerül, így ezzel nekünk nem kell foglalkoznunk.
+\newpage
+\lstinputlisting[style=csharp, caption={Az OnPropertyChanged használata a WebShopsViewModel osztályban}, label={kod-WebShopViewModel}]{WebShopViewModel.cs}
+
+Amikor a WebShops property értéke megváltozik, például amikor a Collection-hoz adunk hozzá új WebShop objektumokat vagy eltávolítunk belőle elemeket, akkor az OnPropertyChanged metódus meghívódik, és ennek hatására a View azonnal frissül a data binding-nak köszönhetően. Maga az adatkötés deklarálása a View-ban, XAML-ben megtörténik.
+
+\lstinputlisting[style=XML, caption={Az OnPropertyChanged használata a WebShopsViewModel osztályban}, label={kod-WebShopViewModel}]{WebShop.xaml}
 
 \section{UiPath Robot}
 \chapter*{Összegzés}
@@ -275,7 +315,7 @@ Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál 
 
 \begin{thebibliography}{2}
 \addcontentsline{toc}{chapter}{\bibname}
-\bibitem{Microsoft}
+\bibitem{.NET}
 \textsc{Microsoft}: Overview of .NET Framework, 
 \url{https://learn.microsoft.com/en-gb/dotnet/framework/get-started/overview}
 
@@ -285,6 +325,14 @@ Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál 
 
 \bibitem{Progtech}
 \textsc{Dr. Kusper Gábor és Dr. Radványi Tibor}: Jegyzet a projekt labor című tárgyhoz, Eszterházy Károly Katolikus Egyetem, Eger, 2012.
+
+\bibitem{Binding}
+\textsc{Microsoft}: Data binding overview (WPF .NET), 
+\url{https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/?view=netdesktop-8.0}
+
+\bibitem{WPF}
+\textsc{Bennage, Christopher és Eisenberg, Rob}: Tanuljuk meg a WPF használatát 24 óra alatt, Kiskapu Kiadó, 2009.
+
 \end{thebibliography}
 
 % Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére

@@ -1,0 +1,11 @@
+ <Grid>
+     <DataGrid x:Name="DataGridComputerParts" 
+                 Margin="10,50,10,10"
+                 AutoGenerateColumns="False"
+                 ItemsSource="{Binding Webshops}"
+                 Style="{StaticResource DataGridStyle}">
+	<!-- ...  -->
+	</DataGrid> 
+	<!-- ...  -->
+</Grid>
+     
