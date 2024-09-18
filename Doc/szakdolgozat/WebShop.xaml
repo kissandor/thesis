@@ -1,8 +1,8 @@
  <Grid>
-     <DataGrid x:Name="DataGridComputerParts" 
+     <DataGrid x:Name="DataGridWebShops" 
                  Margin="10,50,10,10"
                  AutoGenerateColumns="False"
-                 ItemsSource="{Binding Webshops}"
+                 ItemsSource="{Binding WebShops}"
                  Style="{StaticResource DataGridStyle}">
 	<!-- ...  -->
 	</DataGrid> 

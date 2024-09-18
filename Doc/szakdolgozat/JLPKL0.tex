@@ -120,7 +120,7 @@ Az MVVM egy olyan tervezési minta, amelyenek célja az alkalmazások strukturá
 
 	\item \textbf{ViewModel:} A ViewModel egy köztes réteg a Model és a View között. Feladata a felhasználói felület és az üzleti logika közötti kapcsolat fenntartása. A ViewModel feldolgozza a felhasználói interakciókat a View-tól, valamint frissíti a View-t az adatokból, amelyeket a Modelből kap. A ViewModel segítségével az alkalmazás jól elkülöníthető módon oszlik meg, ami könnyebb tesztelést és karbantarthatóságot eredményez.
 \end{itemize}
-	Az MVVM használatával az alkalmazás könnyebben bővíthető és karbantartható, és lehetőséget ad az egységtesztelésre is. A WPF keretrendszer kifejezetten támogatja az MVVM tervezési mintát, és adatakötegelési mechanizmusokat kínál a Model és a ViewModel közötti adatkommunikáció egyszerűsítésére.
+Az MVVM használatával az alkalmazás könnyebben bővíthető és karbantartható, és lehetőséget ad az egységtesztekre is. A WPF keretrendszer kifejezetten támogatja az MVVM tervezési mintát, és könnyen kezelhető adatkötést kínál a View és a ViewModel között.
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=12cm]{mvvm}
@@ -204,7 +204,7 @@ Az UiPath Robot egy szoftverrobot, mely a számítógépen elvégzi az automatiz
 \item \textbf{Integrálható:} A UiPath Robot könnyen integrálható más üzleti alkalmazásokkal és rendszerekkel, lehetővé téve a szervezetek számára az egységes munkafolyamatok kialakítását.
 \end{itemize}
 \chapter{Megoldás}
-A projektem három fő részből áll. Az első rész egy REST API szerver, amely az ASP.NET Core keretrendszerre épül. A második rész egy desktop alkalmazás, amely elküldi az adatbázisba elmentendő adatokat a REST API-n keresztül a szervernek. Ezt az alkalmazást ExcelDataLoader-nek neveztem el, és a Windows Presentation Foundation keretrendszer segítségével készítettem el. A projekt harmadik része maga a UiPath robot, amely az automatizálási feladatokat látja el.
+A projektem három fő részből áll. Az első rész egy REST API szerver, amely az ASP.NET Core keretrendszerre épül. A második rész egy desktop alkalmazás, amely elküldi az adatbázisba elmentendő adatokat a REST API-n keresztül a szervernek. Ezt az alkalmazást ExcelDataLoader-nek neveztem el, és a Windows Presentation Foundation keretrendszer segítségével készítettem el. A projekt harmadik része maga a UiPath Árgép robot, amely az automatizálási feladatokat látja el.
 \section{REST API Szerver}
 Ez a komponens biztosítja a kommunikációs felületet a kliensalkalmazás és az adatbázis között, lehetővé téve az adatbázis műveletek végrehajtását HTTP kéréseken keresztül.
 \subsection{Adatbázis}
@@ -304,14 +304,37 @@ Az osztálynak van egy WebShops nevű, WebShop objektumokat tartalmazó Observab
 \newpage
 \lstinputlisting[style=csharp, caption={Az OnPropertyChanged használata a WebShopsViewModel osztályban}, label={kod-WebShopViewModel}]{WebShopViewModel.cs}
 
-Amikor a WebShops property értéke megváltozik, például amikor a Collection-hoz adunk hozzá új WebShop objektumokat vagy eltávolítunk belőle elemeket, akkor az OnPropertyChanged metódus meghívódik, és ennek hatására a View azonnal frissül a data binding-nak köszönhetően. Maga az adatkötés deklarálása a View-ban, XAML-ben megtörténik.
+Amikor a WebShops property értéke megváltozik, például amikor a Collection-hoz adunk hozzá új WebShop objektumokat vagy eltávolítunk belőle elemeket, akkor az OnPropertyChanged metódus meghívódik, és ennek hatására a View azonnal frissül a data binding-nak köszönhetően. 
 
-\lstinputlisting[style=XML, caption={Az OnPropertyChanged használata a WebShopsViewModel osztályban}, label={kod-WebShopViewModel}]{WebShop.xaml}
+Maga az adatkötés deklarálása a View-ban, XAML-ben megtörténik. Az alábbi kódrészletben egy DataGridet definiálok, és a DataGridben megjelenítendő adatok forrása a ViewModel WebShops property-jéhez van kötve, ahogy az 5. sorban látható.
 
-\section{UiPath Robot}
+\lstinputlisting[style=XML, caption={Adatkötés DataGrid és Webshops Property között}, label={kod-WebShopViewModel}]{WebShop.xaml}
+Az adatkötést azért tartottam fontosnak részletezni a dolgozatomban, mert bár a program fő funkciója az Excel fájl feldolgozása és a feldolgozott adatok továbbítása a szerverre, a program képes lekérdezni a szerverről adatokat is, amelyeket a data binding segítségével dinamikusan megjelenít.
+
+\section{Árgép Robot}
+
+Az adatgyűjtés szempontjából nézve az árgépek, illetve az ár-összehasonlító alkalmazások többféleképpen működhetnek. Vannak olyan alkalmazások, amelyek a webáruházak API-jain keresztül gyűjtik be a termékek árait, illetve a termékekre vonatkozó egyéb információkat. 
+Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék feed tartalmazza azokat az adatokat, amelyek szükségesek ahhoz, hogy a termékek megjelenjenek ezeknek az alkalmazásoknak a felületén. Ez a termék feed általában egy XML vagy CSV fájl, amit a webáruházak rendszeresen frissítenek és bizonyos időközönként újraküldenek az árgép alkalmazásoknak. Ilyen módon működik az \url{https://www.argep.hu} webalkalmazás is.
+
+Az én ÁrGép robotom ezzel szemben web scrapinget alkalmaz. Minden egyes, a felhasználó által kiválasztott webshop oldalára ellátogat a robot, az oldalon rákeres minden egyes számítógép alkatrészre, amit meg szeretnénk vásárolni. Ezután a keresési eredményekből web scrapinggel kinyeri az adatokat, ezután elmenti őket az adatbázisba, és a mentett adatok közül megkeresi a legolcsóbbat minden egyes termék esetében.
+
+\subsection{Analysis}
+\subsection{Bot Development}
+\subsection{Testing}
+\subsection{Support and Maintenance}
+
+\begin{figure}[!ht]
+	\centering
+		\includegraphics[width=15cm, height=9cm]{rpa lifecycle}
+	\caption{Robotic Process Automation (RPA) Life Cycle}
+	\label{picture-ExcelDataLoader}
+\end{figure}
+
 \chapter*{Összegzés}
 \addcontentsline{toc}{chapter}{Összegzés}
 Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről. A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
+
+
 
 \begin{thebibliography}{2}
 \addcontentsline{toc}{chapter}{\bibname}
@@ -332,6 +355,10 @@ Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál 
 
 \bibitem{WPF}
 \textsc{Bennage, Christopher és Eisenberg, Rob}: Tanuljuk meg a WPF használatát 24 óra alatt, Kiskapu Kiadó, 2009.
+
+\bibitem{RPA Lifecycle}
+\textsc{Agilevrms}: Robotic Process Automation (RPA) Life Cycle
+\url{https://www.agilevrms.com/Home/RPA}
 
 \end{thebibliography}
 

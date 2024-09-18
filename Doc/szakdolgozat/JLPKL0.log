@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  15 SEP 2024 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  18 SEP 2024 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,6 +536,9 @@ LaTeX Warning: Label `kod-GetAllCategories' multiply defined.
 
 LaTeX Warning: Label `kod-WebShopViewModel' multiply defined.
 
+
+LaTeX Warning: Label `picture-ExcelDataLoader' multiply defined.
+
 )
 \openout1 = `JLPKL0.aux'.
 
@@ -692,7 +695,7 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Info: Redefining \cal on input line 577.
 LaTeX Info: Redefining \mit on input line 578.
 )
-<eszterhazy-logo-hu.pdf, id=97, 256.07971pt x 88.04292pt>
+<eszterhazy-logo-hu.pdf, id=113, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
 Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 67.
@@ -723,14 +726,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [5
 
 ] [6]
-<mvvm.png, id=167, 430.60875pt x 329.43076pt>
+<mvvm.png, id=187, 430.60875pt x 329.43076pt>
 File: mvvm.png Graphic file (type png)
 <use mvvm.png>
 Package pdftex.def Info: mvvm.png  used on input line 126.
 (pdftex.def)             Requested size: 341.43306pt x 261.21257pt.
  [7 <./mvvm.png>] [8] [9] [10] [11]
 2. fejezet.
-<entity_diagram.png, id=200, 524.55975pt x 310.15875pt>
+<entity_diagram.png, id=220, 524.55975pt x 310.15875pt>
 File: entity_diagram.png Graphic file (type png)
 <use entity_diagram.png>
 Package pdftex.def Info: entity_diagram.png  used on input line 214.
@@ -768,7 +771,7 @@ File: latin2.def 2021/02/14 v1.3d Input encoding file
 ex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 )
-<ExcelDataLoader.png, id=267, 594.42075pt x 319.79475pt>
+<ExcelDataLoader.png, id=288, 594.42075pt x 319.79475pt>
 File: ExcelDataLoader.png Graphic file (type png)
 <use ExcelDataLoader.png>
 Package pdftex.def Info: ExcelDataLoader.png  used on input line 277.
@@ -806,44 +809,54 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
 
 (c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [20{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [21
+) [20{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+<rpa lifecycle.png, id=395, 463.7325pt x 248.72925pt>
+File: rpa lifecycle.png Graphic file (type png)
+<use rpa lifecycle.png>
+Package pdftex.def Info: rpa lifecycle.png  used on input line 328.
+(pdftex.def)             Requested size: 426.80182pt x 256.08392pt.
+ [21] [22 <./rpa lifecycle.png>] [23
 
 ]
-<nyilatkozat.pdf, id=380, 597.50829pt x 845.0471pt>
+Underfull \hbox (badness 1337) in paragraph at lines 360--362
+[]\T1/lmr/m/sc/12 Agilevrms\T1/lmr/m/n/12 : Ro-bo-tic Pro-cess Au-to-ma-ti-on (
+RPA) Life Cyc-le []$\T1/lmtt/m/n/12 https : / / www .
+ []
+
+<nyilatkozat.pdf, id=414, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 339.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 366.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 339.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 366.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<nyilatkozat.pdf, id=383, page=1, 597.50829pt x 845.0471pt>
+<nyilatkozat.pdf, id=417, page=1, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 339.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 366.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 339.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 366.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [22
+[24
 
 ]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 339.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 366.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 339.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 366.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 339.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 366.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [23 <./nyilatkozat.pdf>]
-(./JLPKL0.aux)
+ [25 <./nyilatkozat.pdf>] (./JLPKL0.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -853,13 +866,13 @@ L3 programming layer <2023-08-29>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `JLPKL0.out' has not changed.
-(rerunfilecheck)             Checksum: 982759D5A10BDBC294830A2326E992B8;3987.
+(rerunfilecheck)             Checksum: B185289D5C3D1219B84917F920276D77;4662.
  ) 
 Here is how much of TeX's memory you used:
- 18854 strings out of 474934
- 302403 string characters out of 5763814
+ 18878 strings out of 474934
+ 302888 string characters out of 5763814
  2073801 words of memory out of 5000000
- 39865 multiletter control sequences out of 15000+600000
+ 39881 multiletter control sequences out of 15000+600000
  628568 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,81p,1010b,1992s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -873,10 +886,10 @@ fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
 /texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pfb><c:/texlive/2023/tex
 mf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type
 1/public/lm/lmtt12.pfb>
-Output written on JLPKL0.pdf (23 pages, 541217 bytes).
+Output written on JLPKL0.pdf (25 pages, 696145 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 437 compressed objects within 5 object streams
- 180 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 472 compressed objects within 5 object streams
+ 188 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

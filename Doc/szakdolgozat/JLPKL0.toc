@@ -21,6 +21,10 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.2}Excel Data Loader}{17}{section.2.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}Excel file feldolgozása}{17}{subsection.2.2.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Adatkötés (data binding) \cite {Binding} \cite {WPF}}{19}{subsection.2.2.2}%
-\select@language {magyar} \contentsline {section}{\numberline {2.3}UiPath Robot}{20}{section.2.3}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{21}{chapter*.17}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{22}{chapter*.18}%
+\select@language {magyar} \contentsline {section}{\numberline {2.3}Árgép Robot}{21}{section.2.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.1}Analysis}{21}{subsection.2.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.2}Bot Development}{21}{subsection.2.3.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.3}Testing}{21}{subsection.2.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.4}Support and Maintenance}{21}{subsection.2.3.4}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{23}{chapter*.18}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{24}{chapter*.19}%
