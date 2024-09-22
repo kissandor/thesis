@@ -203,6 +203,26 @@ Az UiPath Robot egy szoftverrobot, mely a számítógépen elvégzi az automatiz
 \item \textbf{Skálázható:} A UiPath Robot alkalmas nagyobb volumenű munkafolyamatok kezelésére is, így a vállalatok könnyen skálázhatják az automatizációs projektjeiket.
 \item \textbf{Integrálható:} A UiPath Robot könnyen integrálható más üzleti alkalmazásokkal és rendszerekkel, lehetővé téve a szervezetek számára az egységes munkafolyamatok kialakítását.
 \end{itemize}
+\subsection{A UiPath fejlesztés alapjai:}
+Mint már az előző fejezetben említettem, a fejlesztés a UiPath Studio grafikus felületén történik. Itt több száz előre elkészített activity található. Ezek az activity-k teszik lehetővé a különböző feladatok automatizálását. Ezek a feladatok lehetnek például adatbázis-műveletek, fájlok kezelése vagy webes feladatok, amelyeket automatizálni szeretnénk. Érdemes megjegyezni, hogy a beépített activity-ken kívül a Studio csomagkezelőjével külső fejlesztők által írt activity-ket is telepíthetünk, vagy akár saját magunk is írhatunk activity-ket. Ehhez a Microsoft Visual Studio fejlesztői környezete szükséges.  
+\subsection*{Workflow-k UiPath-ban: \cite{Workflow}}
+Az activity-ket drag and drop módszerrel egyszerűen munkafolyamatokba (workflow) szervezhetjük. Attól függően, hogy milyen feladatokat szeretnénk automatizálni, a UiPath a következő munkafolyamatokat kínálja:
+\begin{itemize}
+	\item\textbf{Sequence:} Egyszerű, lineáris workflow, amely felülről lefelé haladva, egymás után hajtja végre az activity-ket. Előnye, hogy egyszerű összeállítani, jól átlátható és könnyen olvasható. Legtöbbször elegendő is a kívánt feladat automatizálására.
+	\item \textbf{Flowchart:} Vizuális workflow, akkor érdemes használni, amikor az automatizálási folyamat több elágazással, döntési csomóponttal rendelkezik. Ez a legjobb választás a nem lineáris folyamatok automatizálására. 
+	\item \textbf{State Machine:}Ez egy összetettebb workflow, akkor érdemes használni, amikor a folyamat különböző állapotokat, úgynevezett state-eket vehet fel. A tranzakciók irányítják az állapotok változását, vagyis azt, hogy egyik state-ből mikor léphetünk tovább egy másikba. Minden tranzakció feltételhez kötött, és ha a feltétel teljesül, akkor aktiválódik a tranzakció, és a State Machine állapotot vált.
+	\item \textbf{Global Exception Handler:}Ez egy speciális workflow, amely nem kezelt kivételek esetén automatikusan lefut. Használata segít az automatizálás megbízhatóságának növelésében.
+\end{itemize}	
+\subsection*{Activity-k UiPath-ban: \cite{Activity}}
+Az activity-k a UiPath automatizálás alapvető építőkövei, amelyek reprezentálják azokat a műveleteket, amelyeket az automatizálás során végre szeretnénk hajtani. Minden egyes activity egy speciális funkciót hajt végre. Ilyen funkció lehet például egy e-mail küldése, egy űrlap adatokkal való kitöltése vagy egy adatbázis lekérdezés. Az activity-k paraméterekkel könnyen testreszabhatók, így az adott igényekhez alakíthatók.
+
+	\begin{figure}[!ht]
+	\centering
+	\includegraphics[height=5cm]{activity}
+	\caption{Assign activity Sequence workflow-ban}
+	\label{picture-activity}
+\end{figure}
+
 \chapter{Megoldás}
 A projektem három fő részből áll. Az első rész egy REST API szerver, amely az ASP.NET Core keretrendszerre épül. A második rész egy desktop alkalmazás, amely elküldi az adatbázisba elmentendő adatokat a REST API-n keresztül a szervernek. Ezt az alkalmazást ExcelDataLoader-nek neveztem el, és a Windows Presentation Foundation keretrendszer segítségével készítettem el. A projekt harmadik része maga a UiPath Árgép robot, amely az automatizálási feladatokat látja el.
 \section{REST API Szerver}
@@ -314,7 +334,7 @@ Az adatkötést azért tartottam fontosnak részletezni a dolgozatomban, mert b�
 \section{Árgép Robot}
 
 Az adatgyűjtés szempontjából nézve az árgépek, illetve az ár-összehasonlító alkalmazások többféleképpen működhetnek. Vannak olyan alkalmazások, amelyek a webáruházak API-jain keresztül gyűjtik be a termékek árait, illetve a termékekre vonatkozó egyéb információkat. 
-Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék feed tartalmazza azokat az adatokat, amelyek szükségesek ahhoz, hogy a termékek megjelenjenek ezeknek az alkalmazásoknak a felületén. Ez a termék feed általában egy XML vagy CSV fájl, amit a webáruházak rendszeresen frissítenek és bizonyos időközönként újraküldenek az árgép alkalmazásoknak. Ilyen módon működik az \url{https://www.argep.hu} webalkalmazás is.
+Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék feed tartalmazza azokat a termék adatokat, amelyek megjelenjenek ezeknek az alkalmazásoknak a felületén. Ez a termék feed általában egy XML vagy CSV fájl, amit a webáruházak rendszeresen frissítenek és bizonyos időközönként újraküldenek az árgép alkalmazásoknak. Ilyen módon működik az \url{https://www.argep.hu} webalkalmazás is.
 
 Az én ÁrGép robotom ezzel szemben web scrapinget alkalmaz. Minden egyes, a felhasználó által kiválasztott webshop oldalára ellátogat a robot, az oldalon rákeres minden egyes számítógép alkatrészre, amit meg szeretnénk vásárolni. Ezután a keresési eredményekből web scrapinggel kinyeri az adatokat, ezután elmenti őket az adatbázisba, és a mentett adatok közül megkeresi a legolcsóbbat minden egyes termék esetében.
 
@@ -360,6 +380,13 @@ Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál 
 \textsc{Agilevrms}: Robotic Process Automation (RPA) Life Cycle
 \url{https://www.agilevrms.com/Home/RPA}
 
+\bibitem{Workflow}
+\textsc{UiPath Documentation}: Workflow Design, 
+\url{https://docs.uipath.com/studio/standalone/2023.4/user-guide/workflow-design}
+
+\bibitem{Activity}
+\textsc{Ixenit Blog}: Betekintés a UiPath RPA megoldásába, 
+\url{https://blog.ixenit.com/hu/betekintes-a-uipath-rpa-megoldasaba}
 \end{thebibliography}
 
 % Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére

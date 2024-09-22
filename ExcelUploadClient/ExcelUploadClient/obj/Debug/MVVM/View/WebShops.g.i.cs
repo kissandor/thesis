@@ -60,7 +60,7 @@ namespace ExcelUploadClient.MVVM.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExcelUploadClient;component/mvvm/view/webShops.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ExcelUploadClient;component/mvvm/view/webshops.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\MVVM\View\WebShops.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
