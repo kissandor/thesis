@@ -332,23 +332,27 @@ Maga az adatkötés deklarálása a View-ban, XAML-ben megtörténik. Az alábbi
 Az adatkötést azért tartottam fontosnak részletezni a dolgozatomban, mert bár a program fő funkciója az Excel fájl feldolgozása és a feldolgozott adatok továbbítása a szerverre, a program képes lekérdezni a szerverről adatokat is, amelyeket a data binding segítségével dinamikusan megjelenít.
 
 \section{Árgép Robot}
-
 Az adatgyűjtés szempontjából nézve az árgépek, illetve az ár-összehasonlító alkalmazások többféleképpen működhetnek. Vannak olyan alkalmazások, amelyek a webáruházak API-jain keresztül gyűjtik be a termékek árait, illetve a termékekre vonatkozó egyéb információkat. 
-Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék feed tartalmazza azokat a termék adatokat, amelyek megjelenjenek ezeknek az alkalmazásoknak a felületén. Ez a termék feed általában egy XML vagy CSV fájl, amit a webáruházak rendszeresen frissítenek és bizonyos időközönként újraküldenek az árgép alkalmazásoknak. Ilyen módon működik az \url{https://www.argep.hu} webalkalmazás is.
+Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék feed tartalmazza azokat az adatokat, amelyek megjelenjenek ezeknek az alkalmazásoknak a felületén. Ez a termék feed általában egy XML vagy CSV fájl, amit a webáruházak rendszeresen frissítenek és bizonyos időközönként újraküldenek az árgép alkalmazásoknak. Ilyen módon működik a \url{https://www.argep.hu} webalkalmazás is.
 
-Az én ÁrGép robotom ezzel szemben web scrapinget alkalmaz. Minden egyes, a felhasználó által kiválasztott webshop oldalára ellátogat a robot, az oldalon rákeres minden egyes számítógép alkatrészre, amit meg szeretnénk vásárolni. Ezután a keresési eredményekből web scrapinggel kinyeri az adatokat, ezután elmenti őket az adatbázisba, és a mentett adatok közül megkeresi a legolcsóbbat minden egyes termék esetében.
-
-\subsection{Analysis}
-\subsection{Bot Development}
-\subsection{Testing}
-\subsection{Support and Maintenance}
+\subsection{ÁrGép Robot működése}
 
 \begin{figure}[!ht]
 	\centering
-		\includegraphics[width=15cm, height=9cm]{rpa lifecycle}
-	\caption{Robotic Process Automation (RPA) Life Cycle}
-	\label{picture-ExcelDataLoader}
+	\includegraphics[width=14cm]{mainWorkflow}
+	\caption{ ÁrGép Robot Main Workflow}
+	\label{picture-MainWorkFlow}
 \end{figure}
+
+Az én ÁrGép robotom ezzel szemben minden egyes, a felhasználó által kiválasztott webshop weboldalára elnavigál, és az oldalon rákeres minden egyes számítógép alkatrészre, amit meg szeretnénk vásárolni. Ehhez először a robotnak le kell kérdezni ezeket az adatokat az adatbázisból. Ez a \texttt{DB Connection Workflow}-ban történik meg. Itt a robot a \texttt{Connect to database} activity segítségével kapcsolatot létesít az adatbázissal. Ha az adatbázishoz való kapcsolódás során valami hiba lépne fel, akkor a \texttt{DB Error Workflow} fut le. Itt a robot egy e-mailben értesíti a felhasználót, hogy a kapcsolódás probléma miatt a keresést nem tudta végrehajtani es a robot futása leáll. 
+
+ Sikeres kapcsolat esetén a robot lekérdezi az összes adat a  \texttt{ComputerParts}, \texttt{WebShops} és a \texttt{Categories} táblákból, majd eltárolja ezeket az adatokat három DataTable adattípusú változóba, majd  ezeket a változókat átadja a \texttt{Search Workflow}-nak.
+
+\subsection{Search Workflow}
+\subsection{Result To DB Workflow}
+\subsection{Report Builder Workflow}
+
+\section{Tesztelés}
 
 \chapter*{Összegzés}
 \addcontentsline{toc}{chapter}{Összegzés}
