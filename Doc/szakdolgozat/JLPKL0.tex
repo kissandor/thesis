@@ -332,8 +332,8 @@ Maga az adatkötés deklarálása a View-ban, XAML-ben megtörténik. Az alábbi
 Az adatkötést azért tartottam fontosnak részletezni a dolgozatomban, mert bár a program fő funkciója az Excel fájl feldolgozása és a feldolgozott adatok továbbítása a szerverre, a program képes lekérdezni a szerverről adatokat is, amelyeket a data binding segítségével dinamikusan megjelenít.
 
 \section{Árgép Robot}
-Az adatgyűjtés szempontjából nézve az árgépek, illetve az ár-összehasonlító alkalmazások többféleképpen működhetnek. Vannak olyan alkalmazások, amelyek a webáruházak API-jain keresztül gyűjtik be a termékek árait, illetve a termékekre vonatkozó egyéb információkat. 
-Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék feed tartalmazza azokat az adatokat, amelyek megjelenjenek ezeknek az alkalmazásoknak a felületén. Ez a termék feed általában egy XML vagy CSV fájl, amit a webáruházak rendszeresen frissítenek és bizonyos időközönként újraküldenek az árgép alkalmazásoknak. Ilyen módon működik a \url{https://www.argep.hu} webalkalmazás is.
+Az adatgyűjtés szempontjából nézve az árgépek, illetve az ár-összehasonlító alkalmazások többféleképpen működhetnek. Vannak olyan alkalmazások, amelyek a webáruházak \texttt{API}-jain keresztül gyűjtik be a termékek árait, illetve a termékekre vonatkozó egyéb információkat. 
+Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék feed tartalmazza azokat az adatokat, amelyek megjelenjenek ezeknek az alkalmazásoknak a felületén. Ez a termék feed általában egy \texttt{XML} vagy \texttt{CSV} fájl, amit a webáruházak rendszeresen frissítenek és bizonyos időközönként újraküldenek az árgép alkalmazásoknak. Ilyen módon működik a \url{https://www.argep.hu} webalkalmazás is.
 
 \subsection{ÁrGép Robot működése}
 
@@ -346,9 +346,29 @@ Más alkalmazások egy termékfájlt kapnak a webshopoktól, és ez a termék fe
 
 Az én ÁrGép robotom ezzel szemben minden egyes, a felhasználó által kiválasztott webshop weboldalára elnavigál, és az oldalon rákeres minden egyes számítógép alkatrészre, amit meg szeretnénk vásárolni. Ehhez először a robotnak le kell kérdezni ezeket az adatokat az adatbázisból. Ez a \texttt{DB Connection Workflow}-ban történik meg. Itt a robot a \texttt{Connect to database} activity segítségével kapcsolatot létesít az adatbázissal. Ha az adatbázishoz való kapcsolódás során valami hiba lépne fel, akkor a \texttt{DB Error Workflow} fut le. Itt a robot egy e-mailben értesíti a felhasználót, hogy a kapcsolódás probléma miatt a keresést nem tudta végrehajtani es a robot futása leáll. 
 
- Sikeres kapcsolat esetén a robot lekérdezi az összes adat a  \texttt{ComputerParts}, \texttt{WebShops} és a \texttt{Categories} táblákból, majd eltárolja ezeket az adatokat három DataTable adattípusú változóba, majd  ezeket a változókat átadja a \texttt{Search Workflow}-nak.
+Sikeres kapcsolat esetén a robot lekérdezi az összes adatot a  \texttt{WebShops}, \texttt{Categories}  és \texttt{ComputerParts} táblákból, majd eltárolja ezeket az adatokat három DataTable adattípusú változóban. Ezt követően a robot ezeket a változókat átadja a \texttt{Search Workflow}-nak. Ebben a workflow-ban a robot végrehajtja a keresést, és a keresési eredményeket elmenti egy DataTable adattípusú változóban \cite{DataTable}. Ez az adattípus tökéletes választás, hiszen a DataTable alkalmas arra, hogy táblázatos formában sorokat és oszlopokat kezeljen, akár csak egy Excel-táblázat vagy egy adatbázis-tábla.
 
 \subsection{Search Workflow}
+A webshopokban történő keresésre és az adatok automatizált kigyűjtésére két különböző megközelítést választottam. Mindkét megközelítésnek vannak előnyei és hátrányai, attól függően, hogy milyen webshopban kell dolgoznunk.
+
+\subsection*{Webshop specifikus keresési megoldás}
+Mindannyian vásároltunk már online, és tudjuk, hogy amikor rákeresünk egy tetszőleges webáruházban egy tetszőleges termékre, a keresési eredmény mindig egy nagyon jól strukturált, táblázatos formában jelenik meg. Ilyen strukturált adatok kinyerésére a UiPath-ban rendelkezésre áll az úgynevezett \texttt{Table Extraction} \cite{TableExtraction} adatkinyerési technológia.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=15.5cm]{tableExtraction2}
+	\caption{ UiPath Table Extraction}
+	\label{picture-TableExtraction}
+\end{figure}
+
+
+Amikor elindítjuk a \texttt{Table Extraction} varázslót, az képes automatikusan felismerni a táblázatos formátumokat és azok szerkezetét. Mivel a táblázat felíépitése ismert a robot számára, elég csak egyetlen  termék nevére rákattintani, és az algoritmus azonosítja  a táblázatban található összes többi termék nevét is. Hasonló módon  kinyerhetjük a termékek árát, valamint az összes többi megjelenített, számunkra releváns adatokat is. Az igy kinyert adatok egy DataTable adattípusú változó kerülnek elmentésre.
+
+Ennek a keresési megoldásnak nagy előnye, hogy gyors és pontos adatkinyerést tesz lehetővé. Hátránya viszont, hogy minden egyes webshopra külön implementálni kell a megoldást, ami növeli a fejlesztési időt, és a karbantartást is bonyolítja.
+
+\subsection*{Általános keresési megoldás}
+
+
 \subsection{Result To DB Workflow}
 \subsection{Report Builder Workflow}
 
@@ -391,6 +411,14 @@ Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál 
 \bibitem{Activity}
 \textsc{Ixenit Blog}: Betekintés a UiPath RPA megoldásába, 
 \url{https://blog.ixenit.com/hu/betekintes-a-uipath-rpa-megoldasaba}
+
+\bibitem{DataTable}
+\textsc{docs.uipath.com}: Data Table Variables, 
+\url{https://docs.uipath.com/studio/standalone/2021.10/user-guide/data-table-variables}
+
+\bibitem{TableExtraction}
+\textsc{docs.uipath.com}: Table Extraction, 
+\url{https://docs.uipath.com/activities/other/latest/ui-automation/table-extraction}
 \end{thebibliography}
 
 % Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére

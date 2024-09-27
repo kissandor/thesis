@@ -25,8 +25,8 @@
 \select@language {magyar} \contentsline {section}{\numberline {2.3}Árgép Robot}{22}{section.2.3}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.3.1}ÁrGép Robot működése}{22}{subsection.2.3.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.3.2}Search Workflow}{23}{subsection.2.3.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.3.3}Result To DB Workflow}{23}{subsection.2.3.3}%
-\select@language {magyar} \contentsline {subsection}{\numberline {2.3.4}Report Builder Workflow}{23}{subsection.2.3.4}%
-\select@language {magyar} \contentsline {section}{\numberline {2.4}Tesztelés}{23}{section.2.4}%
-\select@language {magyar} \contentsline {chapter}{Összegzés}{24}{chapter*.21}%
-\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{25}{chapter*.22}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.3}Result To DB Workflow}{24}{subsection.2.3.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {2.3.4}Report Builder Workflow}{24}{subsection.2.3.4}%
+\select@language {magyar} \contentsline {section}{\numberline {2.4}Tesztelés}{24}{section.2.4}%
+\select@language {magyar} \contentsline {chapter}{Összegzés}{25}{chapter*.24}%
+\select@language {magyar} \contentsline {chapter}{Irodalomjegyz\'ek}{26}{chapter*.25}%
