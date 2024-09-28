@@ -352,7 +352,7 @@ Sikeres kapcsolat esetén a robot lekérdezi az összes adatot a  \texttt{WebSho
 A webshopokban történő keresésre és az adatok automatizált kigyűjtésére két különböző megközelítést választottam. Mindkét megközelítésnek vannak előnyei és hátrányai, attól függően, hogy milyen webshopban kell dolgoznunk.
 
 \subsection*{Webshop specifikus keresési megoldás}
-Mindannyian vásároltunk már online, és tudjuk, hogy amikor rákeresünk egy tetszőleges webáruházban egy tetszőleges termékre, a keresési eredmény mindig egy nagyon jól strukturált, táblázatos formában jelenik meg. Ilyen strukturált adatok kinyerésére a UiPath-ban rendelkezésre áll az úgynevezett \texttt{Table Extraction} \cite{TableExtraction} adatkinyerési technológia.
+Mindannyian vásároltunk már online, és tudjuk, hogy amikor rákeresünk egy tetszőleges webáruházban egy termékre, a keresési eredmény mindig egy nagyon jól strukturált, táblázatos formában jelenik meg. Ilyen strukturált adatok kinyerésére a UiPath-ban rendelkezésre áll az úgynevezett \texttt{Table Extraction} \cite{TableExtraction} adatkinyerési technológia.
 
 \begin{figure}[!ht]
 	\centering
@@ -362,12 +362,20 @@ Mindannyian vásároltunk már online, és tudjuk, hogy amikor rákeresünk egy 
 \end{figure}
 
 
-Amikor elindítjuk a \texttt{Table Extraction} varázslót, az képes automatikusan felismerni a táblázatos formátumokat és azok szerkezetét. Mivel a táblázat felíépitése ismert a robot számára, elég csak egyetlen  termék nevére rákattintani, és az algoritmus azonosítja  a táblázatban található összes többi termék nevét is. Hasonló módon  kinyerhetjük a termékek árát, valamint az összes többi megjelenített, számunkra releváns adatokat is. Az igy kinyert adatok egy DataTable adattípusú változó kerülnek elmentésre.
+Amikor elindítjuk a \texttt{Table Extraction} varázslót, az képes automatikusan felismerni a táblázatos formátumokat és azok szerkezetét. Ebben a táblázatban a robotnak meg kell mutatni, hogy melyek azok az adatok, amelyeket ki szeretnénk nyerni. Mivel a táblázat felépítése ismert a robot számára, elég csak egyetlen termék nevére rákattintani, és az algoritmus azonosítja a táblázatban található összes többi termék nevét is. Hasonló módon kinyerhetjük a termékek árát, valamint az összes többi megjelenített, számunkra releváns adatot is. Az így kinyert adatok egy DataTable adattípusú változóba kerülnek elmentésre.
 
 Ennek a keresési megoldásnak nagy előnye, hogy gyors és pontos adatkinyerést tesz lehetővé. Hátránya viszont, hogy minden egyes webshopra külön implementálni kell a megoldást, ami növeli a fejlesztési időt, és a karbantartást is bonyolítja.
 
 \subsection*{Általános keresési megoldás}
+Amikor a felhasználó olyan weboldalon próbál keresést indítani, ahol a webshop-specifikus keresési megoldás nincs implementálva, ott a robot próbál egy általános keresést és adatkinyerést megvalósítani.
 
+Ehhez először is a megnyitott weboldalon a robotnak meg kell találnia a keresőmezőt, ahova begépeli a megkeresendő termék nevét. A keresőmező azonosításához a \texttt{Find Children} activity-t használtam a \texttt{Body HTML} elemre mint szülőre a következő paraméterekkel:
+\begin{center}
+	\texttt{<webctrl tag='INPUT' type='text' />}
+	
+	\texttt{<webctrl tag='INPUT' type='search' />}
+\end{center}
+Ez a activity ezzel a paraméterezéssel egy UI-elemeket tartalmazó listát ad vissza, amely a Body összes, \texttt{text} és \texttt{search} típusú inputmezőjét tartalmazza. Ezután a robot a \texttt{Get Attribute} activity segítségével megvizsgálja a listában található UI-elemk attribútumait. Ellenőrzi, hogy valamelyik attribútum tartalmazza e \texttt{search}, \texttt{looking for} vagy a \texttt{keres} szavaka egyikét és így képes azonosítani a keresőmezőt. Ezt követően a \texttt{Type Into} activity használatával a robot begépeli a termék nevét a keresőmezőbe, majd az Enter billentyű lenyomásával azonnal elindítja a keresést.
 
 \subsection{Result To DB Workflow}
 \subsection{Report Builder Workflow}

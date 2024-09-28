@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  28 SEP 2024 00:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  29 SEP 2024 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -824,16 +824,22 @@ File: tableExtraction2.png Graphic file (type png)
 <use tableExtraction2.png>
 Package pdftex.def Info: tableExtraction2.png  used on input line 359.
 (pdftex.def)             Requested size: 441.01772pt x 41.00662pt.
- [23 <./tableExtraction2.png>] [24] [25
+
+Overfull \hbox (9.46289pt too wide) in paragraph at lines 370--371
+\T1/lmr/m/n/12 Amikor a fel-hasz-ná-ló olyan web-ol-da-lon pró-bál ke-re-sést i
+n-dí-ta-ni, ahol a webshop-specifikus
+ []
+
+[23 <./tableExtraction2.png>] [24] [25
 
 ]
-Underfull \hbox (badness 1337) in paragraph at lines 404--406
+Underfull \hbox (badness 1337) in paragraph at lines 412--414
 []\T1/lmr/m/sc/12 Agilevrms\T1/lmr/m/n/12 : Ro-bo-tic Pro-cess Au-to-ma-ti-on (
 RPA) Life Cyc-le []$\T1/lmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 6364) in paragraph at lines 408--410
+Underfull \hbox (badness 6364) in paragraph at lines 416--418
 []\T1/lmr/m/sc/12 UiPath Do-cu-men-ta-ti-on\T1/lmr/m/n/12 : Workflow De-sign, [
 ]$\T1/lmtt/m/n/12 https : / / docs . uipath . com /
  []
@@ -841,35 +847,35 @@ Underfull \hbox (badness 6364) in paragraph at lines 408--410
 <nyilatkozat.pdf, id=455, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 425.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 433.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 425.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 433.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 <nyilatkozat.pdf, id=458, page=1, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 425.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 425.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 [26
 
 ]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 425.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 425.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 425.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
  [27 <./nyilatkozat.pdf>] (./JLPKL0.aux)
  ***********
@@ -880,41 +886,31 @@ L3 programming layer <2023-08-29>
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `JLPKL0.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `JLPKL0.out':
-(rerunfilecheck)             Before: ABD5FE80C9DFBF750137FAF1DAB8A0C7;5205
-(rerunfilecheck)             After:  99A344FD47BE3DA9F8F91808DA784D59;5205.
+Package rerunfilecheck Info: File `JLPKL0.out' has not changed.
+(rerunfilecheck)             Checksum: 99A344FD47BE3DA9F8F91808DA784D59;5205.
  ) 
 Here is how much of TeX's memory you used:
- 18924 strings out of 474934
- 303691 string characters out of 5763814
+ 18925 strings out of 474934
+ 303736 string characters out of 5763814
  2073801 words of memory out of 5000000
- 39912 multiletter control sequences out of 15000+600000
+ 39914 multiletter control sequences out of 15000+600000
  628568 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,81p,1010b,1992s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{chapter*.23} has been referenced but does not exist
-, replaced by a fixed one
-
-<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2023/t
-exmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/ty
-pe1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmm
-i10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive
-/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fo
-nts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/l
-m/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:/t
-exlive/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pfb><c:/texlive/2023/texmf
--dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/
-public/lm/lmtt12.pfb>
-Output written on JLPKL0.pdf (27 pages, 599504 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2023
+/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/
+type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/l
+mmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texli
+ve/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/
+fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
+/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:
+/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pfb><c:/texlive/2023/tex
+mf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type
+1/public/lm/lmtt12.pfb>
+Output written on JLPKL0.pdf (27 pages, 601802 bytes).
 PDF statistics:
- 586 PDF objects out of 1000 (max. 8388607)
- 513 compressed objects within 6 object streams
- 203 named destinations out of 1000 (max. 500000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 512 compressed objects within 6 object streams
+ 202 named destinations out of 1000 (max. 500000)
  300 words of extra memory for PDF output out of 10000 (max. 10000000)
 
