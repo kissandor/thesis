@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  29 SEP 2024 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  1 OCT 2024 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,59 +825,70 @@ File: tableExtraction2.png Graphic file (type png)
 Package pdftex.def Info: tableExtraction2.png  used on input line 359.
 (pdftex.def)             Requested size: 441.01772pt x 41.00662pt.
 
-Overfull \hbox (9.46289pt too wide) in paragraph at lines 370--371
+Overfull \hbox (9.46289pt too wide) in paragraph at lines 371--372
 \T1/lmr/m/n/12 Amikor a fel-hasz-ná-ló olyan web-ol-da-lon pró-bál ke-re-sést i
 n-dí-ta-ni, ahol a webshop-specifikus
  []
 
-[23 <./tableExtraction2.png>] [24] [25
+[23 <./tableExtraction2.png>] [24]
+(c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
+File: latin2.def 2021/02/14 v1.3d Input encoding file
+)
+Overfull \hbox (5.08362pt too wide) in paragraph at lines 397--398
+\T1/lmr/m/n/12 be-me-ne-ti pa-ra-mé-ter-ként, a má-sik property pe-dig az \T1/l
+mtt/m/n/12 OutArgument<PriceCurrencyPair>
+ []
+
+[25] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
+File: latin2.def 2021/02/14 v1.3d Input encoding file
+) [26] [27
 
 ]
-Underfull \hbox (badness 1337) in paragraph at lines 412--414
+Underfull \hbox (badness 1337) in paragraph at lines 435--437
 []\T1/lmr/m/sc/12 Agilevrms\T1/lmr/m/n/12 : Ro-bo-tic Pro-cess Au-to-ma-ti-on (
 RPA) Life Cyc-le []$\T1/lmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 6364) in paragraph at lines 416--418
+Underfull \hbox (badness 6364) in paragraph at lines 439--441
 []\T1/lmr/m/sc/12 UiPath Do-cu-men-ta-ti-on\T1/lmr/m/n/12 : Workflow De-sign, [
 ]$\T1/lmtt/m/n/12 https : / / docs . uipath . com /
  []
 
-<nyilatkozat.pdf, id=455, 597.50829pt x 845.0471pt>
+<nyilatkozat.pdf, id=512, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 433.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 460.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 433.
+Package pdftex.def Info: nyilatkozat.pdf  used on input line 460.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<nyilatkozat.pdf, id=458, page=1, 597.50829pt x 845.0471pt>
+<nyilatkozat.pdf, id=515, page=1, 597.50829pt x 845.0471pt>
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 460.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 460.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-[26
+[28
 
 ]
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 460.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 460.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: nyilatkozat.pdf Graphic file (type pdf)
 <use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 433.
+Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 460.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [27 <./nyilatkozat.pdf>] (./JLPKL0.aux)
+ [29 <./nyilatkozat.pdf>] (./JLPKL0.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -887,13 +898,13 @@ L3 programming layer <2023-08-29>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `JLPKL0.out' has not changed.
-(rerunfilecheck)             Checksum: 99A344FD47BE3DA9F8F91808DA784D59;5205.
+(rerunfilecheck)             Checksum: 92A5D45F214BB6E820353BCE1DF5D799;5205.
  ) 
 Here is how much of TeX's memory you used:
- 18925 strings out of 474934
- 303736 string characters out of 5763814
- 2073801 words of memory out of 5000000
- 39914 multiletter control sequences out of 15000+600000
+ 19008 strings out of 474934
+ 305245 string characters out of 5763814
+ 2076801 words of memory out of 5000000
+ 39944 multiletter control sequences out of 15000+600000
  628568 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,81p,1010b,1992s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -907,10 +918,10 @@ fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
 /texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pfb><c:/texlive/2023/tex
 mf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type
 1/public/lm/lmtt12.pfb>
-Output written on JLPKL0.pdf (27 pages, 601802 bytes).
+Output written on JLPKL0.pdf (29 pages, 615117 bytes).
 PDF statistics:
- 585 PDF objects out of 1000 (max. 8388607)
- 512 compressed objects within 6 object streams
- 202 named destinations out of 1000 (max. 500000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 579 compressed objects within 6 object streams
+ 251 named destinations out of 1000 (max. 500000)
  300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

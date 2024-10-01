@@ -367,6 +367,7 @@ Amikor elindítjuk a \texttt{Table Extraction} varázslót, az képes automatiku
 Ennek a keresési megoldásnak nagy előnye, hogy gyors és pontos adatkinyerést tesz lehetővé. Hátránya viszont, hogy minden egyes webshopra külön implementálni kell a megoldást, ami növeli a fejlesztési időt, és a karbantartást is bonyolítja.
 
 \subsection*{Általános keresési megoldás}
+
 Amikor a felhasználó olyan weboldalon próbál keresést indítani, ahol a webshop-specifikus keresési megoldás nincs implementálva, ott a robot próbál egy általános keresést és adatkinyerést megvalósítani.
 
 Ehhez először is a megnyitott weboldalon a robotnak meg kell találnia a keresőmezőt, ahova begépeli a megkeresendő termék nevét. A keresőmező azonosításához a \texttt{Find Children} activity-t használtam a \texttt{Body HTML} elemre mint szülőre a következő paraméterekkel:
@@ -376,6 +377,28 @@ Ehhez először is a megnyitott weboldalon a robotnak meg kell találnia a keres
 	\texttt{<webctrl tag='INPUT' type='search' />}
 \end{center}
 Ez a activity ezzel a paraméterezéssel egy UI-elemeket tartalmazó listát ad vissza, amely a Body összes, \texttt{text} és \texttt{search} típusú inputmezőjét tartalmazza. Ezután a robot a \texttt{Get Attribute} activity segítségével megvizsgálja a listában található UI-elemk attribútumait. Ellenőrzi, hogy valamelyik attribútum tartalmazza e \texttt{search}, \texttt{looking for} vagy a \texttt{keres} szavaka egyikét és így képes azonosítani a keresőmezőt. Ezt követően a \texttt{Type Into} activity használatával a robot begépeli a termék nevét a keresőmezőbe, majd az Enter billentyű lenyomásával azonnal elindítja a keresést.
+
+A keresési eredmény megjelenik az oldalon, és a robotnak fel kell ismernie ezeket. Ehhez ismét a \texttt{Find Children} activity-t használtam. A \texttt{Body}-ból összegyűjtöttem az összes olyan UI elemet, amelynek az \texttt{aaname} attribútuma tartalmazza a keresett termék nevét. UiPath-ban az \texttt{aaname} attribútum a UI eleme szöveges tartalmát azonosítja. Ha a termék több szóból áll, akkor az összes szónak szerepelnie kell az \texttt{aaname}-ben. A \texttt{Find Children} activity által visszaadott, UI elemeket tartalmazó lista minden eleméhez a robotnak meg kell találnia az árat is. Csak azokat az UI elemeket fogadtam el jó keresési találatnak a listából, ahol a robot megtalálta az árat is.
+
+Az ár megtalálásának alapgondolata az volt, hogy az árat és a nevet tartalmazó UI elemek közös őssel rendelkeznek. Nem feltétlenül a közvetlen ős tartalmazza mindkettőt, de tapasztalataim szerint a harmadik szintű ős gyakran tartalmazza mind az árat, mind a termék nevét. Ennek az ősnek a megtalálásában a \texttt{Get Ancestor} activity segített. Ahhoz, hogy a robot megtalálja a termék árát ebben az ősben, egy custom activity-t kellett írnom amit \texttt{PriceFinder}-nek neveztem el. 
+
+Ha a robot megtalálta a termék nevét és a termék árát is, akkor azt jó keresési találatnak fogadtam el, és elmentésre kerül abba a DataTable típusú változóba, ahol a jó keresési eredményeket tárolom.
+
+Ezeket a lépéseket egy ciklusban futtatom, és a robot újra és újra elvégzi az összes termékre. A végső eredmény egy olyan DataTable, amelyben megtalálható a keresési eredmény minden egyes termékre, minden egyes webshopból.
+
+
+\subsubsection*{PriceFinder Activity \cite{ActivityCreator}}
+Mint azt már említettem, az activity-k az automatizálás alapvető építőelemei. A beépített több száz activity mellett lehetőségünk van saját activity-k fejlesztésére, amelyeket a projektünk speciális igényeihez alakíthatunk. A UiPath-nek elérhető a Visual Studio-hoz az \texttt{Activity Creator extension}, amelynek segítségével nagyon egyszerűen létrehozhatunk új activity-ket.
+
+Miután telepítettük az extensiont, elérhetővé válik egy új projekt típus, a \texttt{UiPath Standard Activity Project}. Egy ilyen projekt létrehozásakor egy előre elkészített activity sablon áll rendelkezésünkre, melyet igényeink szerint testre szabhatunk. Az én esetemben egy olyan activity-re volt szükségem, amely egy string típusú változót kap bemeneti paraméterként, és visszatér egy \texttt{PriceCurrencyPair} típusú objektummal.
+
+\lstinputlisting[style=csharp, caption={PriceCurrencyPair osztály}, label={kod-PriceCurrencyPair}]{PriceCurrencyPair.cs}
+
+Az activity implementációja a \texttt{PriceFinder} osztályban történik, amely osztálynak örökölnie kell a \texttt{CodeActivity} osztályból. Ez az absztrakt osztály biztosítja az alapvető funkciókat a custom activity-k definiálásához. Ahogy az alábbi egyszerűsített kódrészletben is látható, a \texttt{PriceFinder} osztálynak két property-je van. Az egyik property az \texttt{InArgument<string> InputText}, amely azt jelenti, hogy az activity egy stringet vár bemeneti paraméterként, a másik property pedig az \texttt{OutArgument<PriceCurrencyPair> PriceAndCurrency}, azaz az activity majd egy PriceCurrencyPair típusú objektumot ad vissza a robot számára.
+
+Az \texttt{Execute} metódus automatikusan meghívódik, amikor az activity fut, és itt ebben a metódusban hajtódnak végre a műveletek. Az első lépésben az \texttt{InputText} \texttt{InArgument} értéke kerül beolvasásra és elmentésre az \texttt{inputText} változóba. Ha az inputText érvényes, a \texttt{Finder} privát metódus kerül meghívásra, amelyben implementáltam a keresési logikát. Ez a metódus visszaad egy \texttt{PriceCurrencyPair} objektumot, amely tartalmazza a megtalált árat és pénznemet. Ezt követően az eredmény a \texttt{PriceAndCurrency} \texttt{OutArgument}-ben kerül visszaadásra, azaz ez lesz az activity által visszaadott objektum amelyet a robot használhat.
+
+\lstinputlisting[style=csharp, caption={PriceFinder osztály}, label={kod-PriceFinder}]{PriceFinder.cs}
 
 \subsection{Result To DB Workflow}
 \subsection{Report Builder Workflow}
@@ -427,6 +450,10 @@ Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál 
 \bibitem{TableExtraction}
 \textsc{docs.uipath.com}: Table Extraction, 
 \url{https://docs.uipath.com/activities/other/latest/ui-automation/table-extraction}
+
+\bibitem{ActivityCreator}
+\textsc{docs.uipath.com}: Using The Activity Creator, 
+\url{https://docs.uipath.com/sdk/other/latest/developer-guide/using-activity-creator}
 \end{thebibliography}
 
 % Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére
