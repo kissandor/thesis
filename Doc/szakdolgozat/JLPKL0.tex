@@ -384,7 +384,7 @@ Az ár megtalálásának alapgondolata az volt, hogy az árat és a nevet tartal
 
 Ha a robot megtalálta a termék nevét és a termék árát is, akkor azt jó keresési találatnak fogadtam el, és elmentésre kerül abba a DataTable típusú változóba, ahol a jó keresési eredményeket tárolom.
 
-Ezeket a lépéseket egy ciklusban futtatom, és a robot újra és újra elvégzi az összes termékre. A végső eredmény egy olyan DataTable, amelyben megtalálható a keresési eredmény minden egyes termékre, minden egyes webshopból.
+Ennek a keresési megoldásnak az egyik fő előnye az, hogy a robot minden oldalon megkísérli a keresést. Hátrányként említhető, hogy mivel a robot nem ismeri az adott oldalt, a keresés hosszadalmas lehet, és a találati hatékonyság sem annyira jó, mint a webshop-specifikus keresésnél.
 
 
 \subsubsection*{PriceFinder Activity \cite{ActivityCreator}}
@@ -400,7 +400,11 @@ Az \texttt{Execute} metódus automatikusan meghívódik, amikor az activity fut,
 
 \lstinputlisting[style=csharp, caption={PriceFinder osztály}, label={kod-PriceFinder}]{PriceFinder.cs}
 
+Amikor lefordítjuk a projektet, a Visual Studio automatikusan létrehozza a NuGet csomagot, amelyet ezt követően a UiPath Studio Package Manager-én keresztül telepíthetünk a projektünkhöz.
+
 \subsection{Result To DB Workflow}
+A \texttt{Search workflow} egy olyan DataTable-t ad vissza, amely tartalmazza a keresési eredményeket minden egyes termékre, minden egyes webshopból. Ezt a változót kapja meg a \texttt{Result To DB} workflow, amelynek feladata mindössze annyi, hogy az adatokat ebből a DataTable-ből elmentse az adatbázis \texttt{SearchResults} nevű táblájába.
+
 \subsection{Report Builder Workflow}
 
 \section{Tesztelés}
