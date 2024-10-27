@@ -67,7 +67,7 @@ namespace Ekke.Thesis.PriceFinder.Activities
                     throw new ArgumentException();
                 }
 
-                // Simulate price finding logic
+                
                 PriceCurrencyPair pc = await FindPriceAsync(inputtext, cancellationToken);
 
                 // Outputs
@@ -88,7 +88,7 @@ namespace Ekke.Thesis.PriceFinder.Activities
         private Task<PriceCurrencyPair> FindPriceAsync(string inputText, CancellationToken cancellationToken)
         {
             PriceCurrencyPair pcp = Finder(inputText);
-            // Simulate an asynchronous operation to find the price
+            
             return Task.FromResult(pcp);
         }
        
@@ -97,8 +97,8 @@ namespace Ekke.Thesis.PriceFinder.Activities
             string inputWithoutSpaceInPrice = RemoveSpacesAfterIntegers(SerachForPrice);
 
             // Regular expression to match1 a price and currency pair, including thousands separators
-            var regex1 = new Regex(@"([\d,]+(\.\d{1,2})?)\s*(USD|EUR|GBP|JPY|CAD|AUD|CHF|CNY|SEK|Ft|HUF|FT)", RegexOptions.IgnoreCase);
-            var regex2 = new Regex(@"(\$|€|£|¥|CA\$|AU\$|USD|EUR|GBP|CHF|CNY|SEK|Ft|HUF|FT)?\s?([\d,]+(\.\d{1,2})?)", RegexOptions.IgnoreCase);
+            var regex1 = new Regex(@"([\d,]+(\.\d{1,3})?)\s*(USD|EUR|GBP|JPY|CAD|AUD|CHF|CNY|SEK|Ft|HUF|FT)", RegexOptions.IgnoreCase);
+            var regex2 = new Regex(@"(\$|€|£|¥|CA\$|AU\$|USD|EUR|GBP|CHF|CNY|SEK|Ft|HUF|FT)?\s?([\d,]+(\.\d{1,3})?)", RegexOptions.IgnoreCase);
             var match1 = regex1.Match(inputWithoutSpaceInPrice);
             var match2 = regex2.Match(inputWithoutSpaceInPrice);
 
@@ -106,7 +106,9 @@ namespace Ekke.Thesis.PriceFinder.Activities
             {
                 // Remove thousands separators before parsing the price
                 string priceString = match1.Groups[1].Value.Replace(",", "");
-                double price = double.Parse(priceString, CultureInfo.InvariantCulture);
+                string trimmedPriceString = RemoveDecimalPointIfMoreThanTwoDigits(priceString);
+                
+                double price = double.Parse(trimmedPriceString, CultureInfo.InvariantCulture);
                 string currency = match1.Groups[3].Value.ToUpper();
                 if(!string.IsNullOrEmpty(currency) && price > 0)
                 {
@@ -118,7 +120,9 @@ namespace Ekke.Thesis.PriceFinder.Activities
             {
                 // Extract and clean price string
                 string priceString = match2.Groups[2].Value.Replace(",", "");
-                double price = double.Parse(priceString, CultureInfo.InvariantCulture);
+                string trimmedPriceString  =RemoveDecimalPointIfMoreThanTwoDigits(priceString);
+                
+                double price = double.Parse(trimmedPriceString, CultureInfo.InvariantCulture);
 
                 // Extract currency symbol or code
                 string currency = match2.Groups[1].Value.ToUpper().Replace("CA$", "CAD").Replace("AU$", "AUD");
@@ -137,6 +141,12 @@ namespace Ekke.Thesis.PriceFinder.Activities
         {
             // Use regex to find a digit followed by a space and replace it with just the digit
             return Regex.Replace(s, @"(\d) ", "$1");
+        }
+
+        public static string RemoveDecimalPointIfMoreThanTwoDigits(string input)
+        {
+            var regex = new Regex(@"\.(\d{3,})"); // Olyan mintát keres, ahol a pontot 3 vagy több számjegy követ
+            return regex.IsMatch(input) ? input.Replace(".", "") : input; 
         }
 
         #endregion

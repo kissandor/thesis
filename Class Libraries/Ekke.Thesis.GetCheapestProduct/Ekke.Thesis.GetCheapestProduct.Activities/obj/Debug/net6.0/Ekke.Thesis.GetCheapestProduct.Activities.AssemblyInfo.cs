@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ekke.Thesis.GetCheapestProduct.Activities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+652b49983bf0ab13d785eefdec606b2d45d269ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87f17a7396a0f34f3fb110194345450103df37b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ekke.Thesis.GetCheapestProduct.Activities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ekke.Thesis.GetCheapestProduct.Activities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

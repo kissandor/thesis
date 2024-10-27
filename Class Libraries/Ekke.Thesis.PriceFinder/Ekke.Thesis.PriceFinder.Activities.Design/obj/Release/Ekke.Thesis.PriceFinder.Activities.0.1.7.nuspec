@@ -12,7 +12,7 @@
     <description>This package was generated using the UiPath VS Extension.</description>
     <copyright>© 2022 Company</copyright>
     <tags>UiPath Activit𝗒</tags>
-    <repository type="git" commit="bac8812765890526e555374ac6c528526854654b" />
+    <repository type="git" commit="87f17a7396a0f34f3fb110194345450103df37b2" />
     <dependencies>
       <group targetFramework="net6.0-windows7.0" />
     </dependencies>

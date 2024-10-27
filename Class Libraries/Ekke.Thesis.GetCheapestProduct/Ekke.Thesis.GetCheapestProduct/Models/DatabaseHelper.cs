@@ -16,7 +16,7 @@ namespace Ekke.Thesis.GetCheapestProduct.Models
             this.connectionString = connectionString;
         }
 
-        public List<Product> GetProductsFromDatabase()
+        public List<Product> GetCheapestProductsFromDatabase()
         {
 
             List<Product> products = new List<Product>();
@@ -25,34 +25,6 @@ namespace Ekke.Thesis.GetCheapestProduct.Models
                 try
                 {
                     connection.Open();
-                    /*
-                    string query = "SELECT " +
-                                        "CategoryName, " +
-                                        "ComputerPartName, " +
-                                        "Description, " +
-                                        "ComputerPartPrice, " +
-                                        "Currency, " +
-                                        "WebshopURL, " +
-                                        "ProductUrl " +
-                                    "FROM " +
-                                        "(" +
-                                            "SELECT " +
-                                                "c.CategoryName, " +
-                                                "s.ComputerPartName, " +
-                                                "s.Description, " +
-                                                "s.ComputerPartPrice, " +
-                                                "s.Currency, " +
-                                                "w.WebshopURL, " +
-                                                "s.ProductUrl, " +
-                                                "ROW_NUMBER() OVER(PARTITION BY s.CategoryId ORDER BY s.ComputerPartPrice) AS RowNum " +
-                                             "FROM " +
-                                                "SearchResults s " +
-                                                "INNER JOIN Categories c ON s.CategoryId = c.Id " +
-                                                "INNER JOIN WebShops w ON s.WebshopId = w.Id" +
-                                          ") AS ranked " +
-                                     "WHERE " +
-                                          "RowNum = 1;";
-                    */
                     string query = "SELECT " +
                                         "CategoryName, " +
                                         "ComputerPartName, " +
@@ -107,11 +79,7 @@ namespace Ekke.Thesis.GetCheapestProduct.Models
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error: " + ex.Message);
-                }
-                finally
-                {
-                    if (connection != null) { connection.Close(); }
+                    Console.WriteLine("Error: " + ex.ToString());
                 }
             }
             return products;

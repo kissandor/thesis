@@ -62,7 +62,7 @@ namespace Ekke.Thesis.GetCheapestProduct.Activities
                 // Inputs
                 var connectionString = ConnectionString.Get(context);
                 DatabaseHelper db = new DatabaseHelper(connectionString);
-                List<Product> cheapestProduc = db.GetProductsFromDatabase();
+                List<Product> cheapestProduc = db.GetCheapestProductsFromDatabase();
 
 
                 // Outputs

@@ -104,6 +104,7 @@
       "Path": "WebShopsWhereShearchIsImplemented/Ipon.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "outputElement&Sequence_1",
         "ExtractDataTable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -146,12 +147,12 @@
       "Path": "SearchForOneProductInOneWebShop.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "pf_PriceAndCurrency&Sequence_8",
-        "pc_PriceAndCurrency&Sequence_8",
         "dr_DataRow&Sequence_8",
+        "pc_PriceAndCurrency&Sequence_8",
+        "pf_PriceAndCurrency&Sequence_8",
+        "bool_IsProductCorrect&Sequence_3",
         "arr_WebShopsSearchImplemented&Flowchart_1",
         "bool_IsSearchImplemented&Flowchart_1",
-        "bool_IsProductCorrect&Sequence_3",
         "dt_SearchResultOfOneProduct&Flowchart_1",
         "str_URLParameter&Flowchart_1",
         "arr_ProductNameToArray&Flowchart_1",
@@ -269,14 +270,14 @@
       "Path": "DefaultSearch/DefaultProductSerach.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_InnerOfAnc&Sequence_1",
-        "dr_DataRow&Sequence_9",
-        "pcp_FoundPrice&Sequence_4",
-        "str_HrefOfCurrentUiElement&Sequence_4",
-        "str_InnerTextOfAncestor&Sequence_4",
-        "ui_AncestorOfCurrentUiElement&Sequence_4",
-        "ui_FilteredProducts&Sequence_1",
         "str_InnerTextOfCurrentUiElement&Sequence_4",
+        "ui_AncestorOfCurrentUiElement&Sequence_4",
+        "str_InnerTextOfAncestor&Sequence_4",
+        "str_HrefOfCurrentUiElement&Sequence_4",
+        "pcp_FoundPrice&Sequence_4",
+        "dr_DataRow&Sequence_9",
+        "str_InnerOfAnc&Sequence_1",
+        "ui_FilteredProducts&Sequence_1",
         "str_ComputerPartNameWebCtrl&Sequence_1",
         "ui_ProductsFound&Sequence_1"
       ],

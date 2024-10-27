@@ -202,7 +202,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "Ekke.Thesis.PriceFinder.Activities/0.1.7": {
+      "Ekke.Thesis.PriceFinder.Activities/0.1.8": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -6558,7 +6558,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "Ekke.Thesis.PriceFinder.Activities/0.1.7": {
+      "Ekke.Thesis.PriceFinder.Activities/0.1.8": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/_._": {}
@@ -12797,13 +12797,13 @@
         "packageIcon.png"
       ]
     },
-    "Ekke.Thesis.PriceFinder.Activities/0.1.7": {
-      "sha512": "7kJUWBafU657TrNFI7JYcwAxwPsd7tDL5AMwouMuMsjGnBypGPKmiPNfr5WSXsl20W9p4PxwfF1mkiU45oRhhw==",
+    "Ekke.Thesis.PriceFinder.Activities/0.1.8": {
+      "sha512": "hkaML61xiDSKaXcLYS/F3K3p0CoYbxw942RPpZ8vzLHUO+5QZ/djV6rVpV07JDZN8DUdZhSo4kMenBlew2YSkA==",
       "type": "package",
-      "path": "ekke.thesis.pricefinder.activities/0.1.7",
+      "path": "ekke.thesis.pricefinder.activities/0.1.8",
       "files": [
         ".nupkg.metadata",
-        "ekke.thesis.pricefinder.activities.0.1.7.nupkg.sha512",
+        "ekke.thesis.pricefinder.activities.0.1.8.nupkg.sha512",
         "ekke.thesis.pricefinder.activities.nuspec",
         "lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.Design.dll",
         "lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.dll",
@@ -23910,7 +23910,7 @@
     "net8.0-windows7.0": [
       "BalaReva.Word.Activities >= 8.0.0 <= 8.0.0",
       "Ekke.Thesis.GetCheapestProduct.Activities >= 0.1.0.908121836 <= 0.1.0.908121836",
-      "Ekke.Thesis.PriceFinder.Activities >= 0.1.7 <= 0.1.7",
+      "Ekke.Thesis.PriceFinder.Activities >= 0.1.8 <= 0.1.8",
       "Parser >= 1.0.10 <= 1.0.10",
       "TestDatabaseConnection >= 1.0.13 <= 1.0.13",
       "UiPath.Database.Activities >= 1.7.1 <= 1.7.1",
@@ -23950,7 +23950,7 @@
           "Ekke.Thesis.PriceFinder.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[0.1.7, 0.1.7]"
+            "version": "[0.1.8, 0.1.8]"
           },
           "Parser": {
             "include": "Runtime",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YkXn/Uf+ckdqniGDZ5RdZqLERu+V0pKVVgBetpxuijYw9+v5PFlLnOT/h3382yDf8Z+2asYusTQ5q+xV9DulPw==",
+  "dgSpecHash": "Gv/woYD+SwTUllT9pJlSClaGWxWiuKxZ34Gqdiq14yT/f4rDloH9BXdg2u+pPI+kyxhFj8aRWGlZzxYescGKBg==",
   "success": true,
   "projectFilePath": "D:\\Eger\\thesis\\PriceComparisonRobot2\\PriceComarisonRobot2\\.local\\",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "C:\\Users\\kissa\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\documentformat.openxml\\2.12.1\\documentformat.openxml.2.12.1.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\ekke.thesis.getcheapestproduct.activities.0.1.0.908121836.nupkg.sha512",
-    "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7\\ekke.thesis.pricefinder.activities.0.1.7.nupkg.sha512",
+    "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8\\ekke.thesis.pricefinder.activities.0.1.8.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\google.apis\\1.61.0\\google.apis.1.61.0.nupkg.sha512",
     "C:\\Users\\kissa\\.nuget\\packages\\google.apis.auth\\1.61.0\\google.apis.auth.1.61.0.nupkg.sha512",

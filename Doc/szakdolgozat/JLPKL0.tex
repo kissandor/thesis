@@ -11,7 +11,7 @@
 \usepackage[T1]{fontenc}
 \PassOptionsToPackage{defaults=hu-min}{magyar.ldf}
 \usepackage[magyar]{babel}
-\usepackage{mathtools,amssymb,amsthm,pdfpages, listingsutf8, xcolor, caption}
+\usepackage{mathtools,amssymb,amsthm,pdfpages, listingsutf8, xcolor, caption, array, colortbl, longtable, tabularx}
 \footnotestyle{rule=fourth}
 
 \newtheorem{tetel}{Tétel}[chapter]
@@ -20,6 +20,7 @@
 \theoremstyle{remark}
 \newtheorem{megjegyzes}[tetel]{Megjegyzés}
 
+\renewcommand\tabularxcolumn[1]{m{#1}}
 \renewcommand{\lstlistingname}{kód}
 \lstdefinestyle{csharp}{
 	inputencoding=utf8/latin2,
@@ -36,6 +37,25 @@
 	commentstyle=\itshape\color{teal},
 	keywordstyle=\bfseries\color{blue},
 }
+
+\lstdefinestyle{sql}{
+	inputencoding=utf8/latin2,
+	language=SQL,
+	basicstyle=\footnotesize,
+	numbers=left,
+	xleftmargin=1cm,
+	xrightmargin=1cm,
+	breaklines=true,
+	postbreak=\hbox{$\color{red}\hookrightarrow\ $},
+	backgroundcolor=\color{gray!30},
+	frame=tblr,
+	framesep=3pt,
+	commentstyle=\itshape\color{green},
+	keywordstyle=\bfseries\color{blue},
+	stringstyle=\color{red},
+	morekeywords={ON, INNER, JOIN, PARTITION, BY, ROW_NUMBER, SELECT, FROM, WHERE, ORDER, OVER}
+}
+
 
 \definecolor{maroon}{rgb}{0.5,0,0}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
@@ -73,7 +93,7 @@ A mindennapi munkám során számos ismétlődő feladatokat kell elvégeznem a 
 
 Gondolom, nagyon sokan vannak hasonló helyzetben, olyanok akik egyhangú, monoton, ismétlődő munkát végeznek számítógépen. Ezeknek az ismétlődő munkafolyamatoknak az automatizálásával rendkívüli hatékonyságot lehet elérni úgy, hogy rengeteg munkaórát lehet megtakarítani, és még a hibalehetőségeket is a minimálisra lehet csökkenteni. Az automatizálásra számos megoldás létezik. A UiPath kiemelkedik ezen a területen és a robotfolyamat-automatizáció (RPA) terén kiváló megoldásokat kínál.
 
-A UIPath által létrehozott technológia kulcsfontosságú szerepet játszik a munkafolyamatok automatizálásában. Azokon a területeken, ahol az ismétlődő feladatok és a rutinszerű folyamatok gyakran előfordulnak, az RPA segítségével rendkívül hatékonyan lehet robotokat alkalmazni. Például az adatbevitel, az adatellenőrzés és különböző adminisztratív folyamatok és feladatok automatizálásával az UiPath robot gyors, hatékony és precíz műveleteket végez szinte hibatlanul.
+A UIPath által létrehozott technológia kulcsfontosságú szerepet játszik a munkafolyamatok automatizálásában. Azokon a területeken, ahol az ismétlődő feladatok és a rutinszerű folyamatok gyakran előfordulnak, az RPA segítségével rendkívül hatékonyan lehet robotokat alkalmazni. Például az adatbevitel, az adatellenőrzés és különböző adminisztratív folyamatok és feladatok automatizálásával az UiPath robot gyors, hatékony és precíz műveleteket végez szinte hibátlanul.
 
 Egy másik lényeges dolog az RPA alkalmazásában az, hogy a UiPath rendszer egyszerüen lehetővé teszi az integrációt más vállalati rendszerekkel. Ez azt jelenti, hogy a meglévő informatikai infrastruktúrát könnyen kombinálhatjuk a automatizálással, anélkül, hogy nagyobb es kötséges átalakításokra lenne szükség. Ez lehetővé teszi a vállalatok számára, hogy fokozatosan vezessék be az automatizációt, kezdve a legkritikusabb területekkel, majd később kiterjeszthetik azt az egész vállalati környezetre.
 
@@ -280,7 +300,7 @@ Az alkalmazásom szerveroldali logikáját egyetlen vezérlő osztállyal valós
 \subsubsection{HTTP metódusok}
 Az adatbázison végzett műveleteket HTTP metódusok segítségével valósítom meg:
 \begin{itemize}
-	\item \textbf{Create}: A számítógépalkatrészek, kategóriák és webáruházak hozzáadásáért a POST metódusok felelnek meg. A ComputerPartsUpload, CategoryUpload és WebshopUpload metódusok a kliens által küldött adatok alapján új elemeket hoznak létre és mentik azokat az adatbázisba.
+	\item \textbf{Create}: A számítógép alkatrészek, kategóriák és webáruházak hozzáadásáért a POST metódusok felelnek meg. A ComputerPartsUpload, CategoryUpload és WebshopUpload metódusok a kliens által küldött adatok alapján új elemeket hoznak létre és mentik azokat az adatbázisba.
 
 	\item \textbf{Read}: Az összes számítógépalkatrész, kategória és webáruház lekérése a GET metódusokkal valósul meg. A GetAllComputerParts, GetAllCategories és GetAllWebShops metódusok a megfelelő entitásokat kérdezik le az adatbázisból és visszaküldik  a kliensnek.
 
@@ -406,14 +426,371 @@ Amikor lefordítjuk a projektet, a Visual Studio automatikusan létrehozza a NuG
 A \texttt{Search workflow} egy olyan DataTable-t ad vissza, amely tartalmazza a keresési eredményeket minden egyes termékre, minden egyes webshopból. Ezt a változót kapja meg a \texttt{Result To DB} workflow, amelynek feladata mindössze annyi, hogy az adatokat ebből a DataTable-ből elmentse az adatbázis \texttt{SearchResults} nevű táblájába.
 
 \subsection{Report Builder Workflow}
+A feladat utolsó része a keresési találatok feldolgozása, a feldolgozott adatokból riport készítése, és ennek a riportnak az e-mailben való elküldése a felhasználónak. 
 
-\section{Tesztelés}
+A találatok feldolgozása azt jelenti, hogy a robotnak a \texttt{SearchResults} táblából ki kell olvasnia minden termékből a legolcsóbbat. Ennek megvalósítására egy új, custom activity-re volt szükségem, amely bemeneti paraméterként egy adatbázis  connection stringet kap, és visszaad egy Product típusú listát, amelyben minden terméktípusból a legolcsóbb szerepel. Ezt a custom activity-t \texttt{GetCheapestProducts}-nak neveztem el.
 
-\chapter*{Összegzés}
+\subsubsection*{GetCheapestProducts Activity}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=10cm]{GetCheapestProducts}
+	\caption{ GetCheapestProducts Activity}
+	\label{picture-GetCheapestProducts}
+\end{figure}
+
+Ezt az activity-t is a UiPath \texttt{Activity Creator} extension segítségével készítettem el a Visual Studio-ban. Az activity implementációja a \texttt{GetCheapestProduct} osztályban történik. Ennek az osztálynak a felépítése nagyon hasonló a \texttt{PriceFinder} osztályéhoz. Ahogy az alábbi ábrán is látható, az activity-nek egy \texttt{InArgument<string> ConnectionString} property-je és egy \texttt{OutArgument<List<Product>}\texttt{> Products} property-je van, valamint ebben az osztályban is megtalálható az \texttt{Execute} metódus, ami automatikusan meghívódik, amikor az activity fut.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=14cm]{property}
+	\caption{ GetCheapestProducts Activity Properties}
+	\label{picture-Property}
+\end{figure}
+
+A \texttt{DatabaseHelper} osztály feladata az adatbázis műveletek végrehajtása. Az osztály konstruktorában megkapja a connectionString-et, amely az adatbázishoz való csatlakozáshoz szükséges információkat tartalmazza. 
+
+Az osztályban definiáltam a \texttt{GetCheapestProductsFromDatabase} metódust, amely a connectionString alapján létrehozza az adatbázis kapcsolatot, és lekérdezi az adatbázisból a legolcsóbb termékeket minden kategóriából az alábbi SQL kód segítségével. Ennek a metódusnak a visszatérési értéke egy \texttt{Product} típusú lista lesz, és ez a lista a Products OutArgument-en keresztül kerül visszaadásra a robot számára az activity végrehajtása során.
+
+\lstinputlisting[style=sql, caption={SQL lekérdezés a DatabaseHelper osztályból}, label={kod-GetCheapestProductsFromDatabase}]{GetCheapestProductsFromDatabase.sql}
+\newpage
+\subsubsection*{Riport készítése és email küldés}
+A keresési találatok feldolgozása megtörtént, így a robot számára már elérhető a legolcsóbb termékek listája. Ebből a listából először a robot egy általam elkészített Word-dokumentum sablonba illeszti be minden egyes termékről a szükséges információkat, táblázatos formában. A UiPathban elérhető a Microsoft Word Activities, amely lehetőséget biztosít a Word-dokumentumok automatizált kezelésére, azonban a dolgozatomban egy harmadik féltől származó csomagot használtam. A \texttt{Balareva Word Activities} csomag számos további funkciót kínál, amelyek rugalmasabb és fejlettebb automatizálási lehetőségeket biztosítanak. Ilyen funkció például a \texttt{Word to PDF} activity, amelynek segítségével egyszerűen lehet Word-dokumentumokat PDF formátumba konvertálni. Ezt a PDF riportot a beépített \texttt{Send Email} activity segítségével küldöm el a felhasználónak.
+
+\chapter{User Acceptance Teszt }
+\section{Tesztelési környzezet}
+\subsection{Számítógép specifikáció}
+
+\begin{table}[!ht]
+	\centering
+	\setlength{\extrarowheight}{3pt}
+	
+	\begin{tabularx}{\textwidth}{|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering\arraybackslash}X
+			|}
+		\hline
+		\rowcolor{gray!15}
+		Operációs rendszer&
+		Rendszer típus&
+		Processzor&
+		Memória&
+		Képernyő felbontás \\
+		\hline
+		Windows 11 Home&
+		64-bites operációs rendszer&
+		AMD Ryzen 9 5900HX&
+		16.0 GB&
+		1920 x 1080 \\
+		\hline
+	\end{tabularx}
+	
+\end{table}
+
+\subsection{Szoftver specifikáció}
+
+\begin{table}[!ht]
+	\centering
+	\setlength{\extrarowheight}{3pt}
+	
+	\begin{tabularx}{\textwidth}{|>{\centering}X
+			|>{\centering}X
+			|>{\centering\arraybackslash}X
+			|}
+		\hline
+		\rowcolor{gray!15}
+		Környezet&
+		Alkalmazás neve&
+		Verzió\\
+		\hline
+		Közvetlen hozzáférés&
+		Microsoft Edge&
+		130.0.2849.46 (64-bit) \\
+		\hline
+		Közvetlen hozzáférés&
+		Microsoft Excel&
+		2409 Build 16.0.18025.20030 64-bit \\
+		\hline
+	\end{tabularx}
+	
+\end{table}
+
+\section{Tesztelés előkészítése}
+\subsection{Tesztelés célja}
+A tesztelés általános célja annak biztosítása, hogy a robot megfelelően működjön az előre meghatározott kereteken belül. Ez a fejezet részletezi a felhasználói elfogadási tesztelés eredményeit, melyek alapjan a végső jóváhagyás megtörténhet, biztosítva azt, hogy automatizálás megfelel a projekt követelményeinek.
+\subsection{Minimális elfogadási kritériumok}
+A robot működése a kiírt szakdolgozati feladatban meghatározottak szerint valósul meg, minden kritikus hiba nélkül, amelyek a robot futásának leállását okoznák. Kritikus hiba esetén a robotnak nem szabad leállnia, hanem megfelelő üzenetet kell küldenie a felhasználónak, majd a robot kilép a folyamatból.
+\subsection{Tesztelési műveletek és felelősségek}
+A robot a szakdolgozati feladat kiírásában meghatározott követelmények alapján került fejlesztésre és beállításra. Alapesetben az RPA Tesztmenedzser végezné el a tesztelési folyamatot, de ebben az esetben én végezem el a tesztelést, a felhasználói elfogadási teszt (UAT) során a robotot én indítom el, és én ellenőrzöm az automatizálás eredményeit. Általános esetben a tesztesetek az ügyféllel közösen kerülnek kialakításra, de mivel ez a szakdolgozati projekt és itt nincs konkrét ügyfél, ezért a teszteket az általam előre meghatározott esetek alapján végzem és dokumentálom a \ref{Teszteredmenyek}~Teszteredmények bekezdésben. A tesztek során mindig egy webshopban és csak egy termékre indítok keresést
+
+\section{Követelmények}
+\begin{itemize} 
+	\item A robotnak legyen hozzáférése az adatbázishoz
+	\item A robot képes legyen megnyitni a Microsoft Edge böngészőt
+	\item Képes legyen elnavigálni a weboldalakra, és ott keresést indítani \item Képes legyen a keresési találatokat adatbázisba menteni 
+	\item Képes legyen a keresési találatokból riportot készíteni 
+	\item Képes legyen e-mail üzenetet küldeni 
+\end{itemize}
+\section{Teszteredmények}\label{Teszteredmenyek}
+\begin{table}[!ht]
+	\centering
+	\setlength{\extrarowheight}{3pt}
+	
+	\begin{tabularx}{\textwidth}{|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering\arraybackslash}X
+			|}
+		\hline
+		\rowcolor{gray!15}
+		Dátum &
+		RPA Teszt Manager &
+		Teszteset&
+		Robot kimeneti riport&
+		Státusz
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Az adatbázis nem elérhető
+		&Adatbázishiba e-mail küldése a felhasználónak.
+		&Sikeres teszt
+		\\
+		\hline	
+	\end{tabularx}
+	
+\end{table}
+\begin{table}[!ht]
+	\centering
+	\setlength{\extrarowheight}{3pt}
+	
+	\begin{tabularx}{\textwidth}{|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering\arraybackslash}X
+			|}
+		\hline
+		\rowcolor{gray!15}
+		Dátum &
+		RPA Teszt Manager &
+		Teszteset&
+		Robot kimeneti riport&
+		Státusz
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Az adatbázis nem elérhető
+		&Adatbázishiba e-mail küldése a felhasználónak.
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Adatbázisban nincsenek adatok
+		&Adatbázishiba e-mail küldése a felhasználónak.
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Webböngésző megnyitása sikertelen
+		&Nincs találat e-mail küldése a felhasználónak.
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Weboldal betöltése sikertelen
+		&Nincs találat e-mail küldése a felhasználónak.
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Emag.hu, weboldal specifikus keresés
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Alza.hu, weboldal specifikus keresés
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Pcx.hu, weboldal specifikus keresés
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Ipon.hu, weboldal specifikus keresés
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Emag.hu, átalános keresési megoldás
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Alza.hu, átalános keresési megoldás
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+	\end{tabularx}
+	
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\setlength{\extrarowheight}{3pt}
+	
+	\begin{tabularx}{\textwidth}{|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering\arraybackslash}X
+			|}
+		\hline
+		\rowcolor{gray!15}
+		Dátum &
+		RPA Teszt Manager &
+		Teszteset&
+		Robot kimeneti riport&
+		Státusz
+		\\
+		\hline
+	
+		20/10/2024
+		&Kis Sándor
+		&Pcx.hu, átalános keresési megoldás
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&Ipon.hu, átalános keresési megoldás
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
+		20/10/2024
+		&Kis Sándor
+		&A keresőmezőt nem találta meg a robot.
+		&Nincs találat e-mail küldése a felhasználónak.
+		&Sikeres teszt
+		\\
+		\hline
+			20/10/2024
+		&Kis Sándor
+		&Terméket nem találtaja meg a robot.
+		&Nincs találat e-mail küldése a felhasználónak.
+		&Sikeres teszt
+		\\
+		\hline
+			20/10/2024
+		&Kis Sándor
+		&Árat nem talál a termékhez a robot.
+		&Terméket nem kerül elmentésre az adatbázisba  
+		&Sikeres teszt
+		\\
+		\hline
+			20/10/2024
+		&Kis Sándor
+		&Pénznemet nem talál az árhoz a robot.
+		&Terméket nem kerül elmentésre az adatbázisba  
+		&Sikeres teszt
+		\\
+		\hline
+			20/10/2024
+		&Kis Sándor
+		&A pénznem az ár előtt található.
+		&Az ár és a pénznem helyesen mentődik el az adatbázisba.
+		&Sikeres teszt
+		\\
+		\hline
+			20/10/2024
+		&Kis Sándor
+		&Az ár a pénznem előtt található.
+		&Az ár és a pénznem helyesen mentődik el az adatbázisba.
+		&Sikeres teszt
+		\\
+		\hline
+			20/10/2024
+		&Kis Sándor
+		&Az ár a pénznem előtt található.
+		&Az ár és a pénznem helyesen mentődik el az adatbázisba.
+		&Sikeres teszt
+		\\
+		\hline
+	\end{tabularx}
+	
+\end{table}`
+
+\section{Teljesítmény}
+
+\begin{table}[!ht]
+	\centering
+	\setlength{\extrarowheight}{3pt}
+	
+	\begin{tabularx}{\textwidth}{|>{\centering}X
+			|>{\centering}X
+			|>{\centering}X
+			|>{\centering\arraybackslash}X
+			|}
+		\hline
+		\rowcolor{gray!15}
+		Dátum &
+		RPA Teszt Manager &
+		Teljesítmény&
+		Megjegyzés
+		\\
+		\hline
+		
+		20/10/2024
+		&Kis Sándor
+		& 0:41 perc
+		&Webshop specifikus keresés
+		\\
+		\hline
+			20/10/2024
+		&Kis Sándor
+		&1:13 perc  
+		&Általános keresési megoldás
+		\\
+		\hline
+		
+	\end{tabularx}
+	
+\end{table}
+
+A tesztelése sikeres volt, minden tesztesetnél az elvárt eredményt kaptam és a robot minden esetben az elvárásoknak megfelelően kezelte a kritikus helyzeteket.
+A robot keresési teljesítménye a legideálisabb azokon a weboldalakon volt, ahol webshop specifikus keresést implementáltam. Az ilyen weboldalakon egy termék keresése átlagosan 4 másodpercig tartott. Azokon a weboldalakon, ahol a robot általános keresési megoldást választott, egy átlagos keresés 45 másodpercet vett igénybe.
+\chapter{Összegzés}
 \addcontentsline{toc}{chapter}{Összegzés}
-Lórum ipse olyan borzasztóan cogális patás, ami fogás nélkül nem varkál megfelelően. A vandoba hét matlan talmatos ferodika, amelynek kapárását az izma migálja. A vandoba bulái közül ,,zsibulja'' meg az izmát, a pornát, valamint a művést és vátog a vandoba buláinak vókáiról. Vókája a raktil prozása két emen között. Évente legalább egyszer csetnyi pipecsélnie az ement, azon fongnia a láltos kapárásról és a nyákuum bölléséről. A vandoba ninti és az emen elé redőzi a szamlan radalmakan érvést. Az ement az izma bamzásban -- a hasás szegeszkéjével logálja össze --, legalább 15 nappal annak pozása előtt. Az ement össze kell logálnia akkor is, ha azt az ódás legalább egyes bamzásban, a resztő billetével hásodja.
+A szakdolgozatom elkészítése során elsődleges célom az volt, hogy egy olyan működő robotot hozzak létre, amely képes a megadott weboldalakon keresést indítani és a keresési találatokat feldolgozni. Az általam készített alkalmazás megfelel a felállított specifikációnak, illetve eleget tesz a feladatban kiírt követelményeknek is.
 
+A feladat elkészítése során a legnagyobb kihívás annak az általános keresőmegoldásnak az implementálása volt, amelynek segítségével a robot bármely megadott weboldalon képes keresést indítani. Ez az általános keresési megoldás bár működőképes, bizonyos esetekben meglehetősen időigényes lehet.
 
+\section{Továbbfejlesztési lehetőségek}
+Egy program soha sincs úgymond végleges állapotban, mindig van lehetőség további fejlesztésekre és javításokra például a felhasználói visszajelzések, vagy a változó igények alapján.
+
+A legfontosabb továbbfejlesztési lehetőség egy olyan funkció implementálása, amelyen keresztül a robot képes a webshopoktól közvetlenül kapott termékfájlok fogadására és feldolgozására. Ezzel a funkcióval a robot sokkal pontosabb és gyorsabb keresést tud majd megvalósítani az adott webshopban, és így mind a felhasználói élmény, mind a megbízhatóság jelentősen javulhat.
 
 \begin{thebibliography}{2}
 \addcontentsline{toc}{chapter}{\bibname}

@@ -16,15 +16,15 @@
     },
     {
       "Package": {
-        "Id": "Ekke.Thesis.PriceFinder.Activities",
-        "Version": "0.1.7"
+        "Id": "Ekke.Thesis.GetCheapestProduct.Activities",
+        "Version": "0.1.0.908121836"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7\\lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.Design.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7\\lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7\\lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836"
     },
     {
       "Package": {
@@ -404,15 +404,15 @@
     },
     {
       "Package": {
-        "Id": "Ekke.Thesis.GetCheapestProduct.Activities",
-        "Version": "0.1.0.908121836"
+        "Id": "Ekke.Thesis.PriceFinder.Activities",
+        "Version": "0.1.8"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.Design.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836\\lib/net6.0-windows7.0/Ekke.Thesis.GetCheapestProduct.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8\\lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8\\lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8\\lib/net6.0-windows7.0/Ekke.Thesis.PriceFinder.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.getcheapestproduct.activities\\0.1.0.908121836"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8"
     }
   ],
   "Conflicts": [],
@@ -586,7 +586,7 @@
     },
     "Ekke.Thesis.PriceFinder.Activities": {
       "Id": "Ekke.Thesis.PriceFinder.Activities",
-      "Version": "0.1.7",
+      "Version": "0.1.8",
       "Dependencies": []
     },
     "ExcelNumberFormat": {
@@ -5537,14 +5537,14 @@
     {
       "Package": {
         "Id": "Ekke.Thesis.PriceFinder.Activities",
-        "Version": "0.1.7"
+        "Version": "0.1.8"
       },
       "Assemblies": [
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7\\lib\\net6.0-windows7.0\\Ekke.Thesis.PriceFinder.Activities.Design.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7\\lib\\net6.0-windows7.0\\Ekke.Thesis.PriceFinder.Activities.dll",
-        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7\\lib\\net6.0-windows7.0\\Ekke.Thesis.PriceFinder.dll"
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8\\lib\\net6.0-windows7.0\\Ekke.Thesis.PriceFinder.Activities.Design.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8\\lib\\net6.0-windows7.0\\Ekke.Thesis.PriceFinder.Activities.dll",
+        "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8\\lib\\net6.0-windows7.0\\Ekke.Thesis.PriceFinder.dll"
       ],
-      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.7"
+      "Path": "C:\\Users\\kissa\\.nuget\\packages\\ekke.thesis.pricefinder.activities\\0.1.8"
     },
     {
       "Package": {

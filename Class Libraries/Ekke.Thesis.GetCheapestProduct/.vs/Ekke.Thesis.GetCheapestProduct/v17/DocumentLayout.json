@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.GetCheapestProduct\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AC47613A-3076-4CAB-8680-92A6EF5ECDF8}|Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.csproj|d:\\eger\\thesis\\class libraries\\ekke.thesis.getcheapestproduct\\ekke.thesis.getcheapestproduct\\models\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC47613A-3076-4CAB-8680-92A6EF5ECDF8}|Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.csproj|solutionrelative:ekke.thesis.getcheapestproduct\\models\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{77FF1513-B2D1-46F6-A815-45F7CC92B74B}|Ekke.Thesis.GetCheapestProduct.Activities\\Ekke.Thesis.GetCheapestProduct.Activities.csproj|d:\\eger\\thesis\\class libraries\\ekke.thesis.getcheapestproduct\\ekke.thesis.getcheapestproduct.activities\\activities\\getcheapestproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77FF1513-B2D1-46F6-A815-45F7CC92B74B}|Ekke.Thesis.GetCheapestProduct.Activities\\Ekke.Thesis.GetCheapestProduct.Activities.csproj|solutionrelative:ekke.thesis.getcheapestproduct.activities\\activities\\getcheapestproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC47613A-3076-4CAB-8680-92A6EF5ECDF8}|Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.csproj|d:\\eger\\thesis\\class libraries\\ekke.thesis.getcheapestproduct\\ekke.thesis.getcheapestproduct\\models\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC47613A-3076-4CAB-8680-92A6EF5ECDF8}|Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.csproj|solutionrelative:ekke.thesis.getcheapestproduct\\models\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC47613A-3076-4CAB-8680-92A6EF5ECDF8}|Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.csproj|d:\\eger\\thesis\\class libraries\\ekke.thesis.getcheapestproduct\\ekke.thesis.getcheapestproduct\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC47613A-3076-4CAB-8680-92A6EF5ECDF8}|Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.csproj|solutionrelative:ekke.thesis.getcheapestproduct\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,25 +26,39 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Ekke.Thesis.GetCheapestProduct\\Models\\Product.cs",
+              "ToolTip": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct\\Models\\Product.cs",
+              "RelativeToolTip": "Ekke.Thesis.GetCheapestProduct\\Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T21:58:08.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct\\Models\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "Ekke.Thesis.GetCheapestProduct\\Models\\DatabaseHelper.cs",
               "ToolTip": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct\\Models\\DatabaseHelper.cs",
               "RelativeToolTip": "Ekke.Thesis.GetCheapestProduct\\Models\\DatabaseHelper.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEEAAAA3AAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwBIAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T22:51:35.731Z"
+              "WhenOpened": "2024-08-31T22:51:35.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GetCheapestProduct.cs",
               "DocumentMoniker": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.Activities\\Activities\\GetCheapestProduct.cs",
               "RelativeDocumentMoniker": "Ekke.Thesis.GetCheapestProduct.Activities\\Activities\\GetCheapestProduct.cs",
               "ToolTip": "D:\\Eger\\thesis\\Class Libraries\\Ekke.Thesis.GetCheapestProduct\\Ekke.Thesis.GetCheapestProduct.Activities\\Activities\\GetCheapestProduct.cs",
               "RelativeToolTip": "Ekke.Thesis.GetCheapestProduct.Activities\\Activities\\GetCheapestProduct.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAkwEwAAAARAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-31T22:51:10.115Z",
               "EditorCaption": ""
