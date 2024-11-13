@@ -2,15 +2,15 @@
 \select@language {magyar} \contentsline {chapter}{\numberline {1}Választott technológiák bemutatása}{6}{chapter.1}%
 \select@language {magyar} \contentsline {section}{\numberline {1.1}.NET Keretrendszer \cite {.NET}}{6}{section.1.1}%
 \select@language {magyar} \contentsline {section}{\numberline {1.2}Entity Framework \cite {Entity}}{7}{section.1.2}%
-\select@language {magyar} \contentsline {section}{\numberline {1.3}Windows Presentation Foundation}{7}{section.1.3}%
+\select@language {magyar} \contentsline {section}{\numberline {1.3}Windows Presentation Foundation \cite {WPF}}{7}{section.1.3}%
 \select@language {magyar} \contentsline {section}{\numberline {1.4}MVVM (Model-View-ViewModel)}{8}{section.1.4}%
-\select@language {magyar} \contentsline {section}{\numberline {1.5}Microsoft SQL Server}{9}{section.1.5}%
-\select@language {magyar} \contentsline {section}{\numberline {1.6}UiPath}{9}{section.1.6}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.6.1} UiPath Studio}{10}{subsection.1.6.1}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.6.2} UiPath Orchestrator}{11}{subsection.1.6.2}%
-\select@language {magyar} \contentsline {subsection}{\numberline {1.6.3} UiPath Robot}{12}{subsection.1.6.3}%
+\select@language {magyar} \contentsline {section}{\numberline {1.5}Microsoft SQL Server \cite {SQL} \cite {SSMA}}{9}{section.1.5}%
+\select@language {magyar} \contentsline {section}{\numberline {1.6}UiPath \cite {UiPath}}{9}{section.1.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.6.1} UiPath Studio \cite {Studio}}{10}{subsection.1.6.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.6.2} UiPath Orchestrator \cite {Orchestrator}}{11}{subsection.1.6.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {1.6.3} UiPath Robot \cite {Robot}}{12}{subsection.1.6.3}%
 \select@language {magyar} \contentsline {subsection}{\numberline {1.6.4}A UiPath fejlesztés alapjai:}{12}{subsection.1.6.4}%
-\select@language {magyar} \contentsline {chapter}{\numberline {2}Megoldás}{14}{chapter.2}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Saját ÁrGép Robot fejlesztése}{14}{chapter.2}%
 \select@language {magyar} \contentsline {section}{\numberline {2.1}REST API Szerver}{14}{section.2.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.1}Adatbázis}{14}{subsection.2.1.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.2}Adatbázis inicializálása}{15}{subsection.2.1.2}%
@@ -19,7 +19,7 @@
 \select@language {magyar} \contentsline {subsubsection}{Migráció}{17}{section*.17}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.1.3}Kontroller osztály}{17}{subsection.2.1.3}%
 \select@language {magyar} \contentsline {subsubsection}{HTTP metódusok}{18}{section*.18}%
-\select@language {magyar} \contentsline {section}{\numberline {2.2}Excel Data Loader}{19}{section.2.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.2}Excel Data Loader \cite {WPFCSHARP}}{19}{section.2.2}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.1}Excel file feldolgozása}{19}{subsection.2.2.1}%
 \select@language {magyar} \contentsline {subsection}{\numberline {2.2.2}Adatkötés (data binding) \cite {Binding} \cite {WPF}}{21}{subsection.2.2.2}%
 \select@language {magyar} \contentsline {section}{\numberline {2.3}Árgép Robot}{23}{section.2.3}%

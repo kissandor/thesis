@@ -81,7 +81,8 @@
 \institute{Matematikai és Informatikai Intézet}
 \title{Árgép robot fejlesztése}
 \author{Kis Sándor\\Programtervező Informatikus BSc}
-\supervisor{Nagy Péter\\Külső konzulens}
+\supervisor{Dr. Kovásznai Gergely\\egyetemi docens
+			\collaborator[Külső konzulens] Nagy Péter\\RPA Developer\\ZF Hungária Kft}
 \city{Eger}
 \date{2024}
 \maketitle
@@ -105,6 +106,8 @@ A szakdolgozatom elkészítése során a UiPath technológiát felhasználva lé
 
 A felhasználók egyszerűen felsorolják a kívánt alkatrészeket egy Excel fájlban, amelyet egy asztali alkalmazás segítségével feltöltenek az adatbázisba, majd elindítják a robotot. A robot az adatbázisból kiolvassa az információkat, majd leellenőrzi a webshopokat az alkatrészek aktuális áraiért. Végül a robot riportot készít, amelyben összehasonlítást nyújt arról, hogy melyik webshopban találhatók a legolcsóbb alkatrészek, majd ezt a riportot emailben elküldi a felhasználónak.
 
+A munkám során a GitHub verziókezelőt fogom használni, és a projekt letölthető lesz a következő linkről: \url{https://github.com/kissandor/thesis.git}.
+
 
 \chapter{Választott technológiák bemutatása}
 \section{.NET Keretrendszer \cite{.NET}}
@@ -119,7 +122,7 @@ A Microsoft a .NET platform kiadásakor bevezetett egy új programozási nyelvet
 Az Entity Framework egy objektum-relációs leképző (ORM) keretrendszer, amely lehetővé teszi a fejlesztők számára, hogy objektumorientált módon dolgozzanak relációs adatbázisokkal. Ez azt jelenti, hogy a fejlesztők az adatbázis-táblákat objektumokként kezelhetik, és nem kell SQL-utasításokat írniuk az adatok lekérdezéséhez és módosításához. Az Entity Framework kulcsfontosságú előnyei közé tartozik a megnövelt termelékenység, a kód egyszerűsítése és a kiváló hibaelhárítási képességek. 
 
 A .NET-alapú alkalmazások fejlesztéskor, amikor adatbázis-hozzáférésre van szüksége, az Entity Framework kiváló választás.
-\section{Windows Presentation Foundation}
+\section{Windows Presentation Foundation \cite{WPF}}
 A Windows Presentation Foundation (WPF) egy grafikus felhasználói interfész (GUI) keretrendszer, amelyet a Microsoft fejlesztett ki Windows alkalmazások készítéséhez. A WPF segitségével esztétikus, interaktív és gazdag felhasználói élményt kínáló alkalmazások fejlesztese lehetseges.
 \subsection*{WPF néhány jellemzője:}
 \begin{itemize}
@@ -148,13 +151,13 @@ Az MVVM használatával az alkalmazás könnyebben bővíthető és karbantartha
 		\label{picture-mvvm}
 	\end{figure}
 
-\section{Microsoft SQL Server}
+\section{Microsoft SQL Server \cite{SQL} \cite{SSMA}}
 A Microsoft SQL Server a Microsoft által kifeljesztett relációs adatbázis-kezelő rendszer, mely az SQL (Structured Query Language) nyelvet használja az adatok tárolására, lekérdezésére és kezelésére. 
 
 A SQL Server eredetileg kifejezetten a Windows operációs rendszerre lett tervezve, de az újabb verziók már támogatják más operációs rendszereken való futtatást is, például Linuxon és Docker konténerekben, ezáltal rugalmasságot biztosítanak a különböző környezetekben történő telepítéshez és üzemeltetéshez.
 
 Az SQL Server Management Studio (SSMS) egy grafikus felhasználói felület (GUI), mely segíti a felhasználókat a Microsoft SQL Server adatbázis-kezelő rendszerével kapcsolatos feladatok egyszerű és hatékony végrehajtásában. Az SSMS lehetővé teszi az adatbázisok tervezését, létrehozását, karbantartását és felügyeletét, valamint a lekérdezések írását és futtatását.
-\section{UiPath}
+\section{UiPath \cite{UiPath}}
 UiPath története 2005-re nyúlik vissza, ekkor alapította meg a DeskOver vállalatot Daniel Dines és Marius Tirca egy bukaresti lakásban. Kezdetben szoftverautomatizációs eszközöket és fejlesztői készleteket hoztak létre olyan neves cégek számára, mint az IBM, a Google és a Microsoft, akik ezeket beépítették saját termékeikbe. 
 
 Az igazi áttörés 2012-ben jött el, ekkor találó módon egy ügyfél volt az, aki rámutatott a kezdetleges RPA (robotfolyamat-automatizálás) piacon rejlő lehetőségekre a cég számára.
@@ -165,7 +168,7 @@ A UiPath hamarosan vezető szereplővé vált az RPA piacon, és az általuk kif
 
 A UiPath jelenlegi célkitűzése a Fully Automated Enterprise - a teljesen automatizált vállalat - koncepciójának megvalósítása. Ennek révén a vállalatok teljes mértékben kiaknázhatják bennük rejlő lehetőségeket az automatizáció segítségével, felszabadítva az emberi munkaerőt a kreatívabb feladatok elvégzésére.
 
-\subsection{ UiPath Studio}
+\subsection{ UiPath Studio \cite{Studio}}
 A UiPath Studio a UiPath vállalati RPA platformjának központi eleme, egy vizuális fejlesztői környezet, amely lehetővé teszi automatizált munkafolyamatok egyszerű és gyors létrehozását. Ez azt jelenti, hogy felhasználóknak nem kell kódolási ismeretekkel rendelkezniük a használatához. Akár üzleti felhasználók, akár fejlesztők számára hasznos eszköz, különböző automatizálási igények megoldására.
 \subsection*{Studio főbb jellemzői:}
 	\begin{itemize}
@@ -193,7 +196,7 @@ A UiPath Studio a UiPath vállalati RPA platformjának központi eleme, egy vizu
 	\end{itemize}
 
 	
-\subsection{ UiPath Orchestrator}
+\subsection{ UiPath Orchestrator \cite{Orchestrator}}
 Az UiPath Orchestrator a UiPath vállalati RPA platformjának egy másik kulcsfontosságú eleme. Ez egy központi vezérlőpult, amely lehetővé teszi az RPA-folyamatok ütemezését, figyelését, kezelését és skálázását. Gyakorlatilag az Orchestrator felel az automatizált munkafolyamatok életciklusának teljes körű felügyeleteért.
 
 \subsection*{Orchestrator főbb jellemzői:}
@@ -212,7 +215,7 @@ Az UiPath Orchestrator a UiPath vállalati RPA platformjának egy másik kulcsfo
 		\item \textbf{Skálázhatóság:} Könnyedén skálázható a platform a növekvő automatizálási igényeknek megfelelően.
 		\item \textbf{Biztonság:}  Biztonságos környezetet biztosít az RPA-folyamatok futtatásához, megfelelve a vállalatok biztonsági előírásaiknak.
 \end{itemize}
-\subsection{ UiPath Robot}
+\subsection{ UiPath Robot \cite{Robot}}
 Az UiPath Robot egy szoftverrobot, mely a számítógépen elvégzi az automatizált, ismétlődő manuális feladatokat.  A robotot a UiPath Studio grafikus felületén fejleszthetjük ki, ahol a munkafolyamatokat programozhatjuk a robot számára. Az UiPath Robotnak két fő típusa van. A Felügyelt (attended) robot emberi beavatkozást igényel a munkafolyamatok futtatásához. A felhasználónak manuálisan kell elindítania a robotot, és meg kell adnia a szükséges bemeneteket. Felügyelet nélküli (unattended) robot önállóan futtatja a munkafolyamatokat, emberi beavatkozás nélkül. A robotot előre be kell konfigurálni a szükséges bemenetekkel és kimenetekkel.
 
 \subsection*{A UiPath Robot főbb jellemzői:}
@@ -243,7 +246,7 @@ Az activity-k a UiPath automatizálás alapvető építőkövei, amelyek repreze
 	\label{picture-activity}
 \end{figure}
 
-\chapter{Megoldás}
+\chapter{Saját ÁrGép Robot fejlesztése}
 A projektem három fő részből áll. Az első rész egy REST API szerver, amely az ASP.NET Core keretrendszerre épül. A második rész egy desktop alkalmazás, amely elküldi az adatbázisba elmentendő adatokat a REST API-n keresztül a szervernek. Ezt az alkalmazást ExcelDataLoader-nek neveztem el, és a Windows Presentation Foundation keretrendszer segítségével készítettem el. A projekt harmadik része maga a UiPath Árgép robot, amely az automatizálási feladatokat látja el.
 \section{REST API Szerver}
 Ez a komponens biztosítja a kommunikációs felületet a kliensalkalmazás és az adatbázis között, lehetővé téve az adatbázis műveletek végrehajtását HTTP kéréseken keresztül.
@@ -255,14 +258,14 @@ Az alkalmazásban nincs szükség sok adat tárolására, csupán a webáruháza
 		\caption{SSMS adatbázis diagram}
 		\label{picture-adatbazis}
 	\end{figure}
-Az adatbázis felépítése a az \ref{picture-adatbazis} ábrán látható. 
+Az adatbázis felépítése \aref{picture-adatbazis} ábrán látható. 
 
 Az adatbázisban összesen négy tábla található: a ComputerParts, WebShops, és Categories táblákba az adatokat az Excel Data Loader asztali alkalmazás segítségével egyszerűen feltölthetjük egy Excel-fájlból.
 A negyedik, egyben fő táblánk a SearchResults tábla, amelybe a robot az összes alkatrészről talált keresési eredményt elmenti majd el. Ebben a táblában két idegen kulcs található, amelyek a ComputerParts és a WebShops táblákra mutatnak.
 \subsection{Adatbázis inicializálása}
 Az adatbázis inicializálásához Entity Framework-öt használtam. Az Entity Framework használatakor az adatbázis inicializálását különböző módon lehet elvégezni; választható a Code First, Database First és Model First megközelítés is.
 \subsubsection{Entity}
-Én a Code First megközelítést választottam az adatbázis létrehozására. Ebben a megközelítésben az adatbázis sémát a kód alapján hozzuk létre. Első lépésben létrehoztam három Entity-t, azaz három C\# osztályt melyek reprezentálják az adatbázis táblákat. Az alábbi kódrészlet a SearchResult Entity kódját mutatja be.
+Én a Code First megközelítést választottam az adatbázis létrehozására. Ebben a megközelítésben az adatbázis sémát a kód alapján hozzuk létre. Első lépésben létrehoztam három Entity-t, azaz három C\# osztályt melyek reprezentálják az adatbázis táblákat. A \ref{kod-SearchResult}-es kódrészlet a SearchResult Entity kódját mutatja be.
 
 	\lstinputlisting[style=csharp, caption={SearchResult Entity}, label={kod-SearchResult}]{SearchResult.cs}
 Az érdemes megjegyezni, hogy Entity Framework esetén az Id egy speciális property név, amely az elsődleges kulcsot reprezentálja a létrehozandó táblában. Az elsődleges kulcsnak nem feltétlenül kell az Id nevet kapnia, de ha más nevet választunk, akkor a property-t el kell látnunk a \texttt{[Key]} attribútummal.
@@ -272,14 +275,14 @@ Másik érdekes dolog az \texttt{= null!} használata. A SearchResult osztályba
 A \texttt{= null!} kifejezés használata nem kötelező, de előnyökkel jár. Segít megelőzni a hibákat és a nem kívánt viselkedést, hogy ha egy propertynek nem szabad null értéket kapnia. Biztosítja, hogy az adatbázisban tárolt adatok konzisztensek és javítja a kód olvashatóságát is, mivel egyértelművé teszi, hogy a propertynek mindig értéket kell adni.
 
 \subsubsection{Database Context osztály}
-A következő lépésben létrehoztam a Database Context osztályt. Ez az osztály az Entity Framework központi eleme, amelynek a DbContext osztályból kell származnia. Felelős a relációs adatbázissal való kapcsolódásért, az objektumok leképezéséért az adatbázisra a Code First megközelítés esetén, felelős a változások nyomon követéséért (change tracking), valamint az adatbázis-migrációk kezeléséért. Ez nemcsak hogy szabványos gyakorlat az Entity Framework alkalmazása során, hanem elengedhetetlen is a hatékony adatbázis-kezeléshez. Az következő kódrészlet a  Database Context osztály kódját mutatja be.
+A következő lépésben létrehoztam a Database Context osztályt. Ez az osztály az Entity Framework központi eleme, amelynek a DbContext osztályból kell származnia. Felelős a relációs adatbázissal való kapcsolódásért, az objektumok leképezéséért az adatbázisra a Code First megközelítés esetén, felelős a változások nyomon követéséért (change tracking), valamint az adatbázis-migrációk kezeléséért. Ez nemcsak hogy szabványos gyakorlat az Entity Framework alkalmazása során, hanem elengedhetetlen is a hatékony adatbázis-kezeléshez. A \ref{kod-ExcelUploadContext}-es kódrészlet a  Database Context osztály kódját mutatja be.
 
 \lstinputlisting[style=csharp, caption={ExcelUploadContext osztály}, label={kod-ExcelUploadContext}]{ExcelUploadContext.cs}
 Az osztályban található egy paraméter nélküli és egy paraméterezett konstruktor, valamint négy DbSet property. 
 
 A paraméterezett konstruktor egy DbContextOptions<ExcelUploadContext> típusú objektumot vár paraméterként. Ez az objektum tartalmazza a konfigurációs beállításokat az adott adatbázis kapcsolathoz.
 
-A négy DbSet property (Categories, WebShops, ComputerParts, SearchResults) pedig nem más, mint az adatbázisban lévő táblák reprezentációi. Ezek a property-k teszik lehetővé, hogy a kódban az entitásokon keresztül műveleteket végezek a táblákkal. Erre példa az alábbi kód.
+A négy DbSet property (Categories, WebShops, ComputerParts, SearchResults) pedig nem más, mint az adatbázisban lévő táblák reprezentációi. Ezek a property-k teszik lehetővé, hogy a kódban az entitásokon keresztül műveleteket végezek a táblákkal. Erre példa az alábbi \ref{kod-GetAllCategories}-es kód.
 
 \lstinputlisting[style=csharp, caption={GetAllCategories metódus}, label={kod-GetAllCategories}]{GetAllCategories.cs}
 
@@ -294,8 +297,8 @@ Ez a megoldás azért is kényelmes, mert a fejlesztés során az entity osztál
 \subsection{Kontroller osztály}
 A kontroller osztályok az ASP.NET Core alkalmazásokban felelősek a kérések fogadásáért és a válaszok kiszolgálásáért. Tehát a kliens a kéréseit a kontroller osztálynak küldi el, és a kontroller osztály válaszol a kérésekre a megfelelő adatokkal vagy válaszkóddal.
 
-Az alkalmazásom szerveroldali logikáját egyetlen vezérlő osztállyal valósítom meg, ez a ComputerPartController osztály. Ez az osztály a ControllerBase osztályból származik, ami biztosítja az alapvető funkciókat a HTTP kérések és válaszok kezeléséhez. Továbbá a ComputerPartController osztály az ExcelUploadContext példányát használja, amit konstruktor alapú dependency injection segítségével kap meg. Ez azt jelenti, hogy a szükséges függőségek az osztály konstruktorán keresztül injektálódnak be. Ez látható az alábbi kódrészletben.
-\lstinputlisting[style=csharp, caption={Dependency injection az ExcelUploadContext példányához}, label={kod-GetAllCategories}]{DependencyInjection.cs}
+Az alkalmazásom szerveroldali logikáját egyetlen vezérlő osztállyal valósítom meg, ez a ComputerPartController osztály. Ez az osztály a ControllerBase osztályból származik, ami biztosítja az alapvető funkciókat a HTTP kérések és válaszok kezeléséhez. Továbbá a ComputerPartController osztály az ExcelUploadContext példányát használja, amit konstruktor alapú dependency injection segítségével kap meg. Ez azt jelenti, hogy a szükséges függőségek az osztály konstruktorán keresztül injektálódnak be. Ez látható \aref{kod-DependencyInjection}-es kódrészletben.
+\lstinputlisting[style=csharp, caption={Dependency injection az ExcelUploadContext példányához}, label={kod-DependencyInjection}]{DependencyInjection.cs}
 
 \subsubsection{HTTP metódusok}
 Az adatbázison végzett műveleteket HTTP metódusok segítségével valósítom meg:
@@ -310,8 +313,8 @@ A szerveroldalon csak a Create, Read és Delete adatbázisműveletek vannak impl
 
 
 
-\section{Excel Data Loader}
-Az adatok Excel fájlból történő beolvasására és azok szerverre történő elküldésére készítettem egy desktop alkalmazást, amelyhez a Windows Presentation Foundation (WPF) keretrendszert választottam. Azért esett a választásom a WPF-re, mert kiválóan támogatja a látványos felhasználói felület kialakítását, valamint könnyen kezelhető az adatok megjelenítése és a felhasználóval való interakció. A fejlesztés során az MVVM (Model-View-ViewModel) tervezési mintát követtem, amely lehetővé tette a karbantartható és jól struktúrált kód létrehozását, valamint az adatkezelés és a felhasználói felület szétválasztását. 
+\section{Excel Data Loader \cite{WPFCSHARP}}
+Az adatok Excel fájlból történő beolvasására és azok szerverre történő elküldésére készítettem egy desktop alkalmazást, amely \aref{picture-ExcelDataLoader}-es ábrán látható és amelyhez a Windows Presentation Foundation (WPF) keretrendszert választottam. Azért esett a választásom a WPF-re, mert kiválóan támogatja a látványos felhasználói felület kialakítását, valamint könnyen kezelhető az adatok megjelenítése és a felhasználóval való interakció. A fejlesztés során az MVVM (Model-View-ViewModel) tervezési mintát követtem, amely lehetővé tette a karbantartható és jól struktúrált kód létrehozását, valamint az adatkezelés és a felhasználói felület szétválasztását. 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=15cm, height=7.5cm]{ExcelDataLoader}
@@ -322,31 +325,31 @@ Az adatok Excel fájlból történő beolvasására és azok szerverre történ�
 
 Többféle NuGet csomag közül lehet választani, ha Excel műveleteket szeretnénk integrálni a kódunkba. Mindegyik ilyen NuGet csomagnak vannak előnyei és hátrányai is. A dolgozatomban a Microsoft Office Interop Excel csomagot választottam. Ennek a csomagnak a legnagyobb előnye, hogy közvetlen kapcsolatot biztosít az Excel alkalmazással, így egyszerűen és könnyen lehetővé teszi az Excel funkcióinak és az adatoknak a programozott kezelését. A legnagyobb hátránya talán az, hogy az Excelnek telepítve kell lennie az alkalmazást futtató összes számítógépen. Emellett, mivel a programunk egy külső alkalmazással interaktál, az interop hívások lassabbak lehetnek, különösen akkor, amikor nagyobb adatmennyiséggel dolgozunk. 
 
-Az Excel fájl feldolgozására egy külön statikus osztályt hoztam létre ExcelFileHandlerInterop néven. Ennek az osztálynak egyetlen statikus metódusa van, a ReadExcelFile, amely paraméterként megkapja az Excel fájl elérési útvonalát és a munkalap számát, amin a beolvasandó adatok találhatók. Ez a metódus egy DataTable objektumot ad vissza, amelyben a beolvasott adatok vannak tárolva. Fontos része a kódnak egy új Application objektum létrehozása a Microsoft.Office.Interop.Excel könyvtárból, amely az Excel alkalmazást képviseli. Ennek az Application objektumnak a beépített metódusain keresztül megvalósíthatjuk a különböző Excel műveleteket. Lekérhetjük a munkafüzetet, a munkafüzet munkalapjait, és beállíthatunk tartományokat a munkalapokon. Kérhetjük a tartomány oszlopainak és sorainak számát, így egyszerűen ki tudjuk nyerni a kívánt adatokat. Ennek a megvalósítása látható az alábbi kódrészletben.
+Az Excel fájl feldolgozására \aref{kod-ExcelFileHandlerInterop}-es kódban látható statikus osztályt hoztam létre ExcelFileHandlerInterop néven. Ennek az osztálynak egyetlen statikus metódusa van, a ReadExcelFile, amely paraméterként megkapja az Excel fájl elérési útvonalát és a munkalap számát, amin a beolvasandó adatok találhatók. Ez a metódus egy DataTable objektumot ad vissza, amelyben a beolvasott adatok vannak tárolva. Fontos része a kódnak egy új Application objektum létrehozása a Microsoft.Office.Interop.Excel könyvtárból, amely az Excel alkalmazást képviseli. Ennek az Application objektumnak a beépített metódusain keresztül megvalósíthatjuk a különböző Excel műveleteket. Lekérhetjük a munkafüzetet, a munkafüzet munkalapjait, és beállíthatunk tartományokat a munkalapokon. Kérhetjük a tartomány oszlopainak és sorainak számát, így egyszerűen ki tudjuk nyerni a kívánt adatokat. 
 
 \lstinputlisting[style=csharp, caption={Excel fájl beolvasása és kezelése .NET Interop használatával}, label={kod-ExcelFileHandlerInterop}]{ExcelFileHandlerInterop.cs}
 
-Nagyon fontos az erőforrások felszabadítása. Ügyelni kell arra, hogy bezárjuk az Excel alkalmazást, és hogy felszabadítsuk a COM objektumokat. Ha ezt nem tesszük meg, akkor olyan problémákkal szembesülhetünk, mint például a memória szivárgás, ami azt jelenti, hogy a memória használat folyamatosan növekszik, és ezáltal komoly teljesítménycsökkenés következhet be a rendszerben.
+Nagyon fontos az erőforrások felszabadítása. Ügyelni kell arra, hogy bezárjuk az Excel alkalmazást, és hogy felszabadítsuk a \texttt{COM} objektumokat. Ha ezt nem tesszük meg, akkor olyan problémákkal szembesülhetünk, mint például a memória szivárgás, ami azt jelenti, hogy a memória használat folyamatosan növekszik, és ezáltal komoly teljesítménycsökkenés következhet be a rendszerben.
 \subsection{Adatkötés (data binding) \cite{Binding} \cite{WPF}}
 Az adatkötés vagy adatkapcsolás a felhasználói felület elemeinek és a háttérben lévő adatmodellek összekapcsolását jelenti, így a felhasználói felületen megjelenő adatok mindig automatikusan frissülnek.
 
 A program elkészítésekor én a Model-View-ViewModel (MVVM) tervezési mintát követtem, ahol az adatkötés a View és a ViewModel között valósul meg. A View az, ahol az adatkötés deklarálása megtörténik, a ViewModel pedig biztosítja azt, hogy a View értesüljön a változásokról, de ehhez először a ViewModelnek implementálnia kell az INotifyPropertyChanged interfészt. Ez az interfész a PropertyChanged eseményt definiálja, amit egy tulajdonság megváltozásánál kell kiváltani.
 
-Első lépésben létrehoztam egy ViewModelBase osztályt, amely implementálja az INotifyPropertyChanged interfészt és ez osztály az őse az összes többi ViewModel osztálynak.
+Első lépésben létrehoztam \aref{kod-ViewModelBase}-es kódban látható ViewModelBase osztályt, amely implementálja az \texttt{INotifyPropertyChanged} interfészt és ez osztály az őse az összes többi ViewModel osztálynak.
 
 \lstinputlisting[style=csharp, caption={INotifyPropertyChanged interfész implementálása}, label={kod-ViewModelBase}]{ViewModelBase.cs}
 
-Ebben az osztályban az OnPropertyChanged metódus egy string típusú paramétert vár, amely a annak a tulajdonságnak a  nevét jelöli amit figyelunk, hogy valtozik e. Amikor ennek tulajdonságnak az értéke megváltozik, a PropertyChanged esemény kiváltódik. A View figyeli ezt az eseményt, és amikor a PropertyChanged esemény bekövetkezik, automatikusan frissíti a bindelt elemeket.
+Ebben az osztályban az \texttt{OnPropertyChanged} metódus egy string típusú paramétert vár, amely a annak a tulajdonságnak a  nevét jelöli amit figyelunk, hogy valtozik e. Amikor ennek tulajdonságnak az értéke megváltozik, a PropertyChanged esemény kiváltódik. A View figyeli ezt az eseményt, és amikor a PropertyChanged esemény bekövetkezik, automatikusan frissíti a bindelt elemeket.
 
-Az alábbi WebShopsViewModel osztály kódrészletben látható, hogyan valósítottam meg az OnPropertyChanged metódus használatát. 
+Az alábbi \ref{kod-OnPropertyChanged}-es \texttt{WebShopsViewModel} osztály kódrészletben látható, hogyan valósítottam meg az OnPropertyChanged metódus használatát. 
 
-Az osztálynak van egy WebShops nevű, WebShop objektumokat tartalmazó ObservableCollection property-je. Ennek a property-nek a setterében hívom meg az OnPropertyChanged metódust. Alap esetben ennek a metódusnak paraméterként át kellene adni a property nevét, de a CallerMemberName attribútum használata miatt a property neve automatikusan megadásra kerül, így ezzel nekünk nem kell foglalkoznunk.
+Az osztálynak van egy \texttt{WebShops} nevű, WebShop objektumokat tartalmazó ObservableCollection property-je. Ennek a property-nek a setterében hívom meg az OnPropertyChanged metódust. Alap esetben ennek a metódusnak paraméterként át kellene adni a property nevét, de a \texttt{CallerMemberName} attribútum használata miatt a property neve automatikusan megadásra kerül, így ezzel nekünk nem kell foglalkoznunk.
 \newpage
-\lstinputlisting[style=csharp, caption={Az OnPropertyChanged használata a WebShopsViewModel osztályban}, label={kod-WebShopViewModel}]{WebShopViewModel.cs}
+\lstinputlisting[style=csharp, caption={Az OnPropertyChanged használata a WebShopsViewModel osztályban}, label={kod-OnPropertyChanged}]{WebShopViewModel.cs}
 
 Amikor a WebShops property értéke megváltozik, például amikor a Collection-hoz adunk hozzá új WebShop objektumokat vagy eltávolítunk belőle elemeket, akkor az OnPropertyChanged metódus meghívódik, és ennek hatására a View azonnal frissül a data binding-nak köszönhetően. 
 
-Maga az adatkötés deklarálása a View-ban, XAML-ben megtörténik. Az alábbi kódrészletben egy DataGridet definiálok, és a DataGridben megjelenítendő adatok forrása a ViewModel WebShops property-jéhez van kötve, ahogy az 5. sorban látható.
+Maga az adatkötés deklarálása a View-ban, XAML-ben megtörténik. A \ref{kod-WebShopViewModel}-as kódrészletben egy DataGridet definiálok, és a DataGridben megjelenítendő adatok forrása a ViewModel WebShops property-jéhez van kötve, ahogy az 5. sorban látható.
 
 \lstinputlisting[style=XML, caption={Adatkötés DataGrid és Webshops Property között}, label={kod-WebShopViewModel}]{WebShop.xaml}
 Az adatkötést azért tartottam fontosnak részletezni a dolgozatomban, mert bár a program fő funkciója az Excel fájl feldolgozása és a feldolgozott adatok továbbítása a szerverre, a program képes lekérdezni a szerverről adatokat is, amelyeket a data binding segítségével dinamikusan megjelenít.
@@ -382,7 +385,7 @@ Mindannyian vásároltunk már online, és tudjuk, hogy amikor rákeresünk egy 
 \end{figure}
 
 
-Amikor elindítjuk a \texttt{Table Extraction} varázslót, az képes automatikusan felismerni a táblázatos formátumokat és azok szerkezetét. Ebben a táblázatban a robotnak meg kell mutatni, hogy melyek azok az adatok, amelyeket ki szeretnénk nyerni. Mivel a táblázat felépítése ismert a robot számára, elég csak egyetlen termék nevére rákattintani, és az algoritmus azonosítja a táblázatban található összes többi termék nevét is. Hasonló módon kinyerhetjük a termékek árát, valamint az összes többi megjelenített, számunkra releváns adatot is. Az így kinyert adatok egy DataTable adattípusú változóba kerülnek elmentésre.
+Amikor elindítjuk a \texttt{Table Extraction} varázslót \aref{picture-TableExtraction}-es ábrán látható, a bekeretezett ikonra kattintva , az képes automatikusan felismerni a táblázatos formátumokat és azok szerkezetét. Ebben a táblázatban a robotnak meg kell mutatni, hogy melyek azok az adatok, amelyeket ki szeretnénk nyerni. Mivel a táblázat felépítése ismert a robot számára, elég csak egyetlen termék nevére rákattintani, és az algoritmus azonosítja a táblázatban található összes többi termék nevét is. Hasonló módon kinyerhetjük a termékek árát, valamint az összes többi megjelenített, számunkra releváns adatot is. Az így kinyert adatok egy DataTable adattípusú változóba kerülnek elmentésre.
 
 Ennek a keresési megoldásnak nagy előnye, hogy gyors és pontos adatkinyerést tesz lehetővé. Hátránya viszont, hogy minden egyes webshopra külön implementálni kell a megoldást, ami növeli a fejlesztési időt, és a karbantartást is bonyolítja.
 
@@ -410,11 +413,11 @@ Ennek a keresési megoldásnak az egyik fő előnye az, hogy a robot minden olda
 \subsubsection*{PriceFinder Activity \cite{ActivityCreator}}
 Mint azt már említettem, az activity-k az automatizálás alapvető építőelemei. A beépített több száz activity mellett lehetőségünk van saját activity-k fejlesztésére, amelyeket a projektünk speciális igényeihez alakíthatunk. A UiPath-nek elérhető a Visual Studio-hoz az \texttt{Activity Creator extension}, amelynek segítségével nagyon egyszerűen létrehozhatunk új activity-ket.
 
-Miután telepítettük az extensiont, elérhetővé válik egy új projekt típus, a \texttt{UiPath Standard Activity Project}. Egy ilyen projekt létrehozásakor egy előre elkészített activity sablon áll rendelkezésünkre, melyet igényeink szerint testre szabhatunk. Az én esetemben egy olyan activity-re volt szükségem, amely egy string típusú változót kap bemeneti paraméterként, és visszatér egy \texttt{PriceCurrencyPair} típusú objektummal.
+Miután telepítettük az extensiont, elérhetővé válik egy új projekt típus, a \texttt{UiPath Standard Activity Project}. Egy ilyen projekt létrehozásakor egy előre elkészített activity sablon áll rendelkezésünkre, melyet igényeink szerint testre szabhatunk. Az én esetemben egy olyan activity-re volt szükségem, amely egy string típusú változót kap bemeneti paraméterként, és visszatér egy \aref{kod-PriceCurrencyPair}-es kódban látható \texttt{PriceCurrencyPair} típusú objektummal.
 
 \lstinputlisting[style=csharp, caption={PriceCurrencyPair osztály}, label={kod-PriceCurrencyPair}]{PriceCurrencyPair.cs}
 
-Az activity implementációja a \texttt{PriceFinder} osztályban történik, amely osztálynak örökölnie kell a \texttt{CodeActivity} osztályból. Ez az absztrakt osztály biztosítja az alapvető funkciókat a custom activity-k definiálásához. Ahogy az alábbi egyszerűsített kódrészletben is látható, a \texttt{PriceFinder} osztálynak két property-je van. Az egyik property az \texttt{InArgument<string> InputText}, amely azt jelenti, hogy az activity egy stringet vár bemeneti paraméterként, a másik property pedig az \texttt{OutArgument<PriceCurrencyPair> PriceAndCurrency}, azaz az activity majd egy PriceCurrencyPair típusú objektumot ad vissza a robot számára.
+Ahogy az \aref{kod-PriceFinder}-es kódban megfigyelhető, az activity implementációja  a \texttt{PriceFinder} osztályban történik, amely osztálynak örökölnie kell a \texttt{CodeActivity} osztályból. Ez az absztrakt osztály biztosítja az alapvető funkciókat a custom activity-k definiálásához. Ahogy az alábbi egyszerűsített kódrészletben is látható, a \texttt{PriceFinder} osztálynak két property-je van. Az egyik property az \texttt{InArgument<string> InputText}, amely azt jelenti, hogy az activity egy stringet vár bemeneti paraméterként, a másik property pedig az \texttt{OutArgument<PriceCurrencyPair> PriceAndCurrency}, azaz az activity majd egy PriceCurrencyPair típusú objektumot ad vissza a robot számára.
 
 Az \texttt{Execute} metódus automatikusan meghívódik, amikor az activity fut, és itt ebben a metódusban hajtódnak végre a műveletek. Az első lépésben az \texttt{InputText} \texttt{InArgument} értéke kerül beolvasásra és elmentésre az \texttt{inputText} változóba. Ha az inputText érvényes, a \texttt{Finder} privát metódus kerül meghívásra, amelyben implementáltam a keresési logikát. Ez a metódus visszaad egy \texttt{PriceCurrencyPair} objektumot, amely tartalmazza a megtalált árat és pénznemet. Ezt követően az eredmény a \texttt{PriceAndCurrency} \texttt{OutArgument}-ben kerül visszaadásra, azaz ez lesz az activity által visszaadott objektum amelyet a robot használhat.
 
@@ -428,7 +431,7 @@ A \texttt{Search workflow} egy olyan DataTable-t ad vissza, amely tartalmazza a 
 \subsection{Report Builder Workflow}
 A feladat utolsó része a keresési találatok feldolgozása, a feldolgozott adatokból riport készítése, és ennek a riportnak az e-mailben való elküldése a felhasználónak. 
 
-A találatok feldolgozása azt jelenti, hogy a robotnak a \texttt{SearchResults} táblából ki kell olvasnia minden termékből a legolcsóbbat. Ennek megvalósítására egy új, custom activity-re volt szükségem, amely bemeneti paraméterként egy adatbázis  connection stringet kap, és visszaad egy Product típusú listát, amelyben minden terméktípusból a legolcsóbb szerepel. Ezt a custom activity-t \texttt{GetCheapestProducts}-nak neveztem el.
+A találatok feldolgozása azt jelenti, hogy a robotnak a \texttt{SearchResults} táblából ki kell olvasnia minden termékből a legolcsóbbat. Ennek megvalósítására egy új, custom activity-re volt szükségem, amely bemeneti paraméterként egy adatbázis  connection stringet kap, és visszaad egy Product típusú listát, amelyben minden terméktípusból a legolcsóbb szerepel. Ezt \aref{picture-GetCheapestProducts} ábrán látható custom activity-t \texttt{GetCheapestProducts}-nak neveztem el.
 
 \subsubsection*{GetCheapestProducts Activity}
 \begin{figure}[!ht]
@@ -438,7 +441,7 @@ A találatok feldolgozása azt jelenti, hogy a robotnak a \texttt{SearchResults}
 	\label{picture-GetCheapestProducts}
 \end{figure}
 
-Ezt az activity-t is a UiPath \texttt{Activity Creator} extension segítségével készítettem el a Visual Studio-ban. Az activity implementációja a \texttt{GetCheapestProduct} osztályban történik. Ennek az osztálynak a felépítése nagyon hasonló a \texttt{PriceFinder} osztályéhoz. Ahogy az alábbi ábrán is látható, az activity-nek egy \texttt{InArgument<string> ConnectionString} property-je és egy \texttt{OutArgument<List<Product>}\texttt{> Products} property-je van, valamint ebben az osztályban is megtalálható az \texttt{Execute} metódus, ami automatikusan meghívódik, amikor az activity fut.
+Ezt az activity-t is a UiPath \texttt{Activity Creator} extension segítségével készítettem el a Visual Studio-ban. Az activity implementációja a \texttt{GetCheapestProduct} osztályban történik. Ennek az osztálynak a felépítése nagyon hasonló a \texttt{PriceFinder} osztályéhoz. Ahogy \aref{picture-Property} ábrán is látható, az activity-nek egy \texttt{InArgument<string> ConnectionString} property-je és egy \texttt{OutArgument<List<Product>}\texttt{> Products} típusú property-je van, valamint ebben az osztályban is megtalálható az \texttt{Execute} metódus, ami automatikusan meghívódik, amikor az activity fut.
 
 \begin{figure}[!ht]
 	\centering
@@ -449,10 +452,14 @@ Ezt az activity-t is a UiPath \texttt{Activity Creator} extension segítségéve
 
 A \texttt{DatabaseHelper} osztály feladata az adatbázis műveletek végrehajtása. Az osztály konstruktorában megkapja a connectionString-et, amely az adatbázishoz való csatlakozáshoz szükséges információkat tartalmazza. 
 
-Az osztályban definiáltam a \texttt{GetCheapestProductsFromDatabase} metódust, amely a connectionString alapján létrehozza az adatbázis kapcsolatot, és lekérdezi az adatbázisból a legolcsóbb termékeket minden kategóriából az alábbi SQL kód segítségével. Ennek a metódusnak a visszatérési értéke egy \texttt{Product} típusú lista lesz, és ez a lista a Products OutArgument-en keresztül kerül visszaadásra a robot számára az activity végrehajtása során.
+Az osztályban definiáltam a \texttt{GetCheapestProductsFromDatabase} metódust, amely a connectionString alapján létrehozza az adatbázis kapcsolatot, és lekérdezi az adatbázisból a legolcsóbb termékeket minden kategóriából \aref{kod-GetCheapestProductsFromDatabase}-es SQL kód segítségével. Ennek a metódusnak a visszatérési értéke egy \texttt{Product} típusú lista lesz, és ez a lista a Products OutArgument-en keresztül kerül visszaadásra a robot számára az activity végrehajtása során.
 
 \lstinputlisting[style=sql, caption={SQL lekérdezés a DatabaseHelper osztályból}, label={kod-GetCheapestProductsFromDatabase}]{GetCheapestProductsFromDatabase.sql}
 \newpage
+A \ref{kod-GetCheapestProductsFromDatabase}-es SQL kódban két egymásba ágyazott lekérdezés látható. Az alap gondolat az volt, hogy a belső lekérdezésben lekérdezzük az összes releváns adatot. Itt minden rekordhoz egy sorszámot rendelünk a \text{Row\_Number()} függvény segítségével, mégpedig úgy, hogy minden termékkategória esetén a sorszám újraindul 1-től. Erről a Partition By cp.Id gondoskodik, amely a ComputerPartId alapján különíti el a sorszámozást. Mivel a lekérdezés ár szerint növekvő, ezért minden egyes kategória legolcsóbb termék kapja meg az 1-es sorszámot. A külső lekérdezésben pedig csak erre az 1-es sorszámra szűrünk.
+
+A belső lekérdezés azért is szükséges, mert közvetlenül nem tudunk a Row\_Number() függvény által generált értékekre szűrni. Egy alias hozzárendelésével azonban a külső lekérdezésben már hivatkozhatunk a RowNum oszlopra, és annak értéke alapján tudunk szűrni.
+
 \subsubsection*{Riport készítése és email küldés}
 A keresési találatok feldolgozása megtörtént, így a robot számára már elérhető a legolcsóbb termékek listája. Ebből a listából először a robot egy általam elkészített Word-dokumentum sablonba illeszti be minden egyes termékről a szükséges információkat, táblázatos formában. A UiPathban elérhető a Microsoft Word Activities, amely lehetőséget biztosít a Word-dokumentumok automatizált kezelésére, azonban a dolgozatomban egy harmadik féltől származó csomagot használtam. A \texttt{Balareva Word Activities} csomag számos további funkciót kínál, amelyek rugalmasabb és fejlettebb automatizálási lehetőségeket biztosítanak. Ilyen funkció például a \texttt{Word to PDF} activity, amelynek segítségével egyszerűen lehet Word-dokumentumokat PDF formátumba konvertálni. Ezt a PDF riportot a beépített \texttt{Send Email} activity segítségével küldöm el a felhasználónak.
 
@@ -520,9 +527,9 @@ A keresési találatok feldolgozása megtörtént, így a robot számára már e
 \subsection{Tesztelés célja}
 A tesztelés általános célja annak biztosítása, hogy a robot megfelelően működjön az előre meghatározott kereteken belül. Ez a fejezet részletezi a felhasználói elfogadási tesztelés eredményeit, melyek alapjan a végső jóváhagyás megtörténhet, biztosítva azt, hogy automatizálás megfelel a projekt követelményeinek.
 \subsection{Minimális elfogadási kritériumok}
-A robot működése a kiírt szakdolgozati feladatban meghatározottak szerint valósul meg, minden kritikus hiba nélkül, amelyek a robot futásának leállását okoznák. Kritikus hiba esetén a robotnak nem szabad leállnia, hanem megfelelő üzenetet kell küldenie a felhasználónak, majd a robot kilép a folyamatból.
+A robot működése a kiírt szakdolgozati feladatban meghatározottak szerint valósul meg, minden kritikus hiba nélkül, amelyek a robot futásának leállását okoznák. Kritikus hiba esetén a robotnak nem szabad leállnia, hanem megfelelő üzenetet kell küldenie a felhasználónak, majd amennyiben lehetséges, a robot folytatja a következő tranzakciót.
 \subsection{Tesztelési műveletek és felelősségek}
-A robot a szakdolgozati feladat kiírásában meghatározott követelmények alapján került fejlesztésre és beállításra. Alapesetben az RPA Tesztmenedzser végezné el a tesztelési folyamatot, de ebben az esetben én végezem el a tesztelést, a felhasználói elfogadási teszt (UAT) során a robotot én indítom el, és én ellenőrzöm az automatizálás eredményeit. Általános esetben a tesztesetek az ügyféllel közösen kerülnek kialakításra, de mivel ez a szakdolgozati projekt és itt nincs konkrét ügyfél, ezért a teszteket az általam előre meghatározott esetek alapján végzem és dokumentálom a \ref{Teszteredmenyek}~Teszteredmények bekezdésben. A tesztek során mindig egy webshopban és csak egy termékre indítok keresést
+A robot a szakdolgozati feladat kiírásában meghatározott követelmények alapján került fejlesztésre és beállításra. Alapesetben az RPA Tesztmenedzser végezné el a tesztelési folyamatot, de ebben az esetben én végezem el a te	sztelést, a felhasználói elfogadási teszt (UAT) során a robotot én indítom el, és én ellenőrzöm az automatizálás eredményeit. Általános esetben a tesztesetek az ügyféllel közösen kerülnek kialakításra, de mivel ez a szakdolgozati projekt és itt nincs konkrét ügyfél, ezért a teszteket az általam előre meghatározott esetek alapján végzem és dokumentálom a \ref{Teszteredmenyek}~Teszteredmények bekezdésben. A tesztek során mindig egy webshopban és csak egy termékre indítok keresést
 
 \section{Követelmények}
 \begin{itemize} 
@@ -548,14 +555,14 @@ A robot a szakdolgozati feladat kiírásában meghatározott követelmények ala
 		Dátum &
 		RPA Teszt Manager &
 		Teszteset&
-		Robot kimeneti riport&
+		Robot kimenet&
 		Státusz
 		\\
 		\hline
 		20/10/2024
 		&Kis Sándor
 		&Az adatbázis nem elérhető
-		&Adatbázishiba e-mail küldése a felhasználónak.
+		&Adatbázishiba e-mail küldése a felhasználónak
 		&Sikeres teszt
 		\\
 		\hline	
@@ -577,35 +584,28 @@ A robot a szakdolgozati feladat kiírásában meghatározott követelmények ala
 		Dátum &
 		RPA Teszt Manager &
 		Teszteset&
-		Robot kimeneti riport&
+		Robot kimenet&
 		Státusz
 		\\
 		\hline
 		20/10/2024
 		&Kis Sándor
-		&Az adatbázis nem elérhető
-		&Adatbázishiba e-mail küldése a felhasználónak.
-		&Sikeres teszt
-		\\
-		\hline
-		20/10/2024
-		&Kis Sándor
 		&Adatbázisban nincsenek adatok
-		&Adatbázishiba e-mail küldése a felhasználónak.
+		&Adatbázishiba e-mail küldése a felhasználónak
 		&Sikeres teszt
 		\\
 		\hline
 		20/10/2024
 		&Kis Sándor
 		&Webböngésző megnyitása sikertelen
-		&Nincs találat e-mail küldése a felhasználónak.
+		&Nincs találat e-mail küldése a felhasználónak
 		&Sikeres teszt
 		\\
 		\hline
 		20/10/2024
 		&Kis Sándor
 		&Weboldal betöltése sikertelen
-		&Nincs találat e-mail küldése a felhasználónak.
+		&Nincs találat e-mail küldése a felhasználónak
 		&Sikeres teszt
 		\\
 		\hline
@@ -651,6 +651,14 @@ A robot a szakdolgozati feladat kiírásában meghatározott követelmények ala
 		&Sikeres teszt
 		\\
 		\hline
+		
+		20/10/2024
+		&Kis Sándor
+		&Pcx.hu, átalános keresési megoldás
+		&Árlista riport küldése a felhasználónak
+		&Sikeres teszt
+		\\
+		\hline
 	\end{tabularx}
 	
 \end{table}
@@ -670,18 +678,11 @@ A robot a szakdolgozati feladat kiírásában meghatározott követelmények ala
 		Dátum &
 		RPA Teszt Manager &
 		Teszteset&
-		Robot kimeneti riport&
+		Robot kimenet&
 		Státusz
 		\\
 		\hline
 	
-		20/10/2024
-		&Kis Sándor
-		&Pcx.hu, átalános keresési megoldás
-		&Árlista riport küldése a felhasználónak
-		&Sikeres teszt
-		\\
-		\hline
 		20/10/2024
 		&Kis Sándor
 		&Ipon.hu, átalános keresési megoldás
@@ -691,58 +692,63 @@ A robot a szakdolgozati feladat kiírásában meghatározott követelmények ala
 		\hline
 		20/10/2024
 		&Kis Sándor
-		&A keresőmezőt nem találta meg a robot.
-		&Nincs találat e-mail küldése a felhasználónak.
+		&A keresőmezőt nem találta meg a robot
+		&Nincs találat e-mail küldése a felhasználónak
 		&Sikeres teszt
 		\\
 		\hline
 			20/10/2024
 		&Kis Sándor
-		&Terméket nem találtaja meg a robot.
-		&Nincs találat e-mail küldése a felhasználónak.
+		&Terméket nem találta meg a robot
+		&Nincs találat e-mail küldése a felhasználónak
 		&Sikeres teszt
 		\\
 		\hline
 			20/10/2024
 		&Kis Sándor
-		&Árat nem talál a termékhez a robot.
-		&Terméket nem kerül elmentésre az adatbázisba  
+		&Árat nem talál a termékhez a robot
+		&Termék nem kerül elmentésre az adatbázisba  
 		&Sikeres teszt
 		\\
 		\hline
 			20/10/2024
 		&Kis Sándor
-		&Pénznemet nem talál az árhoz a robot.
-		&Terméket nem kerül elmentésre az adatbázisba  
+		&Pénznemet nem talál az árhoz a robot
+		&Termék nem kerül elmentésre az adatbázisba  
 		&Sikeres teszt
 		\\
 		\hline
 			20/10/2024
 		&Kis Sándor
-		&A pénznem az ár előtt található.
-		&Az ár és a pénznem helyesen mentődik el az adatbázisba.
+		&A pénznem az ár előtt található
+		&Az ár és a pénznem helyesen mentődik el az adatbázisba
 		&Sikeres teszt
 		\\
 		\hline
 			20/10/2024
 		&Kis Sándor
-		&Az ár a pénznem előtt található.
-		&Az ár és a pénznem helyesen mentődik el az adatbázisba.
+		&Az ár a pénznem előtt található
+		&Az ár és a pénznem helyesen mentődik el az adatbázisba
 		&Sikeres teszt
 		\\
 		\hline
 			20/10/2024
 		&Kis Sándor
-		&Az ár a pénznem előtt található.
-		&Az ár és a pénznem helyesen mentődik el az adatbázisba.
+		&Az ár ezres elválasztókat tartalmaz
+		&Az ár és a pénznem helyesen mentődik el az adatbázisba
 		&Sikeres teszt
 		\\
 		\hline
+		
 	\end{tabularx}
 	
 \end{table}`
-
+\linebreak
+\linebreak
+\linebreak
 \section{Teljesítmény}
+A tesztelése sikeres volt, minden tesztesetnél az elvárt eredményt kaptam és a robot minden esetben az elvárásoknak megfelelően kezelte a kritikus helyzeteket.
+A robot keresési teljesítménye a legideálisabb azokon a weboldalakon volt, ahol webshop specifikus keresést implementáltam. Az ilyen weboldalakon egy termék keresése átlagosan 41 másodpercig tartott. Azokon a weboldalakon, ahol a robot általános keresési megoldást választott, egy átlagos keresés 1 perc 13 másodpercet vett igénybe.
 
 \begin{table}[!ht]
 	\centering
@@ -775,12 +781,12 @@ A robot a szakdolgozati feladat kiírásában meghatározott követelmények ala
 		\\
 		\hline
 		
+		
 	\end{tabularx}
 	
 \end{table}
 
-A tesztelése sikeres volt, minden tesztesetnél az elvárt eredményt kaptam és a robot minden esetben az elvárásoknak megfelelően kezelte a kritikus helyzeteket.
-A robot keresési teljesítménye a legideálisabb azokon a weboldalakon volt, ahol webshop specifikus keresést implementáltam. Az ilyen weboldalakon egy termék keresése átlagosan 4 másodpercig tartott. Azokon a weboldalakon, ahol a robot általános keresési megoldást választott, egy átlagos keresés 45 másodpercet vett igénybe.
+
 \chapter{Összegzés}
 \addcontentsline{toc}{chapter}{Összegzés}
 A szakdolgozatom elkészítése során elsődleges célom az volt, hogy egy olyan működő robotot hozzak létre, amely képes a megadott weboldalakon keresést indítani és a keresési találatokat feldolgozni. Az általam készített alkalmazás megfelel a felállított specifikációnak, illetve eleget tesz a feladatban kiírt követelményeknek is.
@@ -802,6 +808,46 @@ A legfontosabb továbbfejlesztési lehetőség egy olyan funkció implementálá
 \textsc{Microsoft}: Entity Framework Core for Beginners, 
 \url{https://learn.microsoft.com/en-gb/shows/entity-framework-core-for-beginners/}
 
+\bibitem{SQL}
+\textsc{Microsoft}: SQL Server, 
+\url{https://learn.microsoft.com/en-gb/sql/sql-server/what-is-sql-server?view=sql-server-ver16}
+
+\bibitem{SSMA}
+\textsc{Microsoft}: SQL Server Management Studio, 
+\url{https://learn.microsoft.com/en-gb/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver16}
+
+
+\bibitem{UiPath}
+\textsc{UiPath}: UiPath | A success story, 
+\url{https://www.linkedin.com/pulse/uipath-success-story-tudor-n-pana-o3wfc}
+
+
+\bibitem{Studio}
+\textsc{UiPath Studio}: A Studio for every skill set, 
+\url{https://www.uipath.com/product/studio}
+
+\bibitem{Orchestrator}
+\textsc{UiPath Orchestrator}: Orchestrator, 
+\url{https://www.uipath.com/product/orchestrator}
+
+
+\bibitem{Robot}
+\textsc{UiPath Robots}: UiPath Robots, 
+\url{https://www.uipath.com/product/robots}
+
+\bibitem{Workflow}
+\textsc{UiPath Documentation}: Workflow Design, 
+\url{https://docs.uipath.com/studio/standalone/2023.4/user-guide/workflow-design}
+
+\bibitem{Activity}
+\textsc{Ixenit Blog}: Betekintés a UiPath RPA megoldásába, 
+\url{https://blog.ixenit.com/hu/betekintes-a-uipath-rpa-megoldasaba}
+
+\bibitem{WPFCSHARP}
+\textsc{Payload}: WPF C\# Professional Modern Flat UI, 
+\url{https://www.youtube.com/watch?v=PzP8mw7JUzI&t=1489s&ab_channel=Payload}
+
+
 \bibitem{Progtech}
 \textsc{Dr. Kusper Gábor és Dr. Radványi Tibor}: Jegyzet a projekt labor című tárgyhoz, Eszterházy Károly Katolikus Egyetem, Eger, 2012.
 
@@ -816,13 +862,7 @@ A legfontosabb továbbfejlesztési lehetőség egy olyan funkció implementálá
 \textsc{Agilevrms}: Robotic Process Automation (RPA) Life Cycle
 \url{https://www.agilevrms.com/Home/RPA}
 
-\bibitem{Workflow}
-\textsc{UiPath Documentation}: Workflow Design, 
-\url{https://docs.uipath.com/studio/standalone/2023.4/user-guide/workflow-design}
 
-\bibitem{Activity}
-\textsc{Ixenit Blog}: Betekintés a UiPath RPA megoldásába, 
-\url{https://blog.ixenit.com/hu/betekintes-a-uipath-rpa-megoldasaba}
 
 \bibitem{DataTable}
 \textsc{docs.uipath.com}: Data Table Variables, 
@@ -835,8 +875,10 @@ A legfontosabb továbbfejlesztési lehetőség egy olyan funkció implementálá
 \bibitem{ActivityCreator}
 \textsc{docs.uipath.com}: Using The Activity Creator, 
 \url{https://docs.uipath.com/sdk/other/latest/developer-guide/using-activity-creator}
+
+
 \end{thebibliography}
 
 % Aláírt, szkennelt nyilatkozat beillesztése a szakdolgozat végére
-\includepdf{nyilatkozat.pdf}
+\includepdf{scan_nyilatkozat.pdf}
 \end{document}

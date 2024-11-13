@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  27 OCT 2024 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.11)  13 NOV 2024 21:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -574,14 +574,7 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
 \l__pdf_internal_box=\box65
 )
-(./JLPKL0.aux
-
-LaTeX Warning: Label `kod-GetAllCategories' multiply defined.
-
-
-LaTeX Warning: Label `kod-WebShopViewModel' multiply defined.
-
-)
+(./JLPKL0.aux)
 \openout1 = `JLPKL0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
@@ -745,7 +738,7 @@ LaTeX Info: Redefining \mit on input line 578.
 <eszterhazy-logo-hu.pdf, id=168, 256.07971pt x 88.04292pt>
 File: eszterhazy-logo-hu.pdf Graphic file (type pdf)
 <use eszterhazy-logo-hu.pdf>
-Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 87.
+Package pdftex.def Info: eszterhazy-logo-hu.pdf  used on input line 88.
 (pdftex.def)             Requested size: 256.07907pt x 88.0427pt.
  [1
 
@@ -760,36 +753,75 @@ thesis-ekf/eszterhazy-logo-hu.pdf>] (./JLPKL0.toc [2
 
  [3] [4
 
-] [5]
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+09.
+
+(c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [5]
 1. fejezet.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 110.
+(hyperref)                removing `\@ifnextchar' on input line 113.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 118.
+(hyperref)                removing `\@ifnextchar' on input line 121.
 
 [6
 
-] [7]
-<mvvm.png, id=261, 430.60875pt x 329.43076pt>
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 125.
+
+[7]
+<mvvm.png, id=279, 430.60875pt x 329.43076pt>
 File: mvvm.png Graphic file (type png)
 <use mvvm.png>
-Package pdftex.def Info: mvvm.png  used on input line 146.
+Package pdftex.def Info: mvvm.png  used on input line 149.
 (pdftex.def)             Requested size: 341.43306pt x 261.21257pt.
- [8 <./mvvm.png>] [9] [10] [11] [12]
-<activity.png, id=295, 374.5995pt x 145.14224pt>
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 154.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 154.
+
+[8 <./mvvm.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 160.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 171.
+
+[9]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 199.
+
+[10]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 218.
+
+[11] [12]
+<activity.png, id=320, 374.5995pt x 145.14224pt>
 File: activity.png Graphic file (type png)
 <use activity.png>
-Package pdftex.def Info: activity.png  used on input line 241.
+Package pdftex.def Info: activity.png  used on input line 244.
 (pdftex.def)             Requested size: 367.1736pt x 142.26378pt.
  [13 <./activity.png>]
 2. fejezet.
-<entity_diagram.png, id=307, 524.55975pt x 310.15875pt>
+<entity_diagram.png, id=332, 524.55975pt x 310.15875pt>
 File: entity_diagram.png Graphic file (type png)
 <use entity_diagram.png>
-Package pdftex.def Info: entity_diagram.png  used on input line 254.
+Package pdftex.def Info: entity_diagram.png  used on input line 257.
 (pdftex.def)             Requested size: 426.81206pt x 213.39452pt.
 [14
 
@@ -797,7 +829,7 @@ Package pdftex.def Info: entity_diagram.png  used on input line 254.
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 267.
+nput line 270.
 
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
@@ -807,40 +839,37 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 )
 (c:/texlive/2023/texmf-dist/tex/generic/stringenc/se-iso-8859-2.def
 File: se-iso-8859-2.def 2019/11/29 v1.12 stringenc: ISO-8859-2
-)
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-68.
-
-(c:/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [15 <./entity_diagram.png>] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2
 .def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [16]
-(c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
+)
+[16] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 ) [17{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2
-023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] (c:/texlive/2023/texmf-dist/t
-ex/latex/base/latin2.def
+023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+(c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 )
-<ExcelDataLoader.png, id=374, 594.42075pt x 319.79475pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 316.
+
+<ExcelDataLoader.png, id=403, 594.42075pt x 319.79475pt>
 File: ExcelDataLoader.png Graphic file (type png)
 <use ExcelDataLoader.png>
-Package pdftex.def Info: ExcelDataLoader.png  used on input line 317.
+Package pdftex.def Info: ExcelDataLoader.png  used on input line 320.
 (pdftex.def)             Requested size: 426.79442pt x 213.40254pt.
-
 [18] [19 <./ExcelDataLoader.png>]
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 330.
+(hyperref)                removing `\@ifnextchar' on input line 333.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 330.
+(hyperref)                removing `\@ifnextchar' on input line 333.
 
 [20] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
@@ -863,19 +892,19 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
 (c:/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [22{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<mainWorkflow.png, id=481, 397.485pt x 352.31625pt>
+<mainWorkflow.png, id=514, 397.485pt x 352.31625pt>
 File: mainWorkflow.png Graphic file (type png)
 <use mainWorkflow.png>
-Package pdftex.def Info: mainWorkflow.png  used on input line 362.
+Package pdftex.def Info: mainWorkflow.png  used on input line 365.
 (pdftex.def)             Requested size: 398.33858pt x 353.08414pt.
  [23 <./mainWorkflow.png>]
-<tableExtraction2.png, id=490, 660.66824pt x 61.4295pt>
+<tableExtraction2.png, id=523, 660.66824pt x 61.4295pt>
 File: tableExtraction2.png Graphic file (type png)
 <use tableExtraction2.png>
-Package pdftex.def Info: tableExtraction2.png  used on input line 379.
+Package pdftex.def Info: tableExtraction2.png  used on input line 382.
 (pdftex.def)             Requested size: 441.01772pt x 41.00662pt.
 
-Overfull \hbox (9.46289pt too wide) in paragraph at lines 391--392
+Overfull \hbox (9.46289pt too wide) in paragraph at lines 394--395
 \T1/lmr/m/n/12 Amikor a fel-hasz-ná-ló olyan web-ol-da-lon pró-bál ke-re-sést i
 n-dí-ta-ni, ahol a webshop-specifikus
  []
@@ -884,127 +913,162 @@ n-dí-ta-ni, ahol a webshop-specifikus
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 )
-Overfull \hbox (5.08362pt too wide) in paragraph at lines 417--418
-\T1/lmr/m/n/12 be-me-ne-ti pa-ra-mé-ter-ként, a má-sik property pe-dig az \T1/l
-mtt/m/n/12 OutArgument<PriceCurrencyPair>
+Overfull \hbox (6.05356pt too wide) in paragraph at lines 420--421
+[]\T1/lmr/m/n/12 Ahogy az a []2.10[]-es kód-ban meg-fi-gyel-he-t®, az ac-ti-vit
+y imp-le-men-tá-ci-ó-ja a \T1/lmtt/m/n/12 PriceFinder
  []
 
 [26] (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
 ) [27]
-<GetCheapestProducts.png, id=563, 251.7405pt x 67.452pt>
+<GetCheapestProducts.png, id=599, 251.7405pt x 67.452pt>
 File: GetCheapestProducts.png Graphic file (type png)
 <use GetCheapestProducts.png>
-Package pdftex.def Info: GetCheapestProducts.png  used on input line 436.
+Package pdftex.def Info: GetCheapestProducts.png  used on input line 439.
 (pdftex.def)             Requested size: 284.52756pt x 76.24251pt.
-
-Overfull \hbox (18.99634pt too wide) in paragraph at lines 441--442
-\T1/lmtt/m/n/12 ConnectionString \T1/lmr/m/n/12 property-je és egy \T1/lmtt/m/n
-/12 OutArgument<List<Product>> Products \T1/lmr/m/n/12 property-
- []
-
-<property.png, id=564, 392.667pt x 192.72pt>
+<property.png, id=601, 392.667pt x 192.72pt>
 File: property.png Graphic file (type png)
 <use property.png>
-Package pdftex.def Info: property.png  used on input line 445.
+Package pdftex.def Info: property.png  used on input line 448.
 (pdftex.def)             Requested size: 398.33858pt x 195.50726pt.
-[28 <./GetCheapestProducts.png> <./property.png>]
+ [28 <./GetCheapestProducts.png> <./property.png>]
 (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 (c:/texlive/2023/texmf-dist/tex/latex/base/latin2.def
 File: latin2.def 2021/02/14 v1.3d Input encoding file
-) [29] [30]
+) [29]
+Overfull \hbox (3.40858pt too wide) in paragraph at lines 461--462
+[]\T1/lmr/m/n/12 A bel-s® le-kér-de-zés azért is szük-sé-ges, mert köz-vet-le-n
+ül nem tu-dunk a Row_Number()
+ []
+
+[30]
 3. fejezet.
 [31
 
-] [32]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 746--749
+[]\T1/lmr/m/n/12 `
+ []
 
-LaTeX Warning: Text page 33 contains only floats.
 
-[33] [34] [35]
+Underfull \hbox (badness 10000) in paragraph at lines 746--749
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 746--749
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 746--749
+
+ []
+
+[32] [33] [34] [35]
 4. fejezet.
 [36
 
 ]
-Underfull \hbox (badness 1337) in paragraph at lines 816--818
-[]\T1/lmr/m/sc/12 Agilevrms\T1/lmr/m/n/12 : Ro-bo-tic Pro-cess Au-to-ma-ti-on (
-RPA) Life Cyc-le []$\T1/lmtt/m/n/12 https : / / www .
+Underfull \hbox (badness 10000) in paragraph at lines 812--814
+[]\T1/lmr/m/sc/12 Microsoft\T1/lmr/m/n/12 : SQL Ser-ver, []$\T1/lmtt/m/n/12 htt
+ps : / / learn . microsoft . com / en-[]gb / sql /
  []
 
 
-Underfull \hbox (badness 6364) in paragraph at lines 820--822
+Underfull \hbox (badness 2653) in paragraph at lines 816--818
+[]\T1/lmr/m/sc/12 Microsoft\T1/lmr/m/n/12 : SQL Ser-ver Ma-nag-ement Stu-dio, [
+]$\T1/lmtt/m/n/12 https : / / learn . microsoft .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 816--818
+\T1/lmtt/m/n/12 com / en-[]gb / sql / ssms / sql-[]server-[]management-[]studio
+-[]ssms ? view =
+ []
+
+
+Underfull \hbox (badness 6808) in paragraph at lines 821--823
+[]\T1/lmr/m/sc/12 UiPath\T1/lmr/m/n/12 : UiPath | A succ-ess sto-ry, []$\T1/lmt
+t/m/n/12 https : / / www . linkedin . com / pulse /
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 830--832
+[]\T1/lmr/m/sc/12 UiPath Or-chest-ra-tor\T1/lmr/m/n/12 : Or-chest-ra-tor, []$\T
+1/lmtt/m/n/12 https : / / www . uipath . com / product /
+ []
+
+
+Underfull \hbox (badness 6364) in paragraph at lines 839--841
 []\T1/lmr/m/sc/12 UiPath Do-cu-men-ta-ti-on\T1/lmr/m/n/12 : Workflow De-sign, [
 ]$\T1/lmtt/m/n/12 https : / / docs . uipath . com /
  []
 
-<nyilatkozat.pdf, id=654, 597.50829pt x 845.0471pt>
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 841.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf>
-Package pdftex.def Info: nyilatkozat.pdf  used on input line 841.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<nyilatkozat.pdf, id=657, page=1, 597.50829pt x 845.0471pt>
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 841.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 841.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 [37
 
 ]
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 841.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 841.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: nyilatkozat.pdf Graphic file (type pdf)
-<use nyilatkozat.pdf, page 1>
-Package pdftex.def Info: nyilatkozat.pdf , page1 used on input line 841.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [38 <./nyilatkozat.pdf>] (./JLPKL0.aux)
+<scan_nyilatkozat.pdf, id=716, 597.6729pt x 845.19763pt>
+File: scan_nyilatkozat.pdf Graphic file (type pdf)
+<use scan_nyilatkozat.pdf>
+Package pdftex.def Info: scan_nyilatkozat.pdf  used on input line 883.
+(pdftex.def)             Requested size: 597.67143pt x 845.19557pt.
+File: scan_nyilatkozat.pdf Graphic file (type pdf)
+<use scan_nyilatkozat.pdf>
+Package pdftex.def Info: scan_nyilatkozat.pdf  used on input line 883.
+(pdftex.def)             Requested size: 597.67143pt x 845.19557pt.
+<scan_nyilatkozat.pdf, id=719, page=1, 597.6729pt x 845.19763pt>
+File: scan_nyilatkozat.pdf Graphic file (type pdf)
+<use scan_nyilatkozat.pdf, page 1>
+Package pdftex.def Info: scan_nyilatkozat.pdf , page1 used on input line 883.
+(pdftex.def)             Requested size: 597.67143pt x 845.19557pt.
+File: scan_nyilatkozat.pdf Graphic file (type pdf)
+<use scan_nyilatkozat.pdf, page 1>
+Package pdftex.def Info: scan_nyilatkozat.pdf , page1 used on input line 883.
+(pdftex.def)             Requested size: 597.69879pt x 845.23425pt.
+ [38]
+File: scan_nyilatkozat.pdf Graphic file (type pdf)
+<use scan_nyilatkozat.pdf, page 1>
+Package pdftex.def Info: scan_nyilatkozat.pdf , page1 used on input line 883.
+(pdftex.def)             Requested size: 597.69879pt x 845.23425pt.
+File: scan_nyilatkozat.pdf Graphic file (type pdf)
+<use scan_nyilatkozat.pdf, page 1>
+Package pdftex.def Info: scan_nyilatkozat.pdf , page1 used on input line 883.
+(pdftex.def)             Requested size: 597.69879pt x 845.23425pt.
+File: scan_nyilatkozat.pdf Graphic file (type pdf)
+<use scan_nyilatkozat.pdf, page 1>
+Package pdftex.def Info: scan_nyilatkozat.pdf , page1 used on input line 883.
+(pdftex.def)             Requested size: 597.69879pt x 845.23425pt.
+ [39 <./scan_nyilatkozat.pdf, page is rotated 270 degrees>]
+(./JLPKL0.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `JLPKL0.out' has not changed.
-(rerunfilecheck)             Checksum: 022E8D63D76DACEA9EE74EA5622686A8;7694.
+(rerunfilecheck)             Checksum: 15BAB9DC80321893893685CCB84297C0;8121.
  ) 
 Here is how much of TeX's memory you used:
- 19695 strings out of 474934
- 315449 string characters out of 5763814
+ 19711 strings out of 474934
+ 315693 string characters out of 5763814
  2077801 words of memory out of 5000000
- 40554 multiletter control sequences out of 15000+600000
+ 40563 multiletter control sequences out of 15000+600000
  628568 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,17n,81p,1010b,1992s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 78i,17n,81p,1011b,1992s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/
 type1/public/lm/lmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/l
 mmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texli
 ve/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/
 fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
-/lm/lmri12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmss12.pfb><c:
-/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso12.pfb><c:/texlive/2023/tex
-mf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type
-1/public/lm/lmtt12.pfb>
-Output written on JLPKL0.pdf (38 pages, 653023 bytes).
+/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on JLPKL0.pdf (39 pages, 749567 bytes).
 PDF statistics:
- 811 PDF objects out of 1000 (max. 8388607)
- 721 compressed objects within 8 object streams
- 310 named destinations out of 1000 (max. 500000)
+ 843 PDF objects out of 1000 (max. 8388607)
+ 755 compressed objects within 8 object streams
+ 317 named destinations out of 1000 (max. 500000)
  406 words of extra memory for PDF output out of 10000 (max. 10000000)
 

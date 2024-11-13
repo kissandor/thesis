@@ -61,33 +61,38 @@ A projekt célja, hogy megoldást nyújtson a következő problémára: **megtal
 
 ## Adatbázis tervezés
 
-Az adatbázis kialakítása a projekt egyik kulcsfontosságú része, amelyben tárolni fogjuk a termékek, árak és webshopok információit. Az adatbázis tervezése során a következő táblákat és mezőket fogjuk használni:
+Az adatbázis kialakítása a projekt egyik kulcsfontosságú része, amelyben tároljuk a termékek, árak és webshopok információit. Az adatbázis tervezése során a következő táblákat és mezőket használjuk:
 
-### Kategoria tábla:
+### Categories tábla:
 
-- **kategoria_id (INT)**: Egyedi azonosító, ami minden kategóriát egyértelműen azonosít.
-- **nev (VARCHAR(255))**: A kategória nevét tárolja.
+- **Id** *(INT)*: Egyedi azonosító, amely minden kategóriát egyértelműen azonosít.
+- **CategoryName** *(NVARCHAR(MAX))*: A kategória nevét tárolja.
 
-### Alkatresz tábla:
+### ComputerParts tábla:
 
-- **alkatresz_id (INT)**: Egyedi azonosító, amely minden alkatrészt azonosít.
-- **alkatresz_nev (VARCHAR(255))**: Az alkatrész nevét tárolja.
-- **kategoria_id (INT)**: Az alkatrész kategóriájának azonosítója. Kapcsolódik a Kategoria táblához.
+- **Id** *(INT)*: Egyedi azonosító, amely minden számítógép alkatrészt azonosít.
+- **ComputerPartName** *(NVARCHAR(MAX))*: Az alkatrész nevét tárolja.
+- **CategoryId** *(INT)*: Az alkatrész kategóriájának azonosítója, amely a Categories táblához kapcsolódik.
 
-### Webshop tábla:
+### WebShops tábla:
 
-- **webshop_id (INT)**: Egyedi azonosító, ami minden webshopot azonosít.
-- **webshop_nev (VARCHAR(255))**: A webshop nevét tárolja.
-- **webshop_url (VARCHAR(255))**: A webshop URL-jét tárolja.
+- **Id** *(INT)*: Egyedi azonosító, amely minden webshopot azonosít.
+- **WebShopName** *(NVARCHAR(MAX))*: A webshop nevét tárolja.
+- **WebShopURL** *(NVARCHAR(MAX))*: A webshop URL-jét tárolja.
 
-### Ar tábla:
+### SearchResults tábla:
 
-- **ar_id (INT)**: Egyedi azonosító, ami minden árat azonosít.
-- **alkatresz_id (INT)**: Az árhoz kapcsolódó alkatrész azonosítója. Kapcsolódik az Alkatresz táblához.
-- **webshop_id (INT)**: Az árhoz kapcsolódó webshop azonosítója. Kapcsolódik a Webshop táblához.
-- **alkatresz_ar (DECIMAL(10, 2))**: Az alkatrész árát tárolja.
+- **Id** *(INT)*: Egyedi azonosító, amely minden keresési eredményt azonosít.
+- **ComputerPartId** *(INT)*: Az adott keresési eredményhez tartozó alkatrész azonosítója, amely a ComputerParts táblához kapcsolódik.
+- **Description** *(NVARCHAR(MAX))*: Az alkatrész leírását tárolja.
+- **ComputerPartPrice** *(DECIMAL(10, 2))*: Az alkatrész árát tárolja.
+- **Currency** *(NVARCHAR(MAX))*: Az ár pénzneme.
+- **WebShopId** *(INT)*: Az árhoz kapcsolódó webshop azonosítója, amely a WebShops táblához kapcsolódik.
+- **ProductUrl** *(NVARCHAR(MAX))*: Az adott termék URL-jét tárolja a webshopban.
 
-Az adatbázis tervezése során figyelembe vesszük az adatok struktúráját és azok közötti kapcsolatokat, hogy hatékonyan tudjuk tárolni és kezelni az információkat. A Kategoria, Alkatresz, Webshop és Ar táblák megfelelően definiáltak az adatok tárolásához és szervezéséhez.
+
+Az adatbázis tervezése során figyelembe vesszük az adatok struktúráját és azok közötti kapcsolatokat, hogy hatékonyan tudjuk tárolni és kezelni az információkat. A Categories, ComputerParts, WebShops és SearchResults táblák megfelelően definiáltak az adatok tárolásához és szervezéséhez.
+
 
 # 5. Asztali alkalmazás fejlesztése
 
